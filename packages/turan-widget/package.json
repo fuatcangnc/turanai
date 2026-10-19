@@ -1,6 +1,6 @@
 {
 	"name": "turan-widget",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Turan widget - trusted companion for the Turan plugin: in-page React AI widget (canvas, element picker, translations) and dev file tools",
 	"type": "module",
 	"license": "MIT",

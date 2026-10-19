@@ -1,6 +1,6 @@
 {
 	"name": "turan-emdash",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Turan - sandbox-compatible AI agent plugin for EmDash (admin chat, content tools, MCP tools)",
 	"type": "module",
 	"license": "MIT",
