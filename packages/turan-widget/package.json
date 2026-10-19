@@ -1,7 +1,7 @@
 {
 	"name": "turan-widget",
 	"version": "0.1.0",
-	"description": "Turan widget — trusted companion for the Turan plugin: in-page React widget (AI mode, element picker) and dev file tools",
+	"description": "Turan widget - trusted companion for the Turan plugin: in-page React AI widget (canvas, element picker, translations) and dev file tools",
 	"type": "module",
 	"license": "MIT",
 	"exports": {
@@ -11,11 +11,14 @@
 	},
 	"files": [
 		"src",
-		"scripts"
+		"scripts",
+		"README.md",
+		"LICENSE"
 	],
 	"scripts": {
 		"build:widget": "node scripts/build-widget.mjs",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "npm run build:widget"
 	},
 	"peerDependencies": {
 		"emdash": ">=1.3.0",
@@ -32,5 +35,20 @@
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"typescript": "^5.7.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fuatcangnc/turanai.git",
+		"directory": "packages/turan-widget"
+	},
+	"homepage": "https://github.com/fuatcangnc/turanai/tree/main/packages/turan-widget#readme",
+	"bugs": {
+		"url": "https://github.com/fuatcangnc/turanai/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"engines": {
+		"node": ">=20"
 	}
 }
