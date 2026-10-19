@@ -1,0 +1,91 @@
+{
+  "slug": "arac-hurda-belgesi-islemleri",
+  "category": "Tescil ve Müşavirlik",
+  "shortTitle": "Araç Hurda Belgesi İşlemleri",
+  "title": "Araç Hurda Belgesi İşlemleri",
+  "summary": "Ekonomik ömrünü tamamlayan veya ağır hasar gören araçların trafik kaydından çıkarılması için hurda belgesi süreçlerinde uzman destek sunuyoruz.",
+  "heroEyebrow": "Tescil ve Müşavirlik",
+  "heroTitle": "Araç Hurda Belgesi İşlemleri",
+  "heroLead": "Kullanım süresini doldurmuş, ciddi hasar almış ya da trafikten tamamen çekilmek istenen araçların resmi kayıtlarının doğru biçimde kapatılması özen gerektiren bir konudur. Karakaş Mühendislik olarak teknik evrak hazırlığından resmi başvuruya kadar tüm hurda süreçlerinde yanınızdayız.",
+  "sections": [
+    {
+      "id": "arac-hurda-belgesi-nedir",
+      "heading": "Araç Hurda Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Hurda belgesi, bir aracın trafik ve aktif kullanım kaydından resmi olarak çıkarılması amacıyla yürütülen bütüncül bir işlem bütününü ifade eder. Ömrünü tamamlamış ya da bir daha yola çıkmayacak araçlarda bu kayıtların usulüne uygun şekilde sonlandırılması, hem yasal hem de mali açıdan büyük bir öneme sahiptir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-alinir",
+      "heading": "Hangi Durumlarda Alınır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Onarımı masraf açısından mantıklı olmayan, ağır hasarlı araçlarda",
+            "Kullanım ömrünü tamamen doldurmuş taşıtlarda",
+            "Trafikten süresiz olarak çekilmesi planlanan araçlarda",
+            "Fiziken kullanılamaz duruma gelen taşıtların kayıtlarının kapatılması gereken durumlarda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islem-adimlari",
+      "heading": "İşlem Adımları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Araca ve mülkiyet sahibine ait bilgiler eksiksiz olarak hazırlanır",
+            "Hurda gerekçesini destekleyen belge ve resmi kayıtlar bir araya getirilir",
+            "İlgili kamu kurumları nezdinde tescil sonlandırma başvurusu gerçekleştirilir",
+            "Kayıtlardaki son durum gözden geçirilerek süreç güvenle tamamlanır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç ruhsatı ve araç sahibinin kimlik belgeleri",
+            "Mülkiyeti kanıtlayan resmi evraklar",
+            "Mevcutsa hasar tespit ya da ekspertiz raporları",
+            "İlgili kurumların talep edebileceği ek destekleyici belgeler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Hurda sürecinde kayıtların hangi yöntemle kapatıldığı, vergi yükümlülüklerinin nasıl sonlandırıldığı ve tescil durumunun eksiksiz kapatılması hayati derecede önemlidir. Yarım bırakılan ya da eksik tamamlanan işlemler, ilerleyen dönemlerde vergi borcu, devir engeli ve kayıt karmaşası gibi sorunların önünü açabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Araç hurda belgesi ne sağlar?",
+      "a": "Aracın trafikteki aktif kullanım ve kayıt durumunun resmi makamlar nezdinde güvenle sonlandırılmasına yardımcı olur."
+    },
+    {
+      "q": "Ağır hasarlı araçta bu işlem gerekli olabilir mi?",
+      "a": "Evet, tamiri ekonomik olmayan ya da bir daha kullanılmayacak durumdaki araçlarda hurda sürecinin yürütülmesi gerekebilir."
+    },
+    {
+      "q": "En sık hata nedir?",
+      "a": "Vergi, tescil ve kayıt kapatma işlemlerinin tam olarak yapılmaması en yaygın karşılaşılan problemlerin başında gelir."
+    }
+  ]
+}

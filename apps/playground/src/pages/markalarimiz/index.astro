@@ -1,0 +1,129 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { ArrowUpRight, CheckCircle2, Globe, ShieldCheck } from '@lucide/astro'
+
+const brands = [
+  {
+    title: 'Araç Projeci',
+    domain: 'aracprojeci.net',
+    url: 'https://aracprojeci.net/',
+    category: 'Dijital Proje & Danışmanlık Platformu',
+    description:
+      'Türkiye genelinde araç tadilat projeleri, TSE onaylı mühendislik çizimleri, karavan dönüşümü, koltuk sökümü, çeki demiri, motor değişimi ve teknik danışmanlık hizmetleri sunan dijital platformumuz.',
+    features: [
+      'TSE AİTM onaylı araç projeleri',
+      'Türkiye geneli online danışmanlık',
+      'Hızlı ruhsat ve tescil desteği',
+    ],
+    badge: 'Yetkili Platform',
+  },
+  {
+    title: 'Karakaş Mühendislik',
+    domain: 'karakasmuhendislik.com.tr',
+    url: 'https://karakasmuhendislik.com.tr/',
+    category: 'Kurumsal Araç Proje & Tescil Portalı',
+    description:
+      'İstanbul merkezli olarak araç proje çizimleri, motosiklet kurye çantası ve taşıma kutusu ruhsata işletme, okul servisi ve sürücü kursu araç dönüşüm projelerinde yetkili mühendislik hizmetleri.',
+    features: [
+      'Motosiklet çanta tescil uzmanlığı',
+      'Aynı gün proje çizimi ve kontrolü',
+      'Yetkili makine mühendisliği kadrosu',
+    ],
+    badge: 'Kurumsal Portal',
+  },
+]
+---
+
+<Layout
+  title="Markalarımız | Karakaş Mühendislik"
+  description="Karakaş Mühendislik bünyesinde araç tadilat projeleri, TSE onayları ve motosiklet çanta tescil hizmeti sunan markalarımız ve web platformlarımız."
+>
+  <main>
+    <InternalHero
+      eyebrow="Grup Markalarımız"
+      title="Markalarımız ve Web Platformlarımız"
+      description="Karakaş Mühendislik güvencesiyle araç projelendirme, kurye taşıma kutusu tescili ve mühendislik danışmanlığı alanında hizmet veren yetkili platformlarımız."
+      image="/images/hero-engineering.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-5xl mx-auto">
+        <!-- Giriş Tanıtımı -->
+        <div class="max-w-3xl mb-12">
+          <p class="text-xs font-black uppercase tracking-widest text-primary mb-2">Kurumsal Güvence</p>
+          <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-neutral-950">
+            Farklı İhtiyaçlara Uzmanlaşmış Dijital Çözümler
+          </h2>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong> olarak araç sahiplerine, filo yöneticilerine ve kurye işletmelerine en hızlı ve güvenilir hizmeti ulaştırmak amacıyla uzmanlaşmış web platformlarımız üzerinden hizmet vermekteyiz.
+          </p>
+        </div>
+
+        <!-- Markalar Grid -->
+        <div class="grid gap-8 md:grid-cols-2">
+          {brands.map((brand) => (
+            <article class="relative flex flex-col justify-between border border-neutral-200 bg-white p-7 sm:p-9 transition-all duration-300 hover:border-neutral-950 hover:shadow-xl group">
+              <div>
+                <div class="flex items-center justify-between gap-3 mb-6">
+                  <span class="inline-flex items-center gap-1.5 bg-neutral-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-neutral-800">
+                    <Globe class="size-3.5 text-primary" />
+                    {brand.domain}
+                  </span>
+                  <span class="inline-flex items-center gap-1 bg-black px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+                    <ShieldCheck class="size-3 text-primary" />
+                    {brand.badge}
+                  </span>
+                </div>
+
+                <h3 class="text-2xl font-black text-neutral-950 tracking-tight group-hover:text-primary transition-colors">
+                  {brand.title}
+                </h3>
+                <p class="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-1 mb-4">
+                  {brand.category}
+                </p>
+
+                <p class="text-sm sm:text-base leading-relaxed text-neutral-700 mb-6">
+                  {brand.description}
+                </p>
+
+                <div class="border-t border-neutral-100 pt-5 mb-8">
+                  <p class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-3">Öne Çıkan Hizmetler</p>
+                  <ul class="space-y-2.5">
+                    {brand.features.map((feature) => (
+                      <li class="flex items-center gap-2.5 text-sm text-neutral-700">
+                        <CheckCircle2 class="size-4 text-emerald-600 shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-neutral-100">
+                <a
+                  href={brand.url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  class="inline-flex w-full items-center justify-center gap-2 bg-primary hover:bg-[#b84d12] px-6 py-3.5 text-xs font-black uppercase tracking-wider !text-white transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-primary/20"
+                >
+                  <span>Siteyi Ziyaret Et</span>
+                  <span class="text-white/80 font-normal">({brand.domain})</span>
+                  <ArrowUpRight class="size-4 text-white" />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Alt Bilgilendirme Notu -->
+        <div class="mt-12 border-l-4 border-primary bg-neutral-50 p-6 sm:p-8">
+          <h4 class="text-base font-bold text-neutral-950 mb-2">TSE Yetkili Mühendislik Güvencesi</h4>
+          <p class="text-sm sm:text-base leading-relaxed text-neutral-700">
+            Tüm markalarımız ve dijital platformlarımız üzerinden yürütülen araç proje, tadilat ve tescil işlemleri, <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong> bünyesindeki yetkili makine mühendislerimiz tarafından mevzuata %100 uygun şekilde yürütülmekte ve onaylanmaktadır.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,87 @@
+{
+  "slug": "sanayi-sicil-belgesi-hizmeti",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Sanayi Sicil Belgesi Hizmeti",
+  "title": "Sanayi Sicil Belgesi Hizmeti",
+  "summary": "Karakaş Mühendislik ile sanayi işletmenizin resmi sanayi kayıt sistemine dahil edilmesi, üretim faaliyetlerinin sınıflandırılması ve süreç yönetiminin profesyonelce yürütülmesi.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Sanayi Sicil Belgesi Hizmeti",
+  "heroLead": "Sanayi sicil belgesi hizmeti; sanayi işletmesinin resmi sanayi kayıt sistemine dahil edilmesi ve üretim faaliyetlerinin doğru biçimde sınıflandırılarak kayıt altına alınmasını kapsayan önemli bir belgelendirme sürecidir. Karakaş Mühendislik olarak teknik veri hazırlığı, faaliyet sınıflandırması ve belge süreci yönetiminde profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "sanayi-sicil-belgesi-nedir",
+      "heading": "Sanayi Sicil Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sanayi sicil belgesi, sanayi işletmesinin üretim faaliyetlerini resmi olarak kayıt altına alan ve işletmenin üretici niteliğini belgeleyen önemli bir dokümandır. Üretim konusu, tesis yapısı, kapasite bilgileri ve makine altyapısı bu değerlendirme kapsamında incelenir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-isletmeler-icin-gerekir",
+      "heading": "Hangi İşletmeler İçin Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "İmalat yapan firmalar",
+            "Sanayi statüsünde faaliyet gösteren üreticiler",
+            "Teşvik ve belgelendirme süreçlerine giren işletmeler",
+            "Üretim altyapısını resmi olarak kayıt altına almak isteyen kuruluşlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basvuru-hazirligi",
+      "heading": "Başvuru Hazırlığı",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Faaliyet konusu net ve açık biçimde tanımlanır",
+            "Tesis ve üretim bilgileri eksiksiz hazırlanır",
+            "Makine-ekipman ve personel yapısı düzenlenir",
+            "Destekleyici firma evrakları dosyalanır",
+            "Başvuru belgeleri teknik açıdan kontrol edilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guncelleme-ve-bildirim-yukumlulukleri",
+      "heading": "Güncelleme ve Bildirim Yükümlülükleri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sanayi sicil kaydı yalnızca ilk başvuru süreciyle sınırlı değildir. İşletme yapısındaki değişiklikler, faaliyet konusu güncellemeleri ve yıllık işletme cetveli gibi bildirim yükümlülüklerinin düzenli olarak takip edilmesi gerekir."
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Başvuruda belirtilen faaliyet konusu ile işletmenin fiili üretim yapısının uyumlu olması gerekir. Eksik makine bilgileri, yanlış NACE kodu yaklaşımı ya da güncellenmeyen işletme verileri sonraki süreçlerde sorun oluşturabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Sanayi sicil belgesi neden önemlidir?",
+      "a": "Sanayi işletmesinin resmi üretici niteliğini belgelediği için teşvik, destek ve birçok teknik başvuru sürecinde önemli rol oynar."
+    },
+    {
+      "q": "Belge alındıktan sonra takip gerekir mi?",
+      "a": "Evet. İşletme bilgilerindeki değişiklikler ve yıllık bildirim yükümlülükleri düzenli olarak güncellenmelidir."
+    },
+    {
+      "q": "En sık başvuru hatası nedir?",
+      "a": "Faaliyet konusu ile fiili üretim yapısının uyuşmaması ve eksik teknik veriler en sık karşılaşılan başvuru hataları arasındadır."
+    }
+  ]
+}

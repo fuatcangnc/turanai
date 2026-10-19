@@ -1,0 +1,217 @@
+{
+  "title": "Karayolu Uygunluk Belgesi Projesi | TSE Süreci | Karakaş",
+  "shortTitle": "Karayolu Uygunluk Belgesi Projesi",
+  "slug": "karayolu-uygunluk-belgesi",
+  "category": "Belgelendirme",
+  "summary": "Karayolu uygunluk belgesi projesi için uygun araç kapsamını, sahiplik belgelerini, teknik kontrolleri, TSE incelemesini ve tescil adımlarını öğrenin.",
+  "image": "/hizmetler/karayolu-uygunluk-belgesi.webp",
+  "featured": false,
+  "order": 10,
+  "heroEyebrow": "Karayolu Uygunluk Belgesi | TSE Onaylı",
+  "heroTitle": "Karayolu Uygunluk Belgesi Projesi",
+  "heroDescription": "Aracın sahiplik ve tescil geçmişini, kimlik bilgilerini ve teknik donanımlarını birlikte kontrol edelim. Başvuru türünü, TSE araç incelemesini ve tescile giden adımları dosyanıza göre netleştirelim.",
+  "imageAlt": "Karayolu uygunluk belgesi projesi için araç teknik incelemesi",
+  "imageTitle": "Karayolu Uygunluk Belgesi Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için karayolu uygunluk belgesi projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Aracın tescile uygunluk dosyası",
+  "introTitle": "Karayolu uygunluk belgesi hangi araçlar için düzenlenir?",
+  "introText": "Karayolu uygunluk belgesi her araç tadilatında otomatik olarak istenen ortak bir evrak değildir. Kamu kurumundan satın alınan, daha önce tescil edilmemiş veya tescil geçmişinde özel bir durum bulunan araçlarda gündeme gelebilir. Doğru başvuru türü, aracın sahiplik belgesi, tescil kaydı ve teknik durumu birlikte incelenerek belirlenir.",
+  "technicalChecks": [
+    {
+      "title": "Sahiplik ve edinim biçimi",
+      "description": "Aracın kamu satışı, fatura, satış sözleşmesi veya başka bir belgeyle edinilme durumu incelenir."
+    },
+    {
+      "title": "Tescil geçmişi",
+      "description": "Aracın daha önce tescil edilip edilmediği, kaydının silinip silinmediği ve mevcut statüsü kontrol edilir."
+    },
+    {
+      "title": "Araç kimlik bilgileri",
+      "description": "Şasi, motor ve teknik etiket bilgileri, sahiplik evraklarındaki kayıtlarla karşılaştırılır."
+    },
+    {
+      "title": "Karayolu donanımları",
+      "description": "Aydınlatma, aynalar, camlar, lastikler, silecekler, koltuklar ve emniyet kemerleri araç kapsamına göre incelenir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Sahiplik belgesi",
+      "description": "Fatura, satış sözleşmesi, trafik şahadetnamesi veya aracın edinimini gösteren ilgili belge."
+    },
+    {
+      "title": "Araç kimlik bilgileri",
+      "description": "Şasi numarasını, motor bilgisini ve teknik etiketi dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Varsa eski tescil belgeleri",
+      "description": "Önceki ruhsat, kayıt kapatma veya tescil durumunu gösteren belgeleri incelemek için."
+    },
+    {
+      "title": "Kurum satış evrakları",
+      "description": "Araç bir kamu kurumu veya tasfiye satışından alındıysa satış kapsamını doğrulamak için."
+    },
+    {
+      "title": "Araç fotoğrafları",
+      "description": "Aracın dört yönünü, içini, motor bölümünü, kimlik numaralarını ve teknik donanımlarını incelemek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Başvuru kapsamı ve araç incelemesi",
+    "title": "Dosya geçmişi ile aracın teknik durumu nasıl eşleştirilir?",
+    "leftTitle": "Başvuru kapsamını belirleyen kayıtlar",
+    "leftItems": [
+      {
+        "title": "Kamu kurumu satışı",
+        "description": "Kurumun düzenlediği satış ve trafik evraklarının araçla eşleşmesi."
+      },
+      {
+        "title": "Daha önce tescil edilmemiş araç",
+        "description": "Aracın sahiplik zinciri ile teknik kimliğinin belge üzerinden doğrulanması."
+      },
+      {
+        "title": "Tescil kaydı silinmiş araç",
+        "description": "Kaydın neden kapandığını gösteren belgeler ile güncel başvuru imkânının incelenmesi."
+      },
+      {
+        "title": "Farklı kayıttan karayoluna geçiş",
+        "description": "Aracın önceki kullanım veya tescil biçiminin sonlandırıldığını gösteren evraklar."
+      }
+    ],
+    "rightTitle": "TSE araç kontrolünde incelenen başlıklar",
+    "rightItems": [
+      {
+        "title": "Kimlik numaraları",
+        "description": "Şasi ve motor bilgilerinin okunabilirliği ile dosyadaki kayıtlarla uyumu."
+      },
+      {
+        "title": "Görüş ve cam donanımı",
+        "description": "Camlar, aynalar, silecekler ve cam yıkama sisteminin araç kapsamındaki durumu."
+      },
+      {
+        "title": "Aydınlatma ve lastikler",
+        "description": "Far, sinyal, stop lambaları ve lastik bilgilerinin ilgili teknik şartlarla uyumu."
+      },
+      {
+        "title": "Koltuk ve emniyet sistemi",
+        "description": "Araç kategorisi ve yaşına göre koltuklar ile emniyet kemerlerinin mevcut durumu."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Karayolu uygunluk belgesi için ücretsiz kapsam kontrolü",
+    "title": "Sahiplik belgesini ve araç fotoğraflarını gönderin.",
+    "description": "Aracın bu başvuru türüne girip girmediğini, eksik sahiplik evraklarını ve teknik kontrolden önce düzeltilmesi gereken noktaları inceleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Başvuru türünün belirlenmesi",
+      "description": "Aracın edinim biçimi, tescil geçmişi ve planlanan kullanımı incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Belge ve araç ön kontrolü",
+      "description": "Sahiplik evrakları, kimlik numaraları ve temel teknik donanımlar kontrol edilir."
+    },
+    {
+      "number": "03",
+      "title": "Teknik dosyanın hazırlanması",
+      "description": "Araç bilgileri, fotoğraflar ve başvuru belgeleri uygunluk dosyasında bir araya getirilir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç fiziki incelemeye girer; teknik donanımlar ile dosya bilgileri karşılaştırılır."
+    },
+    {
+      "number": "05",
+      "title": "Onay ve tescil",
+      "description": "Dosya uygun bulunursa belge düzenlenir ve aracın durumuna göre tescil işlemlerine geçilir."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; aracın tescil geçmişi, sahiplik belgelerinin durumu, teknik inceleme kapsamı, eksik donanımlar ve TSE başvurusunda gereken dosyaya göre belirlenir.",
+    "items": [
+      {
+        "title": "Dosya ve geçmiş incelemesi",
+        "description": "Sahiplik, satış ve eski tescil belgelerinin değerlendirilmesi"
+      },
+      {
+        "title": "Teknik proje hizmeti",
+        "description": "Araç bilgilerinin ve teknik kontrol verilerinin dosyalanması"
+      },
+      {
+        "title": "Kontrol ve tescil adımları",
+        "description": "Güncel TSE ve sonraki resmi işlemlerin araç dosyasına göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Sahiplik zincirinin eksik olması",
+      "description": "Aracın kimden ve hangi belgeyle edinildiği açıkça doğrulanamaz."
+    },
+    {
+      "title": "Yanlış başvuru türü",
+      "description": "Karayolu uygunluk belgesi, tip onayı veya tadilat projesiyle aynı işlem kabul edilir."
+    },
+    {
+      "title": "Kimlik bilgilerinin uyuşmaması",
+      "description": "Şasi, motor veya teknik etiket bilgileri sahiplik evraklarıyla eşleşmez."
+    },
+    {
+      "title": "Eksik çalışan donanım",
+      "description": "Aydınlatma, silecek, ayna veya emniyet sistemi fiziki kontrolde uygun durumda değildir."
+    },
+    {
+      "title": "Araç kapsamına uymayan parça",
+      "description": "Cam, lastik, koltuk veya diğer donanımlar aracın kategori ve yaşına göre ayrıca inceleme gerektirir."
+    },
+    {
+      "title": "Eski kaydın kapatılmamış olması",
+      "description": "Aracın önceki tescil veya kullanım statüsü yeni başvuruyla çakışır."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Karayolu uygunluk belgesi nedir?",
+      "answer": "Belirli tescil geçmişine veya edinim biçimine sahip bir aracın karayolunda tescile esas teknik durumunu gösteren uygunluk belgesidir."
+    },
+    {
+      "question": "Karayolu uygunluk belgesi nereden alınır?",
+      "answer": "Başvuru, yetkili teknik sorumlu aracılığıyla TSE sistemine iletilir. Araç, ilgili TSE Araç Kontrol Merkezinde fiziki incelemeye girer."
+    },
+    {
+      "question": "Hangi araçlar için karayolu uygunluk belgesi gerekir?",
+      "answer": "Kamu satışından alınan, daha önce tescil edilmemiş veya tescil kaydında özel durum bulunan bazı araçlarda gerekebilir. Kesin kapsam, sahiplik ve tescil belgeleri incelendikten sonra belirlenir."
+    },
+    {
+      "question": "Her tadilatlı araç karayolu uygunluk belgesi alır mı?",
+      "answer": "Hayır. Araç tadilat projesi, münferit uygunluk ve karayolu uygunluk başvuruları aynı kapsamda değildir. Aracın geçmişi ile yapılan işlem ayrı ayrı incelenir."
+    },
+    {
+      "question": "Karayolu uygunluk belgesi için hangi evraklar gerekir?",
+      "answer": "Sahiplik belgesi temel evraktır. Aracın durumuna göre trafik şahadetnamesi, fatura, satış sözleşmesi, eski tescil belgeleri ve ek kurum evrakları istenebilir."
+    },
+    {
+      "question": "Karayolu uygunluk belgesi fiyatı ne kadar?",
+      "answer": "Fiyat, dosyanın ve araç incelemesinin kapsamına göre değişir. Sahiplik belgesi ile araç bilgileri incelendikten sonra proje teklifi hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Dosya kapsamı ön kontrolü",
+      "description": "Aracın sahiplik ve tescil geçmişi başvuru yapılmadan önce incelenir."
+    },
+    {
+      "title": "Araçla eşleşen teknik dosya",
+      "description": "Kimlik bilgileri, fotoğraflar ve teknik donanımlar aynı dosyada kontrol edilir."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "TSE araç kontrolü ve tescile giden adımlar aracın durumuna göre açıklanır."
+    }
+  ],
+  "officeText": "Aracın sahiplik belgesini, varsa eski tescil evraklarını ve güncel fotoğraflarını getirin. Başvuru türünü ve eksik teknik noktaları birlikte belirleyelim."
+}

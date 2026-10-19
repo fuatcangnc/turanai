@@ -1,0 +1,93 @@
+{
+  "slug": "imalat-yeterlilik-belgesi-hizmeti",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "İmalat Yeterlilik Belgesi Hizmeti",
+  "title": "İmalat Yeterlilik Belgesi Hizmeti",
+  "summary": "Karakaş Mühendislik ile üretim yapan işletmenizin teknik, organizasyonel ve kalite açısından yeterliliğini kanıtlayan imalat yeterlilik belgesi hazırlık ve değerlendirme süreci.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "İmalat Yeterlilik Belgesi Hizmeti",
+  "heroLead": "İmalat yeterlilik belgesi hizmeti; üretim yapan işletmenin teknik, organizasyonel ve kalite açısından belirli yeterlilik şartlarını sağlayabildiğini göstermek amacıyla yürütülen değerlendirme ve belge hazırlık sürecidir. Karakaş Mühendislik olarak üretim hattı, tesis yapısı, kalite kontrol süreçleri ve teknik altyapıya uygun şekilde imalat yeterlilik süreçlerinde profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "imalat-yeterlilik-belgesi-nedir",
+      "heading": "İmalat Yeterlilik Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "İmalat yeterlilik belgesi, üretici firmanın ürünlerini belirli teknik ve kalite kriterleri doğrultusunda üretebildiğini gösteren önemli bir yeterlilik belgesidir. Bu süreçte yalnızca makine ve ekipman varlığı değil; üretim disiplini, kalite yönetimi, kayıt düzeni ve personel yetkinliği gibi unsurlar da değerlendirilir."
+        }
+      ]
+    },
+    {
+      "id": "kimler-icin-onemlidir",
+      "heading": "Kimler İçin Önemlidir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Üretici firmalar",
+            "Kamu ve özel sektör tedarik süreçlerine katılan işletmeler",
+            "TSE ve benzeri teknik değerlendirmelerde yeterlilik göstermek isteyen kurumlar",
+            "Kurumsal üretim altyapısını belgelemek isteyen işletmeler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "degerlendirme-kriterleri",
+      "heading": "Değerlendirme Kriterleri",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Tesis ve üretim alanı uygunluğu",
+            "Makine ve ekipman yeterliliği",
+            "Personel yapısı ve görev dağılımı",
+            "Kalite kontrol ve izlenebilirlik uygulamaları",
+            "Üretim kayıtlarının düzenli tutulması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hazirlik-dosyasi",
+      "heading": "Hazırlık Dosyası",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Firma tanıtım ve faaliyet bilgileri hazırlanır",
+            "Makine ve ekipman listesi oluşturulur",
+            "Personel ve organizasyon yapısı düzenlenir",
+            "Kalite kontrol kayıtları ve prosedürler hazırlanır",
+            "Üretim süreçlerine ait teknik dokümantasyon tamamlanır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uygulama-hatalari",
+      "heading": "Uygulamada Sık Görülen Hatalar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kayıtların güncel tutulmaması, üretim hattı ile sunulan belgelerin birbiriyle örtüşmemesi ve kalite kontrol süreçlerinin yalnızca evrak üzerinde bırakılması en sık karşılaşılan sorunlar arasındadır. Bu nedenle fiili üretim yapısının teknik belgelerle uyumlu olması büyük önem taşır."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "İmalat yeterlilik belgesi kimler için uygundur?",
+      "a": "Üretim yapan ve teknik yeterliliğini resmi süreçlerde belgelemek isteyen işletmeler için uygundur."
+    },
+    {
+      "q": "Belge için kalite sistemi zorunlu mudur?",
+      "a": "Belge kapsamına göre değişiklik gösterebilir. Ancak kalite kontrol süreçlerinin düzenli ve izlenebilir olması büyük önem taşır."
+    },
+    {
+      "q": "En kritik hazırlık nedir?",
+      "a": "Üretim altyapısının, teknik belgelerin ve kalite kayıtlarının birbiriyle uyumlu şekilde hazırlanması en kritik aşamalardan biridir."
+    }
+  ]
+}

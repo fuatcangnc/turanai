@@ -1,0 +1,197 @@
+{
+  "title": "Çeki Demiri Projesi – Çeki Demirini Ruhsata İşletme | TSE Onaylı | Karakaş",
+  "shortTitle": "Çeki Demiri Projesi",
+  "slug": "ceki-demiri-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Çeki demiri montajının uygunluk projesi, TSE süreci ve ruhsata işletme adımlarının takibi.",
+  "image": "/hizmetler/ceki-demiri-projesi.webp",
+  "featured": true,
+  "order": 9,
+  "heroEyebrow": "Çeki Demiri | TSE Onaylı",
+  "heroTitle": "Çeki Demiri Projesi ve Ruhsata İşletme",
+  "heroDescription": "Çeki demirinin araç tipinize ve montaj talimatına uygunluğunu, proje yolunu ve ruhsata işletme sırasını belgeleriniz üzerinden netleştirelim.",
+  "imageAlt": "Çeki demiri montajı için araç üzerinde teknik inceleme",
+  "imageTitle": "Çeki Demiri Projesi ve Ruhsata İşletme",
+  "whatsappMessage": "Merhaba, aracım için çeki demiri projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Çeki demiri projesi",
+  "introTitle": "Çeki demirini ruhsata işletmeden önce ne kontrol edilir?",
+  "introText": "Çeki demirinde tek bir belgeye bakmak yeterli değildir. Ürünün araç tipine uygunluğu, E belgesi, montaj talimatı, fatura ve montajın araç üzerindeki durumu birlikte değerlendirilir.",
+  "technicalChecks": [
+    {
+      "title": "Araç tipi ve ürün uyumu",
+      "description": "Çeki demirinin araç marka, model ve şasisiyle uyumlu üretildiği kontrol edilir."
+    },
+    {
+      "title": "E / ECE R55 tip onay belgesi",
+      "description": "Ürünün uluslararası güvenlik ve mukavemet standartlarına uygunluğu denetlenir."
+    },
+    {
+      "title": "Mekanik ve elektriksel montaj",
+      "description": "Şasi bağlantı noktaları, tork değerleri ve 7/13 pin elektrik soket tesisatı incelenir."
+    },
+    {
+      "title": "Etiket ve seri numarası",
+      "description": "Demir üzerindeki D değeri, S dikey yük kapasitesi ve onay numarası doğrulanır."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç marka, model ve tescil bilgisini doğrulamak için."
+    },
+    {
+      "title": "Çeki demiri faturası",
+      "description": "Ürünün kaynağını ve ürün bilgisini göstermek için."
+    },
+    {
+      "title": "E / ECE R55 belgesi",
+      "description": "Çeki demirinin uygunluk belgesi ve araçla ilişkili ürün bilgisi."
+    },
+    {
+      "title": "Montaj talimatı",
+      "description": "Üreticinin araç tipi için verdiği montaj bilgisi."
+    },
+    {
+      "title": "Montaj bilgisi",
+      "description": "Montajı yapan işletmeye ve elektrik kitine ilişkin mevcut bilgiler."
+    }
+  ],
+  "group": {
+    "label": "03 · Çeki demiri montajı ve teknik detaylar",
+    "title": "Montaj ve onay aşamalarında hangi adımlar izlenir?",
+    "leftTitle": "Ürün ve montaj gereksinimleri",
+    "leftItems": [
+      {
+        "title": "E Belgeli Ürün Seçimi",
+        "description": "Araca özel üretilmiş ve ECE R55 onaylı çeki demiri."
+      },
+      {
+        "title": "Yetkili Servis Montajı",
+        "description": "Orijinal şasi deliklerine zarar vermeden yapılan mekanik montaj."
+      },
+      {
+        "title": "Elektrik Tesisatı",
+        "description": "Römork sinyalizasyon ve stop lambalarını besleyen soket bağlantısı."
+      }
+    ],
+    "rightTitle": "Resmî onay ve ruhsat süreci",
+    "rightItems": [
+      {
+        "title": "Mühendislik Projesi",
+        "description": "TSE standartlarında hazırlanan montaj uygunluk projesi."
+      },
+      {
+        "title": "TSE Araç Kontrolü",
+        "description": "Fiziki muayene merkezinde demirin ve etiketinin denetlenmesi."
+      },
+      {
+        "title": "Noter Tescili",
+        "description": "Ruhsata 'Çeki Demiri Takılıdır' ibaresinin işlenmesi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Çeki demiri belgeleri için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve çeki demiri belgelerini gönderin.",
+    "description": "Araç ruhsatını, ürün faturasını, E belgesini ve montaj talimatını paylaşın. Dosyayı açmadan önce ürünün ve montajın hangi proje yoluna girdiğini birlikte kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve ürün kontrolü",
+      "description": "Araç ruhsatı ile çeki demirinin araç tipine uygunluğu, etiketi ve ürün belgesi incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Montaj belgeleri",
+      "description": "E belgesi, montaj talimatı, fatura ve montaja ilişkin bilgiler dosya için hazırlanır."
+    },
+    {
+      "number": "03",
+      "title": "Proje dosyası",
+      "description": "Araç ve ürün bilgileriyle, gerekli teknik proje veya montaj uygunluk dosyası oluşturulur."
+    },
+    {
+      "number": "04",
+      "title": "TSE kontrolü",
+      "description": "Araç ve dosya, başvuru kapsamına göre TSE araç kontrol merkezinde incelenir."
+    },
+    {
+      "number": "05",
+      "title": "Tescil adımı",
+      "description": "Onaylanan belgelerle noter tescili için gerekli işlem sırası tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Toplam bedel; çeki demirinin araçla uyumu, montajın durumu, proje dosyası, TSE işlemi ve noter tesciline göre değişir. Belge ve araç bilgileri görülmeden sabit toplam vermek doğru olmaz.",
+    "items": [
+      {
+        "title": "Mühendislik dosyası",
+        "description": "Araç ve belge kapsamına göre proje çizim bedeli"
+      },
+      {
+        "title": "TSE kontrolü",
+        "description": "Başvuru günündeki resmî TSE inceleme tarifesi"
+      },
+      {
+        "title": "Noter tescili",
+        "description": "İşlem günündeki resmî ruhsat yenileme tarifesi"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Trafikten men riski",
+      "description": "Denetimde tescilsiz çeki demiri tespit edilirse eksiklik giderilene kadar araç trafikten men edilebilir."
+    },
+    {
+      "title": "Muayene durumu",
+      "description": "Ruhsata işli olmayan çeki demiri, periyodik muayenede ağır kusur olarak değerlendirilebilir."
+    },
+    {
+      "title": "O1 römork notu",
+      "description": "750 kg altındaki O1 römork için ayrı römork ruhsatı gerekmese de araçtaki çeki demirinin tescili ayrıca değerlendirilir."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Çeki demiri ruhsata işletilir mi?",
+      "answer": "Araca sonradan çeki demiri ilavesi yapıldığında, uygun ürün ve montaj belgeleriyle tescil işlemi yürütülür. Dosyanın kapsamı araç ile ürün bilgileri incelendikten sonra netleşir."
+    },
+    {
+      "question": "Çeki demiri projesi için hangi evraklar gerekir?",
+      "answer": "Araç ruhsatı, çeki demiri faturası, E veya ECE R55 belgesi ve montaj talimatı temel kontrol belgeleridir. Montajla ilgili ek bilgi istenip istenmeyeceği araç özelinde belirlenir."
+    },
+    {
+      "question": "E belgeli çeki demiri ne demektir?",
+      "answer": "E belgesi, ürünün ilgili tip onayı kapsamında belgelendirildiğini gösterir. Belgenin tek başına yeterli olup olmadığı, araç tipi ve montaj talimatı ile birlikte değerlendirilir."
+    },
+    {
+      "question": "Çeki demiri takıldıktan sonra muayene gerekir mi?",
+      "answer": "Muayene gerekliliği, araçtaki mevcut muayene durumu ve işlem dosyasının kapsamına göre belirlenir. Başvuru öncesi araç bilgileriyle kontrol edilmelidir."
+    },
+    {
+      "question": "Çeki demiri sökülürse ruhsattan sildirilir mi?",
+      "answer": "Ruhsata işlenmiş çeki demiri söküldüğünde, araç kaydının güncellenmesi için söküm ve tescil süreci ayrıca değerlendirilir."
+    },
+    {
+      "question": "Çeki demiri projesi fiyatı ne kadar?",
+      "answer": "Toplam tutar; ürün, montaj, mühendislik dosyası, TSE işlemi ve noter tescilinin kapsamına göre değişir. Araç ve belge bilgileri incelendikten sonra net teklif verilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Belge kontrolü",
+      "description": "E belgesi, montaj talimatı ve fatura birlikte incelenir."
+    },
+    {
+      "title": "Araç odaklı inceleme",
+      "description": "Ürünün uygunluğu araç tipi ve montajla birlikte değerlendirilir."
+    },
+    {
+      "title": "Açık işlem sırası",
+      "description": "Proje, TSE ve tescil adımları baştan netleştirilir."
+    }
+  ],
+  "officeText": "Ruhsatınızı, ürün faturasını ve varsa E belgesini getirin; belge durumunu ve sonraki başvuru adımlarını görüşmede netleştirelim."
+}

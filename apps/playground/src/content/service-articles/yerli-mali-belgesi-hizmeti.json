@@ -1,0 +1,87 @@
+{
+  "slug": "yerli-mali-belgesi-hizmeti",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Yerli Malı Belgesi Hizmeti",
+  "title": "Yerli Malı Belgesi Hizmeti",
+  "summary": "Karakaş Mühendislik ile ürününüzün yerli üretim niteliğinin ve yerli katkı oranının teknik ve mali verilerle analiz edilerek yerli malı belgesi başvurusuna hazırlanması.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Yerli Malı Belgesi Hizmeti",
+  "heroLead": "Yerli malı belgesi hizmeti; ürünün yerli üretim niteliği ve yerli katkı oranının teknik ve mali veriler doğrultusunda değerlendirilerek başvuru sürecine uygun biçimde hazırlanmasını kapsar. Karakaş Mühendislik olarak ürün analizi, belge hazırlığı ve başvuru altyapısı konusunda profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "yerli-mali-belgesi-nedir",
+      "heading": "Yerli Malı Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yerli malı belgesi, ürünün yerli üretim niteliğini ve yerli katkı oranını belirli kriterler doğrultusunda ortaya koyan resmi bir değerlendirme sürecidir. Ürünün bileşen yapısı, üretim yeri, sanayi altyapısı ve maliyet yapısı bir arada incelenerek yerli katkı değerlendirmesi yapılır."
+        }
+      ]
+    },
+    {
+      "id": "basvuruda-hangi-veriler-gerekir",
+      "heading": "Başvuruda Hangi Veriler Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Ürün reçetesi ya da bileşen listesi",
+            "Sanayi sicil bilgileri",
+            "Kapasite raporu verileri",
+            "Üretim ve maliyet kalemleri"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yerli-katki-hesabi",
+      "heading": "Yerli Katkı Hesabı",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yerli katkı hesabında ürünün hammadde yapısı, yarı mamul kullanımı, işçilik giderleri ve üretim süreçleri birlikte değerlendirilir. Her ürün grubunda hesaplama yöntemi farklılık gösterebildiği için verilerin düzenli, güncel ve doğrulanabilir biçimde hazırlanması önem taşır."
+        }
+      ]
+    },
+    {
+      "id": "hazirlik-evraklari",
+      "heading": "Hazırlık Evrakları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Firma ve ürün bilgileri hazırlanır",
+            "Fatura ve maliyet verileri düzenlenir",
+            "Sanayi sicil ve kapasite raporu bilgileri kontrol edilir",
+            "Üretim yeri ve süreç tanımları hazırlanır",
+            "Başvuru dosyası teknik olarak düzenlenir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Başvuru Öncesi Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ürün ağacı ile maliyet verilerinin birbiriyle uyuşmaması, ithal içerik oranlarının yanlış değerlendirilmesi ve güncel olmayan kapasite raporu bilgileri başvuru kalitesini olumsuz etkileyebilir. Bu nedenle tüm teknik ve mali verilerin güncel şekilde hazırlanması gerekir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Yerli malı belgesi her ürün için alınabilir mi?",
+      "a": "Ürünün yerli üretim kriterlerini karşılaması ve gerekli teknik-mali verilerin sunulabilmesi durumunda başvuru yapılabilir."
+    },
+    {
+      "q": "Kapasite raporu gerekli olur mu?",
+      "a": "Evet. Başvuru sürecinde işletmenin üretim kapasitesini gösteren kapasite raporu önemli belgeler arasında yer alabilir."
+    },
+    {
+      "q": "En önemli hesap kalemi nedir?",
+      "a": "Ürünün yerli katkı oranını etkileyen hammadde, yarı mamul ve üretim maliyetleri en kritik hesap kalemleri arasında yer alır."
+    }
+  ]
+}

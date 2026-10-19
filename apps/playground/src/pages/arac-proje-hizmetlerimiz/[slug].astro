@@ -1,0 +1,11 @@
+---
+export const prerender = true;
+import Layout from '@/layouts/Layout.astro'
+import ServiceDetail from '@/components/ServiceDetail.astro'
+import { defaultServices } from '@/data/site'
+
+export function getStaticPaths() { return defaultServices.map((service) => ({ params: { slug: service.slug }, props: { service } })) }
+const { service } = Astro.props
+---
+
+<Layout title={`${service.title} | Karakaş Mühendislik`} description={service.summary}><ServiceDetail service={service} /></Layout>

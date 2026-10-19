@@ -1,0 +1,52 @@
+---
+import { ArrowRight } from '@lucide/astro'
+import SiteImage from './SiteImage.astro'
+
+interface Props { eyebrow: string; title: string; description: string; image?: string; breadcrumbTitle?: string }
+const { eyebrow, title, description, image = '/karakas-muhendislik-arac-proje-hizmetleri-bg.webp', breadcrumbTitle } = Astro.props
+const breadcrumbLabel = breadcrumbTitle || eyebrow
+---
+
+<section class="internal-hero relative">
+  <div class="internal-hero__image"><SiteImage src={image} alt="" fetchpriority="high" /></div>
+  <div class="internal-hero__wash"></div>
+  <div class="shell internal-hero__content">
+    <h2 class="eyebrow">{eyebrow}</h2>
+    <h1>{title}</h1>
+    <p class="internal-hero__description">{description}</p>
+    <nav class="breadcrumbs" aria-label="Brotkrümelnavigation" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </span>
+      <ArrowRight size={13} aria-hidden="true" />
+      <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">{breadcrumbLabel}</span>
+        <meta itemprop="item" content={new URL(Astro.url.pathname, 'https://karakasmuhendislik.com.tr').href} />
+        <meta itemprop="position" content="2" />
+      </span>
+    </nav>
+  </div>
+  <!-- Schema.org Breadcrumb JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://karakasmuhendislik.com.tr"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": breadcrumbLabel,
+        "item": new URL(Astro.url.pathname, 'https://karakasmuhendislik.com.tr').href
+      }
+    ]
+  })} />
+  <!-- Custom geometric white dividers (Left & Right) -->
+  <div class="custom-divider-white-left absolute -bottom-[1px] left-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+  <div class="custom-divider-white-right absolute -bottom-[1px] right-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+</section>

@@ -1,0 +1,217 @@
+{
+  "title": "Motosiklet Çanta Ruhsata İşletme | TSE Süreci",
+  "shortTitle": "Motosiklet Çanta Ruhsata İşletme",
+  "slug": "motosiklet-canta-ruhsata-isletme",
+  "category": "Motosiklet",
+  "summary": "Motosiklet çanta ruhsata işletme için kurye kutusu, topcase ve taşıyıcı montajını; gerekli belgeleri, TSE, muayene ve tescil adımlarını inceleyin.",
+  "image": "/images/scooter-canta-ruhsata-isletme.webp",
+  "featured": false,
+  "order": 5,
+  "heroEyebrow": "Motosiklet Taşıma Kutusu | TSE Onaylı",
+  "heroTitle": "Motosiklet Çanta Ruhsata İşletme",
+  "heroDescription": "Arka çanta, topcase veya kurye kutusunun montajını, kullanımını ve motosiklet üzerindeki etkisini birlikte kontrol edelim. Gerekli proje, onay ve ruhsat adımlarını ekipmanınıza göre netleştirelim.",
+  "imageAlt": "Motosiklet çanta ve taşıma kutusu için teknik inceleme",
+  "imageTitle": "Motosiklet Çanta Ruhsata İşletme Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, motosiklet çantamı ruhsata işletme işlemi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Motosiklet taşıma ekipmanı projesi",
+  "introTitle": "Motosiklet çantası hangi durumda ruhsata işletme kapsamına girebilir?",
+  "introText": "Her arka çanta aynı teknik kapsamda değerlendirilmez. Çantanın hacmi, motosiklete nasıl bağlandığı, yolcu selesine ve aydınlatma ekipmanlarına etkisi ile kullanım amacı birlikte incelenir. Büyük, sabit bağlantılı veya paket taşımada kullanılan kutular için proje ve ruhsat işlemi gündeme gelebilir. Küçük, kolay sökülebilir ve kişisel eşya taşımaya yönelik çantalarda ise değerlendirme farklı olabilir.",
+  "technicalChecks": [
+    {
+      "title": "Çanta ve kutu tipi",
+      "description": "Arka çanta, topcase, kurye kutusu, sepet veya yan çantanın ölçüsü ile kullanım biçimi incelenir."
+    },
+    {
+      "title": "Taşıyıcı ve montaj bağlantısı",
+      "description": "Kutu ile taşıyıcının motosiklet şasisi veya mevcut bağlantı noktalarıyla ilişkisi kontrol edilir."
+    },
+    {
+      "title": "Yolcu alanı ve görünürlük",
+      "description": "Yolcu selesi, plaka, stop lambası, sinyaller ve reflektörlerin açıkta kalıp kalmadığı değerlendirilir."
+    },
+    {
+      "title": "Kullanım amacı",
+      "description": "Kişisel eşya taşıma ile düzenli paket veya kurye kullanımı arasındaki fark, ekipmanla birlikte ele alınır."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Motosiklet ruhsatı",
+      "description": "Marka, model, araç sınıfı ve mevcut tescil bilgilerini kontrol etmek için."
+    },
+    {
+      "title": "Çantanın arka ve yan fotoğrafları",
+      "description": "Kutu ölçüsünü, konumunu, yolcu alanına ve görünürlüğe etkisini görmek için."
+    },
+    {
+      "title": "Taşıyıcı bağlantı fotoğrafları",
+      "description": "Şasi, bagaj demiri veya kullanılan sabitleme noktalarını incelemek için."
+    },
+    {
+      "title": "Ürün bilgisi veya fatura",
+      "description": "Varsa çantanın modeli, üreticisi ve satış bilgisini dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Marka veya kurye ekipmanı bilgisi",
+      "description": "Ticari paket taşımada kullanılan kutunun kullanım kapsamını anlamak için."
+    }
+  ],
+  "group": {
+    "label": "03 · Çanta montajı ve motosiklet üzerindeki etkisi",
+    "title": "Taşıma ekipmanı hangi teknik başlıklarda kontrol edilir?",
+    "leftTitle": "Çanta ve taşıyıcı üzerinde kontrol",
+    "leftItems": [
+      {
+        "title": "Kutu ölçüsü ve konumu",
+        "description": "Çantanın motosikletin arka bölümündeki yüksekliği, genişliği ve yerleşimi."
+      },
+      {
+        "title": "Taşıyıcı yapısı",
+        "description": "Bagaj demiri, bağlantı plakası veya özel taşıyıcının çantayla uyumu."
+      },
+      {
+        "title": "Sabitleme elemanları",
+        "description": "Kelepçe, vida, kilit veya diğer montaj parçalarının mevcut durumu."
+      },
+      {
+        "title": "Kutu kapağı ve yükleme",
+        "description": "Kapağın hareketi ile günlük kullanımda taşıyıcıya binen yükün değerlendirilmesi."
+      }
+    ],
+    "rightTitle": "Motosiklet üzerindeki kontrol",
+    "rightItems": [
+      {
+        "title": "Yolcu selesi",
+        "description": "Çantanın ikinci kişinin oturma alanını kapatıp kapatmadığı ve kullanım düzenine etkisi."
+      },
+      {
+        "title": "Plaka ve lambalar",
+        "description": "Arka kutunun plaka, stop, sinyal ve reflektör görünürlüğünü engellememesi."
+      },
+      {
+        "title": "Dış ölçü ve denge",
+        "description": "Ekipmanın motosikletin dış sınırları ile ağırlık dağılımı üzerindeki etkisi."
+      },
+      {
+        "title": "Ruhsat ve kullanım bilgisi",
+        "description": "Montajın ve kullanım biçiminin mevcut araç kaydıyla birlikte değerlendirilmesi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Motosiklet çantası için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve dört açıdan çanta fotoğraflarını gönderin.",
+    "description": "Çantanın ruhsata işletme kapsamına girip girmediğini, montajda eksik bir nokta olup olmadığını ve doğru işlem sırasını proje hazırlanmadan önce birlikte inceleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Motosiklet ve ekipman ön kontrolü",
+      "description": "Ruhsat, çanta tipi, taşıyıcı, montaj noktaları ve kullanım amacı incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Teknik kapsamın belirlenmesi",
+      "description": "Ekipmanın motosiklet üzerindeki etkisine göre gerekli proje ve kontrol sırası netleştirilir."
+    },
+    {
+      "number": "03",
+      "title": "Motosiklet çanta proje dosyası",
+      "description": "Çanta, taşıyıcı ve motosiklet bilgileri teknik dosyada bir araya getirilir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Motosiklet ile proje dosyası güncel başvuru kapsamına göre incelenir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve ruhsat güncellemesi",
+      "description": "Gerekli muayene tamamlanır, işlem kapsamına göre tescil adımı tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; motosiklet modeli, çantanın tipi ve ölçüsü, taşıyıcı bağlantısı, kullanım amacı, proje kapsamı ve resmi işlem kalemlerine göre değişir.",
+    "items": [
+      {
+        "title": "Ekipman ve montaj incelemesi",
+        "description": "Çanta, taşıyıcı ve motosiklet üzerindeki etkisinin değerlendirilmesi"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Motosiklet ile taşıma ekipmanı bilgilerinin dosyalanması"
+      },
+      {
+        "title": "Onay ve tescil adımları",
+        "description": "Güncel TSE, muayene ve ruhsat işlemlerinin dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Yolcu selesinin kapanması",
+      "description": "Çanta veya kutu ikinci kişinin oturma alanını etkilediğinde kullanım düzeni değişebilir."
+    },
+    {
+      "title": "Plaka ve lamba görünürlüğü",
+      "description": "Kutu ya da taşıyıcının plaka, stop, sinyal veya reflektörleri kapatması."
+    },
+    {
+      "title": "Yetersiz taşıyıcı bağlantısı",
+      "description": "Çantanın motosikletle uyumlu olmayan veya gevşek bir taşıyıcıya bağlanması."
+    },
+    {
+      "title": "Büyük kutunun küçük çanta gibi değerlendirilmesi",
+      "description": "Kurye kullanımı veya sabit montajı bulunan ekipmanın teknik kapsamının atlanması."
+    },
+    {
+      "title": "Ekipman bilgisinin eksik olması",
+      "description": "Çanta modeli, montaj fotoğrafları veya ürün belgesi olmadan doğru dosya kapsamının belirlenememesi."
+    },
+    {
+      "title": "İşlem sırasının atlanması",
+      "description": "Proje, kontrol, muayene ve tescil adımlarının motosikletin dosyasına göre planlanmaması."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Motosiklet çantayı ruhsata işletmek zorunlu mu?",
+      "answer": "Zorunluluk her çanta için aynı değildir. Çantanın türü, montaj biçimi, kullanım amacı, yolcu alanına ve aydınlatma ekipmanlarına etkisi birlikte incelenir."
+    },
+    {
+      "question": "Kurye kutusu ruhsata işletilir mi?",
+      "answer": "Büyük hacimli, sabit bağlantılı ve düzenli paket taşımada kullanılan kurye kutuları teknik değerlendirme kapsamına girebilir. Kesin işlem, motosiklet ve montaj fotoğrafları incelendikten sonra belirlenir."
+    },
+    {
+      "question": "Küçük topcase için proje gerekir mi?",
+      "answer": "Küçük ve kolay sökülebilir bir topcase için sonuç, montajın ve kullanımın durumuna göre değişir. Çantanın küçük olması tek başına kesin karar verdirmez."
+    },
+    {
+      "question": "Motosiklet yan çantası da ruhsata işletme kapsamına girer mi?",
+      "answer": "Yan çantanın ölçüsü, montajı, motosikletin dış sınırlarına ve aydınlatma ekipmanlarına etkisi birlikte değerlendirilir. Tüm ekipmanların fotoğrafını ön kontrolde paylaşmak gerekir."
+    },
+    {
+      "question": "Motosiklet çanta projesi için hangi belgeler gerekir?",
+      "answer": "Ruhsat ile çantanın arka, yan ve bağlantı fotoğrafları temel başlangıç bilgisidir. Varsa ürün belgesi, fatura ve kurye ekipmanı bilgisi dosyayı netleştirir."
+    },
+    {
+      "question": "Motosiklet çantayı ruhsata işletmek kaç TL?",
+      "answer": "Fiyat motosiklet, çanta, taşıyıcı bağlantısı ve gerekli işlem kapsamına göre değişir. Ruhsat ve fotoğraflar incelendikten sonra proje teklifi hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Montaj odaklı ön kontrol",
+      "description": "Çanta, taşıyıcı, yolcu alanı ve arka görünürlük tek incelemede değerlendirilir."
+    },
+    {
+      "title": "Kurye ve bireysel kullanım ayrımı",
+      "description": "Ekipmanın kullanım biçimi, teknik dosya hazırlanırken motosiklet bilgileriyle eşleştirilir."
+    },
+    {
+      "title": "Açık işlem planı",
+      "description": "Proje, TSE, muayene ve tescil sırası motosikletin dosyasına göre açıklanır."
+    }
+  ],
+  "officeText": "Motosiklet ruhsatını, çantanın arka ve yan görünüşünü, taşıyıcı bağlantı fotoğraflarını getirin. Ekipmanın montajını ve doğru proje yolunu birlikte belirleyelim."
+}

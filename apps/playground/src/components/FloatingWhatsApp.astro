@@ -1,0 +1,61 @@
+---
+import { siteSettings, whatsappHref } from '@/data/site'
+import SiteImage from './SiteImage.astro'
+
+const defaultWhatsappLink = whatsappHref('Hallo, ich möchte Informationen zum vehicleprojekt und zur Beratung erhalten.')
+---
+
+<aside aria-label="WhatsApp Live-Support" class="fixed bottom-8 right-4 sm:bottom-10 sm:right-6 md:bottom-12 md:right-8 z-50">
+  <a
+    href={defaultWhatsappLink}
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Karakaş Mühendislik WhatsApp Live-Support - Online"
+    class="group flex items-center transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] drop-shadow-[0_10px_25px_rgba(0,0,0,0.25)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50 rounded-full"
+  >
+    <!-- Avatar Section with Pulse Glow -->
+    <div class="relative shrink-0 flex items-center justify-center">
+      <!-- Radar Pulse Effects -->
+      <span class="absolute -inset-2 rounded-full border-2 border-[#25D366]/70 animate-[ping_2.2s_cubic-bezier(0,0,0.2,1)_infinite] pointer-events-none" aria-hidden="true"></span>
+      <span class="absolute -inset-1 rounded-full bg-[#25D366]/30 animate-pulse pointer-events-none" aria-hidden="true"></span>
+
+      <!-- Avatar Photo -->
+      <div class="relative z-10 size-13 sm:size-16 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+        <SiteImage
+          src="/karakasmuhendislik-96.webp"
+          srcset="/karakasmuhendislik-96.webp 96w, /karakasmuhendislik.webp 160w"
+          sizes="64px"
+          alt="Resul Karakaş - Karakaş Mühendislik"
+          class="size-full object-cover"
+          width="64"
+          height="64"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+
+      <!-- Mini WhatsApp Icon Badge -->
+      <span class="absolute bottom-0 right-0 z-20 size-5 sm:size-6 rounded-full bg-white p-0.5 shadow-md grid place-items-center text-[#25D366]">
+        <svg class="size-3.5 sm:size-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/>
+        </svg>
+      </span>
+    </div>
+
+    <!-- Green Pill Content Area (Always visible on mobile and desktop) -->
+    <div class="relative z-0 -ml-4 sm:-ml-5 flex flex-col justify-center rounded-full bg-[#25D366] hover:bg-[#20ba5a] transition-colors py-2 sm:py-2.5 pl-5 sm:pl-7 pr-4 sm:pr-6 text-white shadow-inner">
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <span class="text-[12px] sm:text-[14px] font-black leading-none tracking-tight text-white drop-shadow-xs">
+          Karakaş Mühendislik
+        </span>
+        <span class="inline-flex items-center rounded-full bg-white/25 px-1.5 sm:px-2 py-0.5 text-[8.5px] sm:text-[10px] font-bold leading-none text-white backdrop-blur-xs">
+          Online
+        </span>
+      </div>
+      <span class="mt-1 text-[10.5px] sm:text-[12px] font-medium leading-none text-white/95 drop-shadow-xs whitespace-nowrap">
+        Need help?
+      </span>
+    </div>
+  </a>
+</aside>

@@ -1,0 +1,150 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { siteSettings, phoneHref } from '@/data/site'
+
+const todayDate = '19.08.2026'
+
+const ethicsItems = [
+  {
+    title: 'Dürüstlük ve Şeffaflık',
+    items: [
+      'Tüm faaliyetlerimizde doğru, açık ve dürüst iletişim kurarız.',
+      'Müşterilerimize sunduğumuz hizmetlerde şeffaflık ilkesine bağlı kalırız.',
+    ],
+  },
+  {
+    title: 'Yasalara Uyum',
+    items: [
+      'Faaliyetlerimizi yürürlükteki tüm yasal mevzuatlara uygun şekilde gerçekleştiririz.',
+      'Yetkili kurumlar ve standartlara tam uyum sağlamayı esas alırız.',
+    ],
+  },
+  {
+    title: 'Müşteri Memnuniyeti',
+    items: [
+      'Müşteri ihtiyaç ve beklentilerini ön planda tutarız.',
+      'Sunulan hizmetlerde kaliteyi ve güvenilirliği esas alırız.',
+      'Gelen talep ve şikâyetleri hızlı ve çözüm odaklı şekilde değerlendiririz.',
+    ],
+  },
+  {
+    title: 'Gizlilik ve Veri Güvenliği',
+    items: [
+      'Müşteri ve iş ortaklarımıza ait bilgilerin gizliliğini koruruz.',
+      'Kişisel verilerin korunması konusunda yasal yükümlülüklere uygun hareket ederiz.',
+    ],
+  },
+  {
+    title: 'Tarafsızlık ve Adalet',
+    items: [
+      'Tüm paydaşlarımıza eşit, adil ve tarafsız yaklaşırız.',
+      'Ayrımcılığın hiçbir türüne izin vermeyiz.',
+    ],
+  },
+  {
+    title: 'Sorumluluk ve Güvenilirlik',
+    items: [
+      'Üstlendiğimiz iş ve sorumlulukları zamanında ve eksiksiz yerine getiririz.',
+      'Verdiğimiz sözlerin arkasında durur, güvenilir hizmet sunarız.',
+    ],
+  },
+  {
+    title: 'İş Sağlığı ve Güvenliği',
+    items: [
+      'Çalışanlarımız için güvenli ve sağlıklı bir çalışma ortamı sağlamayı öncelik kabul ederiz.',
+      'İş sağlığı ve güvenliği kurallarına tam uyum gösteririz.',
+    ],
+  },
+  {
+    title: 'Çevreye Duyarlılık',
+    items: [
+      'Faaliyetlerimizi çevreye zarar vermeden yürütmeyi hedefleriz.',
+      'Doğal kaynakların korunmasına katkı sağlar, sürdürülebilirliği destekleriz.',
+    ],
+  },
+  {
+    title: 'Sürekli Gelişim',
+    items: [
+      'Kendimizi sürekli geliştirir, hizmet kalitemizi artırmaya yönelik çalışmalar yaparız.',
+      'Teknolojik gelişmeleri takip ederek iş süreçlerimize entegre ederiz.',
+    ],
+  },
+]
+---
+
+<Layout
+  title="Etik İlkeler Politikası | Karakaş Mühendislik"
+  description="Karakaş Mühendislik Etik İlkeler Politikası; dürüstlük, şeffaflık, güvenilirlik, yasal uyum ve adalet ilkelerimiz."
+>
+  <main>
+    <InternalHero
+      eyebrow="Kurumsal Değerler"
+      title="Etik İlkeler Politikası"
+      description="Dürüstlük, şeffaflık, tarafsızlık ve güven esaslarına dayalı kurumsal çalışma ve meslek ilkelerimiz."
+      image="/images/hero-engineering.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Giriş Kutusu -->
+        <div class="mb-10 border-l-4 border-amber-500 bg-amber-50/50 p-6 sm:p-7 text-sm sm:text-base leading-relaxed text-neutral-800 space-y-3">
+          <p>
+            <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong>; dürüstlük, şeffaflık ve güven esaslarına dayalı bir hizmet anlayışı ile faaliyet göstermeyi temel ilke olarak benimsemektedir. Tüm çalışmalarımızda etik değerlere uygun hareket etmeyi, müşterilerimiz, çalışanlarımız ve iş ortaklarımız ile olan ilişkilerimizde bu ilkeleri gözetmeyi taahhüt ederiz.
+          </p>
+        </div>
+
+        <article class="space-y-6 text-neutral-800">
+          <!-- 9 Etik İlke Bölümü -->
+          {ethicsItems.map((item, index) => (
+            <section class="border border-neutral-200 bg-white p-6 sm:p-7">
+              <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+                <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">
+                  {index + 1}
+                </span>
+                <h2 class="text-base sm:text-lg font-black text-neutral-950">
+                  {item.title}
+                </h2>
+              </div>
+              <ul class="mt-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+                {item.items.map((subItem) => (
+                  <li>{subItem}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
+          <!-- Kılavuz Paragrafı -->
+          <div class="border border-neutral-200 bg-white p-6 text-sm sm:text-base leading-relaxed text-neutral-700">
+            Bu etik ilkeler, işletmemizin tüm faaliyetlerinde rehber niteliğindedir. Tüm çalışanlarımızın ve iş ortaklarımızın bu ilkelere uygun hareket etmesi beklenmektedir.
+          </div>
+
+          <!-- İletişim Bilgileri Kartı -->
+          <section class="border border-neutral-200 bg-neutral-50/70 p-6 sm:p-8">
+            <h2 class="text-lg sm:text-xl font-black text-neutral-950 border-b border-neutral-200/80 pb-3">
+              İletişim
+            </h2>
+            <div class="mt-5 space-y-2.5 text-sm sm:text-base">
+              <p><strong class="font-bold text-neutral-950">Firma / Ünvan:</strong> Karakaş Mühendislik / Resul Karakaş</p>
+              <p><strong class="font-bold text-neutral-950">Web Sitesi:</strong> <a href="https://karakasmuhendislik.com.tr" target="_blank" class="text-primary font-bold hover:underline">https://karakasmuhendislik.com.tr</a></p>
+              <p><strong class="font-bold text-neutral-950">E-posta:</strong> <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></p>
+              <p><strong class="font-bold text-neutral-950">Telefon:</strong> <a href={phoneHref} class="text-primary font-bold hover:underline">0554 816 63 02</a></p>
+              <p class="leading-relaxed">
+                <strong class="font-bold text-neutral-950">Adres:</strong><br />
+                Merkez Mahallesi İslambey Caddesi No: 12<br />
+                Altıparmak İş Merkezi Ofis No: 9<br />
+                Gaziosmanpaşa / İstanbul
+              </p>
+            </div>
+          </section>
+
+          <!-- Kapanış Bilgi & Tarih -->
+          <div class="border-t border-neutral-200 pt-6 flex items-center justify-between text-xs sm:text-sm text-neutral-500 font-medium">
+            <span>Etik İlkeler Politikası</span>
+            <span><strong>Son güncelleme:</strong> {todayDate}</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

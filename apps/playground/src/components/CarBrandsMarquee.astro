@@ -1,0 +1,76 @@
+---
+import { Marquee } from '@/ui/marquee'
+import { ArrowRight } from '@lucide/astro'
+import SiteImage from './SiteImage.astro'
+
+const carBrands = [
+  { name: 'Volkswagen', logo: '/car/volkswagen.webp', alt: 'Volkswagen Fahrzeugprojekt' },
+  { name: 'Ford', logo: '/car/ford.webp', alt: 'Ford Fahrzeugprojekt' },
+  { name: 'Renault', logo: '/car/renault-logo.webp', alt: 'Renault Fahrzeugprojekt' },
+  { name: 'BMW', logo: '/car/bmw.webp', alt: 'BMW Fahrzeugprojekt' },
+  { name: 'Audi', logo: '/car/audi.webp', alt: 'Audi Fahrzeugprojekt' },
+  { name: 'Toyota', logo: '/car/toyota-logo.webp', alt: 'Toyota Fahrzeugprojekt' },
+  { name: 'Peugeot', logo: '/car/peugeot-logo.webp', alt: 'Peugeot Fahrzeugprojekt' },
+  { name: 'Opel', logo: '/car/opel.webp', alt: 'Opel Fahrzeugprojekt' },
+  { name: 'Citroën', logo: '/car/citroen-logo.webp', alt: 'Citroën Fahrzeugprojekt' },
+  { name: 'Honda', logo: '/car/honda-logo.webp', alt: 'Honda Fahrzeugprojekt' },
+  { name: 'Dacia', logo: '/car/dacia-logo.webp', alt: 'Dacia Fahrzeugprojekt' },
+  { name: 'Škoda', logo: '/car/skoda-logo.webp', alt: 'Škoda Fahrzeugprojekt' },
+]
+---
+
+<section class="car-brands-marquee-section mb-8 sm:mb-12 lg:mb-16 -mt-4 sm:-mt-6 lg:-mt-10" aria-label="Betreute Fahrzeugmarken">
+  <div class="mx-auto w-[95vw]">
+    <div class="relative bg-white border border-neutral-200 shadow-xs px-4 sm:px-8 py-5 sm:py-6 overflow-hidden">
+      <!-- Grid container: Title / Tag on the left (on desktop) and Marquee on the right -->
+      <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+        <!-- Section Header / Badge -->
+        <div class="shrink-0 flex items-center justify-between md:justify-start gap-3 md:border-r md:border-neutral-200 md:pr-8">
+          <div class="flex items-center gap-2">
+            <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+            <span class="text-xs font-black uppercase tracking-[0.14em] text-primary whitespace-nowrap">
+              Autorisierte Fahrzeugmarken
+            </span>
+          </div>
+          <a
+            href="/araba-markalari"
+            class="group inline-flex items-center gap-1 text-[11px] font-bold text-neutral-600 hover:text-primary transition-colors whitespace-nowrap"
+          >
+            <span>Alle Marken</span>
+            <ArrowRight size={13} class="group-hover:translate-x-0.5 transition-transform" />
+          </a>
+        </div>
+
+        <!-- Bejamas UI Marquee Slider with WebP Logos -->
+        <div class="flex-1 min-w-0 overflow-hidden">
+          <Marquee time={22} variant="gradient" class="py-1">
+            <div class="flex items-center gap-10 sm:gap-14 mx-4">
+              {carBrands.map((brand) => (
+                <a
+                  href="/araba-markalari"
+                  class="group flex items-center gap-3 px-4 py-2.5 bg-white hover:bg-neutral-50 border border-neutral-200 hover:border-primary/50 transition-all duration-300 shadow-2xs hover:shadow-sm"
+                  title={`${brand.name} TSE-Fahrzeugprojekt`}
+                >
+                  <SiteImage
+                    src={brand.logo.replace(/\.webp$/, '-96.webp')}
+                    srcset={`${brand.logo.replace(/\.webp$/, '-96.webp')} 96w`}
+                    sizes="90px"
+                    alt={brand.alt}
+                    class="h-7 sm:h-8 w-auto max-w-[90px] object-contain transition-transform duration-300 group-hover:scale-105"
+                    width="80"
+                    height="32"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="text-xs font-black text-black group-hover:text-primary transition-colors hidden sm:inline">
+                    {brand.name}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </Marquee>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

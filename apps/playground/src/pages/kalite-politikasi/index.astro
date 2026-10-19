@@ -1,0 +1,123 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { siteSettings, phoneHref } from '@/data/site'
+
+const todayDate = '19.08.2026'
+---
+
+<Layout
+  title="Kalite Politikası | Karakaş Mühendislik"
+  description="Karakaş Mühendislik Kalite Politikası, ISO 9001 standartları, müşteri memnuniyeti ve sürekli iyileştirme ilkelerimiz."
+>
+  <main>
+    <InternalHero
+      eyebrow="Kurumsal İlkeler"
+      title="Kalite Politikası"
+      description="Müşteri memnuniyetini esas alan, güvenilir, mevzuata tam uyumlu ve ulusal/uluslararası standartlara uygun hizmet taahhüdümüz."
+      image="/images/hero-engineering.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Giriş Kutusu -->
+        <div class="mb-10 border-l-4 border-amber-500 bg-amber-50/50 p-6 sm:p-7 text-sm sm:text-base leading-relaxed text-neutral-800 space-y-3">
+          <p>
+            <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong>; müşteri memnuniyetini esas alan, kaliteli, güvenilir ve sürdürülebilir hizmet anlayışı ile faaliyet göstermeyi temel ilke olarak benimsemektedir.
+          </p>
+          <p class="text-neutral-700">
+            Bu doğrultuda, kalite yönetim sistemimizi sürekli geliştirerek hizmetlerimizi ulusal ve uluslararası standartlara uygun şekilde sunmayı taahhüt ederiz.
+          </p>
+        </div>
+
+        <article class="space-y-8 text-neutral-800">
+          <!-- 1. Temel İlkelerimiz -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">1</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Temel İlkelerimiz</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Müşteri beklenti ve ihtiyaçlarını doğru analiz ederek zamanında ve eksiksiz hizmet sunmak</li>
+              <li>Hizmet kalitesini sürekli artırmak ve müşteri memnuniyetini en üst seviyede tutmak</li>
+              <li>Tüm süreçlerimizde kalite odaklı yaklaşımı benimsemek</li>
+              <li>Yasal mevzuatlara ve ilgili standartlara tam uyum sağlamak</li>
+              <li>Çalışanlarımızın bilgi ve yetkinliklerini artırarak sürekli gelişimlerini desteklemek</li>
+              <li>Teknolojik gelişmeleri takip ederek hizmet süreçlerimize entegre etmek</li>
+              <li>Hata ve uygunsuzlukları önleyici yaklaşımlar benimsemek</li>
+            </ul>
+          </section>
+
+          <!-- 2. Kalite Yönetim Sistemi -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">2</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Kalite Yönetim Sistemi</h2>
+            </div>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              İşletmemiz, kalite süreçlerini TSE standartları ve ilgili kalite yönetim sistemleri çerçevesinde yürütmekte olup, hizmet kalitesini sürekli iyileştirmeyi hedeflemektedir.
+            </p>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Kalite hedefleri belirlenir ve düzenli olarak takip edilir</li>
+              <li>Süreç performansları ölçülür ve analiz edilir</li>
+              <li>Müşteri geri bildirimleri dikkate alınarak iyileştirmeler yapılır</li>
+              <li>İç denetimlerle sistemin sürekliliği sağlanır</li>
+            </ul>
+          </section>
+
+          <!-- 3. Müşteri Memnuniyeti -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">3</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Müşteri Memnuniyeti</h2>
+            </div>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Müşteri memnuniyeti, tüm faaliyetlerimizin merkezinde yer almaktadır. Gelen talepler, öneriler ve şikâyetler titizlikle değerlendirilir ve hızlı çözümler üretilir.
+            </p>
+          </section>
+
+          <!-- 4. Sürekli İyileştirme -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">4</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Sürekli İyileştirme</h2>
+            </div>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Kalite yönetim sistemimizin etkinliğini artırmak amacıyla tüm süreçler düzenli olarak gözden geçirilir ve sürekli iyileştirme çalışmaları yürütülür.
+            </p>
+          </section>
+
+          <!-- 5. İletişim Bilgileri -->
+          <section class="border border-neutral-200 bg-neutral-50/70 p-6 sm:p-8">
+            <h2 class="text-lg sm:text-xl font-black text-neutral-950 border-b border-neutral-200/80 pb-3">
+              5. İletişim Bilgileri
+            </h2>
+            <div class="mt-5 space-y-2.5 text-sm sm:text-base">
+              <p><strong class="font-bold text-neutral-950">Firma / Ünvan:</strong> Karakaş Mühendislik / Resul Karakaş</p>
+              <p><strong class="font-bold text-neutral-950">Web Sitesi:</strong> <a href="https://karakasmuhendislik.com.tr" target="_blank" class="text-primary font-bold hover:underline">https://karakasmuhendislik.com.tr</a></p>
+              <p><strong class="font-bold text-neutral-950">E-posta:</strong> <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></p>
+              <p><strong class="font-bold text-neutral-950">Telefon:</strong> <a href={phoneHref} class="text-primary font-bold hover:underline">0554 816 63 02</a></p>
+              <p class="leading-relaxed">
+                <strong class="font-bold text-neutral-950">Adres:</strong><br />
+                Merkez Mahallesi İslambey Caddesi No: 12<br />
+                Altıparmak İş Merkezi Ofis No: 9<br />
+                Gaziosmanpaşa / İstanbul
+              </p>
+            </div>
+          </section>
+
+          <!-- Kapanış Taahhüt Paragrafı -->
+          <div class="border border-neutral-200 bg-white p-6 text-sm sm:text-base leading-relaxed text-neutral-700">
+            Bu kalite politikası, <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong> yönetimi tarafından onaylanmış olup tüm çalışanlarımız tarafından benimsenmesi ve uygulanması esastır.
+          </div>
+
+          <!-- Kapanış Bilgi & Tarih -->
+          <div class="border-t border-neutral-200 pt-6 flex items-center justify-between text-xs sm:text-sm text-neutral-500 font-medium">
+            <span>Kalite Politikası</span>
+            <span><strong>Son güncelleme:</strong> {todayDate}</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

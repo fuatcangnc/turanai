@@ -1,0 +1,87 @@
+{
+  "slug": "iso-belgesi-islemleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "İSO Belgesi İşlemleri",
+  "title": "İSO Belgesi İşlemleri",
+  "summary": "Karakaş Mühendislik ile ISO 9001, 14001, 45001 ve diğer yönetim sistemlerinde süreç tanımlama, dokümantasyon, iç denetim ve belgelendirme denetimine hazırlık desteği.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "İSO Belgesi İşlemleri",
+  "heroLead": "ISO belgesi işlemleri; işletmenin seçtiği yönetim standardına göre süreçlerini tanımlama, dokümantasyon oluşturma, iç denetim süreçlerini yürütme ve belgelendirme denetimine hazırlanma aşamalarını kapsar. Karakaş Mühendislik olarak ISO 9001, ISO 14001, ISO 45001 ve diğer yönetim sistemleri kapsamında işletmenize uygun belge hazırlık ve süreç yönetimi desteği sunuyoruz.",
+  "sections": [
+    {
+      "id": "iso-belgesi-nedir",
+      "heading": "ISO Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "ISO belgesi, işletmenin belirli bir yönetim standardını uyguladığını ve bunun bağımsız denetim süreçleriyle doğrulandığını gösteren uluslararası bir belgelendirme sistemidir. ISO süreçleri yalnızca evrak düzeninden ibaret olmayıp; süreç yönetimi, izlenebilirlik, risk kontrolü ve sürekli iyileştirme yaklaşımını da kapsar."
+        }
+      ]
+    },
+    {
+      "id": "dogru-standardin-secimi",
+      "heading": "Doğru Standardın Seçimi",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "ISO 9001: Kalite yönetim sistemi",
+            "ISO 14001: Çevre yönetim sistemi",
+            "ISO 45001: İş sağlığı ve güvenliği yönetim sistemi",
+            "Faaliyet alanına uygun diğer özel standartlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belgelendirme-hazirligi",
+      "heading": "Belgelendirme Hazırlığı",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Mevcut durum analizi yapılır",
+            "Gerekli prosedür ve kayıt yapısı oluşturulur",
+            "Personel görev ve sorumlulukları belirlenir",
+            "İç denetim ve yönetimin gözden geçirme süreçleri tamamlanır",
+            "Belgelendirme denetimine hazırlık sağlanır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "denetim-sureci",
+      "heading": "Denetim Süreci",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "ISO denetim sürecinde işletmenin uyguladığı yönetim sistemi incelenir, prosedürlerin fiili uygulamalarla uyumu kontrol edilir ve kayıtların standarda uygunluğu değerlendirilir. Eksik görülen noktalar için düzeltici faaliyetler planlanarak süreç tamamlanır."
+        }
+      ]
+    },
+    {
+      "id": "uygulamada-dikkat-edilmesi-gerekenler",
+      "heading": "Uygulamada Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sadece belge almak amacıyla kurulan ancak fiilen uygulanmayan sistemler, denetim sonrasında sürdürülebilir olmaz. Bu nedenle süreçlerin işletmenin gerçek işleyişine uygun şekilde kurulması, personelin sisteme adapte edilmesi ve kayıtların düzenli tutulması büyük önem taşır."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "ISO belgesi almak zor mudur?",
+      "a": "İşletmenin mevcut süreç yapısına göre değişiklik gösterebilir. Doğru hazırlık ve sistem kurulumu ile süreç daha kontrollü ilerler."
+    },
+    {
+      "q": "Her firmaya aynı ISO standardı mı gerekir?",
+      "a": "Hayır. İşletmenin faaliyet alanı, müşteri beklentileri ve yasal gerekliliklerine göre farklı ISO standartları tercih edilir."
+    },
+    {
+      "q": "Belge sonrası süreç biter mi?",
+      "a": "Hayır. ISO sistemleri sürekli iyileştirme esasına dayanır. Gözetim denetimleri, iç denetimler ve sistem güncellemeleri düzenli olarak devam eder."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "slug": "is-makinesi-uygunluk-belgesi-duzenleme-islemleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "İş Makinesi Uygunluk Belgesi Düzenleme İşlemleri",
+  "title": "İş Makinesi Uygunluk Belgesi Düzenleme İşlemleri",
+  "summary": "Karakaş Mühendislik ile iş makinelerinizin teknik kimliğini, güvenlik yapısını ve kullanım sınıfını belgeleyen uygunluk belgesi dosyasının düzenli biçimde hazırlanması.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "İş Makinesi Uygunluk Belgesi Düzenleme İşlemleri",
+  "heroLead": "İş makinesi uygunluk belgesi düzenleme hizmeti; iş makinelerinin teknik bilgilerinin doğru şekilde değerlendirilmesi, kullanım amacına uygun belge dosyasının hazırlanması ve resmi süreçlerde ihtiyaç duyulan evrak düzeninin oluşturulması için önemlidir. Karakaş Mühendislik olarak marka, model, seri numarası, ekipman yapısı ve teknik özellikleri dikkate alarak düzenli ve anlaşılır bir başvuru hazırlığı sunuyoruz.",
+  "sections": [
+    {
+      "id": "is-makinesi-uygunluk-belgesi-nedir",
+      "heading": "İş Makinesi Uygunluk Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "İş makinesi uygunluk belgesi, makinenin teknik kimliğini, temel güvenlik yapısını ve kullanım sınıfını belgelemeye yardımcı olan resmi süreç evrakıdır. Özellikle ithal edilen, yeni alınan, tescil işlemi yapılacak ya da teknik özelliklerinde değişiklik bulunan iş makinelerinde doğru belge hazırlanması büyük önem taşır."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-gerekebilir",
+      "heading": "Hangi Durumlarda Gerekebilir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "İlk kayıt ve tescil işlemlerinde",
+            "İthal iş makinelerinin belge tamamlama sürecinde",
+            "Teknik yapısı ya da ekipmanı değişen makinelerde",
+            "Kurumsal satın alma, denetim ve resmi başvuru süreçlerinde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basvuru-ve-inceleme-sureci",
+      "heading": "Başvuru ve İnceleme Süreci",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Teknik bilgilerin alınması: Makinenin marka, model, seri numarası, motor bilgisi ve ekipman detayları belirlenir.",
+            "Evrak kontrolü: Fatura, teknik katalog, ithalat evrakı ve mevcut belgeler incelenir.",
+            "Uygunluk değerlendirmesi: Makinenin kullanım amacı ve teknik sınıfı doğrultusunda belge kapsamı netleştirilir.",
+            "Dosya hazırlığı: Resmi kurum süreçlerinde kullanılabilecek düzenli belge seti oluşturulur."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Satış faturası ya da mülkiyet belgesi",
+            "Marka, model ve seri numarası bilgileri",
+            "Teknik katalog ya da üretici verileri",
+            "Varsa ithalat ve gümrük evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Eksik seri numarası, okunmayan makine etiketi, teknik katalog uyumsuzluğu ya da fiili makine ile belgeler arasındaki farklılıklar sürecin uzamasına neden olabilir. Karakaş Mühendislik, başvuru öncesinde teknik bilgilerin doğru şekilde kontrol edilmesini sağlayarak sürecin daha sağlıklı ilerlemesine yardımcı olur."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "İş makinesi uygunluk belgesi ne işe yarar?",
+      "a": "Makinenin teknik tanımını netleştirir ve resmi işlemlerde kullanılabilecek belge düzeninin oluşturulmasını sağlar."
+    },
+    {
+      "q": "İthal iş makinelerinde uygunluk belgesi gerekir mi?",
+      "a": "Evet. İthal makinelerde teknik veri, katalog ve uygunluk evraklarının eksiksiz hazırlanması sürecin doğru ilerlemesi açısından önemlidir."
+    },
+    {
+      "q": "Belge sürecini en çok ne uzatır?",
+      "a": "Seri numarası eksikliği, teknik katalog bulunmaması, belge ile makine arasındaki uyumsuzluk ve ekipman bilgilerinin net olmaması süreci uzatabilir."
+    }
+  ]
+}

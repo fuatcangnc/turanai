@@ -1,0 +1,71 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/Layout.astro'
+import BlogCard from '@/components/BlogCard.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts')
+  const categories = [...new Set(posts.map((post) => post.data.category))]
+  const slugify = (value: string) => value.toLocaleLowerCase('tr-TR').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+  return categories.map((category) => ({ params: { slug: slugify(category) }, props: { category, posts: posts.filter((post) => post.data.category === category) } }))
+}
+const { category, posts: categoryPosts } = Astro.props
+---
+
+<Layout title={`${category} | Araç Proje Blogu`} description={`${category} hakkında Karakaş Mühendislik teknik makaleleri.`}>
+  <!-- Schema.org JSON-LD BreadcrumbList -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://karakasmuhendislik.com.tr"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://karakasmuhendislik.com.tr/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": category,
+        "item": new URL(Astro.url.pathname, 'https://karakasmuhendislik.com.tr').href
+      }
+    ]
+  })} />
+  <main class="blog-index">
+    <section class="blog-intro">
+      <div class="shell blog-intro__inner">
+        <h3 class="eyebrow">Blog kategorisi</h3>
+        <h2>{category}</h2>
+        <p>Bu kategorideki araç proje, TSE uygunluk ve ruhsata işletme içerikleri.</p>
+        <nav class="breadcrumbs" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList" style="margin-top:1.5rem">
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Ana Sayfa</span></a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span>/</span>
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/blog"><span itemprop="name">Blog</span></a>
+            <meta itemprop="position" content="2" />
+          </span>
+          <span>/</span>
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">{category}</span>
+            <meta itemprop="item" content={new URL(Astro.url.pathname, 'https://karakasmuhendislik.com.tr').href} />
+            <meta itemprop="position" content="3" />
+          </span>
+        </nav>
+      </div>
+    </section>
+    <section class="shell" style="padding-top:3rem">
+      <div class="blog-grid">{categoryPosts.map((post, index) => <BlogCard post={post} index={index + 1} />)}</div>
+    </section>
+  </main>
+</Layout>

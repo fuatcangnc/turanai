@@ -1,0 +1,21 @@
+---
+/**
+ * Eski çağrılar için ince sarmalayıcı: EmDash kancalarını ve tasarım kabuğunu
+ * Layout.astro taşır. Yeni sayfalar doğrudan Layout.astro kullanabilir.
+ */
+import Layout from "./Layout.astro";
+
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+	kind?: "content" | "custom";
+	pageType?: string;
+}
+
+const props = Astro.props;
+---
+
+<Layout {...props}>
+	<slot />
+</Layout>

@@ -1,0 +1,91 @@
+{
+  "slug": "tuvturk-muayene-islemleri",
+  "category": "Tescil ve Müşavirlik",
+  "shortTitle": "TÜVTÜRK Muayene İşlemleri",
+  "title": "TÜVTÜRK Muayene İşlemleri",
+  "summary": "Periyodik araç muayenesinde ön hazırlık, teknik kontrol ve evrak düzeniyle tadilatlı araç süreçlerinde profesyonel rehberlik sağlıyoruz.",
+  "heroEyebrow": "Tescil ve Müşavirlik",
+  "heroTitle": "TÜVTÜRK Muayene İşlemleri",
+  "heroLead": "Araç muayenesi, taşıtın trafik güvenliği ve teknik yeterliliğini belirli aralıklarla değerlendiren resmi bir kontrol mekanizmasıdır. Karakaş Mühendislik olarak muayene öncesi hazırlıktan teknik kontrole, evrak düzeninden tadilatlı araç takibine kadar sürecinizi kolaylaştırıyoruz.",
+  "sections": [
+    {
+      "id": "tuvturk-muayenesi-nedir",
+      "heading": "TÜVTÜRK Muayenesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Araç muayenesi; fren sistemi, aydınlatma donanımı, lastikler, görüş alanı, egzoz emisyonu ve diğer temel güvenlik bileşenlerinin yetkili mercilerce denetlendiği bir süreçtir. Temel amaç, aracın yol koşullarında güvenle seyrine devam edebilmesini temin etmektir."
+        }
+      ]
+    },
+    {
+      "id": "muayene-oncesi-hazirlik",
+      "heading": "Muayene Öncesi Hazırlık",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Muayene randevusunun zamanında planlanması",
+            "Ruhsat ve istenen resmi evrakların eksiksiz hazırlanması",
+            "Far, sinyal, silecek ve lastiklerin ön kontrolünün yapılması",
+            "Gözle görülen teknik arızaların muayeneden önce giderilmesi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kontrol-edilen-noktalar",
+      "heading": "Kontrol Edilen Noktalar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Fren sistemi performansı ve denge durumu",
+            "Aydınlatma ve görünürlük bileşenleri",
+            "Lastiklerin genel sağlık durumu",
+            "Egzoz emisyonu ve çevre standartlarına uyum",
+            "Aracın temel güvenlik donanımları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Geçerli araç ruhsatı",
+            "Araç sahibinin kimlik bilgileri",
+            "İhtiyaç duyulursa tamamlayıcı teknik belgeler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sik-gorulen-kusurlar",
+      "heading": "Sık Görülen Kusurlar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Muayene esnasında en sık tespit edilen olumsuzluklar; arızalı aydınlatma elemanları, yetersiz lastik diş derinliği, silecek sorunları, fren sistemi eksiklikleri ve yüksek egzoz emisyon değerleri şeklinde sıralanır."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "TÜVTÜRK muayenesinde en çok nelere bakılır?",
+      "a": "Fren sistemi, aydınlatma donanımı, lastikler, görüş sistemleri ve egzoz emisyonu gibi temel güvenlik bileşenleri titizlikle kontrol edilir."
+    },
+    {
+      "q": "Muayene öncesi hazırlık neden önemlidir?",
+      "a": "Ön kontrol sayesinde basit teknik aksaklıklar muayeneden önce giderilebilir ve sürecin çok daha sorunsuz tamamlanması sağlanabilir."
+    },
+    {
+      "q": "Tadilatlı araçlarda ekstra dikkat gerekir mi?",
+      "a": "Evet, tadilatlı araçlarda proje, teknik onay ve ruhsat kayıtlarının güncel ve eksiksiz olması büyük bir önem taşır."
+    }
+  ]
+}

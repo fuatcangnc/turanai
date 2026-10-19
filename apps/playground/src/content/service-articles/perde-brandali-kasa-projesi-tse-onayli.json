@@ -1,0 +1,111 @@
+{
+  "slug": "perde-brandali-kasa-projesi-tse-onayli",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Perde Brandalı Kasa Projesi",
+  "title": "Perde Brandalı Kasa Projesi | TSE Onaylı",
+  "summary": "Yandan hızlı yükleme imkanı sunan raylı perde brandalı kamyon ve kamyonet kasaları için TSE onaylı proje, muayene ve ruhsat süreçleri Karakaş Mühendislik'te.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Perde Brandalı Kasa Projesi",
+  "heroLead": "Perde brandalı kasa projesi, kamyon ve kamyonetlerde yükleme ve boşaltma kolaylığı sağlayan kayar perde sistemli kasaların TSE onaylı projeyle mevzuata uygun hale getirilmesini kapsayan bir araç tadilatıdır. Karakaş Mühendislik olarak perde brandalı kasa dönüşümlerinde proje hazırlığı, teknik uygunluk süreçleri, TÜVTÜRK tadilat muayenesi ve ruhsata işletme adımlarında profesyonel destek veriyoruz.",
+  "sections": [
+    {
+      "id": "perde-brandali-kasa-nedir",
+      "heading": "Perde Brandalı Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yan cepheleri raylı düzenek üzerinde açılıp kapanan brandadan oluşan bu kasa tipi, hem üstten hem de yandan yükleme yapılmasına imkan tanır. Özellikle lojistik ve taşımacılık alanında hızlı operasyon ihtiyacını karşıladığı için yoğun biçimde tercih edilir."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Perde brandalı montaj, aracın ölçülerini, ağırlık yapısını ve kullanım biçimini değiştirdiği için araç tadilatı kapsamına alınır. Yapılan değişikliğin güvenli ve kurallara uygun olduğunu kanıtlayan TSE onaylı araç projesinin hazırlanması zorunludur. Belgesiz uygulamalar TÜVTÜRK muayenesinde aksaklıklara ve ruhsat engellerine yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Standart kasadan perde brandalı kasaya geçiş yapılması",
+            "Sıfırdan perde sistemli kasa montajı gerçekleştirilmesi",
+            "Hasarlı kasaların perde sistemli modelle değiştirilmesi",
+            "Lojistik taşımacılıkta hızlı yükleme ihtiyacı oluşması",
+            "Esnek yük taşıma altyapısı kurulmak istenmesi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Araç ölçüleri alınır ve uygun kasa tipi belirlenir",
+            "Perde brandalı kasa için mühendislik projesi hazırlanır",
+            "Kasa ve raylı perde sistemi montajı gerçekleştirilir",
+            "TSE kontrol ve onay süreci tamamlanır",
+            "TÜVTÜRK tadilat muayenesi yapılır",
+            "Noter aracılığıyla ruhsata işletme işlemleri bitirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ölçümleri alınmış araç için gerekli proje evrakları aşağıdaki gibidir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Yapılan tadilata ait işçilik faturası",
+            "Kasa ve perde sistemi ekipman bilgileri",
+            "Kimlik veya firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yandan hızlı yükleme ve boşaltma imkanı sağlar",
+            "Zaman tasarrufu oluşturur",
+            "Lojistik operasyonlarda verimliliği artırır",
+            "Farklı yük tiplerine uygun esnek kullanım sunar",
+            "Yüklerin dış etkenlerden korunmasına yardımcı olur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme-zorunlu-mu",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Perde brandalı kasa uygulaması sonrası aracın teknik özellikleri değiştiğinden, tadilatın ruhsata işlenmesi gerekir. Ruhsata işlenmeyen uygulamalar TÜVTÜRK muayenesinde sorun yaratabilir ve trafik cezalarıyla karşılaşılmasına neden olabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

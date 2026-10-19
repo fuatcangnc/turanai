@@ -1,0 +1,100 @@
+---
+import "@/styles/globals.css";
+import { Font } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { EmDashBodyEnd, EmDashBodyStart, EmDashHead } from "emdash/ui";
+import { createPublicPageContext } from "emdash/page";
+import SiteHeader from "@/components/SiteHeader.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp.astro";
+
+/**
+ * Uygulama kabuğu: Karakas/Sveltia şablonunun Layout.astro'su + EmDash kancaları.
+ * EmDashHead / BodyStart / BodyEnd ve createPublicPageContext korunur; aksi hâlde
+ * admin enjeksiyonu, içerik önizleme ve canlı koleksiyon bağlamı kaybolur.
+ */
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	kind?: "content" | "custom";
+	pageType?: string;
+	/**
+	 * Identity of the CMS entry this page renders. Passing it lets EmDashHead
+	 * resolve hreflang alternates from the translation group — including
+	 * translated entries whose slug differs.
+	 */
+	content?: { collection: string; id: string; slug?: string | null };
+	/** Absolute canonical URL for this locale (defaults to the current URL). */
+	canonical?: string;
+	/** Per-entry SEO overrides (EmDash `seo` field). */
+	seo?: { ogTitle?: string | null; ogDescription?: string | null; ogImage?: string | null; robots?: string | null };
+}
+
+const {
+	title: rawTitle = "Turan Playground",
+	description: rawDescription = "EmDash + Astro Boilerplate · Karakas/Sveltia Design",
+	image,
+	kind = "custom",
+	pageType = "page",
+	content,
+	canonical: canonicalInput,
+	seo,
+} = Astro.props;
+
+const title = rawTitle.length > 60 ? `${rawTitle.slice(0, 57).trimEnd()}...` : rawTitle;
+const description = rawDescription.length > 155 ? `${rawDescription.slice(0, 152).trimEnd()}...` : rawDescription;
+const origin = Astro.site ?? Astro.url.origin;
+const rawLocalePath = Astro.currentLocale
+	? getRelativeLocaleUrl(Astro.currentLocale, Astro.url.pathname)
+	: Astro.url.pathname;
+// Match the served URL shape (no trailing slash except for the root).
+const canonicalPath = rawLocalePath.length > 1 ? rawLocalePath.replace(/\/$/, "") : rawLocalePath;
+const canonical = canonicalInput ? new URL(canonicalInput, origin).href : new URL(canonicalPath, origin).href;
+const imageUrl = new URL(image ?? "/og-image.webp", origin).href;
+const pageCtx = createPublicPageContext({
+	Astro,
+	kind,
+	pageType,
+	title,
+	description,
+	canonical,
+	image: imageUrl,
+	seo,
+	content,
+});
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale ?? "en"}>
+	<head>
+		<meta charset="UTF-8" />
+		<Font cssVariable="--font-sans" preload />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#121820" />
+		{/* Title lives here; description/canonical/OG/Twitter/JSON-LD and the
+		    per-locale hreflang set are emitted by EmDashHead from pageCtx. */}
+		<title>{title}</title>
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Turan Playground" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<EmDashHead page={pageCtx} />
+	</head>
+	<body class="font-sans">
+		<EmDashBodyStart page={pageCtx} />
+		<SiteHeader />
+		<slot />
+		<SiteFooter />
+		<FloatingWhatsApp />
+		<script is:inline>
+			const loadInit = () => import("/scripts/motion-init.js");
+			window.addEventListener("scroll", loadInit, { once: true, passive: true });
+			window.addEventListener("pointerdown", loadInit, { once: true });
+			window.addEventListener("keydown", loadInit, { once: true });
+		</script>
+		<EmDashBodyEnd page={pageCtx} />
+	</body>
+</html>

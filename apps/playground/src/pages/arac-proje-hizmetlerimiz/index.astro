@@ -1,0 +1,359 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import ServiceCard from '@/components/ServiceCard.astro'
+import { defaultServices, serviceCategories, whatsappHref } from '@/data/site'
+
+const landingCategories = ['Araç Projeleri', 'Dönüşüm', 'Söküm', 'Motosiklet', 'Belgelendirme']
+import { ArrowRight, BadgeCheck, Check, FileCheck, ShieldCheck, Wrench } from '@lucide/astro'
+
+const siteUrl = 'https://karakasmuhendislik.com.tr'
+const pageUrl = `${siteUrl}/arac-proje-hizmetlerimiz`
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}/#webpage`,
+      'url': pageUrl,
+      'name': 'Araç Proje Hizmetleri | TSE Onaylı Mühendislik ve Ruhsata İşletme',
+      'description': 'Araç proje çizimi, tadilat, dönüşüm, TSE AİTM onayı ve ruhsata işletme süreçlerinde yetkili makine mühendisliği hizmetleri.',
+      'breadcrumb': {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Ana Sayfa',
+            'item': siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Araç Proje Hizmetlerimiz',
+            'item': pageUrl,
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${pageUrl}/#service`,
+      'name': 'TSE Onaylı Araç Proje Hizmetleri',
+      'provider': {
+        '@type': 'LocalBusiness',
+        'name': 'Karakaş Mühendislik',
+        'telephone': '0554 816 63 02',
+        'address': {
+          '@type': 'PostalAddress',
+          'streetAddress': 'Altıparmak İş Merkezi Ofis No: 9',
+          'addressLocality': 'Gaziosmanpaşa',
+          'addressRegion': 'İstanbul',
+          'addressCountry': 'TR',
+        },
+        'url': siteUrl,
+      },
+      'serviceType': 'Araç Tadilat ve Projelendirme Hizmetleri',
+      'areaServed': 'TR',
+    },
+  ],
+}
+---
+
+<Layout
+  title="Araç Proje Hizmetleri | TSE Onay ve Ruhsata İşletme | Karakaş"
+  description="TSE AİTM onaylı araç proje hizmetleri: Karavan, motor değişimi, çeki demiri, koltuk söküm, LPG söküm ve engelli tertibatı projelerini yetkili mühendislikle ruhsata işletin."
+>
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <main>
+    <InternalHero
+      eyebrow="Hizmetlerimiz"
+      title="Araç Proje Hizmetleri"
+      description="Aracınızda yapılacak değişikliğe uygun teknik proje, TSE onay ve ruhsata işletme hizmetini bulun. Her hizmet kendi kapsamı ve başvuru adımlarıyla açıklanmıştır."
+      image="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp"
+    />
+
+    <!-- Service Categories & Cards -->
+    <section class="service-list-section">
+      <div class="shell">
+        {
+          landingCategories.map((category) => {
+            const services = defaultServices.filter((service) => service.category === category)
+            return (
+              <div class="category-block">
+                <div class="category-block__head">
+                  <h2>{category}</h2>
+                  <span>{services.length} hizmet</span>
+                </div>
+                <div class="service-grid">
+                  {services.map((service) => (
+                    <ServiceCard service={service} />
+                  ))}
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </section>
+
+    <!-- Comprehensive SEO Article: Araç Proje ve Araç Proje Hizmetleri Rehberi -->
+    <article class="border-t border-neutral-200 bg-white py-16 text-neutral-900 md:py-24">
+      <div class="shell max-w-5xl">
+        
+        <!-- Article Header -->
+        <div class="border-b border-neutral-200 pb-10">
+          <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+            Teknik Bilgilendirme ve Mevzuat
+          </h3>
+          <h2 class="mt-3 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.05] tracking-[-0.05em] text-neutral-950">
+            Araç Proje Hizmetleri ve TSE Onay Süreci Rehberi
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-neutral-700 sm:text-lg">
+            Karayolları Trafik Kanunu ve Araçların İmal, Tadil ve Montajı (AİTM) Hakkında Yönetmelik gereğince, fabrika çıkış özelliklerinde değişiklik yapılan her aracın teknik olarak belgelendirilmesi zorunludur. Karakaş Mühendislik, mevzuata uygun araç tadilat projeleri hazırlayarak tescil sürecini güvenle tamamlamanızı sağlar.
+          </p>
+        </div>
+
+        <!-- 01. Araç Projesi Nedir? -->
+        <section class="mt-14" aria-labelledby="what-is-vehicle-project">
+          <h3 id="what-is-vehicle-project" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Araç Projesi Nedir ve Ne Zaman Gereklidir?
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            <strong>Araç projesi</strong>; bir aracın gövdesinde, motorunda, koltuk düzeninde, yakıt sisteminde veya yürüyen aksamında yapılan yapısal değişikliklerin teknik mevzuata uygunluğunu gösteren resmi mühendislik dosyasıdır. Yetkili makine mühendisleri tarafından hazırlanan bu dosya olmadan yapılan değişiklikler muayeneden geçemez, araç ruhsatına işlenemez ve trafikte idari para cezası ile trafikten men yaptırımına neden olur.
+          </p>
+
+          <div class="mt-6 rounded-none border border-neutral-200 bg-[#f8f9fa] p-6 sm:p-7">
+            <h4 class="text-base font-bold text-neutral-950">
+              Hangi araç tadilatlarında proje çizimi zorunludur?
+            </h4>
+            <ul class="mt-4 grid gap-3 text-sm text-neutral-700 sm:grid-cols-2">
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Panelvan veya minibüslerin <strong>karavana dönüştürülmesi</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Araca <strong>çıkma veya sandık motor montajı</strong> (motor değişimi)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Römork ve karavan çekmek için <strong>çeki demiri montajı</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Mevcut <strong>LPG sisteminin sökülmesi ve iptali</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Yolcu veya yük kapasitesini değiştiren <strong>koltuk sökümü / ilavesi</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Özel tüketim ve kullanım için <strong>engelli tertibatı montajı</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Sürücü kursları için <strong>çift pedal donanımı ekleme/iptali</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                <span>Ticari kurye motosikletlerinde <strong>taşıma kutusu / çanta işletme</strong></span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 02. TSE Onay ve Tescil Süreci -->
+        <section class="mt-14" aria-labelledby="tse-process-steps">
+          <h3 id="tse-process-steps" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            TSE Onaylı Araç Tadilat Proje Süreci Nasıl İlerler?
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Araç tadilatının yasal hale gelmesi dört temel adımdan oluşan kontrollü bir akışla yürütülür:
+          </p>
+
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="border border-neutral-200 bg-[#f8f9fa] p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-primary">Adım 01</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">Teknik Ön Kontrol</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                Araç ruhsatı, şasi bilgileri ve uygulanacak tadilatın fatura/tip onay belgeleri mevzuata uygunluk açısından incelenir.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-[#f8f9fa] p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-primary">Adım 02</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">Mühendislik Çizimi</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                Yetkili makine mühendisi tarafından teknik hesaplamalar, ağırlık dağılımları ve AİTM standartlarına uygun proje dosyası çizilir.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-[#f8f9fa] p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-primary">Adım 03</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">TSE AKM Kontrolü</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                Araç, TSE Araç Kontrol Merkezinde fiziki incelemeden geçer. Proje onaylanarak Montaj Uygunluk Raporu düzenlenir.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-[#f8f9fa] p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-primary">Adım 04</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">TÜVTÜRK ve Tescil</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                TÜVTÜRK muayene istasyonunda tadilat tespiti yapılır ve noter üzerinden güncel araç ruhsatı teslim alınır.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03. Öne Çıkan Araç Proje Hizmetleri -->
+        <section class="mt-14" aria-labelledby="featured-services-detail">
+          <h3 id="featured-services-detail" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Sık Tercih Edilen Araç Proje Hizmetlerimiz
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Karakaş Mühendislik çatısı altında en çok talep gören teknik araç projelerinin ayrıntıları ve işlem hedefleri:
+          </p>
+
+          <div class="mt-6 divide-y divide-neutral-200 border border-neutral-200">
+            <div class="p-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
+              <div class="max-w-2xl">
+                <h4 class="text-lg font-bold text-neutral-950">
+                  <a href="/karavan-projesi" class="hover:text-primary transition">Karavan Projesi ve Karavana Dönüşüm</a>
+                </h4>
+                <p class="mt-2 text-sm leading-relaxed text-neutral-600">
+                  Panelvan, otobüs veya minibüs cinsi araçların M1 sınıfı özel amaçlı motokaravana dönüşümü için gerekli yerleşim planı, yatak, mutfak, havalandırma ve ağırlık hesaplarını içeren TSE onay projesidir.
+                </p>
+              </div>
+              <a href="/karavan-projesi" class="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline sm:mt-0 shrink-0">
+                İncele <ArrowRight size={14} />
+              </a>
+            </div>
+
+            <div class="p-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
+              <div class="max-w-2xl">
+                <h4 class="text-lg font-bold text-neutral-950">
+                  <a href="/arac-motor-degisim-projesi" class="hover:text-primary transition">Motor Değişim Projesi ve Ruhsata İşletme</a>
+                </h4>
+                <p class="mt-2 text-sm leading-relaxed text-neutral-600">
+                  Araca aynı veya farklı güç ve hacimde sandık/çıkma motor takıldığında motor seri numarası, fatura ve teknik uyumluluk dosyasının hazırlanarak ruhsata tescil edilmesini sağlar.
+                </p>
+              </div>
+              <a href="/arac-motor-degisim-projesi" class="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline sm:mt-0 shrink-0">
+                İncele <ArrowRight size={14} />
+              </a>
+            </div>
+
+            <div class="p-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
+              <div class="max-w-2xl">
+                <h4 class="text-lg font-bold text-neutral-950">
+                  <a href="/ceki-demiri-projesi" class="hover:text-primary transition">Çeki Demiri Projesi ve Ruhsata Kayıt</a>
+                </h4>
+                <p class="mt-2 text-sm leading-relaxed text-neutral-600">
+                  E belgeli çeki demirinin araç şasisine montajı sonrası çekme kapasitesi, montaj uygunluğu ve TSE onay belgesinin düzenlenmesi hizmetidir.
+                </p>
+              </div>
+              <a href="/ceki-demiri-projesi" class="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline sm:mt-0 shrink-0">
+                İncele <ArrowRight size={14} />
+              </a>
+            </div>
+
+            <div class="p-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
+              <div class="max-w-2xl">
+                <h4 class="text-lg font-bold text-neutral-950">
+                  <a href="/lpg-sokum-projesi" class="hover:text-primary transition">LPG Söküm Projesi</a>
+                </h4>
+                <p class="mt-2 text-sm leading-relaxed text-neutral-600">
+                  LPG yakıt sisteminin araçtan yetkili serviste sökülmesinin ardından yakıt cinsinin ruhsatta tekrar sadece benzin veya dizel olarak güncellenmesi için hazırlanan tadilat projesidir.
+                </p>
+              </div>
+              <a href="/lpg-sokum-projesi" class="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline sm:mt-0 shrink-0">
+                İncele <ArrowRight size={14} />
+              </a>
+            </div>
+
+            <div class="p-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
+              <div class="max-w-2xl">
+                <h4 class="text-lg font-bold text-neutral-950">
+                  <a href="/engelli-aparati-montaj-projesi" class="hover:text-primary transition">Engelli Aparatı Montaj Projesi</a>
+                </h4>
+                <p class="mt-2 text-sm leading-relaxed text-neutral-600">
+                  Ortopedik engeli bulunan sürücüler için elden gaz-fren, sol ayak gaz pedalı veya direksiyon topuzu gibi özel tertibatların araca montajı ve ruhsata tescil edilmesini kapsar.
+                </p>
+              </div>
+              <a href="/engelli-aparati-montaj-projesi" class="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline sm:mt-0 shrink-0">
+                İncele <ArrowRight size={14} />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04. Gerekli Belgeler -->
+        <section class="mt-14" aria-labelledby="required-documents">
+          <h3 id="required-documents" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Araç Projesi Başvurusunda İstenen Evraklar
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Proje hazırlığına başlamadan önce aşağıdaki evrakların temin edilmesi süreci hızlandırır:
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-3">
+            <div class="border border-neutral-200 bg-white p-5">
+              <FileCheck class="size-6 text-[#32667c]" />
+              <h4 class="mt-3 text-sm font-bold text-neutral-950">Araç Ruhsatı</h4>
+              <p class="mt-1.5 text-xs text-neutral-600 leading-relaxed">
+                Aracın mevcut tescil belgesi aslı veya noter tasdikli sureti.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-white p-5">
+              <Wrench class="size-6 text-[#32667c]" />
+              <h4 class="mt-3 text-sm font-bold text-neutral-950">Montaj ve Parça Faturası</h4>
+              <p class="mt-1.5 text-xs text-neutral-600 leading-relaxed">
+                Tadilatı yapan servisin işçilik faturası ile takılan parçaların fatura ve tip onay belgeleri.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-white p-5">
+              <BadgeCheck class="size-6 text-[#32667c]" />
+              <h4 class="mt-3 text-sm font-bold text-neutral-950">Teknik Uygunluk Belgeleri</h4>
+              <p class="mt-1.5 text-xs text-neutral-600 leading-relaxed">
+                Çeki demiri E belgesi, motor gümrük beyannamesi veya parça uygunluk sertifikaları.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05. Neden Karakaş Mühendislik? -->
+        <section class="mt-14 border-t border-neutral-200 pt-10" aria-labelledby="why-karakas">
+          <h3 id="why-karakas" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Neden Karakaş Mühendislik?
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            İstanbul Gaziosmanpaşa merkezli ofisimizde, Türk Standardları Enstitüsü (TSE) tarafından yetkilendirilmiş AİTM uzmanı makine mühendislerimizle tüm araç projelerini mevzuata tam uyumlu olarak hazırlıyoruz. Dosyanızın ön kontrolünden proje çizimine, TSE randevusundan TÜVTÜRK tespitine kadar her aşamada şeffaf ve hızlı mühendislik desteği sağlıyoruz.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href={whatsappHref('Merhaba, araç projesi hizmetleriniz hakkında detaylı bilgi ve fiyat teklifi almak istiyorum.')}
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex h-12 items-center gap-2.5 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white shadow-sm transition-colors"
+            >
+              <span>WhatsApp ile Projenizi Danışın</span>
+              <ArrowRight size={15} />
+            </a>
+            <a
+              href="/iletisim"
+              class="inline-flex h-12 items-center gap-2 border border-neutral-900 bg-white hover:bg-neutral-950 hover:text-white px-6 text-xs font-black uppercase tracking-wider text-neutral-950 transition-colors"
+            >
+              <span>İletişim ve Ofis Konumu</span>
+              <ArrowRight size={15} />
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+</Layout>

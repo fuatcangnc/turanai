@@ -1,0 +1,217 @@
+{
+  "title": "Hasta Nakil Aracına Dönüşüm Projesi | TSE Onaylı | Karakaş",
+  "shortTitle": "Hasta Nakil Aracı Dönüşüm Projesi",
+  "slug": "hasta-nakil-araci-donusum-projesi",
+  "category": "Dönüşüm",
+  "summary": "Hasta nakil aracı projesi için kabin, sedye, refakatçi ve teknik donanım kontrollerini; gerekli belgeleri ve TSE adımlarını inceleyin.",
+  "image": "/hizmetler/hasta-nakil-araci-donusum-projesi.webp",
+  "featured": false,
+  "order": 11,
+  "heroEyebrow": "Hasta Nakil Aracı | TSE Onaylı",
+  "heroTitle": "Hasta Nakil Aracına Dönüşüm Projesi",
+  "heroDescription": "Araç gövdesini, hasta kabini yerleşimini, sedye bağlantılarını ve teknik donanımları birlikte kontrol edelim. Proje ile onay kapsamını aracınıza göre netleştirelim.",
+  "imageAlt": "Hasta nakil aracına dönüşüm projesi için teknik inceleme",
+  "imageTitle": "Hasta Nakil Aracına Dönüşüm Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, hasta nakil aracına dönüşüm projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Hasta nakil aracı dönüşümü",
+  "introTitle": "Hasta kabini planında önce hangi alanlar kontrol edilir?",
+  "introText": "Dönüşüm yalnız sedyenin araca yerleştirilmesiyle tamamlanmaz. Araç sınıfı, kabin ölçüleri, hasta giriş alanı, sedye ve refakatçi bağlantıları, iç kaplama, havalandırma ve elektrik düzeni kullanım amacıyla birlikte değerlendirilir.",
+  "technicalChecks": [
+    {
+      "title": "Araç sınıfı ve gövde",
+      "description": "İç hacim, kapı açıklıkları ve taşıma kapasitesi dönüşüm planıyla karşılaştırılır."
+    },
+    {
+      "title": "Sedye ve hasta alanı",
+      "description": "Sedye hareketi, sabitleme noktaları ve hasta transfer alanı kontrol edilir."
+    },
+    {
+      "title": "Refakatçi güvenliği",
+      "description": "Refakatçi koltuğu ile emniyet kemeri bağlantıları yerleşimle birlikte incelenir."
+    },
+    {
+      "title": "Kabin sistemleri",
+      "description": "Aydınlatma, elektrik, ısıtma, havalandırma ve iç kaplama düzeni değerlendirilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfı, koltuk sayısı ve teknik kayıtları görmek için."
+    },
+    {
+      "title": "Araç teknik bilgileri",
+      "description": "Gövde, iç ölçü ve taşıma kapasitesini değerlendirmek için."
+    },
+    {
+      "title": "Hasta kabini yerleşimi",
+      "description": "Sedye, refakatçi, dolap ve geçiş alanlarının konumunu incelemek için."
+    },
+    {
+      "title": "Donanım belgeleri",
+      "description": "Sedye bağlantısı, koltuk, elektrik ve diğer ekipmanları dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Dönüşüm fotoğrafları",
+      "description": "Kabin bölmesi, kapılar, bağlantılar ve teknik sistemleri görmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Hasta kabini ve güvenlik donanımları",
+    "title": "Kabin yerleşimi ile araç tekniği nasıl eşleştirilir?",
+    "leftTitle": "Hasta ve refakatçi alanı",
+    "leftItems": [
+      {
+        "title": "Sedye yerleşimi",
+        "description": "Hasta transferi ve sedye hareketi için ayrılan alan."
+      },
+      {
+        "title": "Sedye sabitleme",
+        "description": "Seyir sırasında sedyeyi araç yapısına bağlayan sistem."
+      },
+      {
+        "title": "Refakatçi koltuğu",
+        "description": "Koltuk ile emniyet kemerinin güvenli yerleşimi."
+      },
+      {
+        "title": "Giriş ve geçiş alanı",
+        "description": "Kapı açıklıkları ile kabin içindeki hareket alanı."
+      }
+    ],
+    "rightTitle": "Kabin teknik sistemleri",
+    "rightItems": [
+      {
+        "title": "İç kaplama",
+        "description": "Temizlenebilir yüzeyler ile sabit ekipman bağlantılarının düzeni."
+      },
+      {
+        "title": "Havalandırma ve ısıtma",
+        "description": "Hasta kabinindeki hava ve sıcaklık düzeninin projedeki yeri."
+      },
+      {
+        "title": "Aydınlatma ve elektrik",
+        "description": "Kabin tesisatı, koruma elemanları ve donanım beslemeleri."
+      },
+      {
+        "title": "Depolama ve ekipman",
+        "description": "Dolap ve cihazların seyir sırasında güvenli sabitlenmesi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Hasta nakil aracı için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve kabin planını gönderin.",
+    "description": "Araç gövdesini, sedye yerleşimini ve donanım kapsamını dönüşüm ilerlemeden önce kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç uygunluk ön kontrolü",
+      "description": "Ruhsat, araç gövdesi, iç ölçüler ve kullanım amacı incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Kabin ve donanım planı",
+      "description": "Sedye, refakatçi, geçiş alanı ve teknik sistemler yerleşime alınır."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "Araç ve kabin bilgileri gerekli teknik belgelerle projeye işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Dönüştürülen araç ve proje dosyası güncel kapsamda incelemeye sunulur."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onaydan sonraki işlemler kullanım sınıfı ve dosyaya göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; araç sınıfı, kabin dönüşümünün kapsamı, sedye ve koltuk bağlantıları, teknik donanımlar ile eksik belgelere göre değişir.",
+    "items": [
+      {
+        "title": "Kabin dönüşümü",
+        "description": "İç yerleşim ve sabit ekipmanların değerlendirilmesi"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Araç, donanım ve bağlantı bilgilerinin dosyalanması"
+      },
+      {
+        "title": "Onay adımları",
+        "description": "Güncel kurum işlemlerinin dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Yetersiz transfer alanı",
+      "description": "Sedye giriş ve hareket alanının araç gövdesine göre planlanmaması."
+    },
+    {
+      "title": "Belirsiz sedye bağlantısı",
+      "description": "Sabitleme sisteminin araç yapısıyla ilişkisinin gösterilmemesi."
+    },
+    {
+      "title": "Uygunsuz refakatçi koltuğu",
+      "description": "Koltuk ve kemer bağlantılarının birlikte değerlendirilmemesi."
+    },
+    {
+      "title": "Güvensiz kabin ekipmanı",
+      "description": "Dolap veya cihazların seyir yüklerine göre sabitlenmemesi."
+    },
+    {
+      "title": "Eksik tesisat bilgisi",
+      "description": "Elektrik, havalandırma veya ısıtma düzeninin dosyada açıklanmaması."
+    },
+    {
+      "title": "Yanlış hizmet sınıfı",
+      "description": "Planlanan kullanım ile araç ve başvuru kapsamının uyuşmaması."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Hasta nakil aracına dönüşüm projesi nedir?",
+      "answer": "Uygun bir aracın hasta taşıma kullanımına hazırlanmasında kabin, sedye, refakatçi ve teknik donanım yerleşimini gösteren proje dosyasıdır."
+    },
+    {
+      "question": "Her panelvan hasta nakil aracına dönüştürülebilir mi?",
+      "answer": "Her araç uygun değildir. Gövde, iç hacim, kapı açıklıkları, taşıma kapasitesi ve planlanan hizmet sınıfı birlikte incelenir."
+    },
+    {
+      "question": "Araca sedye koymak dönüşüm için yeterli mi?",
+      "answer": "Hayır. Sedye sabitlemesi, transfer alanı, refakatçi düzeni, kabin sistemleri ve diğer güvenlik donanımları da değerlendirilir."
+    },
+    {
+      "question": "Hasta nakil aracı ile ambulans aynı mıdır?",
+      "answer": "Hizmet sınıfı ve donanım kapsamı aynı kabul edilmemelidir. Aracın hangi amaçla kullanılacağı başta belirlenmeli, güncel sağlık ve araç mevzuatı buna göre kontrol edilmelidir."
+    },
+    {
+      "question": "Dönüşüm tamamlandıktan sonra proje hazırlanabilir mi?",
+      "answer": "Mevcut araç ve donanımlar ön incelemeye alınabilir. Kabinde ölçü, bağlantı veya belge uyumsuzluğu varsa başvurudan önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Hasta nakil aracı projesi fiyatı ne kadar?",
+      "answer": "Fiyat araç sınıfı, kabin yerleşimi, donanımlar ve proje kapsamına göre değişir. Ruhsat ve kabin planı incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Araç ve kabin ön kontrolü",
+      "description": "Gövde ile hasta kabini planı dönüşüm öncesinde birlikte incelenir."
+    },
+    {
+      "title": "Donanıma göre teknik dosya",
+      "description": "Sedye, koltuk ve kabin sistemleri aynı projede ele alınır."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje ve onay adımları aracın kullanım kapsamına göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, kabin yerleşimini ve donanım listesini getirin. Dönüşüm ile proje dosyasının kapsamını görüşmede netleştirelim."
+}

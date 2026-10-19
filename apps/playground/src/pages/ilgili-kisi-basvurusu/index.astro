@@ -1,0 +1,124 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { siteSettings, phoneHref } from '@/data/site'
+
+const todayDate = '19.08.2026'
+---
+
+<Layout
+  title="İlgili Kişi Başvurusu ve KVKK Hakları | Karakaş Mühendislik"
+  description="6698 sayılı KVKK kapsamında ilgili kişi başvuru yöntemleri, haklarınız ve veri sorumlusu iletişim bilgileri."
+>
+  <main>
+    <InternalHero
+      eyebrow="KVKK ve Yasal Haklar"
+      title="İlgili Kişi Başvuru Formu ve Haklar"
+      description="6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca veri sorumlusuna başvuru hakkı ve yöntemleri."
+      image="/images/project-guidance.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Yasal Uyarı Kutusu -->
+        <div class="mb-10 border-l-4 border-primary bg-neutral-50 p-5 sm:p-6 text-sm leading-relaxed text-neutral-800 shadow-xs">
+          <strong class="font-black text-neutral-950 uppercase tracking-wide">Yasal Uyarı:</strong> Bu metin bilgilendirme amaçlı şablondur; hukuki danışmanlık niteliği taşımaz. Mevzuata tam uyum için bir hukuk danışmanına başvurmanızı öneririz.
+        </div>
+
+        <article class="prose max-w-none text-neutral-800 space-y-10">
+          <!-- 1. Veri Sorumlusu -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              1. Veri Sorumlusu
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, veri sorumlusu sıfatıyla:
+            </p>
+            <div class="mt-5 space-y-2.5 text-sm sm:text-base border-t border-neutral-100 pt-4">
+              <p><strong class="font-bold text-neutral-950">Firma / Ünvan:</strong> Karakaş Mühendislik / Resul Karakaş</p>
+              <p><strong class="font-bold text-neutral-950">Web Sitesi:</strong> <a href="https://karakasmuhendislik.com.tr" target="_blank" class="text-primary font-bold hover:underline">https://karakasmuhendislik.com.tr</a></p>
+              <p><strong class="font-bold text-neutral-950">E-posta:</strong> <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></p>
+              <p><strong class="font-bold text-neutral-950">Telefon:</strong> <a href={phoneHref} class="text-primary font-bold hover:underline">0554 816 63 02</a></p>
+              <p class="leading-relaxed">
+                <strong class="font-bold text-neutral-950">Adres:</strong><br />
+                Merkez Mahallesi İslambey Caddesi No: 12<br />
+                Altıparmak İş Merkezi Ofis No: 9<br />
+                Gaziosmanpaşa / İstanbul
+              </p>
+            </div>
+          </section>
+
+          <!-- 2. İlgili Kişinin Hakları -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              2. İlgili Kişinin Hakları
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              KVKK’nın 11. maddesi kapsamında herkes, veri sorumlusuna başvurarak aşağıdaki haklara sahiptir:
+            </p>
+            <ul class="mt-5 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Kişisel verilerinin işlenip işlenmediğini öğrenme</li>
+              <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+              <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+              <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+              <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+              <li>KVKK’ya uygun olarak silinmesini veya yok edilmesini isteme</li>
+              <li>Bu işlemlerin üçüncü kişilere bildirilmesini isteme</li>
+              <li>Otomatik sistemler ile analiz edilmesi sonucu aleyhe bir sonucun ortaya çıkmasına itiraz etme</li>
+              <li>Kanuna aykırı işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme</li>
+            </ul>
+          </section>
+
+          <!-- 3. Başvuru Yöntemi -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              3. Başvuru Yöntemi
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              İlgili kişi olarak taleplerinizi KVKK’nın 13. maddesi uyarınca aşağıdaki yöntemlerle iletebilirsiniz:
+            </p>
+            <ul class="mt-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Yazılı olarak yukarıdaki adrese göndererek</li>
+              <li>E-posta yoluyla: <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></li>
+            </ul>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700 bg-neutral-50 p-4 border border-neutral-150">
+              Başvurunuzda; ad, soyad, iletişim bilgileri ve talep konusu açıkça belirtilmelidir. Gerekli durumlarda kimlik doğrulama talep edilebilir.
+            </p>
+          </section>
+
+          <!-- 4. Başvurunun Değerlendirilmesi -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              4. Başvurunun Değerlendirilmesi
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Tarafımıza iletilen başvurular, KVKK kapsamında en geç <strong>30 (otuz) gün</strong> içerisinde ücretsiz olarak sonuçlandırılır. Ancak işlemin ayrıca bir maliyet gerektirmesi hâlinde, Kişisel Verileri Koruma Kurulu tarafından belirlenen tarifedeki ücret talep edilebilir.
+            </p>
+          </section>
+
+          <!-- 5. Başvurunun Reddedilmesi -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              5. Başvurunun Reddedilmesi
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Aşağıdaki hâllerde başvurular reddedilebilir:
+            </p>
+            <ul class="mt-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Kişisel verilerin resmi istatistik ile anonim hâle getirilmiş olması</li>
+              <li>Veri işlemenin milli güvenlik, kamu düzeni veya suç soruşturması kapsamında gerekli olması</li>
+              <li>Talebin diğer kişilerin hak ve özgürlüklerini ihlal etmesi</li>
+              <li>Yetkisiz kişiler tarafından yapılan başvurular</li>
+            </ul>
+          </section>
+
+          <!-- 6. Güncelleme -->
+          <section class="border-t border-neutral-200 pt-6 flex items-center justify-between text-xs sm:text-sm text-neutral-500 font-medium">
+            <span>6. Güncelleme</span>
+            <span><strong>Son güncelleme:</strong> {todayDate}</span>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

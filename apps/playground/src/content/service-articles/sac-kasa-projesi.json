@@ -1,0 +1,107 @@
+{
+  "slug": "sac-kasa-projesi",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Sac Kasa Projesi",
+  "title": "Sac Kasa Projesi",
+  "summary": "Kamyon ve kamyonet araçlarınızın dayanıklı metal sac kasa sistemine dönüştürülmesi için TSE onaylı proje, muayene ve ruhsat süreçlerinde Karakaş Mühendislik çözümleri.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Sac Kasa Projesi",
+  "heroLead": "Sac kasa dönüşümü, kamyon ve kamyonetlerde mevcut kasaların dayanıklı metal sac yapıyla değiştirilmesini içeren bir araç tadilatıdır. Karakaş Mühendislik olarak sac kasa uygulamalarında TSE onaylı proje hazırlığı, teknik uygunluk süreçleri, TÜVTÜRK tadilat muayenesi ve ruhsata işletme konularında profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "sac-kasa-nedir",
+      "heading": "Sac Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sağlam metal levhalardan üretilen bu kasa tipi, ağır yük taşıma kapasitesiyle ön plana çıkar. Yüksek mukavemeti sayesinde inşaat, sanayi, lojistik ve genel ticari taşımacılık gibi zorlu alanlarda sıkça tercih edilir."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sac kasa uygulaması aracın ağırlığını, ölçülerini ve taşıma kapasitesini değiştirdiği için araç tadilatı sınıfına girer. Bu değişikliğin mevzuata uygun olduğunu gösteren TSE onaylı araç projesinin hazırlanması zorunludur. Onaysız işlemler TÜVTÜRK muayenesinde aksamalara ve ruhsat sürecinde engellere yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Mevcut kasaların dayanıklı sac kasa ile değiştirilmesi",
+            "Hasarlı ya da kullanılamaz kasaların yenilenmesi",
+            "Ticari kullanım için daha sağlam kasa ihtiyacı doğması",
+            "Ağır yük taşımaya uygun sistem kurulması",
+            "Endüstriyel taşımacılık gereksinimlerinin karşılanması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Aracın ölçüleri ve teknik bilgileri alınır",
+            "Sac kasa için mühendislik projesi hazırlanır",
+            "Kasa üretimi ve araç üzerine montaj işlemleri yapılır",
+            "TSE kontrol ve onay süreci tamamlanır",
+            "TÜVTÜRK tadilat muayenesi gerçekleştirilir",
+            "Noter aracılığıyla ruhsata işletme işlemleri bitirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Yapılan tadilata ait işçilik faturası",
+            "Kasa üretimi ve ekipman bilgileri",
+            "Kimlik veya firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yüksek dayanıklılık sağlar",
+            "Ağır yük taşımaya uygun yapı sunar",
+            "Güvenli taşıma avantajı oluşturur",
+            "Uzun ömürlü kullanım imkanı sağlar",
+            "Zorlu ticari kullanım şartlarına uyum sağlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Sac kasa değişikliği sonrası aracın teknik yapısı ve taşıma özellikleri değiştiğinden, tadilatın ruhsata işlenmesi gerekir. Ruhsata yansıtılmayan uygulamalar TÜVTÜRK muayenesinde ağır kusur olarak değerlendirilebilir ve cezai yaptırımlara sebep olabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

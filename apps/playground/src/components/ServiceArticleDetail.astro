@@ -1,0 +1,295 @@
+---
+import { ArrowRight, BadgeCheck, Check, ChevronDown, FileCheck, MapPin, Star } from '@lucide/astro'
+import { phoneHref, siteSettings, whatsappHref } from '@/data/site'
+import SiteImage from './SiteImage.astro'
+
+interface Props { service: any }
+const { service } = Astro.props
+
+const aracProjeCategories = ['Araç Projeleri', 'Dönüşüm', 'Söküm', 'Motosiklet', 'Belgelendirme', 'LPG Söküm Sistemi Tadilatı']
+const isAracProje = aracProjeCategories.includes(service.category)
+
+const articleModules = import.meta.glob<{ default: any }>('../content/service-articles/*.json', { eager: true })
+const matchingModule = Object.entries(articleModules).find(([path]) => path.endsWith(`/${service.slug}.json`))
+const article = matchingModule?.[1]?.default || { sections: [], faqs: [] }
+
+const sections = article.sections || []
+const faqs = (article.faqs || []).map((f: any) => ({ question: f.q, answer: f.a }))
+
+const defaultWhatsappHref = whatsappHref(`${service.shortTitle} hakkında bilgi almak istiyorum.`)
+
+const googleReviews = [
+  { initials: 'Z', name: 'Zübeyde ZENGİN', publishedAt: 'bir yıl önce', quote: 'Konusunda uzman bir firma, herkese tavsiye ederim.', avatarBg: 'bg-[#1769aa]' },
+  { initials: 'İ', name: 'İsmail Can Ayvat', publishedAt: '4 yıl önce', quote: 'Çok memnun kaldım, uygun fiyata kaliteli hizmet sağlayan bir firma kendileri.', avatarBg: 'bg-[#b63a32]' },
+  { initials: 'A', name: 'Avrupa Basım Hizmetleri', publishedAt: 'bir yıl önce', quote: 'Konusunda deneyimli, çözüm odaklı kaliteli hizmet.', avatarBg: 'bg-[#d8752f]' },
+  { initials: 'C', name: 'Cem Abatay', publishedAt: 'bir yıl önce', quote: 'Çok yardımcı oldu, herkesin gelmesini tavsiye ederim.', avatarBg: 'bg-[#7e57c2]' },
+]
+
+const credentials = [
+  { label: 'Kalite yönetimi', title: 'ISO 9001 Kalite Yönetim Sistemi', description: 'Hizmet süreçlerini sürekli iyileştirmeyi ve müşteri memnuniyetini yükseltmeyi amaçlayan kalite yönetim sistemidir.', image: '/belgeler/iso-9001.webp', alt: 'ISO 9001 Kalite Yönetim Sistemi logosu' },
+  { label: 'Çevre yönetimi', title: 'ISO 14001 Çevre Yönetim Sistemi', description: 'Çevresel etkileri azaltmayı ve kaynakları sorumlu kullanmayı esas alan çevre yönetim sistemidir.', image: '/belgeler/iso-14001.webp', alt: 'ISO 14001 Çevre Yönetim Sistemi logosu' },
+  { label: 'İş sağlığı ve güvenliği', title: 'ISO 45001 İş Sağlığı ve Güvenliği Yönetim Sistemi', description: 'Çalışan güvenliğini önceleyen, riskleri sistemli biçimde yönetmeye dayalı iş sağlığı ve güvenliği sistemidir.', image: '/belgeler/iso-45001.webp', alt: 'ISO 45001 İş Sağlığı ve Güvenliği Yönetim Sistemi logosu' },
+  { label: 'Araç proje yetkisi', title: 'TSE AİTM Yetki Belgesi', description: 'Araç tadilat projelerinde teknik proje yetkisini belgeleyen TSE AİTM yetki belgesidir.', image: '/belgeler/tse.webp', alt: 'Türk Standardları Enstitüsü logosu', isTse: true },
+]
+
+const trustReasons = [
+  { title: 'TSE AİTM yetkili mühendislik', description: 'Araç tadilat projelerinde teknik proje yetkisine sahip kadro ile mevzuata uygun dosya hazırlanır.' },
+  { title: 'Araca özel proje planı', description: 'Her araç ve uygulama için ayrı teknik inceleme yapılır; gereken adımlar başvuru sahibiyle açık biçimde paylaşılır.' },
+  { title: 'Tescil yönlendirmesi', description: 'TSE kontrolü, muayene ve noter tescili sırasıyla ilgili süreç baştan sona takip edilir.' },
+]
+
+const googleMapsEmbedURL =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.5541654988383!2d28.914657499999997!3d41.056877799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab713cf4631bf%3A0xd4b7db3809bdcddd!2zS0FSQUtBxZ4gTcOcSEVORMSwUzEsEsgVFNFIE9OQVlMSSBBUkHDhyBQUk9KRSBGxLBSTUEgQkVMR0VMRU5ExLBSTUUgTcOcxZ5BVsSwUkzEsEsgdmUgT1RPTU9UxLBWIEjEsFpNRVRMRVLEsCBSRVNVTCBLQVJBS0HFng!5e0!3m2!1sen!2str!4v1786376364824!5m2!1sen!2str'
+---
+
+<!-- Schema.org JSON-LD (BreadcrumbList + Service + FAQPage) -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://karakasmuhendislik.com.tr" },
+      { "@type": "ListItem", "position": 2, "name": "Araç Proje Hizmetlerimiz", "item": "https://karakasmuhendislik.com.tr/arac-proje-hizmetlerimiz" },
+      { "@type": "ListItem", "position": 3, "name": service.shortTitle || service.title, "item": `https://karakasmuhendislik.com.tr/${service.slug}` }
+    ] },
+    { "@type": "Service", "name": service.title, "description": service.summary,
+      "provider": { "@type": "LocalBusiness", "name": "Karakaş Mühendislik", "telephone": siteSettings.phone,
+        "address": { "@type": "PostalAddress", "addressLocality": "Gaziosmanpaşa", "addressRegion": "İstanbul", "addressCountry": "TR" } },
+      "url": `https://karakasmuhendislik.com.tr/${service.slug}` },
+    ...(faqs.length > 0 ? [{ "@type": "FAQPage", "mainEntity": faqs.map((f: { question: string; answer: string }) => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }] : [])
+  ]
+})} />
+
+<!-- Hero Section -->
+<section class="relative isolate min-h-[32rem] overflow-hidden bg-[#f4f4f4]">
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    {isAracProje ? (
+      <SiteImage src="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp" alt={service.title} class="size-full object-cover object-center" loading="eager" fetchpriority="high" />
+    ) : (
+      <div class="size-full bg-white"></div>
+    )}
+  </div>
+  <div class="absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.85)_100%)] lg:bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.96)_35%,rgba(255,255,255,0.82)_60%,rgba(255,255,255,0.45)_85%,rgba(255,255,255,0.25)_100%)]" aria-hidden="true"></div>
+
+  <div class="shell relative z-20 grid min-h-[32rem] items-center gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_25rem] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_27rem]">
+    <div class="max-w-3xl">
+      <nav class="mb-3 flex items-center gap-2 text-xs font-semibold text-neutral-500" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/" class="hover:text-primary transition-colors"><span itemprop="name">Ana Sayfa</span></a><meta itemprop="position" content="1" /></span>
+        <span aria-hidden="true">/</span>
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/arac-proje-hizmetlerimiz" class="hover:text-primary transition-colors"><span itemprop="name">Araç Proje Hizmetlerimiz</span></a><meta itemprop="position" content="2" /></span>
+        <span aria-hidden="true">/</span>
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" class="text-neutral-900">{service.shortTitle}</span><meta itemprop="item" content={`https://karakasmuhendislik.com.tr/${service.slug}`} /><meta itemprop="position" content="3" /></span>
+      </nav>
+
+      <h2 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">{article.heroEyebrow || service.category}</h2>
+
+      <h1 class="mt-3 text-[clamp(2.2rem,3.8vw,3.6rem)] font-black leading-[1.03] tracking-[-0.05em] text-neutral-950">{article.heroTitle || service.title}</h1>
+
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-neutral-700">{article.heroLead || service.summary}</p>
+
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href={defaultWhatsappHref} target="_blank" rel="noreferrer" class="inline-flex h-11 items-center gap-2.5 bg-[#25D366] hover:bg-[#1fb65a] px-5 text-xs font-black uppercase tracking-wider text-white shadow-sm transition-colors"><span>WhatsApp'tan bilgi alın</span><ArrowRight size={15} /></a>
+        <a href={defaultWhatsappHref} target="_blank" rel="noreferrer" class="inline-flex h-11 items-center gap-2 border border-neutral-900 bg-white/90 hover:bg-neutral-950 hover:text-white px-5 text-xs font-black uppercase tracking-wider text-neutral-950 transition-colors"><span>Ücretsiz ön değerlendirme</span><ArrowRight size={15} /></a>
+      </div>
+    </div>
+
+    <!-- Quick Offer Form -->
+    <form id="service-quick-form" class="relative z-10 w-full max-w-[27rem] justify-self-end border-t-[3px] border-primary bg-white p-5 text-[#1a1a1a] shadow-[0_20px_50px_rgba(4,24,39,0.14)] sm:p-6">
+      <div class="flex items-start justify-between gap-3 border-b border-neutral-200 pb-3">
+        <div>
+          <h3 class="text-[11px] font-black uppercase tracking-[0.16em] text-primary">Hızlı Teklif Formu</h3>
+          <h2 class="mt-1 text-[17px] font-black tracking-tight text-neutral-950 sm:text-[19px]">{service.shortTitle} Teklifi Al</h2>
+        </div>
+        <span class="grid size-9 shrink-0 place-items-center rounded-full bg-[#25D366]/15 text-[#1cae56]">
+          <svg class="size-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/></svg>
+        </span>
+      </div>
+      <p class="mt-2.5 text-xs leading-5 text-neutral-600">Adınızı ve telefonunuzu yazın; teklif talebiniz hazır mesaj olarak WhatsApp'a yönlendirilsin.</p>
+      <div class="mt-3.5 space-y-2.5">
+        <div>
+          <label for="quick-fullName" class="block text-[11px] font-bold uppercase tracking-wider text-neutral-700">Ad Soyad</label>
+          <input id="quick-fullName" type="text" name="fullName" required autocomplete="name" placeholder="Adınız ve Soyadınız" class="mt-1 h-9 w-full rounded-none border border-neutral-300 bg-[#f9f9f9] px-3 text-xs text-neutral-900 outline-none transition focus:border-primary focus:bg-white" />
+        </div>
+        <div>
+          <label for="quick-phone" class="block text-[11px] font-bold uppercase tracking-wider text-neutral-700">Telefon Numarası</label>
+          <input id="quick-phone" type="tel" name="phone" required autocomplete="tel" placeholder="05xx xxx xx xx" class="mt-1 h-9 w-full rounded-none border border-neutral-300 bg-[#f9f9f9] px-3 text-xs text-neutral-900 outline-none transition focus:border-primary focus:bg-white" />
+        </div>
+      </div>
+      <button type="submit" class="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 border-0 bg-[#25D366] hover:bg-[#1fb65a] px-4 text-[16px] font-bold text-white transition-colors cursor-pointer"><span>WhatsApp ile iletişime geç</span><ArrowRight size={18} /></button>
+      <div class="mt-3 flex items-center justify-between border-t border-neutral-100 pt-2.5 text-[11px] text-neutral-500">
+        <span class="inline-flex items-center gap-1 font-semibold text-emerald-700"><Check size={13} /> TSE Yetkili Mühendislik</span>
+        <span>Hızlı Yanıt</span>
+      </div>
+    </form>
+  </div>
+
+  <div class="custom-divider-white-left absolute -bottom-[1px] left-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+  <div class="custom-divider-white-right absolute -bottom-[1px] right-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+</section>
+
+<!-- Main Article Body -->
+<article class="bg-white py-14 md:py-20 text-neutral-900">
+  <div class="shell max-w-6xl">
+    <div class="border-b border-neutral-200 pb-10">
+      <h3 class="text-base font-bold uppercase tracking-[0.14em] text-primary">{article.heroEyebrow || service.category}</h3>
+      <h2 class="mt-4 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.03] tracking-[-0.05em] text-neutral-950">{article.heroTitle || service.title}</h2>
+      <p class="mt-6 text-base sm:text-lg leading-relaxed text-neutral-700">{article.heroLead || service.summary}</p>
+      <div class="mt-7 flex flex-wrap items-center gap-x-8 gap-y-2 border-t border-neutral-200 pt-5 text-sm text-neutral-500">
+        <p>Hazırlayan: <strong class="font-bold text-neutral-900">Karakaş Mühendislik</strong></p>
+        <p>Son güncelleme: <time datetime="2026-08-10">10 Ağustos 2026</time></p>
+      </div>
+    </div>
+
+    {sections.map((section: any, i: number) => (
+      <section class="mt-16" aria-labelledby={`sec-${i}`}>
+        <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">{String(i + 1).padStart(2, '0')} · {service.category}</h3>
+        <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id={`sec-${i}`}>{section.heading}</h2>
+        {section.blocks?.map((block: any) => (
+          block.type === 'p' ? <p class="mt-5 text-base sm:text-lg leading-relaxed text-neutral-700" set:html={block.text} />
+          : block.type === 'ul' ? <ul class="mt-5 space-y-2.5 border-t border-neutral-100 pt-5">{block.items.map((it: string) => <li class="flex items-start gap-2.5 text-sm font-medium text-neutral-800"><Check class="mt-0.5 size-4 shrink-0 text-emerald-700" /><span set:html={it} /></li>)}</ul>
+          : block.type === 'ol' ? <ol class="mt-5 space-y-2.5 border-t border-neutral-100 pt-5">{block.items.map((it: string) => <li class="flex items-start gap-2.5 text-sm font-medium text-neutral-800"><span class="mt-0.5 grid size-5 shrink-0 place-items-center bg-[#17222c] text-[10px] font-black text-white">{String(block.items.indexOf(it) + 1)}</span><span set:html={it} /></li>)}</ol>
+          : null
+        ))}
+      </section>
+    ))}
+
+    {faqs.length > 0 && (
+      <section class="mt-16" aria-labelledby="faq-title">
+        <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-neutral-900">Sık sorulanlar</h3>
+        <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="faq-title">Sıkça Sorulan Sorular</h2>
+        <div class="mt-8 space-y-3">
+          {faqs.map((faq: any, index: number) => (
+            <details class="group border border-neutral-200 bg-[#f7f8f8] open:border-l-4 open:border-l-primary open:bg-white transition-colors" open={index === 0}>
+              <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-6 text-sm sm:text-base font-bold text-neutral-950 select-none"><span>{faq.question}</span><ChevronDown class="size-4 shrink-0 text-neutral-500 group-open:rotate-180 transition-transform" /></summary>
+              <div class="px-6 pb-5 pt-2 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100"><p set:html={faq.answer} /></div>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Bottom CTA Banner -->
+    <section class="mt-16 border-t-[3px] border-primary pt-8">
+      <h3 class="text-xs font-black uppercase tracking-wider text-neutral-900">Ücretsiz ön değerlendirme</h3>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-black text-neutral-950">{service.shortTitle} için bilgileri iletin.</h2>
+      <p class="mt-2 text-sm text-neutral-600 max-w-2xl">Araç ve uygulama bilgilerini inceleyip izlenecek teknik yolu belirleyelim.</p>
+      <a href={defaultWhatsappHref} target="_blank" rel="noreferrer" class="mt-6 inline-flex h-12 items-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white transition-colors shadow-sm"><span>WhatsApp'tan bilgi alın</span><ArrowRight size={14} /></a>
+      <p class="mt-6 flex items-start gap-2 text-xs text-neutral-500"><Check class="mt-0.5 size-4 shrink-0 text-neutral-900" /><span>Teknik kapsam, araç bilgileri ve yapılan uygulama incelendikten sonra kesinleşir.</span></p>
+    </section>
+
+    <!-- Karakaş Mühendislik farkı -->
+    <section class="mt-16">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">Karakaş Mühendislik farkı</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950">Neden Karakaş Mühendislik?</h2>
+      <div class="mt-8 grid gap-4 lg:grid-cols-3">
+        {trustReasons.map((reason: any, index: number) => (
+          <article class="bg-[#f7f8f8] p-6 sm:p-7 border border-neutral-200">
+            <div class="flex items-center justify-between gap-4">
+              <span class="grid size-10 place-items-center bg-black text-sm font-bold text-white">{String(index + 1).padStart(2, '0')}</span>
+              <BadgeCheck class="size-6 text-[#32667c]" />
+            </div>
+            <h3 class="mt-5 text-lg font-black text-neutral-950">{reason.title}</h3>
+            <p class="mt-2.5 text-sm text-neutral-600 leading-relaxed">{reason.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-12 border-t border-neutral-200 pt-10">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-neutral-200 pb-5">
+          <div>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">Yetki ve kalite belgelerimiz</h3>
+            <h3 class="mt-2 text-2xl font-black text-neutral-950">Proje hizmetimizi destekleyen belgeler</h3>
+          </div>
+          <p class="text-xs text-neutral-500 max-w-sm">Belge kapsamı ve geçerlilik durumu güncel nüshalar üzerinden doğrulanır.</p>
+        </div>
+        <ul class="divide-y divide-neutral-200">
+          {credentials.map((cred: any) => (
+            <li class="grid gap-4 py-5 sm:grid-cols-[100px_minmax(0,.8fr)_minmax(0,1.2fr)] sm:items-center sm:gap-6">
+              <div class="grid h-20 w-[100px] place-items-center border border-neutral-200 bg-[#f7f8f8] p-2"><SiteImage src={cred.image} alt={cred.alt} class="max-h-14 max-w-full object-contain" /></div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">{cred.label}</h4>
+                <h4 class="mt-1 text-base font-bold text-neutral-950">{cred.title}</h4>
+              </div>
+              <div class="sm:border-l sm:border-neutral-200 sm:pl-6">
+                <p class="text-sm text-neutral-600 leading-relaxed">{cred.description}</p>
+                {cred.isTse && <p class="mt-1.5 text-xs text-neutral-500"><FileCheck class="mr-1.5 inline size-3.5 text-primary" />Yetki belge numarası, güncel belge nüshasıyla doğrulandıktan sonra yayımlanır.</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="mt-12 border-t border-neutral-200 pt-10">
+        <div class="text-center">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-primary">Google yorumları</h3>
+          <h3 class="mt-2 text-2xl font-black text-neutral-950">Müşterilerimiz ne söylüyor?</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-4 bg-[#f4f5f7] p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-lg font-black text-neutral-950">Google Yorumları</p>
+            <div class="mt-1.5 flex items-center gap-2">
+              <span class="text-2xl font-black text-neutral-950">5.0</span>
+              <div class="flex gap-0.5 text-amber-400">{Array.from({ length: 5 }).map(() => <Star class="size-4 fill-amber-400" />)}</div>
+              <span class="text-xs text-neutral-500">Google Haritalar Puanı</span>
+            </div>
+          </div>
+          <a href="https://share.google/itAGCozUXMtMGs45T" target="_blank" rel="noreferrer" class="inline-flex h-10 items-center justify-center gap-2 bg-[#4285F4] hover:bg-[#276fd4] px-5 text-xs font-bold text-white transition-colors"><span>Google'da tüm yorumları görün</span><ArrowRight size={14} /></a>
+        </div>
+        <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {googleReviews.map((review: any) => (
+            <div class="flex flex-col bg-[#f4f5f7] p-5">
+              <div class="flex items-center gap-3">
+                <span class={`grid size-10 place-items-center rounded-full text-xs font-bold text-white ${review.avatarBg}`}>{review.initials}</span>
+                <div><h4 class="text-sm font-bold text-neutral-950 truncate">{review.name}</h4><p class="text-[11px] text-neutral-400">{review.publishedAt}</p></div>
+              </div>
+              <div class="mt-3 flex gap-0.5 text-amber-400">{Array.from({ length: 5 }).map(() => <Star class="size-3.5 fill-amber-400" />)}</div>
+              <blockquote class="mt-3 text-xs text-neutral-700 leading-relaxed italic">“{review.quote}”</blockquote>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-neutral-200 pt-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">Yüz yüze teknik değerlendirme</h3>
+        <h3 class="mt-2 text-2xl font-black text-neutral-950">{service.shortTitle} projenizi ofiste birlikte planlayalım</h3>
+        <p class="mt-2 text-sm text-neutral-600">Ruhsatınızı ve uygulama bilgilerini getirin; gereken proje yolunu, evrakları ve sonraki başvuru adımlarını görüşmede netleştirelim.</p>
+        <div class="mt-6 grid overflow-hidden border border-neutral-200 lg:grid-cols-[minmax(320px,.72fr)_minmax(0,1.28fr)]">
+          <div class="bg-neutral-950 p-7 text-white sm:p-8 flex flex-col justify-between">
+            <div>
+              <MapPin class="size-8 text-sky-400" />
+              <h4 class="mt-5 text-xs font-bold uppercase tracking-wider text-white/50">Fiziksel hizmet noktası</h4>
+              <p class="mt-2 text-xl font-bold leading-snug">{siteSettings.location}</p>
+              <dl class="mt-6 divide-y divide-white/10 border-y border-white/10 text-xs">
+                <div class="py-3"><dt class="text-white/50">Çalışma saatleri</dt><dd class="mt-0.5 font-bold">{siteSettings.workHours}</dd></div>
+                <div class="py-3"><dt class="text-white/50">Telefon</dt><dd class="mt-0.5 font-bold"><a href={phoneHref} class="hover:underline">{siteSettings.phone}</a></dd></div>
+              </dl>
+            </div>
+            <div class="mt-6 flex flex-col gap-2.5">
+              <a href={defaultWhatsappHref} target="_blank" rel="noreferrer" class="inline-flex h-11 items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-5 text-xs font-bold text-white transition-colors"><span>Ofis görüşmesi için yazın</span><ArrowRight size={14} /></a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Karaka%C5%9F%20M%C3%BChendislik%20Gaziosmanpa%C5%9Fa%20%C4%B0stanbul" target="_blank" rel="noreferrer" class="inline-flex h-11 items-center justify-center gap-2 border border-white/30 hover:bg-white hover:text-neutral-950 px-5 text-xs font-bold text-white transition-colors"><span>Yol tarifi alın</span><ArrowRight size={14} /></a>
+            </div>
+          </div>
+          <div class="relative min-h-[360px] bg-neutral-100">
+            <iframe src={googleMapsEmbedURL} class="absolute inset-0 size-full border-0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Karakaş Mühendislik Gaziosmanpaşa ofis konumu" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const quickForm = document.getElementById('service-quick-form')
+    if (quickForm) {
+      quickForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const fullName = document.getElementById('quick-fullName')?.value || ''
+        const phone = document.getElementById('quick-phone')?.value || ''
+        const serviceTitle = document.querySelector('h1')?.innerText?.trim() || 'Karakaş Mühendislik Hizmeti'
+        const lines = ['Merhaba,', `*${serviceTitle}* için teklif ve bilgi almak istiyorum.`, '', `*Ad Soyad:* ${fullName}`, `*Telefon:* ${phone}`]
+        const whatsappNumber = '905548166302'
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank')
+      })
+    }
+  })
+</script>

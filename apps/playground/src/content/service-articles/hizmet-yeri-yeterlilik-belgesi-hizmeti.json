@@ -1,0 +1,93 @@
+{
+  "slug": "hizmet-yeri-yeterlilik-belgesi-hizmeti",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Hizmet Yeri Yeterlilik Belgesi Hizmeti",
+  "title": "Hizmet Yeri Yeterlilik Belgesi Hizmeti",
+  "summary": "Karakaş Mühendislik ile işletmenizin servis ve hizmet altyapısının fiziki alan, ekipman ve personel açısından yeterliliğini belgeleyen profesyonel hizmet yeri yeterlilik süreci yönetimi.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Hizmet Yeri Yeterlilik Belgesi Hizmeti",
+  "heroLead": "Hizmet yeri yeterlilik belgesi hizmeti; işletmenin sunduğu servis ya da hizmet faaliyetinin fiziki alan, ekipman, personel ve operasyon süreçleri bakımından belirli kriterleri karşılayabildiğini kanıtlayan bir değerlendirme sürecidir. Karakaş Mühendislik olarak hizmet altyapısının teknik uygunluğu, belge hazırlığı ve başvuru adımlarında profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "hizmet-yeri-yeterlilik-belgesi-nedir",
+      "heading": "Hizmet Yeri Yeterlilik Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Hizmet yeri yeterlilik belgesi, bir işletmenin sunduğu hizmeti tanımlı standartlar çerçevesinde yürüttüğünü ve hizmet verdiği alanın bu faaliyet için gerekli altyapıya sahip olduğunu gösteren önemli bir yeterlilik belgesidir. Değerlendirmede fiziki alan, iş akışı, ekipman yapısı ve personel yeterliliği temel kriterler arasında yer alır."
+        }
+      ]
+    },
+    {
+      "id": "kimler-icin-uygundur",
+      "heading": "Kimler İçin Uygundur?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Servis ve bakım hizmeti veren işletmeler",
+            "Teknik destek ya da uygulama merkezi bulunduran firmalar",
+            "Kurumsal hizmet kalitesini resmi olarak belgelendirmek isteyen işletmeler",
+            "Hizmet altyapısını yasal olarak kayıt altına almayı hedefleyen kuruluşlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "degerlendirme-kriterleri",
+      "heading": "Değerlendirme Kriterleri",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Hizmet alanının fiziki yeterliliği",
+            "Cihaz, ekipman ve araç gereç yapısı",
+            "Personelin görev tanımı ve yetkinliği",
+            "Kayıt, takip ve şikayet yönetimi düzeni",
+            "İş sağlığı ve güvenliği yaklaşımı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basvuru-hazirligi",
+      "heading": "Başvuru Hazırlığı",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Firma ve faaliyet bilgileri eksiksiz hazırlanır",
+            "Yerleşim planı ve alan tanımları oluşturulur",
+            "Ekipman listesi düzenli biçimde derlenir",
+            "Personel ve süreç kayıtları dosyalanır",
+            "Başvuru dosyası teknik açıdan kontrol edilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Hizmet alanı ile beyan edilen kapsamın birbiriyle uyuşmaması, eksik ekipman bilgileri ya da belirsiz personel görev tanımları belge sürecini zorlaştırabilir. Bu yüzden başvuru öncesinde fiili hizmet yapısının doğru analiz edilmesi büyük önem taşır."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Hizmet yeri yeterlilik belgesi kimler için önemlidir?",
+      "a": "Servis, bakım, teknik destek ve kurumsal hizmet sunan işletmeler için hizmet altyapısını resmi olarak belgelemek açısından önem taşır."
+    },
+    {
+      "q": "Belge için yerinde inceleme olabilir mi?",
+      "a": "Evet. Hizmet alanının fiziki koşulları, ekipman yapısı ve operasyon düzeni için yerinde inceleme gerçekleştirilebilir."
+    },
+    {
+      "q": "En sık sorun nedir?",
+      "a": "Eksik ekipman bilgileri, belirsiz görev tanımları ve hizmet kapsamı ile fiili yapı arasındaki uyumsuzluk en sık karşılaşılan sorunlar arasındadır."
+    }
+  ]
+}

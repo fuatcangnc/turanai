@@ -1,0 +1,9 @@
+---
+import InternalHero from './InternalHero.astro'
+
+interface Section { title: string; paragraphs: string[]; list?: string[] }
+interface Props { eyebrow: string; title: string; description: string; sections: Section[] }
+const { eyebrow, title, description, sections } = Astro.props
+---
+
+<main><InternalHero eyebrow={eyebrow} title={title} description={description} image="/images/project-guidance.webp" /><section class="prose-section"><div class="shell prose">{sections.map((section) => <section><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}{section.list && <ul>{section.list.map((item) => <li>{item}</li>)}</ul>}</section>)}</div></section></main>

@@ -1,0 +1,87 @@
+{
+  "slug": "tse-belgelendirme-islemleri-hizmeti",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "TSE Belgelendirme İşlemleri Hizmeti",
+  "title": "TSE Belgelendirme İşlemleri Hizmeti",
+  "summary": "Karakaş Mühendislik ile ürün, hizmet ve üretim altyapınızın TSE kriterlerine uygunluğunun teknik dosya hazırlığı, evrak düzeni ve başvuru yönetimiyle belgelendirilmesi.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "TSE Belgelendirme İşlemleri Hizmeti",
+  "heroLead": "TSE belgelendirme işlemleri hizmeti; ürün, hizmet ya da üretim altyapısının ilgili TSE kriterlerine uygunluğunun değerlendirilmesi için gerekli hazırlık, teknik dosya düzeni ve başvuru süreçlerini kapsar. Karakaş Mühendislik olarak teknik uygunluk değerlendirmesi, evrak hazırlığı ve başvuru yönetimi konusunda profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "tse-belgelendirme-nedir",
+      "heading": "TSE Belgelendirme Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "TSE belgelendirme, ilgili standart ya da teknik kriterlere uygunluğun yetkili değerlendirme süreçleriyle doğrulanmasını sağlayan resmi bir belgelendirme sistemidir. Başvuru kapsamına göre ürünün kendisi, üretim yöntemi, hizmet altyapısı ya da kalite sistemi ayrıntılı biçimde incelenebilir."
+        }
+      ]
+    },
+    {
+      "id": "belgelendirme-turleri",
+      "heading": "Belgelendirme Türleri",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Ürün belgelendirme",
+            "Hizmet yeri belgelendirme",
+            "İmalat yeterlilik ve üretim odaklı değerlendirmeler",
+            "Sektöre özel uygunluk başvuruları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basvuru-hazirligi",
+      "heading": "Başvuru Hazırlığı",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Belgelendirme kapsamı netleştirilir",
+            "Standart ve teknik kriterler belirlenir",
+            "Teknik dosya, kayıt ve evrak yapısı hazırlanır",
+            "Gerekirse tesis ve süreç ön incelemesi yapılır",
+            "Başvuru dosyası son kontrollerden geçirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inceleme-ve-denetim-asamalari",
+      "heading": "İnceleme ve Denetim Aşamaları",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Belgelendirme türüne göre doküman incelemesi, numune değerlendirmesi, yerinde denetim ya da üretim süreci kontrolü gerçekleştirilebilir. Başvuru hazırlığının kapsamla uyumlu olması, teknik belgelerin eksiksiz sunulması ve fiili yapının standart kriterlerini karşılaması süreç açısından büyük önem taşır."
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yanlış kapsam seçimi, güncel olmayan teknik dosyalar ve denetim sırasında fiili durumla uyuşmayan belge yapısı sürecin uzamasına neden olabilir. Bu nedenle belgelendirme öncesinde iç hazırlığın eksiksiz tamamlanması ve tüm kayıtların güncel tutulması gerekir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "TSE belgelendirme her firma için aynı mı ilerler?",
+      "a": "Hayır. Belgelendirme kapsamı, sektör, ürün yapısı ve teknik kriterlere göre süreç farklılık gösterebilir."
+    },
+    {
+      "q": "Teknik dosya neden önemlidir?",
+      "a": "Teknik dosya, ürün veya hizmetin ilgili standartlara uygunluğunu gösteren temel belge yapısını oluşturduğu için sürecin en kritik aşamalarından biridir."
+    },
+    {
+      "q": "Başvuru öncesi ön inceleme faydalı olur mu?",
+      "a": "Evet. Ön inceleme sayesinde eksik evraklar, teknik uyumsuzluklar ve olası denetim sorunları başvuru öncesinde tespit edilebilir."
+    }
+  ]
+}

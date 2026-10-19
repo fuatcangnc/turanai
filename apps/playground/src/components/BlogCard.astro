@@ -1,0 +1,15 @@
+---
+import { ArrowRight } from '@lucide/astro'
+import type { CollectionEntry } from 'astro:content'
+import SiteImage from './SiteImage.astro'
+
+interface Props { post: CollectionEntry<'posts'>; index?: number }
+const { post, index = 1 } = Astro.props
+const day = new Intl.DateTimeFormat('de-DE', { day: '2-digit' }).format(post.data.publishedAt)
+const month = new Intl.DateTimeFormat('de-DE', { month: 'short' }).format(post.data.publishedAt).replace('.', '').toUpperCase()
+---
+
+<article class="group flex flex-col" data-reveal data-card-index={index}>
+  <a class="relative block aspect-[1.45] overflow-hidden [clip-path:polygon(0_0,100%_0,100%_94%,94%_100%,0_100%)]" href={`/${post.id}`}><SiteImage class="size-full object-cover transition duration-500 group-hover:scale-105" src={post.data.image} alt={post.data.title} loading="lazy" /><span class="absolute left-5 top-[-.55rem] grid w-[4.25rem] gap-1 bg-primary px-3 pb-3 pt-5 text-center text-white"><strong class="text-3xl font-black leading-none">{day}</strong><span class="border-t border-white/50 pt-1 text-xs font-bold italic">{month}</span></span></a>
+  <div class="flex flex-1 flex-col pt-4"><h3 class="h-[46px] overflow-hidden text-lg font-black uppercase leading-tight text-slate-950 transition group-hover:text-primary"><a href={`/${post.id}`}>{post.data.title}</a></h3><div class="relative mt-5 h-px bg-slate-200"><span class="absolute left-0 top-0 h-0.5 w-24 bg-primary"></span></div><p class="mt-5 line-clamp-3 text-sm leading-7 text-slate-950">{post.data.description}</p><a class="mt-auto inline-flex items-center gap-4 pt-7 text-xs font-black uppercase italic text-slate-950 transition group-hover:text-primary" href={`/${post.id}`}>Artikel lesen <span class="grid size-8 place-items-center bg-primary text-white"><ArrowRight size={15} /></span></a></div>
+</article>

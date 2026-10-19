@@ -1,0 +1,153 @@
+{
+  "slug": "motosiklet-tasima-kutusu-tadilati",
+  "category": "Motosiklet Taşıma Kutusu Tadilatı",
+  "shortTitle": "Motosiklet Taşıma Kutusu Tadilatı",
+  "title": "Motosiklet Taşıma Kutusu Tadilatı",
+  "summary": "Motosiklet ve kurye araçlarına taşıma kutusu montajında TSE AİTM uyumu, proje ve TÜVTÜRK muayenesini Karakaş Mühendislik ile güvenle tamamlayın.",
+  "heroEyebrow": "Motosiklet Taşıma Kutusu Tadilatı",
+  "heroTitle": "Motosiklet Taşıma Kutusu Tadilatı",
+  "heroLead": "Motosiklet ve kurye araçlarına takılan taşıma veya üst kutu, araçın teknik özelliklerini ve görünürlüğünü değiştiren bir tadilat olarak kabul edilir. Bu tür montajlarda TSE AİTM mevzuatına uyum, teknik proje hazırlığı ve TÜVTÜRK muayenesi zorunludur. Karakaş Mühendislik, söz konusu süreci projeden ruhsata işletmeye kadar yönetir.",
+  "sections": [
+    {
+      "id": "tasima-kutusu-tadilati-nedir",
+      "heading": "Taşıma Kutusu Tadilatı Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Taşıma kutusu tadilatı, motosiklet veya hafif ticari araçlara yük taşımaya yönelik sabit ya da sökülebilir kutu sisteminin monte edilmesidir. Bu işlem aracın ağırlık dağılımını ve dış boyutlarını etkilediği için resmi tadilat kapsamına girer."
+        },
+        {
+          "type": "p",
+          "text": "Karakaş Mühendislik olarak, montajın mevzuata uygun biçimde projelendirilmesi ve onaylatılması için uçtan uca hizmet sunuyoruz."
+        }
+      ]
+    },
+    {
+      "id": "kimler-yaptirmali",
+      "heading": "Hangi Araç Sahipleri Yaptırmalı?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Kurye ve kargo dağıtımı yapan motosiklet kullanıcıları",
+            "Ticari yük taşımacılığı yapan araç işletmecileri",
+            "Üst kutu montajı yaptıran motosiklet sahipleri",
+            "Filo araçlarına standart kutu sistemi kuran firmalar",
+            "Aracını mevzuata uygun hale getirmek isteyen sürücüler"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Ruhsatta kayıtlı olmayan montajlı kutu, muayene ve trafik denetimlerinde sorun oluşturabilir; bu yüzden tadilatın resmileştirilmesi önemlidir."
+        }
+      ]
+    },
+    {
+      "id": "aitm-uyumu",
+      "heading": "TSE AİTM Uyumu Neden Önemlidir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "AİTM, araçların imal, tadil ve montajı hakkındaki teknik yönetmeliği ifade eder. Taşıma kutusu montajının bu yönetmelikteki boyut, sabitleme ve görünürlük şartlarına uyması, hem güvenlik hem de yasal geçerlilik için zorunludur."
+        },
+        {
+          "type": "p",
+          "text": "Uyumsuz montaj, araç dengesini bozabileceği gibi muayenede reddedilmesine de yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "proje-ve-teknik-cizim",
+      "heading": "Teknik Proje ve Çizim Hazırlığı",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Aracın mevcut teknik verileri ve ölçüleri alınır",
+            "Kutu boyut ve montaj noktaları belirlenir",
+            "AİTM şartlarına uygun teknik proje çizilir",
+            "Sabitlenme ve yük dağılımı hesaplamaları yapılır",
+            "Proje mühendislik onayıyla resmileştirilir",
+            "Onaylı proje muayene başvurusuna hazırlanır"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Proje, montajın araç emniyetini tehlikeye atmayacağını ispatlayan temel belgedir ve TÜVTÜRK sürecinde talep edilir."
+        }
+      ]
+    },
+    {
+      "id": "tuvturuk-muayenesi",
+      "heading": "TÜVTÜRK Muayene Süreci",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Onaylı projeyle birlikte araç, TÜVTÜRK istasyonunda tadilat muayenesine götürülür. Burada kutu montajının projeye ve AİTM şartlarına uygunluğu yerinde kontrol edilir."
+        },
+        {
+          "type": "p",
+          "text": "Muayene sonucu olumlu olduğunda araç, tadilatın ruhsata işlenmesi için ilgili şube müdürlüğüne yönlendirilir."
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme",
+      "heading": "Ruhsata İşletme Adımları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "TÜVTÜRK muayene raporu ve onaylı proje teslim edilir",
+            "Araç tescil şubesine ruhsat tadilatı başvurusu yapılır",
+            "Yeni teknik bilgiler ruhsata işlenir",
+            "Güncel ruhsat sahibine teslim edilir",
+            "Araç artık yasal olarak tadilatlı biçimde kullanılabilir"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Ruhsata işlenmeyen montaj, ileride satış veya sigorta işlemlerinde sorun çıkarabilir; bu aşama sürecin tamamlayıcı kritik parçasıdır."
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Kutu boyutları aracın görünürlüğünü engellememelidir",
+            "Montaj noktaları araç gövdesine zarar vermeyecek biçimde seçilmelidir",
+            "Proje mutlaka yetkili mühendislikce onaylanmalıdır",
+            "Muayene öncesi montajın projeye birebir uyduğu kontrol edilmelidir",
+            "Ruhsat tadilatı muayeneden sonra geciktirilmeden yaptırılmalıdır"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Standart dışı veya projesiz montaj, hem can güvenliği hem de yasal açıdan risk oluşturur. Bu yüzden süreç profesyonel rehberlikle yürütülmelidir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Kutu montajı ruhsata işletmek zorunda mıyım?",
+      "a": "Evet. Taşıma kutusu araçta teknik değişiklik oluşturduğu için TÜVTÜRK muayenesi ve ruhsat tadilatı yaptırılması yasal olarak zorunludur."
+    },
+    {
+      "q": "AİTM uyumu olmadan montaj yapılır mı?",
+      "a": "Yapılabilir ancak muayenede kabul edilmez ve trafik denetimlerinde cezai yaptırıma yol açabilir; bu yüzden projeli ve uyumlu montaj önerilir."
+    },
+    {
+      "q": "Süreç ne kadar sürer?",
+      "a": "Proje hazırlığı, muayene ve ruhsat işlemleri birkaç gün ile birkaç hafta arasında, kurum yoğunluğuna göre değişebilir."
+    },
+    {
+      "q": "Karakaş Mühendislik montajı da mı yapar?",
+      "a": "Hayır. Firma projelendirme, AİTM uyum danışmanlığı, muayene ve ruhsat süreçlerindeki mühendislik desteğini sağlar; fiziksel montaj uzman atölyelerce yapılır."
+    }
+  ]
+}

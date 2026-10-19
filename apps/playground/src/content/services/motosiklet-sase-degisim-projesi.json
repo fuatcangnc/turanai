@@ -1,0 +1,217 @@
+{
+  "title": "Motosiklet Şase Değişim Projesi ve Ruhsat İşlemi | Karakaş",
+  "shortTitle": "Motosiklet Şase Değişim Projesi",
+  "slug": "motosiklet-sase-degisim-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Motosiklet şase değişim projesi için şase numarası, yeni parça belgesi, montaj kontrolleri, TSE, muayene ve ruhsat güncelleme adımlarını inceleyin.",
+  "image": "/hizmetler/motosiklet-sase-degisim-projesi.webp",
+  "featured": false,
+  "order": 12,
+  "heroEyebrow": "Motosiklet Şase Değişimi | TSE Onaylı",
+  "heroTitle": "Motosiklet Şase Değişim Projesi",
+  "heroDescription": "Yeni şasenin kaynağını, numarasını, motosikletle teknik uyumunu ve mevcut ruhsat kaydını birlikte kontrol edelim. Proje, TSE, muayene ve tescil adımlarını dosyanıza göre netleştirelim.",
+  "imageAlt": "Motosiklet şase değişim projesi için teknik inceleme",
+  "imageTitle": "Motosiklet Şase Değişim Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, motosikletim için şase değişim projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Motosiklet şase numarası ve tescil değişikliği",
+  "introTitle": "Şase değişiminde neden yalnız montaj bilgisi yeterli değildir?",
+  "introText": "Şase, motosikletin ana taşıyıcı yapısı olduğu kadar araç kimliğinin de temel parçasıdır. Bu nedenle yeni şasenin kaynağı, numarası, motosikletle uyumu ve mevcut ruhsat bilgileri aynı dosyada incelenir. Fiziksel montaj tamamlanmış olsa bile şase numarası ile tescil kaydı eşleşmiyorsa işlem tamamlanmış sayılmaz.",
+  "technicalChecks": [
+    {
+      "title": "Mevcut motosiklet kimliği",
+      "description": "Ruhsattaki şase numarası, marka, model ve teknik bilgiler motosiklet üzerindeki kayıtla karşılaştırılır."
+    },
+    {
+      "title": "Yeni şasenin kaynağı",
+      "description": "Şasenin satış belgesi, fatura veya parça bilgisi ile numarasının okunabilirliği incelenir."
+    },
+    {
+      "title": "Model ve teknik uyum",
+      "description": "Yeni şasenin motosikletin modeli, taşıyıcı yapısı ve temel bileşenleriyle uyumu değerlendirilir."
+    },
+    {
+      "title": "Montaj ve güvenlik ekipmanları",
+      "description": "Direksiyon, ön takım, frenler, süspansiyon, motor bağlantıları ve aydınlatma motosiklet üzerindeki mevcut durumuyla kontrol edilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Motosiklet ruhsatı",
+      "description": "Mevcut şase numarası, marka, model ve tescil bilgilerini görmek için."
+    },
+    {
+      "title": "Yeni şase faturası veya satış belgesi",
+      "description": "Yeni parçanın kaynağını ve kimlik bilgisini dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Yeni şase numarası fotoğrafı",
+      "description": "Numaranın okunabilirliğini ve parça üzerindeki konumunu önceden incelemek için."
+    },
+    {
+      "title": "Motosikletin güncel fotoğrafları",
+      "description": "Şase, motor, ön takım, arka düzen ve genel montaj durumunu görmek için."
+    },
+    {
+      "title": "Varsa servis veya hasar kaydı",
+      "description": "Değişim gerekçesini ve yapılan işlemi açıklayan mevcut belgeleri dosyayla eşleştirmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Şase kimliği ve motosiklet montajı",
+    "title": "Yeni şase ile motosikletin teknik bilgileri nasıl eşleştirilir?",
+    "leftTitle": "Şase kimliği için kontrol",
+    "leftItems": [
+      {
+        "title": "Şase numarası",
+        "description": "Yeni şase üzerindeki numaranın okunabilirliği ve belgeyle uyumu."
+      },
+      {
+        "title": "Parça kaynağı",
+        "description": "Fatura, satış belgesi veya mevcut parça bilgilerinin dosyada yer alması."
+      },
+      {
+        "title": "Model uyumu",
+        "description": "Şasenin motosikletin marka, model ve temel yapısıyla ilişkisi."
+      },
+      {
+        "title": "Eski kayıt bilgisi",
+        "description": "Ruhsatta bulunan şase numarasının değişim dosyasında referans alınması."
+      }
+    ],
+    "rightTitle": "Montaj sonrasında kontrol",
+    "rightItems": [
+      {
+        "title": "Motor bağlantıları",
+        "description": "Motorun yeni şase üzerindeki bağlantı noktaları ve sabitleme düzeni."
+      },
+      {
+        "title": "Direksiyon ve ön takım",
+        "description": "Gidon, maşa ve ön süspansiyon bileşenlerinin montaj durumu."
+      },
+      {
+        "title": "Fren ve elektrik tesisatı",
+        "description": "Fren hatları, aydınlatma, sinyaller ve bağlantıların güvenli konumu."
+      },
+      {
+        "title": "Dış görünüm ve donanım",
+        "description": "Plaka, lambalar, çamurluklar ve diğer ekipmanların motosiklet üzerindeki durumu."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Şase değişimi için ücretsiz ön kontrol",
+    "title": "Ruhsatı, yeni şase belgesini ve numara fotoğrafını gönderin.",
+    "description": "Şase değişiminin proje kapsamına girip girmediğini, dosyada eksik belge olup olmadığını ve motosiklet kontrolünden önce düzeltilmesi gereken noktaları birlikte inceleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Ruhsat ve şase belgesi incelemesi",
+      "description": "Mevcut ruhsat, yeni şase belgesi, numara bilgisi ve motosiklet fotoğrafları karşılaştırılır."
+    },
+    {
+      "number": "02",
+      "title": "Teknik uyum ve montaj kontrolü",
+      "description": "Yeni şase ile motor, ön takım, frenler ve diğer temel bileşenlerin ilişkisi incelenir."
+    },
+    {
+      "number": "03",
+      "title": "Şase değişim proje dosyası",
+      "description": "Eski kayıt, yeni parça bilgileri ve motosiklet üzerindeki montaj teknik dosyada bir araya getirilir."
+    },
+    {
+      "number": "04",
+      "title": "TSE motosiklet kontrolü",
+      "description": "Motosiklet ile proje dosyası güncel başvuru kapsamına göre incelenir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve ruhsat güncellemesi",
+      "description": "Gerekli muayene tamamlanır, yeni şase bilgisi tescil işlemiyle ruhsata işlenir."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; motosikletin modeli, yeni şasenin belgelendirme durumu, montajın mevcut hâli, teknik inceleme kapsamı ve resmi işlem kalemlerine göre değişir.",
+    "items": [
+      {
+        "title": "Şase ve belge incelemesi",
+        "description": "Yeni parça kaynağı ile mevcut ruhsat bilgilerinin değerlendirilmesi"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Kimlik, montaj ve motosiklet bileşenlerinin dosyalanması"
+      },
+      {
+        "title": "Onay ve tescil adımları",
+        "description": "Güncel TSE, muayene ve ruhsat işlemlerinin dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Belgesiz yeni şase",
+      "description": "Parçanın kaynağı ve numarası dosyada doğrulanamadığında başvuru kapsamı netleşmez."
+    },
+    {
+      "title": "Numaranın okunmaması",
+      "description": "Şase numarası motosiklet üzerinde veya belgelerde açık biçimde doğrulanamaz."
+    },
+    {
+      "title": "Model uyumsuzluğu",
+      "description": "Yeni şase ile motosikletin temel bileşenleri arasında teknik uyumsuzluk bulunur."
+    },
+    {
+      "title": "Eksik montaj kontrolü",
+      "description": "Fren, direksiyon, süspansiyon veya motor bağlantıları dosyayla birlikte incelenmez."
+    },
+    {
+      "title": "Ruhsat kaydının güncellenmemesi",
+      "description": "Motosiklet üzerindeki yeni şase numarası ile resmi tescil bilgisi farklı kalır."
+    },
+    {
+      "title": "İşlem sırasının atlanması",
+      "description": "Proje, TSE, muayene ve tescil adımları motosikletin dosyasına göre planlanmaz."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Motosiklet şase değişim projesi nedir?",
+      "answer": "Motosikletteki ana taşıyıcı şase değiştiğinde, yeni şasenin kimliğini, kaynağını ve motosiklet üzerindeki montajını tescile esas biçimde gösteren teknik dosyadır."
+    },
+    {
+      "question": "Motosiklet şasesi değişince ruhsat güncellenir mi?",
+      "answer": "Yeni şase numarası mevcut ruhsattan farklıysa, proje ve gerekli kurum işlemlerinden sonra tescil kaydının güncellenmesi gerekir."
+    },
+    {
+      "question": "Şase değişimi için hangi belgeler gerekir?",
+      "answer": "Ruhsat, yeni şase faturası veya satış belgesi, numara fotoğrafı ve motosikletin güncel fotoğrafları temel başlangıç belgeleridir. Dosyaya göre ek belge istenebilir."
+    },
+    {
+      "question": "Farklı model bir şase motosiklete takılabilir mi?",
+      "answer": "Uygunluk yalnız görünüşe göre belirlenmez. Şasenin model, taşıyıcı yapı, motor ve diğer bileşenlerle teknik ilişkisi incelenmeden sonuç verilemez."
+    },
+    {
+      "question": "Montajı yapılmış motosiklet için sonradan proje hazırlanabilir mi?",
+      "answer": "Motosiklet belge ve fotoğraflarla ön incelemeye alınabilir. Numara, montaj veya parça belgesinde uyumsuzluk varsa başvurudan önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Motosiklet şase değişim projesi fiyatı ne kadar?",
+      "answer": "Fiyat motosiklet modeli, şase belgesi, montaj durumu ve proje kapsamına göre değişir. Ruhsat ve şase belgeleri incelendikten sonra teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Kimlik ve belge ön kontrolü",
+      "description": "Ruhsat, yeni şase numarası ve parça belgeleri proje başlamadan önce karşılaştırılır."
+    },
+    {
+      "title": "Montaj odaklı teknik dosya",
+      "description": "Şase, motor, ön takım, frenler ve elektrik donanımı aynı motosiklet üzerinde değerlendirilir."
+    },
+    {
+      "title": "Açık tescil planı",
+      "description": "Proje, TSE, muayene ve ruhsatta şase numarası güncelleme sırası açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, yeni şase belgesini, şase numarası fotoğrafını ve motosikletin güncel görsellerini getirin. Dosyanın kapsamını ve gerekli işlem sırasını birlikte belirleyelim."
+}

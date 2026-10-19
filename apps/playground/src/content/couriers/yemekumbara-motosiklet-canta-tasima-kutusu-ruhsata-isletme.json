@@ -1,0 +1,29 @@
+{
+  "title": "Yemekumbara Motosiklet Çanta (Taşıma Kutusu) Ruhsata İşletme Rehberi",
+  "brand": "Yemekumbara",
+  "slug": "yemekumbara-motosiklet-canta-tasima-kutusu-ruhsata-isletme",
+  "deliveryFocus": "yemek siparişi ve paket servis teslimatı",
+  "equipment": "paket servis çantası, taşıma kutusu ve arka kasa",
+  "reviewFocus": "ekipmanın motosiklet modeliyle birlikte ölçü, denge ve bağlantı açısından incelenmesi",
+  "profileLabel": "Paket servis organizasyonu",
+  "profileSummary": "Yemekumbara, yemek siparişi ve paket servis süreçleri için kullanılan dijital teslimat kanallarından biri olarak anılır. Farklı restoran paketlerinin taşındığı uygulamalarda çantanın hacmi, dengesi ve motosikletteki bağlantısı birlikte kontrol edilir.",
+  "contextText": "Yemekumbara teslimatlarında kullanılan paket çantası ve motosiklet kasası, operasyon tipine göre incelenir.",
+  "faqs": [
+    {
+      "question": "Yemekumbara motosiklet çantayı ruhsata işletmek kaç TL?",
+      "answer": "Yemekumbara için kullanılan ekipmanın ruhsata işletme bedeli; motosiklet modeli, paket servis çantası, taşıma kutusu ve arka kasa türü, montaj yapısı ve ihtiyaç duyulan teknik işlem kapsamına göre değişir. Net ücret için ruhsat, ekipman bilgisi ve fotoğraflar üzerinden ön değerlendirme yapılır."
+    },
+    {
+      "question": "Yemekumbara motosiklet çantası ruhsata nasıl işletilir?",
+      "answer": "Yemekumbara kuryesinin kullandığı ekipman için önce ekipmanın motosiklet modeliyle birlikte ölçü, denge ve bağlantı açısından incelenmesi değerlendirilir. Ardından gerekli teknik proje, uygunluk kontrolü, muayene ve tescil adımları aracın durumuna göre planlanır."
+    },
+    {
+      "question": "Yemekumbara kuryelerinde motosiklet yan çanta da değerlendirilir mi?",
+      "answer": "Yan çanta, topcase veya ek taşıma ekipmanının değerlendirilmesi; ürünün niteliği, montaj noktaları ve motosiklet üzerindeki etkisine göre yapılır. Yemekumbara operasyonunda kullanılan tüm ekipmanları birlikte paylaşmanız doğru proje kapsamının belirlenmesini sağlar."
+    },
+    {
+      "question": "Yemekumbara kurye ekipmanını ruhsata işletmek zorunlu mu?",
+      "answer": "Ruhsata işletme ihtiyacı, ekipmanın motosiklete uygulanış biçimi ile teknik ve tescil kapsamına göre belirlenir. Yemekumbara için kullanılan taşıma sisteminin güncel durumunu teknik incelemeyle netleştirmek, işlem öncesinde doğru yolun belirlenmesine yardımcı olur."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "slug": "sase-numarasi-caktirma-islemleri",
+  "category": "Tescil ve Müşavirlik",
+  "shortTitle": "Şase Numarası Çaktırma İşlemleri",
+  "title": "Şase Numarası Çaktırma İşlemleri",
+  "summary": "Okunamaz hale gelen şase numarasının TSE, TÜVTÜRK ve noter süreçleriyle uyumlu şekilde yeniden işaretlenmesi için uzman destek sağlıyoruz.",
+  "heroEyebrow": "Tescil ve Müşavirlik",
+  "heroTitle": "Şase Numarası Çaktırma İşlemleri",
+  "heroLead": "Şase numarası, aracın kimliğini ortaya koyan en temel teknik verilerden biridir ve hasar ya da aşınma sonucu okunamaz hale gelebilir. Karakaş Mühendislik olarak teknik incelemeden TSE süreçlerine, TÜVTÜRK tadilat muayenesine kadar resmi kayıt yönetiminde yanınızdayız.",
+  "sections": [
+    {
+      "id": "sase-numarasi-caktirma-nedir",
+      "heading": "Şase Numarası Çaktırma Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Şase numarası, aracın kimliğini belirleyen en hayati teknik işaretlerden biridir. Numaranın silinmesi, aşınması, hasar görmesi ya da okunamaz duruma gelmesi halinde; resmi makamların yönlendirmesi ve teknik incelemeler ışığında yeniden işaretleme ihtiyacı doğabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-gerekir",
+      "heading": "Hangi Durumlarda Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Paslanma ya da fiziksel aşınma nedeniyle numaranın okunamaması durumunda",
+            "Kaza veya onarım sonrasında şase bölgesinde işlem yapılması gerektiğinde",
+            "Resmi tespit neticesinde yeniden işaretleme zorunluluğu oluşması halinde",
+            "Teknik kayıtlarla şase bilgisinin doğrulanma ihtiyacı doğduğunda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resmi-surec-nasil-isler",
+      "heading": "Resmi Süreç Nasıl İşler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Şase numarasının güncel durumu teknik olarak incelenir",
+            "Gerekli kurum görüşleri ve teknik belgeler hazırlanır",
+            "Yetkili yönlendirme doğrultusunda işaretleme işlemi gerçekleştirilir",
+            "Gerekiyorsa TÜVTÜRK muayene ve ruhsat kayıtları güncellenir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Geçerli araç ruhsatı",
+            "Kimlik ve mülkiyet bilgileri",
+            "Mevcutsa ekspertiz, tespit ya da inceleme raporları",
+            "Yetkili kurumların yönlendirme evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Şase numarası işlemleri son derece hassas ve mevzuata bağlı süreçlerdir. Resmi dayanak olmadan yapılan her türlü müdahale ciddi hukuki ve idari risk doğurabilir. Bu sebeple tüm adımların yasalara uygun, kayıtlı ve denetlenebilir biçimde ilerlemesi şarttır. TSE onayı, TÜVTÜRK tadilat muayenesi ve noter ruhsat güncellemesinin gerektiği durumlarda süreç kapsamının doğru yönetilmesi büyük bir önem arz eder."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Şase numarası neden yeniden işaretlenir?",
+      "a": "Numaranın okunamaz hale gelmesi, zarar görmesi ya da resmi tespit sonucunda kimlik bilgilerinin yeniden doğrulanması gerektiğinde işaretleme yapılabilir."
+    },
+    {
+      "q": "Her araçta aynı süreç mi uygulanır?",
+      "a": "Hayır, araç tipi, hasar durumu, teknik yapı ve resmi inceleme sonuçlarına göre uygulanan süreç farklılık gösterebilir."
+    },
+    {
+      "q": "En önemli risk nedir?",
+      "a": "Resmi prosedürlerin dışında yapılan müdahaleler ve kayıt uyumsuzlukları ciddi hukuki, teknik ve tescil sorunlarına sebep olabilir."
+    }
+  ]
+}

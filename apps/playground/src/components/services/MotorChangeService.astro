@@ -1,0 +1,976 @@
+---
+import { ArrowRight, BadgeCheck, Check, ChevronDown, FileCheck, MapPin, Star } from '@lucide/astro'
+import { phoneHref, siteSettings, whatsappHref } from '@/data/site'
+import serviceData from '@/content/services/arac-motor-degisim-projesi.json'
+import SiteImage from '../SiteImage.astro'
+
+interface Props {
+  service?: typeof serviceData
+}
+
+const { service = serviceData } = Astro.props
+
+const defaultWhatsappHref = whatsappHref('Merhaba, aracım için motor değişikliği projesi hakkında bilgi almak istiyorum.')
+
+const googleReviews = [
+  {
+    initials: 'Z',
+    name: 'Zübeyde ZENGİN',
+    publishedAt: 'bir yıl önce',
+    quote: 'Konusunda uzman bir firma, herkese tavsiye ederim.',
+    avatarBg: 'bg-[#1769aa]',
+  },
+  {
+    initials: 'İ',
+    name: 'İsmail Can Ayvat',
+    publishedAt: '4 yıl önce',
+    quote: 'Çok memnun kaldım, uygun fiyata kaliteli hizmet sağlayan bir firma kendileri.',
+    avatarBg: 'bg-[#b63a32]',
+  },
+  {
+    initials: 'A',
+    name: 'Avrupa Basım Hizmetleri',
+    publishedAt: 'bir yıl önce',
+    quote: 'Konusunda deneyimli, çözüm odaklı kaliteli hizmet.',
+    avatarBg: 'bg-[#d8752f]',
+  },
+  {
+    initials: 'C',
+    name: 'Cem Abatay',
+    publishedAt: 'bir yıl önce',
+    quote: 'Çok yardımcı oldu, herkesin gelmesini tavsiye ederim.',
+    avatarBg: 'bg-[#7e57c2]',
+  },
+]
+
+const credentials = [
+  {
+    label: 'Kalite yönetimi',
+    title: 'ISO 9001 Kalite Yönetim Sistemi',
+    description: 'Hizmet süreçlerini sürekli iyileştirmeyi ve müşteri memnuniyetini yükseltmeyi amaçlayan kalite yönetim sistemidir.',
+    image: '/belgeler/iso-9001.webp',
+    alt: 'ISO 9001 Kalite Yönetim Sistemi logosu',
+  },
+  {
+    label: 'Çevre yönetimi',
+    title: 'ISO 14001 Çevre Yönetim Sistemi',
+    description: 'Çevresel etkileri azaltmayı ve kaynakları sorumlu kullanmayı esas alan çevre yönetim sistemidir.',
+    image: '/belgeler/iso-14001.webp',
+    alt: 'ISO 14001 Çevre Yönetim Sistemi logosu',
+  },
+  {
+    label: 'İş sağlığı ve güvenliği',
+    title: 'ISO 45001 İş Sağlığı ve Güvenliği Yönetim Sistemi',
+    description: 'Çalışan güvenliğini önceleyen, riskleri sistemli biçimde yönetmeye dayalı iş sağlığı ve güvenliği sistemidir.',
+    image: '/belgeler/iso-45001.webp',
+    alt: 'ISO 45001 İş Sağlığı ve Güvenliği Yönetim Sistemi logosu',
+  },
+  {
+    label: 'Araç proje yetkisi',
+    title: 'TSE AİTM Yetki Belgesi',
+    description: 'Araç tadilat projelerinde teknik proje yetkisini belgeleyen TSE AİTM yetki belgesidir.',
+    image: '/belgeler/tse.webp',
+    alt: 'Türk Standardları Enstitüsü logosu',
+    isTse: true,
+  },
+]
+
+const googleMapsEmbedURL =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.5541654988383!2d28.914657499999997!3d41.056877799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab713cf4631bf%3A0xd4b7db3809bdcddd!2zS0FSQUtBxZ4gTcOcSEVORMSwU0zEsEsgVFNFIE9OQVlMSSBBUkHDhyBQUk9KRSBGxLBSTUEgQkVMR0VMRU5ExLBSTUUgTcOcxZ5BVsSwUkzEsEsgdmUgT1RPTU9UxLBWIEjEsFpNRVRMRVLEsCBSRVNVTCBLQVJBS0HFng!5e0!3m2!1sen!2str!4v1786376364824!5m2!1sen!2str'
+---
+
+<!-- Schema.org JSON-LD (BreadcrumbList + Service + FAQPage) -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://karakasmuhendislik.com.tr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Araç Proje Hizmetlerimiz",
+          "item": "https://karakasmuhendislik.com.tr/arac-proje-hizmetlerimiz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": service.shortTitle || service.title,
+          "item": `https://karakasmuhendislik.com.tr/${service.slug}`
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": service.title,
+      "description": service.summary || service.heroDescription,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Karakaş Mühendislik",
+        "telephone": siteSettings.phone,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gaziosmanpaşa",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      "url": `https://karakasmuhendislik.com.tr/${service.slug}`
+    },
+    ...(service.faqs && service.faqs.length > 0 ? [{
+      "@type": "FAQPage",
+      "mainEntity": service.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }] : [])
+  ]
+})} />
+
+<!-- Hero Section -->
+<section class="relative isolate min-h-[32rem] overflow-hidden bg-[#f4f4f4]">
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <SiteImage
+      src="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp"
+      alt={service.heroTitle || service.title}
+      class="size-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.85)_100%)] lg:bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.96)_35%,rgba(255,255,255,0.82)_60%,rgba(255,255,255,0.45)_85%,rgba(255,255,255,0.25)_100%)]" aria-hidden="true"></div>
+  
+  <div class="shell relative z-20 grid min-h-[32rem] items-center gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_25rem] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_27rem]">
+    <div class="max-w-3xl">
+      <!-- Breadcrumb -->
+      <nav class="mb-3 flex items-center gap-2 text-xs font-semibold text-neutral-500" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/" class="hover:text-primary transition-colors">
+            <span itemprop="name">Ana Sayfa</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </span>
+        <span aria-hidden="true">/</span>
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/arac-proje-hizmetlerimiz" class="hover:text-primary transition-colors">
+            <span itemprop="name">Araç Proje Hizmetlerimiz</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </span>
+        <span aria-hidden="true">/</span>
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name" class="text-neutral-900">{service.shortTitle}</span>
+          <meta itemprop="item" content={`https://karakasmuhendislik.com.tr/${service.slug}`} />
+          <meta itemprop="position" content="3" />
+        </span>
+      </nav>
+
+      <h2 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">
+        {service.heroEyebrow || 'Araç Motor Değişimi | TSE Onaylı'}
+      </h2>
+      
+      <h1 class="mt-3 text-[clamp(2.2rem,3.8vw,3.6rem)] font-black leading-[1.03] tracking-[-0.05em] text-neutral-950">
+        {service.heroTitle || service.title}
+      </h1>
+      
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-neutral-700">
+        {service.heroDescription || service.summary}
+      </p>
+      
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a
+          href={defaultWhatsappHref}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-11 items-center gap-2.5 bg-[#25D366] hover:bg-[#1fb65a] px-5 text-xs font-black uppercase tracking-wider text-white shadow-sm transition-colors"
+        >
+          <span>WhatsApp'tan bilgi alın</span>
+          <ArrowRight size={15} />
+        </a>
+        
+        <a
+          href={defaultWhatsappHref}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-11 items-center gap-2 border border-neutral-900 bg-white/90 hover:bg-neutral-950 hover:text-white px-5 text-xs font-black uppercase tracking-wider text-neutral-950 transition-colors"
+        >
+          <span>Ücretsiz ön değerlendirme</span>
+          <ArrowRight size={15} />
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Offer Form on the Right -->
+    <form
+      id="service-quick-form"
+      class="relative z-10 w-full max-w-[27rem] justify-self-end border-t-[3px] border-primary bg-white p-5 text-[#1a1a1a] shadow-[0_20px_50px_rgba(4,24,39,0.14)] sm:p-6"
+    >
+      <div class="flex items-start justify-between gap-3 border-b border-neutral-200 pb-3">
+        <div>
+          <h3 class="text-[11px] font-black uppercase tracking-[0.16em] text-primary">
+            Hızlı Teklif Formu
+          </h3>
+          <h2 class="mt-1 text-[17px] font-black tracking-tight text-neutral-950 sm:text-[19px]">
+            {service.shortTitle} Teklifi Al
+          </h2>
+        </div>
+        <span class="grid size-9 shrink-0 place-items-center rounded-full bg-[#25D366]/15 text-[#1cae56]">
+          <svg class="size-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/>
+          </svg>
+        </span>
+      </div>
+
+      <p class="mt-2.5 text-xs leading-5 text-neutral-600">
+        Adınızı ve telefonunuzu yazın; teklif talebiniz hazır mesaj olarak WhatsApp'a yönlendirilsin.
+      </p>
+
+      <div class="mt-3.5 space-y-2.5">
+        <div>
+          <label for="quick-fullName" class="block text-[11px] font-bold uppercase tracking-wider text-neutral-700">Ad Soyad</label>
+          <input
+            id="quick-fullName"
+            type="text"
+            name="fullName"
+            required
+            autocomplete="name"
+            placeholder="Adınız ve Soyadınız"
+            class="mt-1 h-9 w-full rounded-none border border-neutral-300 bg-[#f9f9f9] px-3 text-xs text-neutral-900 outline-none transition focus:border-primary focus:bg-white"
+          />
+        </div>
+        <div>
+          <label for="quick-phone" class="block text-[11px] font-bold uppercase tracking-wider text-neutral-700">Telefon Numarası</label>
+          <input
+            id="quick-phone"
+            type="tel"
+            name="phone"
+            required
+            autocomplete="tel"
+            placeholder="05xx xxx xx xx"
+            class="mt-1 h-9 w-full rounded-none border border-neutral-300 bg-[#f9f9f9] px-3 text-xs text-neutral-900 outline-none transition focus:border-primary focus:bg-white"
+          />
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 border-0 bg-[#25D366] hover:bg-[#1fb65a] px-4 text-[16px] font-bold text-white transition-colors cursor-pointer"
+      >
+        <span>WhatsApp ile iletişime geç</span>
+        <ArrowRight size={18} />
+      </button>
+
+      <div class="mt-3 flex items-center justify-between border-t border-neutral-100 pt-2.5 text-[11px] text-neutral-500">
+        <span class="inline-flex items-center gap-1 font-semibold text-emerald-700">
+          <Check size={13} /> TSE Yetkili Mühendislik
+        </span>
+        <span>Hızlı Yanıt</span>
+      </div>
+    </form>
+  </div>
+
+  <!-- Custom geometric white dividers (Left & Right) -->
+  <div class="custom-divider-white-left absolute -bottom-[1px] left-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+  <div class="custom-divider-white-right absolute -bottom-[1px] right-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+</section>
+
+<!-- Main Article Body -->
+<article class="bg-white py-14 md:py-20 text-neutral-900">
+  <div class="shell max-w-6xl">
+    
+    <!-- Article Header -->
+    <div class="border-b border-neutral-200 pb-10">
+      <h3 class="text-base font-bold uppercase tracking-[0.14em] text-primary">
+        {service.articleEyebrow || 'Motor Değişim Projesi'}
+      </h3>
+      <h2 class="mt-4 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.03] tracking-[-0.05em] text-neutral-950">
+        {service.articleTitle || service.title}
+      </h2>
+      <p class="mt-6 text-base sm:text-lg leading-relaxed text-neutral-700">
+        {service.articleLead1}
+      </p>
+      <p class="mt-4 text-base sm:text-lg leading-relaxed text-neutral-700">
+        {service.articleLead2}
+      </p>
+      <div class="mt-7 flex flex-wrap items-center gap-x-8 gap-y-2 border-t border-neutral-200 pt-5 text-sm text-neutral-500">
+        <p>Hazırlayan: <strong class="font-bold text-neutral-900">{service.articleAuthor || 'Karakaş Mühendislik'}</strong></p>
+        <p>Son güncelleme: <time datetime="2026-08-10">{service.articleUpdated || '10 Ağustos 2026'}</time></p>
+      </div>
+    </div>
+
+    <!-- 3 Summary Badges -->
+    <section class="mt-10 grid border-y border-neutral-200 sm:grid-cols-3">
+      {service.summaryCards?.map((item) => (
+        <div class={`border-b border-neutral-200 px-6 py-6 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0 ${item.className}`}>
+          <p class="text-[22px] font-black tracking-tight">{item.value}</p>
+          <p class={`mt-2 text-sm leading-normal ${item.labelClassName}`}>{item.label}</p>
+        </div>
+      ))}
+    </section>
+
+    <!-- Article Featured Image -->
+    {service.articleImage && (
+      <figure class="mt-10 overflow-hidden border border-neutral-200 bg-[#f7f8f8]">
+        <SiteImage
+          src={service.articleImage}
+          alt={service.title}
+          class="h-auto w-full object-cover"
+          loading="lazy"
+          width="1672"
+          height="941"
+        />
+      </figure>
+    )}
+
+    <!-- 01 · Uygun Proje Yolu -->
+    <section class="mt-16" aria-labelledby="motor-path-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">
+        01 · Uygun proje yolu
+      </h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-path-title">
+        Montaj uygunluk ile motor tadilat projesi arasındaki fark nedir?
+      </h2>
+      <p class="mt-5 text-base sm:text-lg leading-relaxed text-neutral-700">
+        Sıfır motor her zaman montaj uygunluk, çıkma motor da her zaman tadilat anlamına gelmez. Dosya türünü motorun yaşı değil, eski motorla arasındaki teknik fark belirler. Güç, hacim, yakıt, model yılı ve emisyon bilgileri karşılaştırılınca izlenecek yol ortaya çıkar.
+      </p>
+
+      <!-- Decision Flowchart Box -->
+      <div class="mt-8" aria-label="Motor değişimi dosya türü karar grafiği">
+        <div class="mx-auto max-w-xl border border-neutral-800 bg-[#17222c] px-6 py-5 text-center text-white">
+          <h4 class="text-xs font-bold uppercase tracking-[0.12em] text-white/60">Başlangıç sorusu</h4>
+          <p class="mt-2 text-lg sm:text-xl font-bold">{service.decisionTree?.startQuestion}</p>
+        </div>
+        <div class="mx-auto hidden h-10 w-px bg-neutral-300 md:block"></div>
+        <div class="grid gap-6 md:grid-cols-2 md:gap-8">
+          <!-- Option A -->
+          <section class="border border-[#b8d5df] bg-[#f1f7f9] p-6 md:p-7">
+            <h4 class="text-xs font-bold uppercase tracking-[0.12em] text-[#32667c]">{service.decisionTree?.optionA.label}</h4>
+            <h3 class="mt-2 text-xl font-black text-neutral-950">{service.decisionTree?.optionA.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-neutral-600">{service.decisionTree?.optionA.description}</p>
+            <ul class="mt-5 space-y-2.5 border-t border-neutral-200 pt-5">
+              {service.decisionTree?.optionA.items.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm font-medium text-neutral-800">
+                  <Check class="mt-0.5 size-4 shrink-0 text-emerald-700" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <!-- Option B -->
+          <section class="border border-[#f1c79e] bg-[#fff4e8] p-6 md:p-7">
+            <h4 class="text-xs font-bold uppercase tracking-[0.12em] text-[#b94e17]">{service.decisionTree?.optionB.label}</h4>
+            <h3 class="mt-2 text-xl font-black text-neutral-950">{service.decisionTree?.optionB.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-neutral-600">{service.decisionTree?.optionB.description}</p>
+            <ul class="mt-5 space-y-2.5 border-t border-neutral-200 pt-5">
+              {service.decisionTree?.optionB.items.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm font-medium text-neutral-800">
+                  <Check class="mt-0.5 size-4 shrink-0 text-amber-700" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Pre-purchase Warning Callout -->
+      <aside class="mt-10 border-y border-neutral-200 py-7 sm:flex sm:items-center sm:justify-between sm:gap-8">
+        <div class="max-w-3xl">
+          <h3 class="text-lg sm:text-xl font-black text-neutral-950">Motoru satın almadan önce ön kontrol yaptırın.</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-neutral-600">
+            Ruhsatı, motor numarasını ve bildiğiniz teknik verileri gönderin. Hangi dosyanın gerektiğine motoru taktırmadan önce bakalım.
+          </p>
+        </div>
+        <a
+          href={defaultWhatsappHref}
+          target="_blank"
+          rel="noreferrer"
+          class="mt-5 inline-flex h-11 shrink-0 items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-5 text-xs font-black uppercase tracking-wider text-white transition-colors sm:mt-0"
+        >
+          <span>WhatsApp'tan gönderin</span>
+          <ArrowRight size={14} />
+        </a>
+      </aside>
+    </section>
+
+    <!-- 02 · İşlem Akışı (6-Step Timeline) -->
+    <section class="mt-16 border border-neutral-200 bg-[#f7f8f8] p-6 sm:p-8 lg:p-10" aria-labelledby="motor-process-title">
+      <div class="border-b border-neutral-200 pb-6">
+        <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-[#32667c]">02 · İşlem akışı</h3>
+        <h2 class="mt-2 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-process-title">
+          Motor Değişim Projesi Süreci
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-700">
+          Motor değişim projesi nasıl yapılır? Süreç altı ana adımda tamamlanır. Teknik uygunluk kontrolünden sonra evraklar ve proje dosyası hazırlanır. Araç TSE kontrolü ile TÜVTÜRK tadilat muayenesinden geçince yeni motor bilgisi noterde ruhsata işlenir.
+        </p>
+      </div>
+
+      <div class="mt-8 relative">
+        <ol class="grid gap-6 lg:grid-cols-6 lg:gap-0">
+          {service.processSteps?.map((step, index) => {
+            const isLast = index === service.processSteps.length - 1
+            const badgeBg = isLast ? 'bg-emerald-600 text-white' : index === 2 ? 'bg-primary text-white' : 'bg-[#17222c] text-white'
+            return (
+              <li class="relative flex flex-col border-b border-neutral-200 pb-6 pl-16 last:border-b-0 last:pb-0 lg:border-b-0 lg:border-r lg:px-4 lg:last:border-r-0">
+                <span class={`absolute left-0 top-0 grid size-11 place-items-center text-sm font-black ring-4 ring-white lg:relative lg:mx-auto ${badgeBg}`}>
+                  {step.number}
+                </span>
+                <p class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 lg:mt-6">
+                  Adım {index + 1}/{service.processSteps.length}
+                </p>
+                <h3 class="mt-2 text-base font-black leading-tight text-neutral-950">
+                  {step.title}
+                </h3>
+                <p class="mt-2 text-xs sm:text-sm leading-relaxed text-neutral-600">
+                  {step.description}
+                </p>
+                {isLast && (
+                  <p class="mt-4 flex items-center gap-1.5 text-xs font-bold text-emerald-700 lg:mt-auto lg:pt-4">
+                    <Check class="size-4 shrink-0" /> Tescil tamamlanır
+                  </p>
+                )}
+              </li>
+            )
+          })}
+        </ol>
+      </div>
+    </section>
+
+    <!-- 03 · Teknik Uygunluk -->
+    <section class="mt-16" aria-labelledby="motor-technical-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">03 · Teknik uygunluk</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-technical-title">
+        Motorun araca uygunluğu nasıl belirlenir?
+      </h2>
+      <p class="mt-5 text-base sm:text-lg leading-relaxed text-neutral-700">
+        Motor gücünün aynı olması olumlu bir veri olsa da tek başına proje uygunluğunu göstermez. Motor numarası, sahiplik belgesi, silindir hacmi, yakıt sistemi, model yılı, emisyon seviyesi ve montaj birlikte incelenir.
+      </p>
+
+      <!-- 4 Technical Check Items -->
+      <div class="mt-8 border-y border-neutral-200 divide-y divide-neutral-200">
+        {service.technicalChecks?.map((item, index) => (
+          <div class={`grid gap-3 px-5 py-4 md:grid-cols-[40px_minmax(0,.65fr)_minmax(0,1.35fr)_150px] md:items-center md:gap-6 ${index % 2 === 0 ? 'bg-[#f7f8f8]' : 'bg-white'}`}>
+            <span class="text-sm font-bold text-neutral-400">{String(index + 1).padStart(2, '0')}</span>
+            <h3 class="text-base font-black text-neutral-950">{item.label}</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">{item.description}</p>
+            <span class="w-fit border border-[#b8d5df] bg-[#f1f7f9] px-3 py-1.5 text-xs font-bold tracking-wider text-[#32667c]">
+              {item.value}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Decision Comparison Table -->
+      <div class="mt-10">
+        <h3 class="text-xl sm:text-2xl font-black text-neutral-950">Hangi dosya yolu uygulanır?</h3>
+        <p class="mt-3 text-sm sm:text-base text-neutral-600 leading-relaxed">
+          İki dosya yolu aynı sonuca, yani yeni motorun ruhsata işlenmesine gider. Fakat teknik incelemenin kapsamı ve ara adımlar aynı değildir. Nihai yol, araç ile motorun belgeleri ve teknik verileri incelendikten sonra belirlenir.
+        </p>
+
+        <div class="mt-6 overflow-x-auto border border-neutral-200">
+          <table class="w-full min-w-[700px] border-collapse text-left text-sm">
+            <thead class="bg-neutral-950 text-white">
+              <tr>
+                <th class="w-[24%] px-5 py-3.5 font-bold">Kontrol</th>
+                <th class="w-[38%] px-5 py-3.5 font-bold">Montaj uygunluk</th>
+                <th class="w-[38%] px-5 py-3.5 font-bold">Motor tadilatı</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-neutral-200">
+              {service.technicalDecisionRows?.map((row, index) => (
+                <tr class={index % 2 === 0 ? 'bg-[#f7f8f8]' : 'bg-white'}>
+                  <th class="px-5 py-4 align-top font-bold text-neutral-950">{row.criterion}</th>
+                  <td class="px-5 py-4 align-top text-neutral-700 leading-relaxed">{row.montage}</td>
+                  <td class="px-5 py-4 align-top text-neutral-700 leading-relaxed">{row.modification}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-4 text-xs sm:text-sm text-neutral-500 leading-relaxed">
+          TSE'nin motor tadilatında istediği AİTM belgeleri ve motor mukayese raporuna ilişkin güncel hizmet kayıtlarını{' '}
+          <a class="font-bold text-[#32667c] underline underline-offset-4" href="https://www.tse.org.tr/hizmet-standartlari-tablosu/" target="_blank" rel="noreferrer">
+            TSE Hizmet Standartları Tablosu'nda
+          </a>{' '}
+          görebilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <!-- 04 · Belge Dosyası -->
+    <section class="mt-16" aria-labelledby="motor-documents-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">04 · Belge dosyası</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-documents-title">
+        Motor Değişim Projesi İçin Gerekli Evraklar
+      </h2>
+      <p class="mt-5 text-base sm:text-lg leading-relaxed text-neutral-700">
+        Dosyayı iki aşamada hazırlayın. Önce her motor değişimi başvurusunda gereken ortak belgeleri toplayın. Ardından yalnızca takılan motorun durumuna uygun ek listeyi tamamlayın.
+      </p>
+
+      <!-- Stage 1 Box -->
+      <div class="mt-8 border border-[#b8d5df] bg-[#f1f7f9] p-6 sm:p-7">
+        <div class="grid gap-5 lg:grid-cols-[260px_minmax(0,1fr)] lg:items-start lg:gap-8">
+          <div>
+            <span class="inline-flex bg-neutral-950 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+              1. aşama · Her başvuruda
+            </span>
+            <h3 class="mt-4 text-lg sm:text-xl font-black text-neutral-950">{service.documentGroups?.[0]?.title}</h3>
+            <p class="mt-2 text-xs sm:text-sm text-neutral-600">Motor sıfır veya ikinci el olsa da önce bu belgeleri hazırlayın.</p>
+          </div>
+          <ul class="grid gap-3 sm:grid-cols-2 lg:border-l lg:border-neutral-200 lg:pl-8">
+            {service.documentGroups?.[0]?.items.map((item) => (
+              <li class="flex items-start gap-2.5 text-sm text-neutral-800 font-medium">
+                <span class="mt-0.5 grid size-4 place-items-center bg-black text-white shrink-0">
+                  <Check size={11} />
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Stage 2 Options -->
+      <div class="mt-8">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">2. aşama · Motor türüne göre birini seçin</h4>
+        <h3 class="mt-2 text-lg sm:text-xl font-black text-neutral-950">Takılan motor hangi gruba giriyor?</h3>
+        
+        <div class="mt-5 grid gap-5 lg:grid-cols-2">
+          {service.documentGroups?.slice(1).map((group, index) => (
+            <div class="border border-neutral-200 bg-white p-6 sm:p-7">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Seçenek {index + 1}</span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-[#32667c]">
+                  Ek belge listesi <ArrowRight size={12} />
+                </span>
+              </div>
+              <h4 class="mt-3 text-lg font-black text-neutral-950">{group.title}</h4>
+              <ul class="mt-5 space-y-2.5 border-t border-neutral-100 pt-4">
+                {group.items.map((item) => (
+                  <li class="flex items-start gap-2.5 text-sm text-neutral-700">
+                    <span class="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <aside class="mt-6 border-l-4 border-primary bg-[#fff9f2] px-6 py-5">
+        <h3 class="text-base font-black text-neutral-950">Motor faturasında hangi bilgiler bulunmalı?</h3>
+        <p class="mt-2 text-xs sm:text-sm text-neutral-700 leading-relaxed">
+          Faturada motor numarası, bilinen teknik özellikler, montaj işçiliği ve araç sahibinin bilgileri açıkça yazılmalıdır. Eksik bilgi için firma yetkilisinin veya montajı yapan iş yerinin imzaladığı ek belge istenebilir.
+        </p>
+      </aside>
+    </section>
+
+    <!-- Hızlı Başlangıç Banner -->
+    <section class="mt-16 bg-neutral-950 p-7 sm:p-9 text-white shadow-xl">
+      <h3 class="text-xs font-bold uppercase tracking-widest text-white/60">Hızlı başlangıç</h3>
+      <h2 class="mt-3 text-2xl sm:text-3xl font-black">Ücretsiz Hızlı Ön Kontrol</h2>
+      <p class="mt-3 max-w-2xl text-sm sm:text-base text-white/75 leading-relaxed">
+        Ruhsatı, motor belgesini, motor numarasını ve bildiğiniz teknik verileri gönderin. Montaj uygunluk raporu mu yoksa motor tadilat projesi mi gerektiğini, dosyayı hazırlamadan önce kontrol edelim.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href={defaultWhatsappHref}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex h-12 items-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white transition-colors"
+        >
+          <span>WhatsApp'tan evrak gönderin</span>
+          <ArrowRight size={14} />
+        </a>
+      </div>
+    </section>
+
+    <!-- 05 · Ücret Kalemleri -->
+    <section class="mt-16 border-y border-neutral-200 py-10" aria-labelledby="motor-cost-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-[#32667c]">05 · Ücret kalemleri</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-cost-title">
+        Motor Değişim Projesi Fiyatları
+      </h2>
+      <h3 class="mt-3 text-xl font-bold text-neutral-900">Araç Motor Değişimi Ruhsata İşletme Ücreti</h3>
+      <p class="mt-4 text-base text-neutral-700 leading-relaxed">
+        Montaj uygunluk raporu ile motor tadilat projesinin toplam maliyeti aynı değildir. Mühendislik hizmeti, TSE kontrolü, gerekiyorsa muayene ve noter tescili ayrı ayrı hesaplanır. Önce aracın hangi dosyaya girdiği belirlenir, ardından güncel bedellerle toplam maliyet çıkarılır.
+      </p>
+
+      <!-- Cost Table -->
+      <div class="mt-8 overflow-x-auto border border-neutral-200">
+        <table class="w-full min-w-[680px] border-collapse text-left text-sm">
+          <thead class="bg-neutral-950 text-white">
+            <tr>
+              <th class="w-[25%] px-5 py-3.5 font-bold">Maliyet kalemi</th>
+              <th class="w-[45%] px-5 py-3.5 font-bold">Kapsam</th>
+              <th class="w-[30%] px-5 py-3.5 font-bold">2026 bilgisi</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-200">
+            {service.costRows?.map((row, index) => (
+              <tr class={index % 2 === 0 ? 'bg-[#f7f8f8]' : 'bg-white'}>
+                <th class="px-5 py-4 align-top font-bold text-neutral-950">{row.item}</th>
+                <td class="px-5 py-4 align-top text-neutral-700 leading-relaxed">{row.scope}</td>
+                <td class="px-5 py-4 align-top font-bold text-[#32667c]">{row.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2026 Noter Callout -->
+      <div class="mt-8 grid gap-5 border border-[#b8d5df] bg-[#f1f7f9] p-6 md:grid-cols-[minmax(0,1fr)_220px] md:items-center md:p-8">
+        <div>
+          <h3 class="text-xl font-black text-neutral-950">Ruhsata Araç Motoru İşletme Fiyatı</h3>
+          <p class="mt-2.5 text-sm sm:text-base text-neutral-700 leading-relaxed">
+            1 Ocak 2026 itibarıyla noterde araç motorunu ruhsata işletme bedeli <strong>1.968 TL</strong> olarak belirtiliyor. Bu tutar yalnızca noter ile yeni ruhsatın düzenlenmesini kapsar. Mühendislik projesi, TSE kontrolü ve TÜVTÜRK tadilat muayenesi ayrıca ücretlendirilir.
+          </p>
+        </div>
+        <div class="border-l-4 border-[#32667c] bg-white px-5 py-5 md:text-right">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">2026 noter bedeli</h4>
+          <p class="mt-1.5 text-3xl font-black text-neutral-950">{service.noterPrice2026 || '1.968 TL'}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · Motor Seçimi -->
+    <section class="mt-16 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,.7fr)] lg:items-start" aria-labelledby="motor-important-title">
+      <div>
+        <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">06 · Motor seçimi</h3>
+        <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-important-title">
+          Motor almadan önce hangi bilgiler kontrol edilmeli?
+        </h2>
+        <p class="mt-5 text-base leading-relaxed text-neutral-700">
+          Motor ustasının verdiği mekanik uygunluk bilgisi, proje için tek başına yeterli değildir. Motor numarası, faturasının bulunması ve kaynak aracın bilinmesi gerekir. Güç, hacim, yakıt ve emisyon verileri de araçla uyumlu olmalıdır.
+        </p>
+        <p class="mt-4 text-base leading-relaxed text-neutral-700">
+          Daha eski model motor, yakıt türü değişikliği veya belirgin teknik fark ek rapor gerektirebilir. Bu nedenle proje kontrolünü motor seçiminin bir parçası sayın.
+        </p>
+      </div>
+
+      <aside class="border border-[#ead99e] bg-[#fffbea] p-6">
+        <h3 class="text-xs font-black uppercase tracking-wider text-[#756019]">Motor almadan önce sorun</h3>
+        <ul class="mt-4 space-y-3">
+          {service.prePurchaseChecklist?.map((item) => (
+            <li class="flex items-start gap-2.5 text-sm text-neutral-800 font-medium">
+              <Check class="mt-0.5 size-4 shrink-0 text-neutral-950" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </section>
+
+    <!-- 07 · Tescili Geciktirmeyin (Penalty Box) -->
+    <section class="mt-16 border border-[#e7b8b2] bg-[#fff4f2] p-6 sm:p-8" aria-labelledby="motor-penalty-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-[#9f3e35]">07 · Tescili geciktirmeyin</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-penalty-title">
+        Araç Motor Değişimi Ruhsata İşletilmezse Ne Olur?
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-neutral-700">
+        Motor değişimi, montaj bittiğinde resmî olarak tamamlanmış sayılmaz. Değişikliğin 30 gün içinde araç belgelerine işletilmemesi hâlinde 2918 sayılı Karayolları Trafik Kanunu’nun 32/1 maddesi kapsamında idari işlem uygulanır. 2026 yılı için belirtilen idari para cezası <strong>1.246,11 TL</strong>’dir. Sürücü belgesine ayrıca <strong>10 ceza puanı</strong> işlenir.
+      </p>
+
+      <div class="mt-6 grid gap-3 sm:grid-cols-3">
+        <div class="bg-white p-5 border border-[#e7b8b2]">
+          <p class="text-2xl font-black text-[#9f3e35]">{service.penaltyInfo?.days}</p>
+          <p class="mt-1 text-xs text-neutral-600">{service.penaltyInfo?.daysLabel}</p>
+        </div>
+        <div class="bg-white p-5 border border-[#e7b8b2]">
+          <p class="text-2xl font-black text-[#9f3e35]">{service.penaltyInfo?.fee}</p>
+          <p class="mt-1 text-xs text-neutral-600">{service.penaltyInfo?.feeLabel}</p>
+        </div>
+        <div class="bg-white p-5 border border-[#e7b8b2]">
+          <p class="text-2xl font-black text-[#9f3e35]">{service.penaltyInfo?.points}</p>
+          <p class="mt-1 text-xs text-neutral-600">{service.penaltyInfo?.pointsLabel}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · Kaynaklar ve Güncellik -->
+    <section class="mt-16 border-y border-neutral-200 py-10" aria-labelledby="sources-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-[#32667c]">08 · Kaynaklar ve güncellik</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="sources-title">
+        Resmî işlem adımlarını nereden kontrol edebilirsiniz?
+      </h2>
+      <p class="mt-4 text-base text-neutral-700 leading-relaxed">
+        Bu rehber, güncel TSE ve Emniyet Genel Müdürlüğü mevzuatları dikkate alınarak hazırlanmıştır.
+      </p>
+
+      <ul class="mt-6 grid gap-3 md:grid-cols-2">
+        {service.sources?.map((source) => (
+          <li class="border border-neutral-200 bg-[#f7f8f8]">
+            <a href={source.url} target="_blank" rel="noreferrer" class="flex min-h-14 items-center justify-between gap-4 px-5 py-3.5 text-sm font-bold text-neutral-950 transition hover:border-[#32667c] hover:bg-[#f1f7f9]">
+              <span>{source.label}</span>
+              <ArrowRight class="size-4 shrink-0 text-[#32667c]" />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- 09 · Karakaş Mühendislik Farkı -->
+    <section class="mt-16" aria-labelledby="why-karakas-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">09 · Karakaş Mühendislik farkı</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="why-karakas-title">
+        Neden Karakaş Mühendislik?
+      </h2>
+      <p class="mt-4 text-base text-neutral-700 leading-relaxed">
+        Motor değişiminde doğru proje yolu, araca ve takılacak motora ait bilgilerin birlikte incelenmesiyle belirlenir. Karakaş Mühendislik, ilk teknik kontrolden ruhsat tesciline kadar gereken adımları ve belgeleri başvuru sahibiyle açık biçimde paylaşır.
+      </p>
+
+      <!-- 3 Trust Cards -->
+      <div class="mt-8 grid gap-4 lg:grid-cols-3">
+        {service.trustReasons?.map((reason, index) => (
+          <article class="bg-[#f7f8f8] p-6 sm:p-7 border border-neutral-200">
+            <div class="flex items-center justify-between gap-4">
+              <span class="grid size-10 place-items-center bg-black text-sm font-bold text-white">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <BadgeCheck class="size-6 text-[#32667c]" />
+            </div>
+            <h3 class="mt-5 text-lg font-black text-neutral-950">{reason.title}</h3>
+            <p class="mt-2.5 text-sm text-neutral-600 leading-relaxed">{reason.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <!-- Credentials -->
+      <div class="mt-12 border-t border-neutral-200 pt-10">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-neutral-200 pb-5">
+          <div>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">Yetki ve kalite belgelerimiz</h3>
+            <h3 class="mt-2 text-2xl font-black text-neutral-950">Proje hizmetimizi destekleyen belgeler</h3>
+          </div>
+          <p class="text-xs text-neutral-500 max-w-sm">Belge kapsamı ve geçerlilik durumu güncel nüshalar üzerinden doğrulanır.</p>
+        </div>
+
+        <ul class="divide-y divide-neutral-200">
+          {credentials.map((cred) => (
+            <li class="grid gap-4 py-5 sm:grid-cols-[100px_minmax(0,.8fr)_minmax(0,1.2fr)] sm:items-center sm:gap-6">
+              <div class="grid h-20 w-[100px] place-items-center border border-neutral-200 bg-[#f7f8f8] p-2">
+                <SiteImage src={cred.image} alt={cred.alt} class="max-h-14 max-w-full object-contain" />
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">{cred.label}</h4>
+                <h4 class="mt-1 text-base font-bold text-neutral-950">{cred.title}</h4>
+              </div>
+              <div class="sm:border-l sm:border-neutral-200 sm:pl-6">
+                <p class="text-sm text-neutral-600 leading-relaxed">{cred.description}</p>
+                {cred.isTse && (
+                  <p class="mt-1.5 text-xs text-neutral-500">
+                    <FileCheck class="mr-1.5 inline size-3.5 text-primary" />
+                    Yetki belge numarası, güncel belge nüshasıyla doğrulandıktan sonra yayımlanır.
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Google Reviews Section -->
+      <div class="mt-12 border-t border-neutral-200 pt-10">
+        <div class="text-center">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-primary">Google yorumları</h3>
+          <h3 class="mt-2 text-2xl font-black text-neutral-950">Müşterilerimiz ne söylüyor?</h3>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-4 bg-[#f4f5f7] p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-lg font-black text-neutral-950">Google Yorumları</p>
+            <div class="mt-1.5 flex items-center gap-2">
+              <span class="text-2xl font-black text-neutral-950">5.0</span>
+              <div class="flex gap-0.5 text-amber-400">
+                {Array.from({ length: 5 }).map(() => (
+                  <Star class="size-4 fill-amber-400" />
+                ))}
+              </div>
+              <span class="text-xs text-neutral-500">Google Haritalar Puanı</span>
+            </div>
+          </div>
+          <a
+            href="https://share.google/itAGCozUXMtMGs45T"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex h-10 items-center justify-center gap-2 bg-[#4285F4] hover:bg-[#276fd4] px-5 text-xs font-bold text-white transition-colors"
+          >
+            <span>Google'da tüm yorumları görün</span>
+            <ArrowRight size={14} />
+          </a>
+        </div>
+
+        <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {googleReviews.map((review) => (
+            <div class="flex flex-col bg-[#f4f5f7] p-5">
+              <div class="flex items-center gap-3">
+                <span class={`grid size-10 place-items-center rounded-full text-xs font-bold text-white ${review.avatarBg}`}>
+                  {review.initials}
+                </span>
+                <div>
+                  <h4 class="text-sm font-bold text-neutral-950 truncate">{review.name}</h4>
+                  <p class="text-[11px] text-neutral-400">{review.publishedAt}</p>
+                </div>
+              </div>
+              <div class="mt-3 flex gap-0.5 text-amber-400">
+                {Array.from({ length: 5 }).map(() => (
+                  <Star class="size-3.5 fill-amber-400" />
+                ))}
+              </div>
+              <blockquote class="mt-3 text-xs text-neutral-700 leading-relaxed italic">
+                “{review.quote}”
+              </blockquote>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Physical Office & Google Maps -->
+      <div class="mt-12 border-t border-neutral-200 pt-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-[#32667c]">Yüz yüze teknik değerlendirme</h3>
+        <h3 class="mt-2 text-2xl font-black text-neutral-950">Motor değişim projenizi ofiste birlikte planlayalım</h3>
+        <p class="mt-2 text-sm text-neutral-600">
+          Ruhsatınızı ve yeni motorun bilgilerini getirin; gereken proje yolunu, evrakları ve sonraki başvuru adımlarını görüşmede netleştirelim.
+        </p>
+
+        <div class="mt-6 grid overflow-hidden border border-neutral-200 lg:grid-cols-[minmax(320px,.72fr)_minmax(0,1.28fr)]">
+          <div class="bg-neutral-950 p-7 text-white sm:p-8 flex flex-col justify-between">
+            <div>
+              <MapPin class="size-8 text-sky-400" />
+              <h4 class="mt-5 text-xs font-bold uppercase tracking-wider text-white/50">Fiziksel hizmet noktası</h4>
+              <p class="mt-2 text-xl font-bold leading-snug">{siteSettings.location}</p>
+              
+              <dl class="mt-6 divide-y divide-white/10 border-y border-white/10 text-xs">
+                <div class="py-3">
+                  <dt class="text-white/50">Çalışma saatleri</dt>
+                  <dd class="mt-0.5 font-bold">{siteSettings.workHours}</dd>
+                </div>
+                <div class="py-3">
+                  <dt class="text-white/50">Telefon</dt>
+                  <dd class="mt-0.5 font-bold">
+                    <a href={phoneHref} class="hover:underline">{siteSettings.phone}</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-2.5">
+              <a
+                href={defaultWhatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex h-11 items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-5 text-xs font-bold text-white transition-colors"
+              >
+                <span>Ofis görüşmesi için yazın</span>
+                <ArrowRight size={14} />
+              </a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Karaka%C5%9F%20M%C3%BChendislik%20Gaziosmanpa%C5%9Fa%20%C4%B0stanbul"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex h-11 items-center justify-center gap-2 border border-white/30 hover:bg-white hover:text-neutral-950 px-5 text-xs font-bold text-white transition-colors"
+              >
+                <span>Yol tarifi alın</span>
+                <ArrowRight size={14} />
+              </a>
+            </div>
+          </div>
+
+          <div class="relative min-h-[360px] bg-neutral-100">
+            <iframe
+              src={googleMapsEmbedURL}
+              class="absolute inset-0 size-full border-0"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Karakaş Mühendislik Gaziosmanpaşa ofis konumu"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · Sık Sorulanlar (Accordion FAQs) -->
+    <section class="mt-16" aria-labelledby="motor-faq-title">
+      <h3 class="text-[13px] font-bold uppercase tracking-[0.14em] text-neutral-900">10 · Sık sorulanlar</h3>
+      <h2 class="mt-3 text-[clamp(1.8rem,3.5vw,2.65rem)] font-black leading-tight tracking-tight text-neutral-950" id="motor-faq-title">
+        Motor Değişim Projesi Hakkında Sık Sorulan Sorular
+      </h2>
+
+      <div class="mt-8 space-y-3">
+        {service.faqs?.map((faq, index) => (
+          <details class="group border border-neutral-200 bg-[#f7f8f8] open:border-l-4 open:border-l-primary open:bg-white transition-colors" open={index === 0}>
+            <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-6 text-sm sm:text-base font-bold text-neutral-950 select-none">
+              <span>{faq.question}</span>
+              <ChevronDown class="size-4 shrink-0 text-neutral-500 group-open:rotate-180 transition-transform" />
+            </summary>
+            <div class="px-6 pb-5 pt-2 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="mt-16 border-t-[3px] border-primary pt-8">
+      <h3 class="text-xs font-black uppercase tracking-wider text-neutral-900">Ücretsiz ön değerlendirme</h3>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-black text-neutral-950">Motor değişikliği projeniz için bilgileri iletin.</h2>
+      <p class="mt-2 text-sm text-neutral-600 max-w-2xl">
+        Araç ve motor bilgilerini inceleyip hangi proje yolunun uygun olduğunu belirleyelim.
+      </p>
+      <a
+        href={defaultWhatsappHref}
+        target="_blank"
+        rel="noreferrer"
+        class="mt-6 inline-flex h-12 items-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white transition-colors shadow-sm"
+      >
+        <span>WhatsApp'tan bilgi alın</span>
+        <ArrowRight size={14} />
+      </a>
+      <p class="mt-6 flex items-start gap-2 text-xs text-neutral-500">
+        <Check class="mt-0.5 size-4 shrink-0 text-neutral-900" />
+        <span>Teknik kapsam, araç ile motor bilgileri ve yapılan uygulama incelendikten sonra kesinleşir.</span>
+      </p>
+    </section>
+
+  </div>
+</article>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const quickForm = document.getElementById('service-quick-form')
+    if (quickForm) {
+      quickForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const fullName = document.getElementById('quick-fullName')?.value || ''
+        const phone = document.getElementById('quick-phone')?.value || ''
+        const serviceTitle = document.querySelector('h1')?.innerText?.trim() || 'Araç Motor Değişimi Projesi'
+        
+        const lines = [
+          'Merhaba,',
+          `*${serviceTitle}* için teklif ve bilgi almak istiyorum.`,
+          '',
+          `*Ad Soyad:* ${fullName}`,
+          `*Telefon:* ${phone}`
+        ]
+        
+        const whatsappNumber = '905548166302'
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank')
+      })
+    }
+  })
+</script>

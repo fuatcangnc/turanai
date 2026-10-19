@@ -1,0 +1,155 @@
+{
+  "slug": "tip-onay-belgesi-hizmetleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Tip Onay Belgesi Hizmetleri",
+  "title": "Tip Onay Belgesi Hizmetleri",
+  "summary": "Araç ve makineleriniz için zorunlu tip onay belgesi başvurusu, test ve uygunluk süreçlerini Karakaş Mühendislik desteğiyle eksiksiz tamamlayın.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Tip Onay Belgesi Hizmetleri",
+  "heroLead": "Tip onay belgesi, bir araç veya makine tipinin ilgili teknik mevzuata uygunluğunu gösteren ve seri üretim öncesinde alınması gereken resmi bir belgedir. Belge, ürünün güvenlik, çevre ve performans kriterlerini karşıladığını ispatlar. Karakaş Mühendislik, tip onay sürecinde başvuru, test koordinasyonu ve kurum takibini yönetir.",
+  "sections": [
+    {
+      "id": "tip-onay-belgesi-nedir",
+      "heading": "Tip Onay Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Tip onay belgesi, belirli bir araç veya makine tipinin tasarım ve üretim özellikleri bakımından geçerli mevzuata uygun olduğunu gösteren resmi dokümandır. Bu belge, aynı tip altındaki tüm ürünlerin standartlara uyduğunu kabul ettirir."
+        },
+        {
+          "type": "p",
+          "text": "Karakaş Mühendislik; belge kapsamının doğru belirlenmesi ve başvuru dosyasının eksiksiz kurulması için mühendislik desteği sağlar."
+        }
+      ]
+    },
+    {
+      "id": "ne-zaman-gerekir",
+      "heading": "Tip Onay Belgesi Ne Zaman Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araçların seri üretim ve piyasaya arzından önce",
+            "Makine ve ekipmanların belgelendirme zorunluluğu olduğunda",
+            "İhracat hedeflenen pazarlarda teknik uyum ispatında",
+            "TSE veya uluslararası regülasyon kapsamına girildiğinde",
+            "Tadilat sonrası araç tipinin yeniden değerlendirilmesinde",
+            "Kamu alımlarında teknik yeterlilik kanıtı olarak"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Belge zorunluluğu ürünün sınıfına ve hedef pazarın mevzuatına göre değişkenlik gösterir; bu sebeple kapsam baştan netleştirilmelidir."
+        }
+      ]
+    },
+    {
+      "id": "basvuru-sureci",
+      "heading": "Başvuru ve Test Süreci",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Ürün tipinin teknik özellikleri ve kapsamı belirlenir",
+            "Geçerli regülasyon ve standartlar tespit edilir",
+            "Başvuru dosyası teknik çizimlerle hazırlanır",
+            "Gerekli testler akredite kuruluşlarda planlanır",
+            "Test sonuçları rapor halinde değerlendirmeye sunulur",
+            "Onay mercince tip onay belgesi düzenlenir"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Test aşaması, ürünün emniyet ve çevre kriterlerine uyumunu kanıtlayan en kritik basamaktır. Eksik test, başvurunun geri çevrilmesine neden olabilir."
+        }
+      ]
+    },
+    {
+      "id": "gereken-dokumanlar",
+      "heading": "Hazırlanması Gereken Dokümanlar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Teknik tanım ve ürün özellik formu",
+            "Detaylı tasarım ve imalat çizimleri",
+            "Test prosedürlerine ait plan ve standart listeleri",
+            "Ölçüm ve analiz sonuçlarını içeren raporlar",
+            "Üretim uygunluk beyanı ve yetkili imzaları",
+            "Başvuru dilekçesi ve firma bilgi formu"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Dokümantasyonun tutarlılığı, tip onayının hızlı sonuçlanmasını doğrudan etkiler. Karakaş Mühendislik bu evrakları kurum formatına uygun hazırlar."
+        }
+      ]
+    },
+    {
+      "id": "test-ve-uygunluk",
+      "heading": "Test ve Uygunluk Değerlendirmesi",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ürün, emisyon, fren, yapısal dayanım ve benzeri kriterler açısından akredite laboratuvarlarda test edilir. Elde edilen veriler, tipin mevzuata uygun olup olmadığının belirlenmesinde kullanılır."
+        },
+        {
+          "type": "p",
+          "text": "Değerlendirme sonucunda uygunsuzluk tespit edilirse, tasarım veya üretimde düzeltme yapılarak test tekrarlanabilir."
+        }
+      ]
+    },
+    {
+      "id": "karakas-destegi",
+      "heading": "Karakaş Mühendislik'in Sağladığı Destek",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Süreç boyunca dosya hazırlığı, test koordinasyonu ve kurum yazışmalarının tamamı ekibimizce yönetilir. Böylece üretici firma mevzuat takibindeki yükten kurtulur."
+        },
+        {
+          "type": "p",
+          "text": "Belge alındıktan sonraki periyodik gözetim ve yenileme işlemlerinde de süreklilik sağlanmasına yardımcı olunur."
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Başvuru kapsamı ürün tipini tam olarak yansıtmalıdır",
+            "Testler yetkili ve akredite kuruluşlarda yaptırılmalıdır",
+            "Teknik çizimler ile üretim örnekleri uyumlu olmalıdır",
+            "Belge geçerlilik süresi ve yenileme takvimi izlenmelidir",
+            "Tadilat sonrası tip değişikliği mutlaka bildirilmelidir"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Hatalı kapsam veya eksik test, hem maliyet hem de zaman kaybına yol açar. Bu nedenle süreç uzman rehberlikle yürütülmelidir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Tip onay belgesi tek bir ürün için mi geçerlidir?",
+      "a": "Hayır. Belge, aynı teknik özelliklere sahip ürün tipinin tamamını kapsar; tip içindeki tüm birimler bu onaydan faydalanır."
+    },
+    {
+      "q": "Testler zorunlu mudur?",
+      "a": "Evet. Ürünün mevzuata uygunluğunu ispatlamak için ilgili teknik testlerin akredite kuruluşlarda yaptırılması gerekir."
+    },
+    {
+      "q": "Belgenin geçerlilik süresi var mıdır?",
+      "a": "Tip onay belgelerinin belirli bir geçerlilik süresi bulunabilir ve periyodik gözetim veya yenileme gerektirebilir."
+    },
+    {
+      "q": "Tadilat sonrası yeniden başvuru gerekir mi?",
+      "a": "Tipi değiştiren teknik tadilatlarda ürünün yeniden değerlendirilmesi ve gerekli durumlarda yeni onay alınması gerekebilir."
+    }
+  ]
+}

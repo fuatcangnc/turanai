@@ -1,0 +1,630 @@
+---
+import {
+  ArrowRight,
+  Bike,
+  Check,
+  ClipboardCheck,
+  FileCheck2,
+  ShieldCheck,
+  Phone,
+  HelpCircle,
+  ChevronDown
+} from '@lucide/astro'
+import SiteImage from './SiteImage.astro'
+import { whatsappHref, siteSettings } from '@/data/site'
+
+interface CourierData {
+  title?: string
+  brand?: string
+  name?: string
+  slug?: string
+  deliveryFocus?: string
+  equipment?: string
+  reviewFocus?: string
+  profileLabel?: string
+  profileSummary?: string
+  contextText?: string
+  faqs?: Array<{ question: string; answer: string }>
+}
+
+interface Props {
+  courier: CourierData
+}
+
+const { courier: rawCourier } = Astro.props
+
+// Import all rich courier json data dynamically
+const allCouriers = import.meta.glob('../content/couriers/*.json', { eager: true }) as Record<string, any>
+const richCourier = (rawCourier.slug && allCouriers[`../content/couriers/${rawCourier.slug}.json`])
+  ? allCouriers[`../content/couriers/${rawCourier.slug}.json`].default || allCouriers[`../content/couriers/${rawCourier.slug}.json`]
+  : {}
+
+const courier = {
+  ...rawCourier,
+  ...richCourier,
+  brand: richCourier.brand || rawCourier.brand || rawCourier.name || 'Kurye',
+  slug: rawCourier.slug || richCourier.slug || '',
+  deliveryFocus: richCourier.deliveryFocus || rawCourier.deliveryFocus || 'hızlı sipariş teslimatı',
+  equipment: richCourier.equipment || rawCourier.equipment || 'kurye kutusu, arka taşıma kasası ve paket ekipmanları',
+  reviewFocus: richCourier.reviewFocus || rawCourier.reviewFocus || 'kutunun montaj güvenliği ve araçla teknik uyumu',
+  profileLabel: richCourier.profileLabel || rawCourier.profileLabel || `${richCourier.brand || rawCourier.name || 'Kurye'} teslimat modeli`,
+  profileSummary: richCourier.profileSummary || rawCourier.profileSummary || `${richCourier.brand || rawCourier.name || 'Kurye'} kapsamında kullanılan ekipmanın türü ve motosiklete montajı, teslimat kullanımına göre teknik olarak değerlendirilir.`,
+  contextText: richCourier.contextText || rawCourier.contextText || `${richCourier.brand || rawCourier.name || 'Kurye'} kuryelerinin teslimat için kullandığı ekipman, motosikletin mevcut yapısıyla birlikte değerlendirilir.`
+}
+
+const title = courier.title || `${courier.brand} Motosiklet Çanta (Taşıma Kutusu) Ruhsata İşletme Rehberi`
+const description = `${courier.brand} kuryelerinde kullanılan ${courier.equipment} için motosiklet çanta ruhsata işletme sürecini, teknik değerlendirme adımlarını ve sık sorulan soruları inceleyin.`
+
+const faqs = courier.faqs && courier.faqs.length > 0 ? courier.faqs : [
+  {
+    question: `${courier.brand} motosiklet çantayı ruhsata işletmek kaç TL?`,
+    answer: `${courier.brand} için kullanılan ekipmanın ruhsata işletme bedeli; motosiklet modeli, ${courier.equipment} türü, montaj yapısı ve ihtiyaç duyulan teknik işlem kapsamına göre değişir. Net ücret için ruhsat, ekipman bilgisi ve fotoğraflar üzerinden ön değerlendirme yapılır.`
+  },
+  {
+    question: `${courier.brand} motosiklet çantası ruhsata nasıl işletilir?`,
+    answer: `${courier.brand} kuryesinin kullandığı ekipman için önce ${courier.reviewFocus} değerlendirilir. Ardından gerekli teknik proje, uygunluk kontrolü, muayene ve tescil adımları aracın durumuna göre planlanır.`
+  },
+  {
+    question: `${courier.brand} kuryelerinde motosiklet yan çanta da değerlendirilir mi?`,
+    answer: `Yan çanta, topcase veya ek taşıma ekipmanının değerlendirilmesi; ürünün niteliği, montaj noktaları ve motosiklet üzerindeki etkisine göre yapılır. ${courier.brand} operasyonunda kullanılan tüm ekipmanları birlikte paylaşmanız doğru proje kapsamının belirlenmesini sağlar.`
+  },
+  {
+    question: `${courier.brand} kurye ekipmanını ruhsata işletmek zorunlu mu?`,
+    answer: `Ruhsata işletme ihtiyacı, ekipmanın motosiklete uygulanış biçimi ile teknik ve tescil kapsamına göre belirlenir. ${courier.brand} için kullanılan taşıma sisteminin güncel durumunu teknik incelemeyle netleştirmek, işlem öncesinde doğru yolun belirlenmesine yardımcı olur.`
+  }
+]
+
+const processRows = [
+  ['01', 'Ekipmanı paylaşın', `${courier.equipment} hakkında temel fotoğraf ve montaj bilgilerini iletin.`],
+  ['02', 'Teknik kapsam netleşsin', `${courier.reviewFocus} değerlendirilerek doğru proje yolu belirlenir.`],
+  ['03', 'Proje adımları planlansın', `${courier.deliveryFocus} için kullanılan ekipmanın kontrol ve başvuru sırası planlanır.`],
+  ['04', 'Tescil yönlendirmesini alın', 'İşlem sonrasında izlenecek ruhsata işletme adımları araç özelinde paylaşılır.']
+]
+
+const documentRows = [
+  ['Motosiklet ruhsatı', 'Araç bilgileri ve tescil verilerini görmek için.'],
+  [`${courier.brand} ekipman fotoğrafları`, `${courier.equipment} türü ve yerleşimini anlamak için.`],
+  ['Montaj bilgisi', `${courier.reviewFocus} değerlendirmesini desteklemek için.`],
+  ['Ürün bilgisi varsa', 'Model, ölçü veya üretici verisini tamamlamak için.']
+]
+
+const equipmentCards = [
+  [`${courier.brand} taşıma ekipmanı`, `${courier.equipment} için kullanılan mevcut çözüm.`],
+  ['Motosiklet arka taşıma alanı', 'Arka taşıyıcı, kutu yerleşimi ve bağlantı noktalarının düzeni.'],
+  ['Teslimat odaklı kullanım', `${courier.deliveryFocus} sırasında ekipmanın kullanım biçimi.`],
+  ['Ek aparatlar', 'Yan çanta, topcase veya sabitlemeyi destekleyen ek parçalar.']
+]
+
+const targetWhatsApp = siteSettings.whatsapp || '905465135855'
+---
+
+<main class="bg-white" data-courier-company={courier.slug}>
+  <!-- Schema.org JSON-LD (BreadcrumbList + Service + FAQPage) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://karakasmuhendislik.com.tr"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Kurye Firmaları",
+            "item": "https://karakasmuhendislik.com.tr/kurye-firmalari"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${courier.brand} Çanta Ruhsata İşletme`,
+            "item": `https://karakasmuhendislik.com.tr/${courier.slug}`
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": `${courier.brand} Motosiklet Çanta (Taşıma Kutusu) Ruhsata İşletme`,
+        "description": description,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Karakaş Mühendislik",
+          "telephone": siteSettings.phone,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gaziosmanpaşa",
+            "addressRegion": "İstanbul",
+            "addressCountry": "TR"
+          }
+        },
+        "url": `https://karakasmuhendislik.com.tr/${courier.slug}`
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq: { question: string; answer: string }) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  })} />
+
+  <!-- HERO SECTION -->
+  <section class="relative isolate overflow-hidden border-b border-black/10 bg-[#f3f3f3] py-10 text-[#1a1a1a] md:py-14">
+    <SiteImage
+      src="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp"
+      alt={`${courier.brand} kurye motosiklet taşıma ekipmanı için teknik inceleme`}
+      class="absolute inset-0 -z-20 h-full w-full object-cover object-[76%_center]"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#f3f3f3_0%,rgba(243,243,243,.98)_31%,rgba(243,243,243,.78)_54%,rgba(243,243,243,.26)_77%,rgba(243,243,243,.08)_100%)]"></div>
+
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 relative grid gap-10 lg:grid-cols-[minmax(0,1fr)_28rem] lg:items-center lg:gap-14">
+      <div class="max-w-3xl py-4 md:py-8">
+        <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 text-[12px] font-semibold text-black/55" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="transition hover:text-primary" itemprop="item" href="/">
+              <span itemprop="name">Ana Sayfa</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <ArrowRight class="size-3 text-primary" aria-hidden="true" />
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="transition hover:text-primary" itemprop="item" href="/kurye-firmalari">
+              <span itemprop="name">Kurye Firmaları</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+          <ArrowRight class="size-3 text-primary" aria-hidden="true" />
+          <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span class="text-[#1a1a1a]" itemprop="name">{courier.brand}</span>
+            <meta itemprop="item" content={`https://karakasmuhendislik.com.tr/${courier.slug}`} />
+            <meta itemprop="position" content="3" />
+          </span>
+        </nav>
+
+        <h2 class="mt-8 text-[12px] font-black uppercase tracking-[0.17em] text-primary">
+          Kurye motosiklet yazısı
+        </h2>
+
+        <h1 class="mt-4 text-[clamp(2.3rem,4.5vw,4.1rem)] font-semibold leading-[1.02] tracking-[-0.055em] text-[#1a1a1a]">
+          {title}
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-[16px] leading-7 text-black/65 sm:text-[17px] sm:leading-8">
+          {description}
+        </p>
+
+        <!-- Brand Profile Box -->
+        <section class="mt-7 max-w-2xl border-l-[3px] border-primary bg-white/90 px-5 py-4 shadow-[0_12px_28px_rgba(0,0,0,.06)]">
+          <h3 class="text-[12px] font-black uppercase tracking-[0.13em] text-primary">
+            {courier.brand} hakkında
+          </h3>
+          <p class="mt-2 text-[14px] leading-6 text-[#1a1a1a]/75">
+            {courier.profileSummary}
+          </p>
+        </section>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            class="inline-flex h-11 items-center gap-3 border border-[#1a1a1a] bg-white/80 px-5 text-[12px] font-black uppercase tracking-[0.06em] text-[#1a1a1a] transition hover:border-primary hover:bg-primary hover:text-white"
+            href="/motosiklet-canta-ruhsata-isletme"
+          >
+            Motosiklet çanta hizmeti
+            <ArrowRight class="size-4" />
+          </a>
+        </div>
+      </div>
+
+      <!-- WHATSAPP OFFER FORM -->
+      <form
+        id="courier-offer-form"
+        class="relative z-10 w-full max-w-[27rem] justify-self-end border-t-[3px] border-primary bg-white p-5 text-[#1a1a1a] shadow-[0_20px_55px_rgba(4,24,39,0.16)] sm:p-6"
+      >
+        <div class="flex items-start justify-between gap-4 border-b border-black/10 pb-4">
+          <div>
+            <h3 class="text-[12px] font-black uppercase tracking-[0.18em] text-primary">
+              WhatsApp teklif formu
+            </h3>
+            <h2 class="mt-1.5 text-[20px] font-black tracking-[-0.045em] sm:text-[22px]">
+              {courier.brand} için teklif alın
+            </h2>
+          </div>
+          <span class="grid size-9 shrink-0 place-items-center rounded-full bg-[#25D366]/15 text-[#1cae56]">
+            <svg class="size-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/>
+            </svg>
+          </span>
+        </div>
+
+        <p class="mt-3 text-[13px] leading-5 text-black/60">
+          Adınızı ve telefonunuzu yazın; teklif talebiniz hazır mesaj olarak WhatsApp'a yönlendirilsin.
+        </p>
+
+        <div class="mt-4 grid gap-3">
+          <div>
+            <label for="courier-fullName" class="block text-[12px] font-bold text-neutral-800">Ad soyad</label>
+            <input
+              id="courier-fullName"
+              type="text"
+              name="fullName"
+              required
+              autocomplete="name"
+              placeholder="Adınız ve soyadınız"
+              class="mt-1 h-10 w-full rounded-none border border-black/15 bg-[#f7f7f7] px-3 text-[14px] text-neutral-900 outline-none transition focus:border-primary focus:bg-white"
+            />
+          </div>
+          <div>
+            <label for="courier-phone" class="block text-[12px] font-bold text-neutral-800">Telefon</label>
+            <input
+              id="courier-phone"
+              type="tel"
+              name="phone"
+              required
+              autocomplete="tel"
+              placeholder="05xx xxx xx xx"
+              class="mt-1 h-10 w-full rounded-none border border-black/15 bg-[#f7f7f7] px-3 text-[14px] text-neutral-900 outline-none transition focus:border-primary focus:bg-white"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 border-0 bg-primary px-4 text-[12px] font-black uppercase tracking-[0.05em] text-white transition hover:bg-[#c45314]"
+        >
+          WhatsApp ile teklif iste
+          <ArrowRight class="size-4" />
+        </button>
+
+        <div class="mt-4 flex items-center justify-between border-t border-black/10 pt-3 text-[11px] text-black/50">
+          <span>Hızlı geri dönüş</span>
+          <span class="inline-flex items-center gap-1 font-semibold text-[#1cae56]">
+            <Check class="size-3" /> TSE Yetkili Mühendislik
+          </span>
+        </div>
+      </form>
+    </div>
+    <!-- Custom geometric white dividers (Left & Right) -->
+    <div class="custom-divider-white-left absolute -bottom-[1px] left-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+    <div class="custom-divider-white-right absolute -bottom-[1px] right-0 z-20 pointer-events-none border-0 outline-none shadow-none" aria-hidden="true"></div>
+  </section>
+
+  <!-- ARTICLE AND SIDEBAR SECTION -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-[1160px] mx-auto px-4 sm:px-6">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16.5rem] lg:items-start lg:gap-16">
+        
+        <!-- ARTICLE MAIN -->
+        <article class="min-w-0">
+          
+          <div class="border-b border-black/10 pb-8">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">
+              {courier.brand} kurye ekipmanı incelemesi
+            </h3>
+            <h2 class="mt-4 text-[clamp(1.9rem,3.8vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.05em] text-[#1a1a1a]">
+              {courier.brand} taşıma ekipmanınızı motosikletinize göre değerlendirin.
+            </h2>
+            <p class="mt-6 text-[16px] leading-7 text-black/65 sm:text-[17px] sm:leading-8">
+              {courier.contextText} {courier.equipment} için doğru teknik yol; ekipmanın motosiklete nasıl bağlandığı, kullanım amacı ve mevcut araç bilgileriyle birlikte belirlenir.
+            </p>
+          </div>
+
+          <!-- 00 · Firma ve Teslimat Modeli -->
+          <section
+            id="company-profile-title"
+            class="mt-10 border-l-[3px] border-primary bg-[#f7f7f7] p-6 sm:p-7"
+            aria-labelledby="company-profile-heading"
+          >
+            <h3 class="text-[12px] font-black uppercase tracking-[0.14em] text-primary">{courier.profileLabel}</h3>
+            <h3 id="company-profile-heading" class="mt-3 text-[clamp(1.4rem,2.6vw,2.1rem)] font-semibold leading-tight tracking-[-0.04em] text-[#1a1a1a]">
+              {courier.brand} kurye ekipmanı neden motosiklet özelinde değerlendirilmelidir?
+            </h3>
+            <p class="mt-4 text-[15px] leading-7 text-black/65 sm:text-[16px]">
+              {courier.profileSummary}
+            </p>
+          </section>
+
+          <!-- Quick WhatsApp Evaluation Banner -->
+          <aside class="mt-8 border border-[#b8e5c6] bg-[#ecf9f0] p-5 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-6">
+            <div>
+              <h4 class="text-[12px] font-black uppercase tracking-[0.14em] text-[#168344]">
+                Hızlı ön değerlendirme
+              </h4>
+              <h3 class="mt-2 text-[19px] font-semibold tracking-[-0.03em] text-[#1a1a1a] sm:text-[20px]">
+                {courier.brand} ekipman bilgilerinizi WhatsApp'tan iletin.
+              </h3>
+              <p class="mt-2 text-[14px] leading-6 text-black/60">
+                Ekipmanın fotoğrafı ve motosiklet ruhsatı, ilk teknik değerlendirme için iyi bir başlangıç sağlar.
+              </p>
+            </div>
+            <a
+              href={`https://wa.me/${targetWhatsApp}?text=${encodeURIComponent(`Merhaba, ${courier.brand} kurye çanta ruhsata işletme hakkında bilgi almak istiyorum.`)}`}
+              target="_blank"
+              rel="noreferrer"
+              class="mt-5 inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-none bg-[#25D366] px-5 text-[12px] font-black uppercase tracking-[0.05em] text-white transition hover:bg-[#1fb65a] sm:mt-0"
+            >
+              <svg class="size-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/></svg>
+              WhatsApp'tan yazın
+            </a>
+          </aside>
+
+          <!-- 01 · İşlem akışı -->
+          <section id="getir-process-title" class="mt-14" aria-labelledby="process-heading">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">01 · İşlem akışı</h3>
+            <h2 id="process-heading" class="mt-3 text-[clamp(1.7rem,3.2vw,2.5rem)] font-semibold leading-tight tracking-[-0.045em] text-[#1a1a1a]">
+              {courier.brand} motosiklet çanta ruhsata işletme süreci
+            </h2>
+            <p class="mt-5 text-[15px] leading-7 text-black/65 sm:text-[16px]">
+              {courier.brand} için kullanılan taşıma sistemleri aynı tipte olmayabilir. Bu nedenle süreç, ekipmanın mevcut uygulamasına ve motosikletinizin teknik durumuna göre şekillenir.
+            </p>
+            <ol class="mt-7 overflow-hidden border border-black/10 bg-white">
+              {processRows.map(([number, stepTitle, stepDescription]) => (
+                <li class="grid gap-3 border-b border-black/10 p-5 last:border-b-0 sm:grid-cols-[54px_minmax(0,1fr)_minmax(0,1.2fr)] sm:items-center">
+                  <span class="grid size-10 place-items-center bg-[#1a1a1a] text-[12px] font-black text-white">
+                    {number}
+                  </span>
+                  <h3 class="text-[16px] font-semibold text-[#1a1a1a]">{stepTitle}</h3>
+                  <p class="text-[14px] leading-6 text-black/60">{stepDescription}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <!-- 02 · Ekipman kapsamı -->
+          <section id="getir-equipment-title" class="mt-14" aria-labelledby="equipment-heading">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">02 · Ekipman kapsamı</h3>
+            <h2 id="equipment-heading" class="mt-3 text-[clamp(1.7rem,3.2vw,2.5rem)] font-semibold leading-tight tracking-[-0.045em] text-[#1a1a1a]">
+              {courier.brand} için hangi taşıma ekipmanları değerlendirilir?
+            </h2>
+            <p class="mt-5 text-[15px] leading-7 text-black/65 sm:text-[16px]">
+              Arka taşıma çözümlerinin tamamı aynı şekilde ele alınmaz. Ekipmanın türü, taşıma hacmi ve motosiklet üzerindeki konumu teknik değerlendirme kapsamını etkiler.
+            </p>
+            <div class="mt-7 grid gap-px border border-black/10 bg-black/10 sm:grid-cols-2">
+              {equipmentCards.map(([cardTitle, cardDescription]) => (
+                <article class="bg-white p-5">
+                  <Bike class="size-5 text-primary" />
+                  <h3 class="mt-4 text-[16px] font-semibold text-[#1a1a1a]">{cardTitle}</h3>
+                  <p class="mt-2 text-[14px] leading-6 text-black/60">{cardDescription}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <!-- 03 · Teknik adımlar -->
+          <section
+            id="getir-technical-title"
+            class="mt-14 grid gap-6 border-y border-black/10 py-10 md:grid-cols-3"
+            aria-labelledby="technical-heading"
+          >
+            <div class="md:col-span-1">
+              <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">03 · Teknik adımlar</h3>
+              <h2 id="technical-heading" class="mt-3 text-[24px] font-semibold leading-tight tracking-[-0.04em] text-[#1a1a1a] sm:text-[27px]">
+                Kontrol, dosya ve tescil adımlarını ayırın.
+              </h2>
+            </div>
+            <div class="grid gap-4 md:col-span-2">
+              <div class="flex gap-4 bg-[#f5f5f5] p-5">
+                <ClipboardCheck class="mt-0.5 size-6 shrink-0 text-primary" />
+                <div>
+                  <h3 class="text-[16px] font-semibold text-[#1a1a1a]">Teknik kontrol</h3>
+                  <p class="mt-1.5 text-[14px] leading-6 text-black/60">
+                    Ekipmanın yerleşimi ve motosikletle ilişkisi incelenir.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 bg-[#f5f5f5] p-5">
+                <FileCheck2 class="mt-0.5 size-6 shrink-0 text-primary" />
+                <div>
+                  <h3 class="text-[16px] font-semibold text-[#1a1a1a]">Proje ve dosya</h3>
+                  <p class="mt-1.5 text-[14px] leading-6 text-black/60">
+                    Gerekli teknik dosya kapsamında izlenecek yol netleştirilir.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 bg-[#f5f5f5] p-5">
+                <ShieldCheck class="mt-0.5 size-6 shrink-0 text-primary" />
+                <div>
+                  <h3 class="text-[16px] font-semibold text-[#1a1a1a]">Muayene ve tescil</h3>
+                  <p class="mt-1.5 text-[14px] leading-6 text-black/60">
+                    Araç özelinde sonraki resmi işlem adımları yönlendirilir.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04 · Hazırlık bilgileri -->
+          <section id="getir-documents-title" class="mt-14" aria-labelledby="documents-heading">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">04 · Hazırlık bilgileri</h3>
+            <h2 id="documents-heading" class="mt-3 text-[clamp(1.7rem,3.2vw,2.5rem)] font-semibold leading-tight tracking-[-0.045em] text-[#1a1a1a]">
+              Ön değerlendirmede hangi bilgiler faydalı olur?
+            </h2>
+            <p class="mt-5 text-[15px] leading-7 text-black/65 sm:text-[16px]">
+              İlk görüşmeye her belgeyle gelmeniz gerekmez. Aşağıdaki bilgileri paylaşmanız, ekipmana göre doğru soruların hızlıca belirlenmesini kolaylaştırır.
+            </p>
+            <div class="mt-7 overflow-hidden border border-black/10">
+              <div class="hidden grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] bg-neutral-950 px-5 py-3 text-[12px] font-black uppercase tracking-[0.08em] text-white sm:grid">
+                <span>Bilgi</span>
+                <span>Neden istenir?</span>
+              </div>
+              {documentRows.map(([docItem, docPurpose]) => (
+                <div class="grid gap-1 border-t border-black/10 px-5 py-4 first:border-t-0 sm:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] sm:gap-5">
+                  <p class="text-[14px] font-semibold text-[#1a1a1a]">{docItem}</p>
+                  <p class="text-[14px] leading-6 text-black/60">{docPurpose}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <!-- Pre-application Note Box -->
+          <aside class="mt-14 border-l-[3px] border-primary bg-[#fff4e8] p-6 sm:p-7">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">
+              Uygulama öncesi not
+            </h3>
+            <h3 class="mt-3 text-[20px] font-semibold leading-tight tracking-[-0.035em] text-[#1a1a1a] sm:text-[22px]">
+              Ekipman takılmadan önce teknik kapsamı konuşmak daha sağlıklı olur.
+            </h3>
+            <p class="mt-3 text-[14px] leading-6 text-black/65">
+              Montaj şekli ve ürün bilgisi baştan netleştiğinde, motosikletinize uygun proje yolunu daha doğru biçimde belirleyebiliriz.
+            </p>
+          </aside>
+
+          <!-- 05 · Sık sorulanlar -->
+          <section id="getir-faq-title" class="mt-14" aria-labelledby="faq-heading">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">05 · Sık sorulanlar</h3>
+            <h2 id="faq-heading" class="mt-3 text-[clamp(1.7rem,3.2vw,2.5rem)] font-semibold leading-tight tracking-[-0.045em] text-[#1a1a1a]">
+              {courier.brand} motosiklet çanta ruhsata işletme hakkında sorular
+            </h2>
+            <div class="mt-7 space-y-3">
+              {faqs.map((faq: { question: string; answer: string }, index: number) => (
+                <details class="group border border-black/10 bg-white transition hover:border-black/25 open:bg-neutral-50/50">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-semibold text-[#1a1a1a] select-none text-[15px] sm:text-[16px]">
+                    <span class="flex items-center gap-3">
+                      <HelpCircle class="size-4 text-primary shrink-0" />
+                      {faq.question}
+                    </span>
+                    <ChevronDown class="size-4 shrink-0 text-black/40 transition duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div class="border-t border-black/5 px-5 pt-3 pb-5 text-[14px] leading-6 text-black/65 sm:text-[15px] sm:leading-7">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- BOTTOM DARK CTA -->
+          <section class="mt-14 bg-neutral-950 p-7 text-white sm:p-9">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.17em] text-primary">
+              Motosiklet çanta araç proje desteği
+            </h3>
+            <h2 class="mt-4 max-w-2xl text-[clamp(1.6rem,3.2vw,2.4rem)] font-semibold leading-tight tracking-[-0.045em]">
+              {courier.brand} taşıma ekipmanınız için doğru teknik adımı birlikte belirleyelim.
+            </h2>
+            <p class="mt-4 max-w-2xl text-[14px] leading-6 text-white/70 sm:text-[15px] sm:leading-7">
+              Genel bilgi yerine, motosikletinizdeki ekipmanı ve montajını birlikte değerlendirelim.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a
+                href={`https://wa.me/${targetWhatsApp}?text=${encodeURIComponent(`Merhaba, ${courier.brand} motosiklet çanta ruhsata işletme için teklif almak istiyorum.`)}`}
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex h-11 items-center justify-center gap-2 bg-[#25D366] px-5 text-[12px] font-black uppercase tracking-[0.05em] text-white transition hover:bg-[#1fb65a]"
+              >
+                <svg class="size-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/></svg>
+                WhatsApp'tan yazın
+              </a>
+              <a
+                href="/motosiklet-canta-ruhsata-isletme"
+                class="inline-flex h-11 items-center justify-center gap-2 border border-white/35 bg-transparent px-5 text-[12px] font-black uppercase tracking-[0.05em] text-white transition hover:border-white hover:bg-white hover:text-black"
+              >
+                Ana hizmet sayfası <ArrowRight class="size-4" />
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <p class="mt-8 text-[12px] leading-6 text-black/45">
+            Bu sayfa, {courier.brand} ile resmî ortaklık veya temsilcilik ilişkisi iddiası taşımaz. Teknik kapsam; motosiklet, ekipman ve montaj biçimine göre ayrıca değerlendirilir.
+          </p>
+        </article>
+
+        <!-- STICKY ASIDE -->
+        <aside class="space-y-4 lg:sticky lg:top-28 lg:self-start">
+          
+          <!-- Table of Contents Nav -->
+          <nav aria-label={`${courier.brand} makale içeriği`} class="border-t-[3px] border-primary bg-[#f5f5f5] p-5">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.15em] text-primary">Bu yazıda</h3>
+            <ol class="mt-5 grid gap-1">
+              {[
+                ['00', '#company-profile-title', 'Firma ve teslimat modeli'],
+                ['01', '#getir-process-title', 'İşlem akışı'],
+                ['02', '#getir-equipment-title', 'Ekipman kapsamı'],
+                ['03', '#getir-technical-title', 'Teknik adımlar'],
+                ['04', '#getir-documents-title', 'Hazırlık bilgileri'],
+                ['05', '#getir-faq-title', 'Sık sorulanlar'],
+              ].map(([num, href, label]) => (
+                <li>
+                  <a
+                    href={href}
+                    class="flex items-center gap-3 border-b border-black/10 py-3 text-[13px] font-semibold leading-5 text-[#1a1a1a] transition hover:text-primary"
+                  >
+                    <span class="text-[11px] font-black text-primary">{num}</span>
+                    <span>{label}</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+
+          <!-- Quick Info Box -->
+          <section class="border border-[#b8e5c6] bg-[#ecf9f0] p-5">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.14em] text-[#168344]">Hızlı bilgi</h3>
+            <p class="mt-3 text-[17px] font-semibold leading-tight tracking-[-0.03em] text-[#1a1a1a]">
+              Çanta fotoğrafını ve ruhsatı WhatsApp'tan iletin.
+            </p>
+            <a
+              href={`https://wa.me/${targetWhatsApp}?text=${encodeURIComponent(`Merhaba, ${courier.brand} kurye çanta ruhsata işletme için bilgi almak istiyorum.`)}`}
+              target="_blank"
+              rel="noreferrer"
+              class="mt-5 inline-flex h-10 w-full items-center justify-center gap-2 rounded-none bg-[#25D366] px-3 text-[11px] font-black uppercase tracking-[0.04em] text-white transition hover:bg-[#1fb65a]"
+            >
+              <svg class="size-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.839.814 2.796.814 3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm3.374 8.211c-.141.398-.716.732-1.002.779-.271.045-.589.07-.954-.047-.367-.117-.843-.275-1.447-.538-2.544-1.109-4.183-3.696-4.31-3.865-.126-.17-1.026-1.365-1.026-2.604 0-1.239.65-1.849.881-2.1.231-.252.504-.315.672-.315.168 0 .336.002.483.01.155.008.363-.059.567.432.21.505.714 1.744.777 1.871.063.126.105.274.021.442-.084.168-.126.273-.252.421-.126.147-.265.328-.378.441-.126.126-.258.263-.111.515.147.252.654 1.08 1.401 1.746.962.857 1.774 1.123 2.026 1.249.252.126.399.105.546-.063.147-.168.63-.736.798-.988.168-.252.336-.21.567-.126.231.084 1.47.693 1.722.819.252.126.42.189.483.294.063.105.063.609-.078 1.007z"/></svg>
+              WhatsApp'a geç
+            </a>
+          </section>
+
+          <!-- Main Service Box -->
+          <section class="bg-neutral-950 p-5 text-white">
+            <h3 class="text-[12px] font-black uppercase tracking-[0.14em] text-primary">Ana hizmet</h3>
+            <p class="mt-3 text-[17px] font-semibold leading-tight tracking-[-0.03em]">
+              Motosiklet çanta proje sürecinin tamamını inceleyin.
+            </p>
+            <a
+              href="/motosiklet-canta-ruhsata-isletme"
+              class="mt-5 inline-flex items-center gap-2 text-[12px] font-black uppercase tracking-[0.05em] text-primary transition hover:text-white"
+            >
+              Hizmet detayına git <ArrowRight class="size-4" />
+            </a>
+          </section>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script is:inline>
+  // Setup Courier Offer Form submission to WhatsApp
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('courier-offer-form')
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const fullName = document.getElementById('courier-fullName')?.value || ''
+        const phone = document.getElementById('courier-phone')?.value || ''
+        const brand = document.querySelector('[data-courier-company]')?.getAttribute('data-courier-company') || 'Kurye'
+        
+        const message = [
+          'Merhaba,',
+          `${brand} için motosiklet çanta ruhsata işletme hizmetinde teklif almak istiyorum.`,
+          '',
+          `Ad soyad: ${fullName}`,
+          `Telefon: ${phone}`
+        ].join('\n')
+
+        const whatsappNumber = '905465135855'
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank')
+      })
+    }
+  })
+</script>

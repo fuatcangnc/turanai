@@ -1,0 +1,107 @@
+{
+  "slug": "acik-kasa-projesi",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Açık Kasa Projesi",
+  "title": "Açık Kasa Projesi",
+  "summary": "Kamyon ve kamyonet araçlarınızın açık kasa sistemine dönüştürülmesi için TSE onaylı proje, muayene ve ruhsat süreçlerinde Karakaş Mühendislik güvencesiyle profesyonel çözüm.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Açık Kasa Projesi",
+  "heroLead": "Açık kasa dönüşümü, kamyon ve kamyonet gibi ticari araçlarda mevcut kapalı ya da farklı tipteki kasaların çıkarılıp üstü açık bir taşıma düzenine geçilmesini içeren kapsamlı bir araç tadilatıdır. Karakaş Mühendislik bünyesinde, bu dönüşümler için TSE onaylı proje dokümantasyonu, teknik uygunluk değerlendirmesi, TÜVTÜRK tadilat muayenesi ve ruhsata işletme adımlarında uçtan uca uzmanlık sağlanır.",
+  "sections": [
+    {
+      "id": "acik-kasa-nedir",
+      "heading": "Açık Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Üstü açık olarak üretilen bu kasa modeli, kamyon ve kamyonetlerde yüklerin yükleme noktasına daha rahat ulaşmasını mümkün kılar. İnşaat sahalarından tarımsal üretime, lojistik dağıtımdan genel ticari taşımacılığa kadar geniş bir yelpazede pratiklik sağlayan bir yapıya sahiptir."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Aracın yük taşıma düzenini ve teknik özelliklerini doğrudan etkileyen bu uygulama, resmi olarak araç tadilatı sınıfına girer. Bu sebeple dönüşümün ilgili mevzuata tam uyumlu olduğunu gösteren TSE onaylı bir araç projesinin hazırlanması zorunlu tutulur. Belgesiz gerçekleştirilen işlemler TÜVTÜRK muayene sürecinde aksamalara ve ruhsat aşamasında ciddi engellere yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Mevcut kapalı kasaların açık sisteme dönüştürülmesi",
+            "Yükleme ve boşaltma işlemlerinde kolaylık sağlanması",
+            "Ticari operasyonlar için daha esnek taşıma düzeneği kurulması",
+            "Hasar görmüş ya da kullanıma elverişsiz kasaların yenilenmesi",
+            "Değişken yük profillerine uygun altyapı oluşturulması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Aracın ölçüleri ve teknik verileri kayıt altına alınır",
+            "Açık kasa dönüşümüne yönelik mühendislik projesi oluşturulur",
+            "Eski kasa sökülür ve açık kasa tertibatı monte edilir",
+            "TSE denetim ve onay aşaması başarıyla sonuçlandırılır",
+            "TÜVTÜRK tarafından tadilat muayenesi gerçekleştirilir",
+            "Noter kanalıyla ruhsata işletme işlemleri tamamlanır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Gerçekleştirilen tadilata ilişkin işçilik faturası",
+            "Kasa uygulamasına dair teknik dokümanlar",
+            "Gerçek kişi ya da firma kimlik bilgileri"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yüklerin hızlı ve rahat yüklenip boşaltılmasına imkan tanır",
+            "Farklı çalışma koşullarına uyum sağlayan esneklik sunar",
+            "Ticari faaliyetlerde verimliliği yükseltir",
+            "Çeşitli yük tipleri için taşıma olanağı oluşturur",
+            "Bakım ve erişim noktasında kolaylık sağlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Açık kasa uygulaması aracın teknik kimliğini değiştirdiğinden, yapılan tadilatın ruhsata işlenmesi gereklidir. Ruhsata yansıtılmayan bu tür değişiklikler TÜVTÜRK muayenesinde ağır kusur kapsamına alınabilir ve idari para cezalarıyla sonuçlanabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

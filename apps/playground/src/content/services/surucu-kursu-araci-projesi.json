@@ -1,0 +1,217 @@
+{
+  "title": "Sürücü Kursu Aracı Projesi | Çift Pedal ve TSE | Karakaş",
+  "shortTitle": "Sürücü Kursu Aracı Projesi",
+  "slug": "surucu-kursu-araci-projesi",
+  "category": "Dönüşüm",
+  "summary": "Sürücü kursu aracı projesi için çift pedal, montaj ve kumanda kontrollerini; gerekli belgeleri, TSE ve tescil adımlarını inceleyin.",
+  "image": "/hizmetler/surucu-kursu-araci-projesi.webp",
+  "featured": false,
+  "order": 8,
+  "heroEyebrow": "Eğitim Aracı | TSE Onaylı",
+  "heroTitle": "Sürücü Kursu Aracı Projesi",
+  "heroDescription": "Çift pedal sistemini, eğitmen kumandalarını, montaj bağlantılarını ve araç belgelerini kontrol edelim. Proje ile TSE adımlarını aracınıza göre netleştirelim.",
+  "imageAlt": "Sürücü kursu aracı projesi için çift pedal teknik incelemesi",
+  "imageTitle": "Sürücü Kursu Aracı Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, sürücü kursu aracı projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Sürücü kursu eğitim aracı",
+  "introTitle": "Çift pedal montajında yalnız pedallar mı kontrol edilir?",
+  "introText": "Eğitmen tarafındaki ek kumandaların güvenli çalışması, sürücü pedal hareketini kısıtlamaması ve bağlantıların araç yapısıyla uyumu birlikte incelenir. Montaj faturası, donanım bilgisi ve araç üzerindeki uygulama aynı dosyayla eşleşmelidir.",
+  "technicalChecks": [
+    {
+      "title": "İkincil pedal hareketi",
+      "description": "Eğitmen pedalının ana kumandayı tam ve kontrollü biçimde çalıştırması incelenir."
+    },
+    {
+      "title": "Bağlantı mekanizması",
+      "description": "Mil, tel, kol veya kullanılan aktarım düzeninin sabitlemesi kontrol edilir."
+    },
+    {
+      "title": "Sürücü tarafı kumandaları",
+      "description": "Ek sistemin orijinal pedal hareketini ve sürüş alanını kısıtlamaması gerekir."
+    },
+    {
+      "title": "Eğitmen kullanım alanı",
+      "description": "Pedal erişimi, paspas, koltuk ve çevredeki parçalarla birlikte değerlendirilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfı ve mevcut tescil bilgilerini görmek için."
+    },
+    {
+      "title": "Pedal sistemi belgesi",
+      "description": "İkincil kumandanın türünü ve teknik bilgisini doğrulamak için."
+    },
+    {
+      "title": "Montaj faturası",
+      "description": "Uygulamanın araç ve kullanılan donanımla eşleşmesi için."
+    },
+    {
+      "title": "Pedal ve bağlantı fotoğrafları",
+      "description": "Her iki taraftaki kumandaları ve aktarım mekanizmasını incelemek için."
+    },
+    {
+      "title": "Araç dış görünüş fotoğrafları",
+      "description": "Aracın dosyadaki genel durumu ile başvuru bilgilerini eşleştirmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Eğitim aracı kumanda ve montaj düzeni",
+    "title": "Eğitmen müdahalesi güvenli biçimde nasıl projelendirilir?",
+    "leftTitle": "Eğitmen kumandaları",
+    "leftItems": [
+      {
+        "title": "İkincil fren pedalı",
+        "description": "Eğitmenin gerektiğinde fren sistemine müdahale ettiği kumanda."
+      },
+      {
+        "title": "İkincil debriyaj pedalı",
+        "description": "Manuel araçta debriyaj kullanımına yönelik ek kumanda."
+      },
+      {
+        "title": "Diğer ek kumandalar",
+        "description": "Araç ve eğitim kapsamı gerektiriyorsa dosyada ayrıca tanımlanan parçalar."
+      },
+      {
+        "title": "Söküm veya iptal",
+        "description": "Eğitim aracı kullanımından çıkarılacak araçta mevcut donanımın kaldırılması."
+      }
+    ],
+    "rightTitle": "Teknik kontrol başlıkları",
+    "rightItems": [
+      {
+        "title": "Pedal geri dönüşü",
+        "description": "Kumandanın bırakıldığında takılmadan başlangıç konumuna dönmesi."
+      },
+      {
+        "title": "Bağlantı güvenliği",
+        "description": "Aktarım parçalarının gevşemeye ve çevredeki parçalara temasa karşı kontrolü."
+      },
+      {
+        "title": "Ayak alanı",
+        "description": "Pedal ile paspas, kaplama ve koltuk arasında engel bulunmaması."
+      },
+      {
+        "title": "Proje-montaj eşleşmesi",
+        "description": "Araç üzerindeki sistemin belge ve teknik çizimle aynı olması."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Çift pedal sistemi için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve pedal fotoğraflarını gönderin.",
+    "description": "Montaj bağlantılarını, donanım belgesini ve proje öncesinde düzeltilmesi gereken noktaları başvurudan önce kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve sistem ön kontrolü",
+      "description": "Ruhsat, pedal donanımı, montaj faturası ve fotoğraflar incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Kumanda kontrolü",
+      "description": "Pedal hareketi, bağlantılar ve sürücü ile eğitmen kullanım alanı değerlendirilir."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "İkincil kumandalar ile montaj ayrıntıları proje dosyasına işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ve dosya güncel başvuru kapsamına göre TSE incelemesine sunulur."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onaydan sonraki işlemler dosyanın kapsamına göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; araç tipi, şanzıman, takılan ikincil kumandalar, montajın mevcut durumu ve belge kapsamına göre değişir.",
+    "items": [
+      {
+        "title": "Donanım ve montaj",
+        "description": "Çift pedal sistemi ile araç üzerindeki uygulama"
+      },
+      {
+        "title": "Proje dosyası",
+        "description": "Kumanda ve bağlantı bilgilerinin projelendirilmesi"
+      },
+      {
+        "title": "Onay ve tescil",
+        "description": "Dosyaya göre gereken resmî adımların planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Pedalın takılması",
+      "description": "Aktarım sisteminin pedalın serbest hareketini engellemesi."
+    },
+    {
+      "title": "Gevşek bağlantı",
+      "description": "Mil, tel veya kol bağlantısının araç kullanımında hareket etmesi."
+    },
+    {
+      "title": "Paspas ve kaplama teması",
+      "description": "Pedal hareket alanında engel oluşturacak malzeme bulunması."
+    },
+    {
+      "title": "Eksik donanım belgesi",
+      "description": "Montaj faturası ile araçtaki sistemin eşleşmemesi."
+    },
+    {
+      "title": "Proje dışı değişiklik",
+      "description": "Dosyada gösterilmeyen başka bir kumanda veya uygulama bulunması."
+    },
+    {
+      "title": "Hatalı söküm",
+      "description": "İptal işleminde orijinal pedal düzeninin doğru biçimde geri kurulmaması."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Sürücü kursu aracı projesi nedir?",
+      "answer": "Eğitmenin araca müdahale edebilmesi için eklenen ikincil kumandaları ve montaj bağlantılarını gösteren teknik proje dosyasıdır."
+    },
+    {
+      "question": "Her araca çift pedal takılabilir mi?",
+      "answer": "Pedal yapısı, sürücü ve eğitmen ayak alanı, şanzıman tipi ve güvenli bağlantı imkânı incelenmeden uygunluk kararı verilemez."
+    },
+    {
+      "question": "Sürücü kursu aracında hangi pedallar bulunur?",
+      "answer": "İkincil kumanda kapsamı aracın şanzımanına ve güncel eğitim aracı şartlarına göre belirlenir. Fren ve manuel araçlarda debriyaj düzeni özellikle kontrol edilir."
+    },
+    {
+      "question": "Montajdan sonra proje hazırlanabilir mi?",
+      "answer": "Mevcut sistem belge ve fotoğraflarla ön incelemeye alınabilir. Pedal hareketi veya bağlantıda sorun varsa başvurudan önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Eğitim aracı donanımı sökülürken de proje gerekir mi?",
+      "answer": "Araç eğitim aracı kullanımından çıkarılacaksa mevcut donanımın sökülmesi ve tescil kaydının güncellenmesi ayrı bir dosya kapsamı oluşturabilir."
+    },
+    {
+      "question": "Sürücü kursu aracı projesi fiyatı ne kadar?",
+      "answer": "Fiyat araç, şanzıman, pedal sistemi, montaj ve eksik belgelere göre değişir. Ruhsat ve pedal fotoğrafları incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Pedal sistemi ön kontrolü",
+      "description": "Montaj ve belgeler proje başlamadan önce birlikte incelenir."
+    },
+    {
+      "title": "Kumanda odaklı değerlendirme",
+      "description": "Pedal hareketi ve bağlantılar araç üzerinde ele alınır."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje, TSE ve tescil adımları dosyaya göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, pedal sistemi belgesini ve montaj fotoğraflarını getirin. Eğitim aracı proje kapsamını görüşmede netleştirelim."
+}

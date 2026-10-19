@@ -1,0 +1,203 @@
+---
+import { ArrowLeft, ArrowRight } from '@lucide/astro'
+import { defaultServices, type Service } from '@/data/site'
+import { Carousel, CarouselSlide } from '@/ui/carousel'
+import SiteImage from './SiteImage.astro'
+
+interface Props {
+  services?: Service[]
+}
+
+const { services = defaultServices } = Astro.props
+
+const orderedServices = [...services].sort((first, second) => {
+  if (Boolean(first.featured) !== Boolean(second.featured)) {
+    return first.featured ? -1 : 1
+  }
+  return first.order - second.order
+})
+
+const serviceImages = [
+  '/images/hero-engineering.webp',
+  '/images/vehicle-conversion.webp',
+  '/images/project-guidance.webp',
+  '/images/hero-engineering.webp',
+] as const
+
+const serviceBenefitsBySlug: Record<string, readonly [string, string, string]> = {
+  'lpg-sokum-projesi': ['LPG donanım kontrolü', 'Söküm uygunluk projesi', 'Ruhsat güncelleme desteği'],
+  'engelli-aparati-montaj-projesi': ['Aparat montaj projesi', 'TSE kontrol yönlendirmesi', 'Ruhsat işlem desteği'],
+  'arac-motor-degisim-projesi': ['Motor uygunluk incelemesi', 'Teknik proje dosyası', 'Ruhsata işletme desteği'],
+  'okul-servisi-sokum-projesi': ['Servis donanımı sökümü', 'Araç sınıfı güncellemesi', 'Ruhsat işlemleri'],
+  'motosiklet-canta-ruhsata-isletme': ['Taşıma ekipmanı ölçümü', 'Montaj uygunluk projesi', 'Tescil yönlendirmesi'],
+  'karavan-projesi': ['Yerleşim ve ağırlık hesabı', 'Dönüşüm proje dosyası', 'TSE onay yönlendirmesi'],
+  'koltuk-sokum-projesi': ['Koltuk kapasite hesabı', 'Söküm ve montaj projesi', 'Ruhsat güncelleme desteği'],
+  'surucu-kursu-araci-projesi': ['Çift kumanda incelemesi', 'Dönüşüm veya iptal projesi', 'TSE ve tescil süreci'],
+  'ceki-demiri-projesi': ['Montaj uygunluk projesi', 'TSE kontrol süreci', 'Ruhsata işletme desteği'],
+  'karayolu-uygunluk-belgesi': ['Teknik kriter incelemesi', 'Uygunluk belge dosyası', 'Başvuru yönlendirmesi'],
+  'hasta-nakil-araci-donusum-projesi': ['Donanım yerleşim projesi', 'Hasta nakil uygunluğu', 'Onay ve tescil desteği'],
+  'motosiklet-sase-degisim-projesi': ['Şase kimlik doğrulaması', 'Teknik ölçüm projesi', 'Tescil işlem desteği'],
+  'hidrolik-kapak-lift-projesi': ['Taşıma kapasite hesabı', 'Montaj ölçü projesi', 'Ruhsata işletme desteği'],
+  'hidrolik-ayak-projesi': ['Denge ayağı uygunluk projesi', 'Montaj teknik incelemesi', 'TSE onay desteği'],
+  'pickup-camli-kabin-projesi': ['Kabin ölçülendirme projesi', 'Araç üstü uygulama kontrolü', 'Tescil yönlendirmesi'],
+  'sari-tepe-lambali-eskort-araci-projesi': ['Tepe lambası uygunluk projesi', 'Kullanım amacı değerlendirmesi', 'Ruhsat işlem desteği'],
+  'lpg-sistemi-sokum-tadilati': ['LPG sistem söküm işlemi', 'Güvenlik kontrolü', 'Tescil güncelleme desteği'],
+}
+
+function getServiceBenefits(service: Service): readonly string[] {
+  return (
+    serviceBenefitsBySlug[service.slug] ?? [
+      `${service.shortTitle} teknik değerlendirmesi`,
+      'TSE uygunluk dosyası',
+      'Ruhsata işletme desteği',
+    ]
+  )
+}
+
+---
+
+<section class="overflow-hidden bg-white py-18 md:py-24" id="one-cikan-hizmetler">
+  <div class="shell">
+    <!-- Section Header -->
+    <div class="mx-auto max-w-4xl text-center" data-reveal>
+      <div class="inline-flex items-center gap-2 border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-neutral-900">
+        <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+        <span>TSE Yetkili Mühendislik Hizmetlerimiz</span>
+      </div>
+      <h2 class="mx-auto mt-4 max-w-3xl text-3xl font-black uppercase leading-[1.08] tracking-[-0.04em] text-[#152033] sm:text-4xl lg:text-[40px]">
+        {Astro.currentLocale === 'de' ? (
+          <>TSE-zertifizierte <span class="text-primary">Fahrzeugprojekte</span> und <span class="text-primary">Motorrad-Kofferraum</span>-Zulassungsdienste</>
+        ) : (
+          <>TSE Onaylı <span class="text-primary">Araç Proje</span> ve <span class="text-primary">Motosiklet Çanta</span> Tescil Hizmetleri</>
+        )}
+      </h2>
+      <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
+        Otomobil, hafif ticari araçlar ve kurye motosikletleri için AİTM mevzuatına tam uyumlu teknik proje çizimi ve ruhsat tescil desteği.
+      </p>
+    </div>
+
+    <!-- Carousel with Bejamas UI -->
+    <div class="mt-10 overflow-hidden xl:mt-12">
+      <Carousel
+        class="gap-5 pb-4 sm:gap-6"
+        data-service-carousel
+      >
+        {orderedServices.map((service, index) => {
+          const benefits = getServiceBenefits(service)
+          const serviceImage = service.image || serviceImages[index % serviceImages.length]
+
+          return (
+            <CarouselSlide class="min-w-0 flex-[0_0_88%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] xl:flex-[0_0_25%]">
+              <article class="group h-full">
+                <div class="flex min-h-[630px] flex-col overflow-hidden rounded-[19px] border border-black/[0.06] bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_20px_42px_rgba(18,32,51,0.12)] sm:p-6">
+                  
+                  <!-- Top Badge & Title -->
+                  <div class="flex h-14 items-start gap-4">
+                    <span class="grid size-11 shrink-0 place-items-center bg-primary text-sm font-black text-white">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <h3 class="line-clamp-2 pt-0.5 text-[15px] font-black uppercase leading-[1.25] tracking-[-0.025em] text-[#152033]">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  <!-- Image -->
+                  <a
+                    aria-label={`${service.shortTitle} hizmetini inceleyin`}
+                    class="relative mt-4 block aspect-[16/9] overflow-hidden rounded-xl bg-[#1b2631]"
+                    href={service.url}
+                  >
+                    <SiteImage
+                      alt={`${service.shortTitle} araç proje hizmeti`}
+                      class="size-full object-cover transition duration-700 group-hover:scale-[1.06]"
+                      src={serviceImage}
+                      widths={[320, 480, 600]}
+                      sizes="(max-width: 640px) 88vw, (max-width: 1024px) 45vw, 300px"
+                      width="500"
+                      height="281"
+                      quality={58}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+
+                  <!-- Summary -->
+                  <p class="mt-5 h-12 line-clamp-2 text-sm leading-6 text-[#626d7c]">
+                    {service.summary}
+                  </p>
+
+                  <!-- Benefits Checklist -->
+                  <ul class="mt-5 space-y-2 border-t border-black/[0.08] pt-5 text-[13px] font-bold text-[#152033]">
+                    {benefits.map((benefit) => (
+                      <li class="flex items-center before:content-['→'] before:text-primary before:font-black before:mr-2 before:text-sm">
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <!-- Detail Action Link -->
+                  <a
+                    class="mt-auto flex h-12 items-center justify-between border border-black/15 pl-4 text-[10px] font-black uppercase leading-3 tracking-[0.035em] text-[#152033] transition hover:border-primary hover:text-primary"
+                    href={service.url}
+                  >
+                    {service.shortTitle} detayı
+                    <span class="grid h-full w-12 place-items-center bg-[#121820] text-white transition group-hover:bg-primary">
+                      <ArrowRight class="size-4" />
+                    </span>
+                  </a>
+
+                </div>
+              </article>
+            </CarouselSlide>
+          )
+        })}
+      </Carousel>
+    </div>
+
+    <!-- Bottom Controls & CTA -->
+    <div class="mt-9 flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:text-left">
+      <div class="flex -space-x-2" aria-hidden="true">
+        <span class="grid size-9 place-items-center rounded-full border-2 border-white bg-[#25313c] text-[10px] font-black text-white">KM</span>
+        <span class="grid size-9 place-items-center rounded-full border-2 border-white bg-primary text-base text-white">↗</span>
+      </div>
+      <p class="text-sm text-[#4f5967]">Aracınıza uygun çözümü birlikte belirleyelim.</p>
+      <div class="flex items-center gap-2" aria-label="Hizmet kaydırma kontrolleri">
+        <button
+          aria-label="Önceki hizmetler"
+          class="grid size-9 place-items-center rounded-full border border-black/15 text-[#152033] transition enabled:hover:border-primary enabled:hover:bg-primary enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+          data-service-prev
+          type="button"
+        >
+          <ArrowLeft class="size-4" />
+        </button>
+        <button
+          aria-label="Sonraki hizmetler"
+          class="grid size-9 place-items-center rounded-full border border-black/15 text-[#152033] transition enabled:hover:border-primary enabled:hover:bg-primary enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+          data-service-next
+          type="button"
+        >
+          <ArrowRight class="size-4" />
+        </button>
+      </div>
+      <a
+        class="inline-flex items-center gap-2 border-b border-[#1e2936] pb-1 text-sm font-bold text-[#152033] transition hover:border-primary hover:text-primary"
+        href="/arac-proje-hizmetlerimiz"
+      >
+        Tüm hizmetleri görün <ArrowRight class="size-4" />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const serviceCarousel = document.querySelector('[data-service-carousel]')
+    document.querySelector('[data-service-prev]')?.addEventListener('click', () => {
+      serviceCarousel?.scrollBy({ left: -(serviceCarousel.clientWidth / 2), behavior: 'smooth' })
+    })
+    document.querySelector('[data-service-next]')?.addEventListener('click', () => {
+      serviceCarousel?.scrollBy({ left: serviceCarousel.clientWidth / 2, behavior: 'smooth' })
+    })
+  })
+</script>

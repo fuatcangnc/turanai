@@ -1,0 +1,217 @@
+{
+  "title": "Okul Servisi Söküm Projesi ve Ruhsat İptali | Karakaş",
+  "shortTitle": "Okul Servisi Söküm Projesi",
+  "slug": "okul-servisi-sokum-projesi",
+  "category": "Söküm",
+  "summary": "Okul servisi söküm projesi için kaldırılacak donanımları, gerekli belgeleri, TSE, muayene ve ruhsat güncelleme adımlarını inceleyin.",
+  "image": "/hizmetler/okul-servisi-sokum-projesi.webp",
+  "featured": false,
+  "order": 4,
+  "heroEyebrow": "Okul Taşıtı İptali | TSE Onaylı",
+  "heroTitle": "Okul Servisi Söküm Projesi",
+  "heroDescription": "Okul taşıtına özgü işaret, ikaz ve iç donanımların kaldırılmasını; aracın yeni kullanım ve tescil bilgileriyle birlikte kontrol edelim.",
+  "imageAlt": "Okul servisi söküm projesi için minibüs teknik incelemesi",
+  "imageTitle": "Okul Servisi Söküm Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için okul servisi söküm projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Okul taşıtı kaydının kaldırılması",
+  "introTitle": "Okul servisi yazılarını sökmek neden yeterli olmaz?",
+  "introText": "Okul taşıtı statüsü, yalnız aracın dışındaki yazı ve levhalardan oluşmaz. İkaz sistemi, iç donanımlar, koltuk düzeni ve ruhsattaki kullanım bilgisi birlikte değerlendirilir. Araçtaki söküm ile proje dosyası eşleştirildikten sonra resmi kayıt güncellenir.",
+  "technicalChecks": [
+    {
+      "title": "Ruhsattaki okul taşıtı kaydı",
+      "description": "Mevcut kullanım amacı ve tescil bilgileri incelenir."
+    },
+    {
+      "title": "Dış işaret ve levhalar",
+      "description": "Okul taşıtı yazıları, levhalar ve ayırt edici uygulamalar kontrol edilir."
+    },
+    {
+      "title": "İkaz ve uyarı sistemleri",
+      "description": "Araca okul servisi için eklenen lamba, uyarı ve elektrik donanımlarının durumu incelenir."
+    },
+    {
+      "title": "İç donanım ve koltuk düzeni",
+      "description": "Kapı, koltuk, kemer ve servise özgü ekipmanlar mevcut araçla karşılaştırılır."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Okul taşıtı kaydını, sınıfı ve koltuk sayısını görmek için."
+    },
+    {
+      "title": "Araç kimlik ve ağırlık bilgileri",
+      "description": "Projedeki teknik verileri araç etiketiyle doğrulamak için."
+    },
+    {
+      "title": "Dış görünüm fotoğrafları",
+      "description": "Yazı, levha ve ikaz ekipmanlarının durumunu incelemek için."
+    },
+    {
+      "title": "Araç içi fotoğraflar",
+      "description": "Koltuk, kemer, kapı ve servise özgü donanımları kontrol etmek için."
+    },
+    {
+      "title": "Varsa eski proje belgeleri",
+      "description": "Okul taşıtı dönüşümündeki kayıtları mevcut araçla eşleştirmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Okul taşıtı donanımları ve yeni kullanım",
+    "title": "Söküm sonrası araç hangi bilgilerle projelendirilir?",
+    "leftTitle": "Kaldırılacak okul taşıtı unsurları",
+    "leftItems": [
+      {
+        "title": "Yazı ve levhalar",
+        "description": "Okul taşıtını dıştan tanımlayan işaretler."
+      },
+      {
+        "title": "İkaz donanımı",
+        "description": "Okul servisi kullanımına bağlı lamba ve uyarı sistemleri."
+      },
+      {
+        "title": "Servise özgü iç ekipman",
+        "description": "Araçta yalnız okul taşımacılığı için bulunan donanımlar."
+      },
+      {
+        "title": "Elektrik bağlantıları",
+        "description": "Sökülen ekipmanlardan kalan kablo, anahtar ve bağlantılar."
+      }
+    ],
+    "rightTitle": "Söküm sonrası araç bilgileri",
+    "rightItems": [
+      {
+        "title": "Araç sınıfı ve cinsi",
+        "description": "Yeni kullanımın ruhsat bilgileriyle uyumu."
+      },
+      {
+        "title": "Koltuk kapasitesi",
+        "description": "Araçta kalan koltukların ve kemerlerin sayımı."
+      },
+      {
+        "title": "Kapı ve geçiş düzeni",
+        "description": "Sökümün yolcu girişine ve iç yerleşime etkisi."
+      },
+      {
+        "title": "Tescil kaydı",
+        "description": "Okul taşıtı şerhinin kaldırılacağı yeni ruhsat kapsamı."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Okul servisi sökümü için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve aracın iç-dış fotoğraflarını gönderin.",
+    "description": "Araçta kalan okul taşıtı ekipmanlarını ve proje kapsamını başvurudan önce belirleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Ruhsat ve kullanım kontrolü",
+      "description": "Okul taşıtı kaydı ile aracın planlanan yeni kullanımı incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Donanımların sökülmesi",
+      "description": "Servise özgü işaret, ikaz ve ekipmanlar araçtan uygun biçimde kaldırılır."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "Söküm sonrası araç, koltuk ve kullanım bilgileri projeye işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ve proje dosyası güncel başvuru kapsamında incelenir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Gerekli muayene tamamlanır ve okul taşıtı kaydı ruhsattan kaldırılır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; araç türü, okul taşıtı donanımları, koltuk düzeni, sökümün mevcut durumu ve proje kapsamına göre değişir.",
+    "items": [
+      {
+        "title": "Donanım sökümü",
+        "description": "Araçtaki işaret, ikaz ve servise özgü ekipmanlar"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Yeni kullanım ve araç bilgilerinin dosyalanması"
+      },
+      {
+        "title": "Resmi işlemler",
+        "description": "TSE, muayene ve tescil kapsamındaki güncel ücretler"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Yalnız yazıların sökülmesi",
+      "description": "Araçta kalan ikaz veya iç ekipmanlar proje kapsamıyla uyuşmaz."
+    },
+    {
+      "title": "Açık elektrik tesisatı",
+      "description": "Sökülen uyarı ekipmanlarından kalan bağlantılar teknik risk oluşturur."
+    },
+    {
+      "title": "Koltuk sayısı uyumsuzluğu",
+      "description": "Araçtaki fiili oturma kapasitesi ile ruhsat bilgisi farklı kalır."
+    },
+    {
+      "title": "Eski levhaların araçta kalması",
+      "description": "Dış görünüm, okul taşıtı statüsünün sürdüğünü gösterir."
+    },
+    {
+      "title": "Yeni kullanımın belirsiz olması",
+      "description": "Proje ve tescil bilgileri doğru araç kapsamında hazırlanamaz."
+    },
+    {
+      "title": "Söküm sonrası fotoğraf eksikliği",
+      "description": "Ön kontrolde aracın güncel durumu yeterince doğrulanamaz."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Okul servisi söküm projesi nedir?",
+      "answer": "Ruhsatında okul taşıtı kaydı bulunan aracın bu kullanımdan çıkarılması için hazırlanan teknik tadilat dosyasıdır."
+    },
+    {
+      "question": "Okul servisi yazılarını sökmek yeterli mi?",
+      "answer": "Hayır. İkaz sistemleri, iç donanımlar, koltuk düzeni ve ruhsat kaydı da birlikte kontrol edilir."
+    },
+    {
+      "question": "Okul servisi sökümünde koltuklar değişir mi?",
+      "answer": "Koltuk sayısı her araçta otomatik olarak değişmez. Araçtaki mevcut düzen ile planlanan yeni kullanım birlikte incelenir."
+    },
+    {
+      "question": "Okul taşıtı kaydı ruhsattan nasıl kaldırılır?",
+      "answer": "Donanım sökümü ve teknik proje sonrası TSE kontrolü, gerekli muayene ve tescil adımları tamamlanır."
+    },
+    {
+      "question": "Söküm yapılmış araç için sonradan proje hazırlanabilir mi?",
+      "answer": "Araç fotoğraf ve belgelerle ön incelemeye alınabilir. Eksik ekipman sökümü veya bağlantı sorunu varsa kontrol öncesinde düzeltme gerekebilir."
+    },
+    {
+      "question": "Okul servisi söküm projesi fiyatı ne kadar?",
+      "answer": "Fiyat araç türü, donanım, koltuk düzeni ve proje kapsamına göre belirlenir. Ruhsat ve fotoğraflar incelendikten sonra teklif verilebilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Donanım odaklı ön kontrol",
+      "description": "Aracın içi, dışı ve ikaz sistemleri aynı incelemede ele alınır."
+    },
+    {
+      "title": "Yeni kullanıma uygun dosya",
+      "description": "Koltuk, araç sınıfı ve tescil bilgileri birlikte projelendirilir."
+    },
+    {
+      "title": "Açık işlem sırası",
+      "description": "Sökümden ruhsat güncellemesine kadar gereken adımlar açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı ve aracın iç-dış fotoğraflarını getirin. Okul taşıtına özgü hangi ekipmanların kaldırılacağını birlikte belirleyelim."
+}

@@ -1,0 +1,928 @@
+---
+import { ArrowLeft, ArrowRight, BadgeCheck, Bike, CarFront, Check, CircleCheck, FileCheck, Phone, ShieldCheck, Wrench } from '@lucide/astro'
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/Layout.astro'
+import BlogCard from '@/components/BlogCard.astro'
+import ProjectForm from '@/components/ProjectForm.astro'
+import ServiceCard from '@/components/ServiceCard.astro'
+import ServiceCarousel from '@/components/ServiceCarousel.astro'
+import InteractiveVehicleBlueprint from '@/components/InteractiveVehicleBlueprint.astro'
+import CarBrandsMarquee from '@/components/CarBrandsMarquee.astro'
+import WhyChooseUs from '@/components/WhyChooseUs.astro'
+import { defaultServices, phoneHref, siteSettings, whatsappHref, courierCompanies } from '@/data/site'
+import { Carousel, CarouselSlide } from '@/ui/carousel'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/ui/accordion'
+import SiteImage from '@/components/SiteImage.astro'
+
+const siteUrl = 'https://karakasmuhendislik.com.tr'
+
+// Strict scope: Spanish (/es) and Turkish (/tr) hero copy only; other locales keep the original text.
+const isEs = Astro.currentLocale === 'es'
+const isTr = Astro.currentLocale === 'tr'
+const isDe = Astro.currentLocale === 'de'
+
+// Hero eyebrow: Spanish only on /es; every other locale keeps its existing label.
+const heroEyebrow = isEs
+  ? 'OFICINA DE PROYECTOS DE VEHÍCULOS AUTORIZADA TSE 360 Y TÜVTÜRK'
+  : isTr
+    ? 'TSE 360 & TÜVTÜRK YETKİLİ ARAÇ PROJE OFİSİ'
+    : isDe
+      ? 'TSE 360 & TÜVTÜRK ZUGELASSENES FAHRZEUGPROJEKTBÜRO'
+      : 'TSE 360 & TÜVTÜRK LICENSED VEHICLE PROJECT OFFICE'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      'url': siteUrl,
+      'name': 'Karakaş Mühendislik | Araç Proje ve Motosiklet Çanta Ruhsata İşletme',
+      'description': 'Araç proje ve motosiklet çanta ruhsata işletme hizmetleri. Türkiye genelinde güvenilir mühendislik ve tescil desteği.',
+      'publisher': {
+        '@id': `${siteUrl}/#organization`,
+      },
+    },
+    {
+      '@type': 'AutomotiveBusiness',
+      '@id': `${siteUrl}/#organization`,
+      'name': 'Karakaş Mühendislik',
+      'url': siteUrl,
+      'logo': `${siteUrl}/karakasmuhendislik-logo.webp`,
+      'image': `${siteUrl}/karakasmuhendislik-logo.webp`,
+      'telephone': '0554 816 63 02',
+      'email': 'bilgi@karakasmuhendislik.com.tr',
+      'priceRange': '₺₺',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': 'Altıparmak İş Merkezi Ofis No: 9',
+        'addressLocality': 'Gaziosmanpaşa',
+        'addressRegion': 'İstanbul',
+        'addressCountry': 'TR',
+      },
+      'openingHoursSpecification': [
+        {
+          '@type': 'OpeningHoursSpecification',
+          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          'opens': '09:00',
+          'closes': '19:00',
+        },
+      ],
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'TSE Onaylı Araç Proje ve Motosiklet Çanta Ruhsata İşletme Hizmetleri',
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Araç Proje | TSE Onaylı',
+              'url': `${siteUrl}/arac-proje-hizmetlerimiz`,
+              'description': 'TSE AİTM onaylı araç tadilat, karavan dönüşümü, motor değişimi, çeki demiri ve koltuk söküm projeleri.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Motosiklet Çanta Ruhsata İşletme | TSE Onaylı',
+              'url': `${siteUrl}/motosiklet-canta-ruhsata-isletme`,
+              'description': 'Motosiklet arka çanta, kurye taşıma kutusu ve şase değişimi ruhsata işletme projesi.',
+            },
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/#faq`,
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Motosiklet çanta ruhsata nasıl işletilir?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Motosiklete monte edilen arka çanta veya taşıma kutusu için yetkili makine mühendisimiz tarafından TSE onaylı tadilat projesi çizilir. Ardından TSE Araç Kontrol Merkezi incelemesi ve TÜVTÜRK tespit muayenesi yapılarak noterden yeni ruhsat teslim alınır.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Araç projesi hangi durumlarda zorunludur?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Karavan dönüşümü, motor değişimi, çeki demiri montajı, koltuk sökümü veya ilavesi, LPG sökümü, engelli aparatı ve sürücü kursu çift pedal montajı gibi aracın fabrika çıkış özelliklerini değiştiren tüm işlemlerde yasal olarak araç projesi zorunludur.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'TSE onay ve ruhsat süreci ne kadar sürer?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Teknik evraklarınız ve montaj faturanız hazır olduğunda proje çizimi ve TSE 360 sistemine dosya yükleme işlemi aynı gün içinde tamamlanır. Randevu sonrasında muayene ve noter tesciliyle süreç hızla sonuçlandırılır.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kurye firmaları için toplu çanta işletme desteği var mı?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Evet. Getir, Trendyol Go, Yemeksepeti, Vigo, Paket Taxi ve kurumsal kurye filoları için toplu motosiklet çanta ruhsata işletme ve teknik danışmanlık hizmeti sunuyoruz.',
+          },
+        },
+      ],
+    },
+  ],
+}
+
+const orderedServices = [...defaultServices].sort((a, b) => {
+  if (Boolean(a.featured) !== Boolean(b.featured)) {
+    return a.featured ? -1 : 1
+  }
+  return a.order - b.order
+})
+
+const vehicleServices = defaultServices.filter((s) => s.category !== 'Motosiklet')
+
+const posts = (await getCollection('posts')).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+
+const processSteps = [
+  ['01', 'Ruhsat ve Teknik Evrak Kontrolü', 'Araç veya motosiklet ruhsatı, tadilat faturası, uygunluk belgesi ve teknik montaj detayları TSE yetkili makine mühendisimizce incelenir.'],
+  ['02', 'TSE Proje Çizimi ve Hesap Raporu', 'Sanayi Bakanlığı AİTM mevzuatına tam uyumlu teknik çizim, mukavemet ve ağırlık dağılımı mühendislik hesapları hazırlanır.'],
+  ['03', 'TSE 360 Dijital Dosya Onayı', 'Hazırlanan tadilat projesi TSE 360 sistemine yüklenir; Araç Kontrol Merkezinde (AKM) dijital inceleme ve resmi onay tamamlanır.'],
+  ['04', 'TÜVTÜRK Muayenesi ve Noter Tescili', 'TÜVTÜRK tadilat tespit muayenesi sonrası notere gidilerek yeni araç veya motosiklet ruhsatı aynı gün içinde teslim alınır.'],
+  ['05', 'Resmi Ruhsat ve Trafik Tescili', 'Tüm yasal ve teknik onaylar eksiksiz tamamlanarak aracınız yasal güvenceyle trafiğe hazır hale getirilir.'],
+]
+
+const faqs = [
+  ['Motosiklet çanta ruhsata nasıl işletilir?', 'Motosiklete monte edilen arka çanta veya taşıma kutusu için yetkili makine mühendisimiz tarafından TSE onaylı tadilat projesi çizilir. Ardından TSE Araç Kontrol Merkezi incelemesi ve TÜVTÜRK tespit muayenesi yapılarak noterden yeni ruhsat teslim alınır.'],
+  ['Araç projesi hangi durumlarda zorunludur?', 'Karavan dönüşümü, motor değişimi, çeki demiri montajı, koltuk sökümü veya ilavesi, LPG sökümü, engelli aparatı ve sürücü kursu çift pedal montajı gibi aracın fabrika çıkış özelliklerini değiştiren tüm işlemlerde yasal olarak araç projesi zorunludur.'],
+  ['TSE onay ve ruhsat süreci ne kadar sürer?', 'Teknik evraklarınız ve montaj faturanız hazır olduğunda proje çizimi ve TSE 360 sistemine dosya yükleme işlemi aynı gün içinde tamamlanır. Randevu sonrasında muayene ve noter tesciliyle süreç hızla sonuçlandırılır.'],
+  ['Kurye firmaları için toplu çanta işletme desteği var mı?', 'Evet. Getir, Trendyol Go, Yemeksepeti, Vigo, Paket Taxi ve kurumsal kurye filoları için toplu motosiklet çanta ruhsata işletme ve teknik danışmanlık hizmeti sunuyoruz.'],
+]
+---
+
+<Layout
+  title="Araç Proje ve Motosiklet Çanta Ruhsata İşletme | Karakaş"
+  description="Araç proje ve motosiklet çanta ruhsata işletme hizmetleri. Türkiye genelinde güvenilir mühendislik ve tescil desteği."
+>
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <main class="home">
+
+    <!-- Ultra-Premium Light Mode Hero Section -->
+    <section class="py-4 sm:py-6 lg:py-8 mb-8 sm:mb-12 lg:mb-16">
+      <div class="mx-auto w-[95vw]">
+        <div class="relative isolate flex min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] items-center overflow-hidden rounded-none bg-white text-black shadow-[0_20px_50px_-20px_rgba(0,0,0,0.08)] border border-neutral-300 px-6 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
+          <!-- Neutral Technical Dot Matrix Pattern -->
+          <div class="absolute inset-0 -z-10 bg-[radial-gradient(#e5e5e5_1.5px,transparent_1.5px)] [background-size:24px_24px] opacity-70" aria-hidden="true"></div>
+          <!-- Subtle warm ambient lighting -->
+          <div class="absolute -right-20 -top-20 -z-10 size-96 rounded-full bg-primary/5 blur-3xl" aria-hidden="true"></div>
+          <div class="absolute -left-20 -bottom-20 -z-10 size-96 rounded-full bg-neutral-900/5 blur-3xl" aria-hidden="true"></div>
+
+          <div class="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-14 xl:gap-16">
+            <!-- Left Column -->
+            <div class="w-full">
+              <!-- Precision Eyebrow Pill -->
+              <div class="inline-flex items-center gap-2.5 border border-neutral-300 bg-neutral-100 px-3.5 py-1.5 text-[11px] sm:text-xs font-black uppercase tracking-[0.14em] text-black shadow-2xs">
+                <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                <span>{heroEyebrow}</span>
+              </div>
+
+              <!-- Main Title with Target Keywords -->
+              <h1 class="mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-black uppercase text-black tracking-[-0.03em] leading-[1.1]">
+                <span class="text-primary">{isEs ? 'SERVICIOS DE PROYECTOS DE VEHÍCULOS' : isTr ? 'ARAÇ PROJE HİZMETLERİ' : isDe ? 'FAHRZEUGPROJEKTE' : 'VEHICLE PROJECT'}</span>{isEs ? ' Y' : isTr ? ' VE' : isDe ? ' UND' : ' SERVICES AND'}<br />
+                <span class="text-primary">{isEs ? 'REGISTRO DE BAÚL DE MOTOCICLETA' : isTr ? 'MOTOSİKLET ÇANTA' : isDe ? 'MOTORRAD-KOFFER' : 'MOTORCYCLE LUGGAGE BOX'}</span>{isEs ? ' EN LA DOCUMENTACIÓN' : isTr ? ' RUHSATA İŞLETME' : isDe ? ' IN DEN FAHRZEUGPAPIEREN EINTRAGEN' : ' REGISTRATION'} <span class="text-primary">| {isEs ? 'HOMOLOGADO POR TSE' : isTr ? 'TSE ONAYLI' : isDe ? 'TSE-ZUGELASSEN' : 'TSE APPROVED'}</span>
+              </h1>
+
+              <!-- Extended Description with Primary Keyword Context -->
+              {isEs && (
+              <p class="mt-4 max-w-2xl lg:max-w-3xl text-base sm:text-lg text-neutral-800 leading-relaxed font-medium">
+                Con nuestro equipo de ingeniería mecánica autorizado preparamos los planos de proyecto de vehículos homologados por TSE para turismos y vehículos comerciales, y gestionamos el registro del baúl de motocicleta y del chasis en la documentación para flotas de mensajería y motocicletas particulares: rápido, completo y totalmente conforme a la normativa.
+              </p>
+            )}
+            {isTr && (
+          <p class="mt-4 max-w-2xl lg:max-w-3xl text-base sm:text-lg text-neutral-800 leading-relaxed font-medium">
+            Yetkili makine mühendisi ekibimizle binek ve ticari araçlar için TSE onaylı araç proje çizimlerini hazırlıyor; kurye ve bireysel motosikletler için arka çanta ve şase değişimi ruhsata işletme süreçlerini yönetiyoruz — hızlı, eksiksiz ve mevzuata tam uyumlu.
+          </p>
+        )}
+        <p class:list={['mt-4 max-w-2xl lg:max-w-3xl text-base sm:text-lg text-neutral-800 leading-relaxed font-medium', (isEs || isTr || isDe) && 'hidden']}>
+                With our licensed mechanical engineering team, we prepare TSE-approved vehicle project drawings for passenger and commercial vehicles, and manage motorcycle luggage box registration and chassis registration processes for courier and individual motorcycles — fast, complete and fully compliant with regulations.
+              </p>
+              {isDe && (
+                <p class="mt-4 max-w-2xl lg:max-w-3xl text-base sm:text-lg text-neutral-800 leading-relaxed font-medium">
+                  Mit unserem zugelassenen Maschinenbau-Ingenieurteam erstellen wir TSE-zugelassene Fahrzeugprojektzeichnungen für Pkw und Nutzfahrzeuge und betreuen die Eintragung von Motorrad-Koffern und Rahmentausch in die Fahrzeugpapiere – für Kurierflotten und private Motorräder: schnell, vollständig und vollständig regelkonform.
+                </p>
+              )}
+
+              <!-- Quick Trust & Feature Points -->
+              <div class="mt-5 flex flex-wrap items-center gap-2.5 text-xs font-bold text-black">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-neutral-50 border border-neutral-300 shadow-2xs">
+                  <CircleCheck size={14} class="text-primary" /> {isTr ? 'Araç Projesi | TSE Onaylı' : isDe ? 'Fahrzeugprojekt | TSE-zugelassen' : 'Vehicle Project | TSE Approved'}
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-neutral-50 border border-neutral-300 shadow-2xs">
+                  <CircleCheck size={14} class="text-primary" /> {isTr ? 'Motosiklet Çanta Ruhsata İşletme' : isDe ? 'Motorrad-Koffereintragung' : 'Motorcycle Luggage Box Registration'}
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-neutral-50 border border-neutral-300 shadow-2xs">
+                  <CircleCheck size={14} class="text-primary" /> {isTr ? 'TÜVTÜRK & Noter Tescil Desteği' : isDe ? 'TÜVTÜRK & Notar-Zulassung' : 'TÜVTÜRK & Notary Registration Support'}
+                </span>
+              </div>
+
+              <!-- Authority Metrics Bar -->
+              <div class="mt-7 grid grid-cols-3 gap-6 border-y border-neutral-200 py-5 max-w-xl">
+                <div>
+                  <strong class="block text-2xl sm:text-3xl font-black text-black tracking-tight">{isTr ? '12+ Yıl' : isDe ? '12+ Jahre' : '12+ Years'}</strong>
+                  <span class="text-[11px] sm:text-xs font-bold text-neutral-600 uppercase tracking-wider">{isTr ? 'Mühendislik Deneyimi' : isDe ? 'Ingenieurerfahrung' : 'Engineering Experience'}</span>
+                </div>
+                <div class="border-l border-neutral-200 pl-6">
+                  <strong class="block text-2xl sm:text-3xl font-black text-black tracking-tight">1,000+</strong>
+                  <span class="text-[11px] sm:text-xs font-bold text-neutral-600 uppercase tracking-wider">{isTr ? 'Ruhsata İşlenen Proje' : isDe ? 'Eingetragene Projekte' : 'Registered Projects'}</span>
+                </div>
+                <div class="border-l border-neutral-200 pl-6">
+                  <strong class="block text-2xl sm:text-3xl font-black text-primary tracking-tight">100%</strong>
+                  <span class="text-[11px] sm:text-xs font-bold text-neutral-600 uppercase tracking-wider">{isTr ? 'Mevzuata Uyum' : isDe ? 'Regelkonformität' : 'Regulatory Compliance'}</span>
+                </div>
+              </div>
+
+              <!-- Dual CTAs -->
+              <div class="mt-7 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://www.tuvturk.com.tr/hizmetlerimiz/hizli-islemler/arac-muayene-randevusu-alma"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="group inline-flex items-center justify-center gap-3 bg-primary hover:bg-[#b84d12] text-white font-black uppercase text-xs sm:text-[13px] tracking-wider px-8 py-4.5 transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-primary/25"
+                >
+                  <span>{isTr ? 'TÜVTÜRK RANDEVU AL' : isDe ? 'TÜVTÜRK-TERMIN BUCHEN' : 'BOOK TÜVTÜRK APPOINTMENT'}</span>
+                  <ArrowRight size={16} class="group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <a
+                  href={whatsappHref('Hello, I would like to get information about your vehicle project and motorcycle luggage box registration services.')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="group inline-flex items-center justify-center gap-3 bg-white hover:bg-black border-2 border-black text-black hover:text-white font-black uppercase text-xs sm:text-[13px] tracking-wider px-8 py-4.5 transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-md"
+                >
+                  <span>{isTr ? 'WHATSAPP İLE TEKLİF AL' : isDe ? 'ANGEBOT PER WHATSAPP ERHALTEN' : 'GET A QUOTE VIA WHATSAPP'}</span>
+                  <ArrowRight size={16} class="group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+
+              <!-- Google Rating Card -->
+              <a
+                href={siteSettings.googleReviewsUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Read our Google reviews"
+                class="mt-7 inline-flex items-center gap-3.5 border border-neutral-300 bg-white p-3 text-black shadow-2xs transition hover:border-primary/60 hover:shadow-md"
+              >
+                <span class="grid size-10 place-items-center bg-neutral-100 border border-neutral-300">
+                  <svg aria-hidden="true" class="size-6" viewBox="-0.5 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.827 24c0-1.524.253-2.986.705-4.356l-7.909-6.04A23.58 23.58 0 0 0 .214 24c0 3.737.867 7.261 2.406 10.388l7.905-6.051A14.052 14.052 0 0 1 9.827 24" fill="#FBBC05" />
+                    <path d="M23.714 10.133c3.31 0 6.302 1.174 8.652 3.094L39.202 6.4C35.036 2.773 29.695.533 23.714.533c-9.287 0-17.268 5.311-21.09 13.071l7.909 6.04c1.822-5.532 7.017-9.511 13.181-9.511" fill="#EB4335" />
+                    <path d="M23.714 37.867c-6.165 0-11.36-3.979-13.182-9.511l-7.909 6.039c3.822 7.761 11.803 13.072 21.091 13.072 5.732 0 11.204-2.035 15.311-5.849l-7.507-5.804c-2.118 1.334-4.785 2.053-7.804 2.053" fill="#34A853" />
+                    <path d="M46.145 24c0-1.387-.213-2.88-.534-4.267H23.714V28.8h12.604c-.63 3.091-2.346 5.468-4.8 7.014l7.507 5.804C43.339 37.614 46.145 31.649 46.145 24" fill="#4285F4" />
+                  </svg>
+                </span>
+                <div class="leading-tight text-left">
+                  <div class="flex items-center gap-2 text-sm font-black text-black">
+                    <span>5/5.0</span>
+                    <span class="tracking-widest text-[#f59e0b]">★★★★★</span>
+                  </div>
+                  <p class="mt-0.5 text-xs text-neutral-600 font-medium">{isTr ? 'Google üzerinde yüzlerce 5 yıldızlı değerlendirme' : isDe ? 'Hunderte 5-Sterne-Bewertungen auf Google' : 'Hundreds of 5-Star Reviews on Google'}</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Right Column: Interactive Vehicle Blueprint -->
+            <div class="relative hidden w-full max-w-[620px] lg:max-w-none mx-auto lg:block">
+              <InteractiveVehicleBlueprint />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Car Brands Marquee (Bejamas UI) -->
+    <CarBrandsMarquee />
+
+    <!-- Services Carousel -->
+    <ServiceCarousel services={defaultServices.filter((s) => s.slug !== 'mobil-hizmet-ve-yol-yardim-araci-projesi')} />
+
+    <!-- Two Main Core Pillars: Araç Proje & Motosiklet Çanta Ruhsata İşletme (Directly Below Services) -->
+    <!-- Two Main Core Pillars: Araç Proje & Motosiklet Çanta Ruhsata İşletme (Directly Below Services) -->
+    <section class="border-y border-neutral-200 bg-white py-20 lg:py-28 [content-visibility:auto] [contain-intrinsic-size:auto_1100px]" id="uzmanlik-alanlari">
+      <div class="shell">
+        <!-- Section Header in Site's Signature Industrial Style -->
+        <div class="text-center max-w-4xl mx-auto mb-16" data-reveal>
+          <div class="inline-block">
+            <span class="inline-block -skew-x-12 bg-neutral-950 px-5 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-white">
+              <span class="inline-block skew-x-12">{isDe ? 'TSE-ZUGELASSENES KOMPETENZZENTRUM' : 'TSE YETKİLİ UZMANLIK MERKEZİ'}</span>
+            </span>
+          </div>
+          <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-neutral-950 leading-tight">
+            {isDe ? 'Zwei Kernkompetenzen' : 'Araç Projesi ve Motosiklet Çanta Tescilinde'} <span class="text-primary">{isDe ? 'bei Fahrzeugprojekten und Motorrad-Koffereintragung' : 'İki Ana Uzmanlık'}</span>
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+            {isDe
+              ? 'Wählen Sie den benötigten Leistungsbereich – wir übernehmen die vollständig regelkonforme technische Berechnung, die digitale Dateigenehmigung über TSE 360 und die notarielle Eintragung mit Null-Fehler-Garantie.'
+              : 'İhtiyacınız olan hizmet alanını seçin; mevzuata tam uygun teknik hesaplama, TSE 360 dijital dosya onayı ve noter tescil adımlarını sıfır hata güvencesiyle tamamlayalım.'}
+          </p>
+        </div>
+
+        <!-- 2 Architectural Industrial Panels -->
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-12" data-reveal>
+          
+          <!-- Panel 1: Araç Proje & Tadilat Mühendisliği -->
+          <div class="flex flex-col justify-between border border-neutral-200 bg-neutral-50/50 p-8 sm:p-10 border-t-4 border-t-primary shadow-xs transition-colors hover:border-neutral-300">
+            <div>
+              <!-- Header Bar -->
+              <div class="flex items-center justify-between border-b border-neutral-200 pb-4">
+                <div class="flex items-center gap-2.5">
+                  <span class="grid size-8 place-items-center bg-primary text-white text-xs font-black">01</span>
+                  <div>
+                    <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight text-neutral-950">{isDe ? 'Fahrzeugprojekte' : 'Araç Proje Hizmetleri'}</h3>
+                    <h4 class="text-[11px] font-bold uppercase tracking-wider text-primary">{isDe ? 'TSE- und AİTM-zugelassene Ingenieurleistung' : 'TSE & AİTM Onaylı Mühendislik'}</h4>
+                  </div>
+                </div>
+                <span class="hidden sm:inline-block text-[11px] font-black uppercase tracking-wider text-neutral-400 bg-white border border-neutral-200 px-2.5 py-1">{isDe ? 'Pkw & Nutzfahrzeuge' : 'Otomobil & Ticari'}</span>
+              </div>
+
+              <p class="mt-5 text-sm text-neutral-600 leading-relaxed">
+                {isDe
+                  ? 'Gemäß der AİTM-Verordnung des Ministeriums für Industrie und Technologie bearbeiten wir Fahrzeugumbauten, Wohnmobil-Umbauten, Motortausch und Anhängerkupplungsprojekte noch am selben Tag im TSE-360-System.'
+                  : 'Sanayi ve Teknoloji Bakanlığı AİTM yönetmeliğine uygun araç tadilat, karavan dönüşüm, motor değişimi ve çeki demiri projelerini aynı gün TSE 360 sistemine işliyoruz.'}
+              </p>
+
+              <!-- Technical Service List (Clean Industrial Rows) -->
+              <div class="mt-6">
+                <div class="flex items-center justify-between border-b border-neutral-200 pb-2 mb-1">
+                  <span class="text-[11px] font-black uppercase tracking-wider text-neutral-500">Sık Yapılan Araç Projeleri</span>
+                  <a href="/arac-proje-hizmetlerimiz" class="text-[11px] font-black uppercase tracking-wider text-primary hover:text-neutral-950 transition-colors">Tüm Projeler (15+) →</a>
+                </div>
+
+                <div class="divide-y divide-neutral-200 border-b border-neutral-200">
+                  <a href="/karavan-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-primary">01.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-primary transition-colors">Karavan Dönüşüm Projesi</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-primary transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                  <a href="/arac-motor-degisim-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-primary">02.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-primary transition-colors">Motor Değişimi & Ruhsata Tescil</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-primary transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                  <a href="/ceki-demiri-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-primary">03.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-primary transition-colors">Çeki Demiri Montaj Uygunluk</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-primary transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                  <a href="/koltuk-sokum-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-primary">04.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-primary transition-colors">Koltuk Sökümü / Koltuk İlavesi</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-primary transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                  <a href="/lpg-sokum-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-primary">05.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-primary transition-colors">LPG Sistemi Sökümü & Tadilat</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-primary transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                  <a href="/engelli-aparati-montaj-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-primary">06.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-primary transition-colors">Engelli Aparatı Montaj Projesi</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-primary transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Technical Bullets -->
+              <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 border border-neutral-200 bg-white p-4 text-xs font-bold text-neutral-800">
+                <div class="flex items-center gap-2">
+                  <span class="size-1.5 bg-primary"></span>
+                  <span>Aynı Gün TSE 360</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="size-1.5 bg-primary"></span>
+                  <span>TÜVTÜRK Garantisi</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="size-1.5 bg-primary"></span>
+                  <span>Noter Onay Güvencesi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel Actions (Solid Sharp Buttons) -->
+            <div class="mt-8 pt-6 border-t border-neutral-200 flex flex-wrap items-center gap-3">
+              <a
+                href="/arac-proje-hizmetlerimiz"
+                class="inline-flex min-h-12 items-center justify-center gap-2 bg-primary hover:bg-[#b84d12] text-white px-7 text-xs font-black uppercase tracking-wider transition-all duration-200 hover:scale-[1.01]"
+              >
+                <span>TÜM ARAÇ PROJELERİNİ İNCELEYİN</span>
+                <ArrowRight class="size-4" />
+              </a>
+              <a
+                href={whatsappHref('Merhaba, araç projesi çizimi ve TSE onay süreci hakkında teklif almak istiyorum.')}
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex min-h-12 items-center justify-center gap-2 border-2 border-neutral-950 bg-white hover:bg-neutral-950 hover:text-white text-neutral-950 px-6 text-xs font-black uppercase tracking-wider transition-all duration-200"
+              >
+                <span>WHATSAPP TEKLİFİ AL</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Motosiklet Çanta Ruhsata İşletme & Kurye Tescili -->
+          <div class="flex flex-col justify-between border border-neutral-200 bg-neutral-50/50 p-8 sm:p-10 border-t-4 border-t-emerald-600 shadow-xs transition-colors hover:border-neutral-300">
+            <div>
+              <!-- Header Bar -->
+              <div class="flex items-center justify-between border-b border-neutral-200 pb-4">
+                <div class="flex items-center gap-2.5">
+                  <span class="grid size-8 place-items-center bg-emerald-600 text-white text-xs font-black">02</span>
+                  <div>
+                    <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight text-neutral-950">{isDe ? 'Motorrad-Koffereintragung' : 'Motosiklet Çanta Tescili'}</h3>
+                    <h4 class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">{isDe ? 'Eintragung für Kuriere & Privatfahrzeuge' : 'Kurye & Bireysel Ruhsata İşletme'}</h4>
+                  </div>
+                </div>
+                <span class="hidden sm:inline-block text-[11px] font-black uppercase tracking-wider text-neutral-400 bg-white border border-neutral-200 px-2.5 py-1">{isDe ? 'Kurier & Motorrad' : 'Kurye & Motosiklet'}</span>
+              </div>
+
+              <p class="mt-5 text-sm text-neutral-600 leading-relaxed">
+                {isDe
+                  ? 'Wir sorgen dafür, dass Kurier-Paketboxen und private Motorrad-Topcases ohne Bußgeld- und Beschlagnahmerisiko bei Verkehrskontrollen in die Fahrzeugpapiere eingetragen werden.'
+                  : 'Kurye paket servis kutuları ve bireysel motosiklet arka çantalarının (topcase) trafik çevirmelerinde ceza ve bağlama riski olmadan ruhsata işlenmesini sağlıyoruz.'}
+              </p>
+
+              <!-- Technical Courier List (Clean Industrial Rows) -->
+              <div class="mt-6">
+                <div class="flex items-center justify-between border-b border-neutral-200 pb-2 mb-1">
+                  <span class="text-[11px] font-black uppercase tracking-wider text-neutral-500">Popüler Kurye ve Donanım Tescilleri</span>
+                  <a href="/kurye-firmalari" class="text-[11px] font-black uppercase tracking-wider text-emerald-700 hover:text-neutral-950 transition-colors">Tüm 27 Kuryeyi Gör →</a>
+                </div>
+
+                <div class="divide-y divide-neutral-200 border-b border-neutral-200">
+                  <a href="/getir-motosiklet-canta-tasima-kutusu-ruhsata-isletme" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-emerald-600">01.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-emerald-700 transition-colors">Getir Kurye Taşıma Kutusu Ruhsata İşletme</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-emerald-700 transition-transform group-hover:translate-x-0.5">Rehber →</span>
+                  </a>
+                  <a href="/trendyol-go-motosiklet-canta-tasima-kutusu-ruhsata-isletme" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-emerald-600">02.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-emerald-700 transition-colors">Trendyol Go Çanta Ruhsata İşletme</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-emerald-700 transition-transform group-hover:translate-x-0.5">Rehber →</span>
+                  </a>
+                  <a href="/yemek-sepeti-motosiklet-canta-tasima-kutusu-ruhsata-isletme" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-emerald-600">03.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-emerald-700 transition-colors">Yemeksepeti Motosiklet Kutu Tescili</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-emerald-700 transition-transform group-hover:translate-x-0.5">Rehber →</span>
+                  </a>
+                  <a href="/vigo-motosiklet-canta-tasima-kutusu-ruhsata-isletme-rehberi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-emerald-600">04.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-emerald-700 transition-colors">Vigo Kurye Çanta Tescil Rehberi</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-emerald-700 transition-transform group-hover:translate-x-0.5">Rehber →</span>
+                  </a>
+                  <a href="/motosiklet-canta-ruhsata-isletme" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-emerald-600">05.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-emerald-700 transition-colors">Bireysel Topcase / Arka Çanta Projesi</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-emerald-700 transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                  <a href="/motosiklet-sase-degisim-projesi" class="group flex items-center justify-between py-3 px-1 transition-colors hover:bg-white hover:pl-2.5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-emerald-600">06.</span>
+                      <span class="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-emerald-700 transition-colors">Motosiklet Şase Değişim Projesi</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-400 group-hover:text-emerald-700 transition-transform group-hover:translate-x-0.5">İncele →</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Technical Bullets -->
+              <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 border border-neutral-200 bg-white p-4 text-xs font-bold text-neutral-800">
+                <div class="flex items-center gap-2">
+                  <span class="size-1.5 bg-emerald-600"></span>
+                  <span>Cezasız Sürüş</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="size-1.5 bg-emerald-600"></span>
+                  <span>Tüm Modellere Uyum</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="size-1.5 bg-emerald-600"></span>
+                  <span>Filo & Tekli Çizim</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel Actions (Solid Sharp Buttons) -->
+            <div class="mt-8 pt-6 border-t border-neutral-200 flex flex-wrap items-center gap-3">
+              <a
+                href="/motosiklet-canta-ruhsata-isletme"
+                class="inline-flex min-h-12 items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-7 text-xs font-black uppercase tracking-wider transition-all duration-200 hover:scale-[1.01]"
+              >
+                <span>MOTOSİKLET ÇANTA PROJE DETAYI</span>
+                <ArrowRight class="size-4" />
+              </a>
+              <a
+                href="/kurye-firmalari"
+                class="inline-flex min-h-12 items-center justify-center gap-2 border-2 border-neutral-950 bg-white hover:bg-neutral-950 hover:text-white text-neutral-950 px-6 text-xs font-black uppercase tracking-wider transition-all duration-200"
+              >
+                <span>KURYE FİRMA REHBERLERİ</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <WhyChooseUs />
+
+    <!-- Step by Step Process Section -->
+    <section class="relative isolate overflow-hidden bg-[#0d0f10] py-20 text-white md:py-24 lg:min-h-[54rem] [content-visibility:auto] [contain-intrinsic-size:auto_900px]" id="proje-sureci" aria-labelledby="proje-sureci-baslik">
+      <SiteImage class="absolute inset-0 -z-30 size-full object-cover object-[54%_center] opacity-40 grayscale" src="/images/home-process-technical-review.webp" alt="" aria-hidden="true" loading="lazy" />
+      <div class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgba(8,10,11,.72)_0%,rgba(8,10,11,.78)_38%,rgba(8,10,11,.97)_80%,#0d0f10_100%)]" aria-hidden="true"></div>
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,.2)_48%,rgba(0,0,0,.75)_100%)]" aria-hidden="true"></div>
+      <div class="shell relative">
+        <div class="mx-auto max-w-5xl text-center" data-reveal>
+          <h3 class="mx-auto w-fit -skew-x-12 bg-primary px-7 py-3 text-[13px] font-black uppercase tracking-[.08em] text-white"><span class="block skew-x-12">TSE Yetkili Mühendislik & Tescil</span></h3>
+          <h2 class="mt-6 text-balance text-[clamp(2.35rem,4.8vw,4.75rem)] font-black uppercase leading-[.98] tracking-[-.055em] text-white" id="proje-sureci-baslik">TSE Onaylı Araç Proje ve Ruhsatlandırma Süreci Nasıl İşler?</h2>
+          <p class="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/72">İlk teknik evrak incelemesinden TSE 360 dijital onayına, TÜVTÜRK tadilat muayenesinden noter ruhsat tesciline kadar tüm mühendislik sürecini hızlı ve garantili yönetiyoruz.</p>
+        </div>
+        <div class="relative mx-auto mt-14 max-w-7xl lg:min-h-[27rem]">
+          <div class="relative z-10 mx-auto mt-10 grid size-[17rem] place-items-center rounded-full bg-[linear-gradient(145deg,#f1f1f1_0%,#777_28%,#d8d8d8_51%,#575757_76%,#e2e2e2_100%)] p-[13px] shadow-[0_24px_65px_rgba(0,0,0,.6)] md:size-[19rem] lg:mt-0 lg:size-[21rem]" data-process-core>
+            <div class="grid size-full place-items-center rounded-full bg-[#202224] p-3 shadow-[inset_0_0_0_3px_rgba(255,255,255,.22),inset_0_12px_25px_rgba(255,255,255,.1)]">
+              <a
+                class="group grid size-full place-items-center rounded-full bg-[radial-gradient(circle_at_50%_30%,#36393b_0%,#181a1b_50%,#090a0a_100%)] text-center shadow-[inset_0_8px_24px_rgba(255,255,255,.12),0_0_28px_rgba(239,68,68,.65)] focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-white"
+                href={whatsappHref('Merhaba, araç projesi çizimi ve TSE ruhsatlandırma süreci hakkında bilgi ve fiyat teklifi almak istiyorum.')}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TSE yetkili makine mühendisimizden WhatsApp ile hemen bilgi ve teklif alın"
+              >
+                <span class="flex flex-col items-center px-4">
+                  <span class="mb-5 block h-4 w-14 rounded-full bg-gradient-to-r from-orange-400 to-red-600 shadow-[0_0_18px_rgba(239,68,68,.9)]" data-process-indicator aria-hidden="true"></span>
+                  <span class="text-xs font-bold italic uppercase tracking-wider text-white/75">TSE Yetkili Ofis</span>
+                  <strong class="mt-1.5 text-[1.45rem] font-black uppercase leading-tight tracking-[-.04em] text-white md:text-[1.75rem]">Hemen Bilgi & Teklif Alın</strong>
+                  <span class="mt-3 inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-primary group-hover:text-white transition-colors">
+                    <span>WhatsApp İle İletişim</span>
+                    <ArrowRight class="size-3.5 transition-transform duration-300 group-hover:translate-x-1" stroke-width={3} aria-hidden="true" />
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <ol class="mt-10 grid gap-px bg-white/16 md:grid-cols-2 lg:absolute lg:inset-0 lg:mt-0 lg:grid-cols-[1fr_22rem_1fr] lg:grid-rows-2 lg:gap-0 lg:bg-transparent" aria-labelledby="proje-sureci-baslik">
+            {processSteps.slice(0, 4).map(([number, title, description], index) => {
+              const positions = ['lg:col-start-1 lg:row-start-1 lg:self-start lg:pr-16', 'lg:col-start-3 lg:row-start-1 lg:self-start lg:pl-16 lg:text-right', 'lg:col-start-1 lg:row-start-2 lg:self-end lg:pr-16', 'lg:col-start-3 lg:row-start-2 lg:self-end lg:pl-16 lg:text-right']
+              return <li class:list={[`bg-[#111415]/95 p-6 md:p-7 lg:bg-transparent lg:p-0 ${positions[index] ?? ''}`, 'text-white']} data-reveal><h3 class="text-[clamp(1.25rem,1.8vw,1.65rem)] font-black uppercase leading-tight tracking-[-.035em] text-white"><span class="mr-2 text-primary">{number} ·</span>{title}</h3><p class="mt-4 text-base leading-7 text-white/68">{description}</p><span class="mt-7 block h-px bg-white/18 lg:mt-8" aria-hidden="true"></span></li>
+            })}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="border-b border-neutral-200 bg-white py-20 md:py-28 [content-visibility:auto] [contain-intrinsic-size:auto_1000px]">
+      <div class="shell">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8" data-reveal>
+          <div>
+            <div class="inline-flex items-center gap-2 border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-neutral-900 shadow-2xs">
+              <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+              <span>Müşteri Deneyimleri</span>
+            </div>
+            <h2 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-black uppercase text-neutral-950 tracking-tight leading-tight">
+              Gerçek Geri Bildirimler. <span class="text-primary">Onaylı Projeler.</span>
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-neutral-600 max-w-xl">
+              TSE onaylı araç tadilat ve motosiklet çanta projelerimizde müşterilerimizin Google üzerindeki doğrulanmış değerlendirmeleri.
+            </p>
+          </div>
+
+          <!-- Google Rating Summary Badge (Clickable) -->
+          <a
+            href={siteSettings.googleReviewsUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="group flex items-center gap-4 border border-neutral-200 bg-[#fafafa] p-4 sm:p-5 shadow-xs shrink-0 hover:border-primary/50 hover:bg-white hover:shadow-md transition-all duration-300"
+          >
+            <div class="grid size-12 place-items-center bg-white border border-neutral-200 p-2 shadow-2xs group-hover:scale-105 transition-transform">
+              <SiteImage src="/google-icon.svg" alt="Google" class="size-full object-contain" width="24" height="24" />
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-base font-black text-neutral-950">5.0</span>
+                <div class="flex text-amber-400 text-sm">★★★★★</div>
+              </div>
+              <p class="text-xs font-semibold text-neutral-500 mt-0.5 group-hover:text-primary transition-colors flex items-center gap-1">
+                <span>Google İncelemelerini Gör</span>
+                <ArrowRight class="size-3 transition-transform group-hover:translate-x-0.5" />
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="relative mt-12 md:mt-16 px-0 sm:px-14">
+          <!-- Navigation Buttons -->
+          <button
+            class="hidden sm:grid absolute -left-2 top-1/2 z-10 size-12 -translate-y-1/2 place-items-center border border-neutral-300 bg-white text-neutral-900 shadow-sm transition-all duration-200 hover:bg-primary hover:border-primary hover:text-white hover:scale-105 active:scale-95"
+            type="button"
+            data-testimonial-prev
+            aria-label="Önceki yorum"
+          >
+            <ArrowLeft class="size-5" />
+          </button>
+
+          <Carousel class="gap-6 pb-4" align="start" snapType="proximity" data-testimonial-carousel>
+            {
+              [
+                {
+                  initials: 'MK',
+                  name: 'Mustafa Kazci',
+                  role: '5 Yorum · Google Kullanıcısı',
+                  project: 'TSE Onaylı Araç Projesi',
+                  quote: 'Resul beye ilgi ve alakasından dolayı çok teşekkür ederim, sorunsuzca uygun fiyata işimizi halletti. Gönül rahatlığıyla işlerinizi yaptırabilirsiniz...',
+                },
+                {
+                  initials: 'AÇ',
+                  name: 'Alaaddin Çelik',
+                  role: 'Local Guide · 23 Yorum · 7 Fotoğraf',
+                  project: 'Araç Tadilat & Proje Tescili',
+                  quote: 'Resul Kardeşim işinin ehli. Kibar ve ilgili. İşini titizlikle yaptı yardımcı oldu, fiyat konusunda piyasadan iyi, verdiği belgelerle aracımı sıkıntısız tadilat yaptırdım.',
+                },
+                {
+                  initials: 'YB',
+                  name: 'Yeni Bilgi',
+                  role: '2 Yorum · Google Kullanıcısı',
+                  project: 'Karavan Dönüşüm Projesi',
+                  quote: '2 ya da 3 yere karavan ile alakalı istediğim projeyi söyledim yapamamışlardı, sonra internette bu siteyi buldum yaptı, emeğine sağlık kardeşim.',
+                },
+                {
+                  initials: 'ZZ',
+                  name: 'Zübeyde Zengin',
+                  role: 'Google Doğrulanmış Müşteri',
+                  project: 'Mühendislik & Ruhsat Tescili',
+                  quote: 'Konusunda uzman bir firma, herkese tavsiye ederim.',
+                },
+              ].map((item) => (
+                <CarouselSlide class="w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
+                  <article class="flex h-full min-h-[22rem] flex-col justify-between border border-neutral-200 bg-white p-7 shadow-xs transition-all duration-300 hover:border-neutral-300 hover:shadow-md" data-reveal>
+                    <div>
+                      <!-- Card Header: Rating + Google Icon -->
+                      <div class="flex items-center justify-between gap-3 border-b border-neutral-100 pb-4">
+                        <div class="flex items-center gap-1.5">
+                          <div class="flex text-amber-400 text-xs">★★★★★</div>
+                          <span class="text-[11px] font-black text-neutral-800">5.0</span>
+                        </div>
+                        <a
+                          href={siteSettings.googleReviewsUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          class="flex items-center gap-1.5 bg-neutral-50 hover:bg-neutral-100 border border-neutral-200/80 px-2 py-1 rounded transition-colors"
+                          title="Google'da Gör"
+                        >
+                          <SiteImage src="/google-icon.svg" alt="Google" class="size-3.5 object-contain" width="14" height="14" />
+                          <span class="text-[10px] font-bold text-neutral-600">Google Yorumu</span>
+                        </a>
+                      </div>
+
+                      <!-- Project Tag -->
+                      <div class="mt-4">
+                        <span class="inline-block rounded bg-primary/10 px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-primary">
+                          {item.project}
+                        </span>
+                      </div>
+
+                      <!-- Quote Text -->
+                      <p class="mt-3 text-sm leading-relaxed text-neutral-700 font-medium">
+                        "{item.quote}"
+                      </p>
+                    </div>
+
+                    <!-- Card Footer: Author Info -->
+                    <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center gap-3">
+                      <div class="grid size-10 shrink-0 place-items-center rounded-full bg-neutral-950 text-white text-xs font-black uppercase tracking-wider">
+                        {item.initials}
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <strong class="block truncate text-xs font-black uppercase text-neutral-950 tracking-tight">
+                          {item.name}
+                        </strong>
+                        <small class="block truncate text-[11px] font-medium text-neutral-500">
+                          {item.role}
+                        </small>
+                      </div>
+                      <span class="shrink-0 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded" title="Doğrulanmış Müşteri">
+                        <Check class="size-3" />
+                        <span class="hidden sm:inline">Onaylı</span>
+                      </span>
+                    </div>
+                  </article>
+                </CarouselSlide>
+              ))
+            }
+          </Carousel>
+
+          <button
+            class="hidden sm:grid absolute -right-2 top-1/2 z-10 size-12 -translate-y-1/2 place-items-center border border-neutral-300 bg-white text-neutral-900 shadow-sm transition-all duration-200 hover:bg-primary hover:border-primary hover:text-white hover:scale-105 active:scale-95"
+            type="button"
+            data-testimonial-next
+            aria-label="Sonraki yorum"
+          >
+            <ArrowRight class="size-5" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section (Hızlı Teklif & Danışmanlık) -->
+    <section class="border-y border-neutral-200 bg-[#f8f9fa] py-20 lg:py-28 [content-visibility:auto] [contain-intrinsic-size:auto_1100px]" id="proje-talebi">
+      <div class="shell grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
+        <!-- Left Column: Authority, Value Points & Direct Contact -->
+        <div class="lg:col-span-5 flex flex-col justify-between" data-reveal>
+          <div>
+            <div class="inline-block">
+              <span class="inline-block -skew-x-12 bg-neutral-950 px-4 py-1 text-[11px] font-black uppercase tracking-[0.2em] text-white">
+                <span class="inline-block skew-x-12">HIZLI TEKLİF & DANIŞMANLIK</span>
+              </span>
+            </div>
+            
+            <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase leading-[1.06] tracking-tight text-neutral-950">
+              Araç Projesi ve Çanta Tescili İçin <span class="text-primary">Anında Teklif Alın</span>
+            </h2>
+            
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-600 font-normal">
+              Aracınızın veya motosikletinizin ruhsat ve tadilat detaylarını iletin; TSE 360 onay adımlarını, resmi harçları ve mühendislik bedelini dakikalar içinde netleştirelim.
+            </p>
+
+            <!-- Structured Value Steps -->
+            <div class="mt-8 space-y-3">
+              <div class="flex items-start gap-3.5 p-3.5 border border-neutral-200 bg-white">
+                <div class="grid size-7 shrink-0 place-items-center bg-primary text-white font-mono font-black text-xs">01</div>
+                <div>
+                  <h3 class="text-xs font-black uppercase tracking-tight text-neutral-950">Aynı Gün TSE 360 İncelemesi</h3>
+                  <p class="text-xs text-neutral-600 mt-0.5 leading-normal">Teknik hesaplamalar ve proje çizimi yapılarak dosyanız aynı gün sisteme yüklenir.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 p-3.5 border border-neutral-200 bg-white">
+                <div class="grid size-7 shrink-0 place-items-center bg-primary text-white font-mono font-black text-xs">02</div>
+                <div>
+                  <h3 class="text-xs font-black uppercase tracking-tight text-neutral-950">Türkiye Geneli Yetkili Hizmet</h3>
+                  <p class="text-xs text-neutral-600 mt-0.5 leading-normal">81 ilde binek otomobiller, ticari araçlar ve kurye filoları için eksiksiz mühendislik.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 p-3.5 border border-neutral-200 bg-white">
+                <div class="grid size-7 shrink-0 place-items-center bg-primary text-white font-mono font-black text-xs">03</div>
+                <div>
+                  <h3 class="text-xs font-black uppercase tracking-tight text-neutral-950">%100 Ruhsat & Tescil Güvencesi</h3>
+                  <p class="text-xs text-neutral-600 mt-0.5 leading-normal">TÜVTÜRK tespit muayenesi ve noter ruhsat basımında sıfır hata ve tam güvence.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Engineer Support Callout -->
+            <div class="mt-8 border-l-4 border-primary bg-neutral-950 p-6 text-white shadow-md">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-primary">Doğrudan Yetkili Mühendis Hattı</span>
+                <span class="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 border border-emerald-800/60">
+                  <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Çevrimiçi
+                </span>
+              </div>
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <a href={phoneHref} class="text-2xl font-black text-white hover:text-primary transition-colors tracking-tight">
+                  0554 816 63 02
+                </a>
+                <a
+                  href={whatsappHref('Merhaba, araç projesi ve motosiklet çanta tescili için teklif almak istiyorum.')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex min-h-11 items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] text-white px-5 text-xs font-black uppercase tracking-wider transition-all duration-200 hover:scale-[1.02] shadow-sm"
+                >
+                  <span>WhatsApp İle Sorun</span>
+                  <ArrowRight class="size-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Proposal Form -->
+        <div class="lg:col-span-7" data-reveal>
+          <ProjectForm services={defaultServices} hideHeading />
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog & Knowledge Base -->
+    <section class="bg-white py-20 md:py-24 [content-visibility:auto] [contain-intrinsic-size:auto_1000px]">
+      <div class="shell">
+        <div class="mx-auto max-w-3xl text-center" data-reveal>
+          <h3 class="mx-auto w-fit -skew-x-12 bg-primary px-7 py-3 text-xs font-black uppercase italic tracking-[.12em] text-white">
+            <span class="block skew-x-12">Bilgi Merkezi</span>
+          </h3>
+          <h2 class="mt-6 text-4xl font-black uppercase leading-none tracking-[-.055em] text-slate-950 md:text-6xl">Blog ve Teknik Rehberler</h2>
+          <p class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-black/70">Araç proje çizimi, motosiklet çanta işletme, TSE 360 ve ruhsat tescil süreçlerinde doğru karar vermeniz için güncel makaleler.</p>
+        </div>
+        <div class="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {posts.slice(0, 3).map((post, index) => <BlogCard post={post} index={index + 1} />)}
+        </div>
+      </div>
+    </section>
+
+    <!-- SSS (FAQ) -->
+    <section class="bg-white py-20 md:py-24 [content-visibility:auto] [contain-intrinsic-size:auto_1100px]" id="sik-sorulan-sorular">
+      <div class="shell">
+        <div class="grid items-end gap-5 md:grid-cols-[10rem_1fr]" data-reveal>
+          <h3 class="w-fit -skew-x-12 bg-primary px-7 py-3 text-xs font-black uppercase italic tracking-[.12em] text-white">
+            <span class="block skew-x-12">SSS</span>
+          </h3>
+          <div>
+            <h2 class="text-4xl font-black uppercase leading-none tracking-[-.055em] text-slate-950 md:text-6xl">
+              Araç Projesi ve Çanta Tescili Hakkında Merak Edilenler
+            </h2>
+            <p class="mt-4 text-sm leading-7 text-black/70">Mevzuat, onay adımları ve tescil süreçlerinde bilmeniz gerekenler.</p>
+          </div>
+        </div>
+        <div class="mt-14 grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
+          <div class="relative min-h-[22rem] overflow-hidden md:min-h-[31rem]" data-reveal>
+            <SiteImage class="absolute inset-0 size-full object-cover" src="/arac-proje-hizmetleri-sik-sorulan-sorular.webp" alt="Araç proje hizmetleri hakkında sık sorulan sorular" loading="lazy" />
+          </div>
+          <div data-reveal>
+            <Accordion type="single">
+              {
+                faqs.map(([question, answer], index) => (
+                  <AccordionItem value={`faq-${index}`} open={index === 0}>
+                    <AccordionTrigger>
+                      {question}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      {answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))
+              }
+            </Accordion>
+          </div>
+        </div>
+        <div class="relative z-10 mt-10 grid gap-5 sm:gap-6 overflow-visible p-6 sm:p-8 text-white md:-mt-16 md:mr-10 md:ml-16 md:grid-cols-[1.2fr_auto_1fr] md:items-center md:px-14 md:py-8">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 to-slate-900 border-l-4 border-primary md:border-l-0 md:[clip-path:polygon(5%_0%,100%_0,100%_100%,0%_100%)] shadow-2xl">
+            <span class="hidden md:block absolute -left-5 top-0 h-full w-12 -skew-x-12 bg-primary" aria-hidden="true"></span>
+          </div>
+          <h3 class="relative text-xl sm:text-2xl lg:text-[30px] font-black uppercase italic leading-tight tracking-tight text-white">
+            <span class="block">Bir Sorunuz mu Var?</span>
+            <span class="block text-amber-400">Mühendislerimize Danışın.</span>
+          </h3>
+          <span class="hidden h-24 w-px bg-primary md:block" aria-hidden="true"></span>
+          <p class="max-w-md text-sm sm:text-base leading-relaxed text-neutral-200">Araç veya motosiklet ruhsatınızı WhatsApp'tan iletin, TSE onay adımlarını ve resmi harçları anında paylaşalım.</p>
+          <a
+            class="inline-flex w-full items-center justify-center gap-3 bg-primary hover:bg-white hover:text-slate-950 text-white font-black uppercase text-xs sm:text-sm py-3.5 px-6 transition-all duration-300 shadow-lg md:absolute md:right-[-2.5rem] md:top-1/2 md:-translate-y-1/2 md:size-20 md:shrink-0 md:p-0 md:grid md:place-items-center"
+            href={whatsappHref('Merhaba, araç projesi ve motosiklet çanta ruhsata işletme hakkında danışmak istiyorum.')}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp ile iletişime geçin"
+          >
+            <span class="md:hidden">WhatsApp İle Danışın</span>
+            <ArrowRight size={20} class="md:size-7" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script is:inline>
+  const serviceCarousel = document.querySelector('[data-service-carousel]')
+  document.querySelector('[data-service-prev]')?.addEventListener('click', () => {
+    serviceCarousel?.scrollBy({ left: -(serviceCarousel.clientWidth / 2), behavior: 'smooth' })
+  })
+  document.querySelector('[data-service-next]')?.addEventListener('click', () => {
+    serviceCarousel?.scrollBy({ left: serviceCarousel.clientWidth / 2, behavior: 'smooth' })
+  })
+
+  const testimonialCarousel = document.querySelector('[data-testimonial-carousel]')
+  document.querySelector('[data-testimonial-prev]')?.addEventListener('click', () => testimonialCarousel?.scrollBy({ left: -(testimonialCarousel.clientWidth / 3), behavior: 'smooth' }))
+  document.querySelector('[data-testimonial-next]')?.addEventListener('click', () => testimonialCarousel?.scrollBy({ left: testimonialCarousel.clientWidth / 3, behavior: 'smooth' }))
+</script>

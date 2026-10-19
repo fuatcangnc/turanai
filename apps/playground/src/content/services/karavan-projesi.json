@@ -1,0 +1,217 @@
+{
+  "title": "Karavan Projesi ve Ruhsata İşletme | Karakaş",
+  "shortTitle": "Karavan Projesi",
+  "slug": "karavan-projesi",
+  "category": "Dönüşüm",
+  "summary": "Karavan projesi için yerleşim, sabit donanım, ağırlık ve koltuk kontrollerini; gerekli belgeleri, TSE ve ruhsata işletme adımlarını inceleyin.",
+  "image": "/hizmetler/karavan-projesi.webp",
+  "featured": true,
+  "order": 6,
+  "heroEyebrow": "Karavan Dönüşümü | TSE Onaylı",
+  "heroTitle": "Karavan Projesi ve Ruhsata İşletme",
+  "heroDescription": "İç yerleşimi, sabit yaşam donanımlarını, ağırlık dağılımını ve araç sınıfını birlikte kontrol edelim. Proje, TSE ve ruhsat adımlarını dönüşümünüze göre netleştirelim.",
+  "imageAlt": "Karavan projesi için panelvan üzerinde teknik inceleme",
+  "imageTitle": "Karavan Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için karavan projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Karavan dönüşüm projesi",
+  "introTitle": "Karavan yerleşimi çizilmeden önce hangi bilgiler netleşmeli?",
+  "introText": "Karavan projesi yalnız dolap ve yatak ölçüsünden oluşmaz. Araç sınıfı, mevcut koltuklar, sabit yaşam donanımları, toplam ağırlık, yük dağılımı ve elektrik ya da gaz sistemi varsa bunların yerleşimi aynı dosyada değerlendirilir.",
+  "technicalChecks": [
+    {
+      "title": "Araç sınıfı ve taşıma kapasitesi",
+      "description": "Ruhsat bilgileri ile dönüşüm sonrası beklenen ağırlık birlikte incelenir."
+    },
+    {
+      "title": "Sabit yaşam donanımları",
+      "description": "Yatak, masa, pişirme ve depolama düzeninin araç içindeki yeri kontrol edilir."
+    },
+    {
+      "title": "Koltuk ve emniyet düzeni",
+      "description": "Seyir sırasında kullanılacak koltukların ve kemer bağlantılarının kapsamı belirlenir."
+    },
+    {
+      "title": "Tesisat ve havalandırma",
+      "description": "Elektrik, gaz, su veya havalandırma sistemi varsa güvenli yerleşimi değerlendirilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfını, koltuk sayısını ve ağırlık bilgilerini görmek için."
+    },
+    {
+      "title": "İç yerleşim planı",
+      "description": "Yatak, masa, pişirme ve depolama alanlarının konumunu incelemek için."
+    },
+    {
+      "title": "Araç ve donanım ölçüleri",
+      "description": "İç hacim, geçiş alanı ve sabit ekipman yerleşimini kontrol etmek için."
+    },
+    {
+      "title": "Ekipman listesi ve belgeleri",
+      "description": "Elektrik, gaz, ısıtma veya diğer sistemleri dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Dönüşüm fotoğrafları",
+      "description": "Sabitlemeleri, koltukları, mobilyaları ve tesisat güzergâhlarını görmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Karavan yerleşimi ve teknik donanım",
+    "title": "Yaşam alanı ile araç güvenliği nasıl birlikte planlanır?",
+    "leftTitle": "Karavan yaşam düzeni",
+    "leftItems": [
+      {
+        "title": "Yatak düzeni",
+        "description": "Sabit veya dönüşebilen yatak alanının araç içindeki konumu."
+      },
+      {
+        "title": "Masa ve oturma alanı",
+        "description": "Seyir ile park hâlindeki kullanımın birbirinden ayrılması."
+      },
+      {
+        "title": "Pişirme alanı",
+        "description": "Ocak ve çevresindeki yüzeylerin güvenli ve erişilebilir yerleşimi."
+      },
+      {
+        "title": "Depolama bölümleri",
+        "description": "Kapak ve çekmecelerin seyir sırasında açılmayacak biçimde sabitlenmesi."
+      }
+    ],
+    "rightTitle": "Araçla ilgili hesaplar",
+    "rightItems": [
+      {
+        "title": "Ağırlık dağılımı",
+        "description": "Mobilya, su ve ekipman yükünün dingiller üzerindeki etkisi."
+      },
+      {
+        "title": "Koltuk ve kemerler",
+        "description": "Seyir koltuklarının bağlantı ve kullanım kapsamı."
+      },
+      {
+        "title": "Elektrik ve gaz",
+        "description": "Mevcut sistemlerin belge, koruma ve yerleşim kontrolü."
+      },
+      {
+        "title": "Dış değişiklikler",
+        "description": "Pencere, havalandırma veya dış ekipmanın araç ölçülerine etkisi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Karavan yerleşimi için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve yerleşim planını gönderin.",
+    "description": "Araç sınıfını, sabit donanımları ve proje öncesinde değişmesi gereken noktaları montaj ilerlemeden kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve plan ön kontrolü",
+      "description": "Ruhsat, iç ölçüler, koltuk düzeni ve dönüşüm planı birlikte incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Donanım ve ağırlık hesabı",
+      "description": "Sabit ekipmanlar, tesisatlar ve beklenen yük dağılımı değerlendirilir."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "Yerleşim, ölçü, ağırlık ve donanım bilgileri projeye işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ile proje dosyası güncel başvuru kapsamına göre TSE kontrolüne sunulur."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onaydan sonraki muayene ve ruhsat adımları dosyaya göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; aracın sınıfı, dönüşümün tamamlanma durumu, koltuk ve sabit donanım kapsamı, ağırlık hesabı ile tesisat belgelerine göre değişir.",
+    "items": [
+      {
+        "title": "Dönüşüm kapsamı",
+        "description": "İç yerleşim ve sabit donanımların değerlendirilmesi"
+      },
+      {
+        "title": "Teknik hesaplar",
+        "description": "Ölçü, ağırlık ve koltuk bilgilerinin projelendirilmesi"
+      },
+      {
+        "title": "Onay adımları",
+        "description": "Güncel başvuru sırasının dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Eksik sabit donanım",
+      "description": "Karavan kullanımını tanımlayan ekipmanların planda açık gösterilmemesi."
+    },
+    {
+      "title": "Ağırlık hesabının atlanması",
+      "description": "Mobilya, su ve diğer ekipmanların toplam yüke eklenmemesi."
+    },
+    {
+      "title": "Uygunsuz seyir koltuğu",
+      "description": "Koltuk ve kemer düzeninin park alanıyla karıştırılması."
+    },
+    {
+      "title": "Güvensiz dolap sabitlemesi",
+      "description": "Mobilya ve kapakların araç hareketine göre bağlanmaması."
+    },
+    {
+      "title": "Belgesiz tesisat",
+      "description": "Elektrik veya gaz sisteminin proje dosyasında açıklanmaması."
+    },
+    {
+      "title": "Proje dışı dış ekipman",
+      "description": "Pencere, havalandırma ya da taşıyıcının dosyada gösterilmemesi."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Karavan projesi nedir?",
+      "answer": "Uygun bir aracın yaşam alanına dönüştürülmesinde iç yerleşimi, sabit donanımları, ağırlığı ve araç üzerindeki değişiklikleri gösteren teknik proje dosyasıdır."
+    },
+    {
+      "question": "Her panelvan karavana dönüştürülebilir mi?",
+      "answer": "Her araç otomatik olarak uygun değildir. Araç sınıfı, taşıma kapasitesi, iç hacim, koltuk düzeni ve planlanan donanımlar birlikte incelenir."
+    },
+    {
+      "question": "Karavan projesi için hangi sabit donanımlar gerekir?",
+      "answer": "Yatak veya yatağa dönüşen düzen, masa, pişirme ve depolama alanı proje kapsamında değerlendirilir. Kesin yerleşim araç ve başvuru kapsamına göre belirlenir."
+    },
+    {
+      "question": "Dönüşüm bitmeden proje kontrolü yapılabilir mi?",
+      "answer": "Evet. Ruhsat ve yerleşim planı üzerinden ön kontrol yapmak, ölçü veya yerleşim kaynaklı yeniden işçiliği azaltabilir."
+    },
+    {
+      "question": "Karavan projesinde ağırlık neden önemlidir?",
+      "answer": "Mobilya, su, akü ve diğer ekipmanlar aracın toplam ağırlığını ve dingil yüklerini etkiler. Bu yükler dönüşüm planında birlikte değerlendirilir."
+    },
+    {
+      "question": "Karavan projesi fiyatı ne kadar?",
+      "answer": "Fiyat araç sınıfı, dönüşüm kapsamı, koltuk düzeni, tesisatlar ve eksik belgelere göre değişir. Ruhsat ile yerleşim planı incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Yerleşim ön kontrolü",
+      "description": "Araç ve karavan planı dönüşüm ilerlemeden önce birlikte incelenir."
+    },
+    {
+      "title": "Hesaba dayalı proje",
+      "description": "Ölçü, ağırlık ve sabit ekipmanlar teknik dosyada bir araya getirilir."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje, TSE, muayene ve tescil adımları dosyaya göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, yerleşim planını ve ekipman listesini getirin. Dönüşüm ile proje dosyasının kapsamını görüşmede netleştirelim."
+}

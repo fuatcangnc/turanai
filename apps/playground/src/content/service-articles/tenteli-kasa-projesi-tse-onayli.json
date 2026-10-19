@@ -1,0 +1,110 @@
+{
+  "slug": "tenteli-kasa-projesi-tse-onayli",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Tenteli Kasa Projesi",
+  "title": "Tenteli Kasa Projesi | TSE Onaylı",
+  "summary": "Açık kasaların metal iskelet ve branda sistemiyle korunaklı hale getirildiği tenteli kamyon ve kamyonet kasaları için TSE onaylı proje ve ruhsat süreci Karakaş Mühendislik'te.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Tenteli Kasa Projesi",
+  "heroLead": "Tenteli kasa projesi, kamyon ve kamyonetlere uygulanan tente (branda) sisteminin TSE onaylı projeyle mevzuata uygun hale getirilmesini kapsayan bir araç tadilatıdır. Karakaş Mühendislik olarak tenteli kasa dönüşümlerinde teknik proje hazırlığı, TSE onayı, TÜVTÜRK tadilat muayenesi ve ruhsata işletme işlemlerinde profesyonel destek veriyoruz.",
+  "sections": [
+    {
+      "id": "tenteli-kasa-nedir",
+      "heading": "Tenteli Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bu kasa tipi, açık kasa üzerine kurulan metal iskelet ve üzerine gerilen branda sayesinde oluşturulur. Böylece yükler yağmur, güneş, rüzgar ve benzeri dış etkilere karşı korunmuş olur. Ticari taşımacılıkta hem ekonomik hem de pratik bir seçenek olarak öne çıkar."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Tenteli kasa kurulumu araç üzerinde yapısal değişiklik oluşturduğu için araç tadilatı kapsamına girer. Yapılan değişikliğin mevzuata uygun olduğunu kanıtlayan TSE onaylı araç projesinin hazırlanması gerekir. Onaysız uygulamalar TÜVTÜRK muayenesinde aksamalara ve ruhsat sürecinde engellere yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Açık kasaların tenteli sisteme dönüştürülmesi",
+            "Yüklerin dış etkenlerden korunma ihtiyacı doğması",
+            "Ticari kullanım için daha pratik taşıma çözümü kurulması",
+            "Mevcut tenteli kasaların yenilenmesi veya revize edilmesi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Aracın ölçüleri ve teknik bilgileri alınır",
+            "Tenteli kasa için mühendislik projesi hazırlanır",
+            "İskelet ve branda sistemi araca uygulanır",
+            "TSE kontrol ve onay süreci tamamlanır",
+            "TÜVTÜRK tadilat muayenesi yapılır",
+            "Noter aracılığıyla ruhsata işletme işlemleri bitirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ölçümleri alınmış araç için gerekli proje evrakları aşağıdaki gibidir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Yapılan tadilata ait işçilik faturası",
+            "Gerekli durumlarda teknik ekipman belgeleri",
+            "Kimlik veya firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yükleri yağmur ve güneşten korur",
+            "Ekonomik ve pratik kullanım sağlar",
+            "Kolay montaj ve söküm avantajı sunar",
+            "Ticari faaliyetlerde taşıma esnekliği oluşturur",
+            "Yük güvenliği ve koruma seviyesini artırır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme-zorunlu-mu",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Tenteli kasa uygulaması sonrası aracın teknik yapısı değiştiğinden, tadilatın ruhsata işlenmesi gerekir. Ruhsata işlenmeyen uygulamalar TÜVTÜRK muayenesinde ağır kusur olarak değerlendirilebilir ve cezai yaptırımlara yol açabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

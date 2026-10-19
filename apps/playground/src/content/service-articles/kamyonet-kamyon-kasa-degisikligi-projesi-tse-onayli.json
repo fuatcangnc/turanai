@@ -1,0 +1,112 @@
+{
+  "slug": "kamyonet-kamyon-kasa-degisikligi-projesi-tse-onayli",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Kamyonet & Kamyon Kasa Değişikliği Projesi",
+  "title": "Kamyonet & Kamyon Kasa Değişikliği Projesi | TSE Onaylı",
+  "summary": "Aracınızın mevcut kasasını kullanım amacına uygun farklı bir sisteme değiştirmek için TSE onaylı proje, muayene ve ruhsat süreçlerinde Karakaş Mühendislik uzmanlığı.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Kamyonet & Kamyon Kasa Değişikliği Projesi",
+  "heroLead": "Kamyonet ve kamyon kasa değişikliği projesi, aracın mevcut kasasının kullanım ihtiyacına uygun başka bir kasa sistemiyle değiştirilmesini ve bu değişikliğin TSE onaylı projeyle mevzuata uygun hale getirilmesini kapsayan bir araç tadilatıdır. Karakaş Mühendislik olarak açık, kapalı, tenteli, frigorifik ve özel üretim kasa dönüşümlerinde proje hazırlığı, teknik uygunluk, TÜVTÜRK muayenesi ve ruhsata işletme adımlarında profesyonel destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "kamyonet-kamyon-kasa-degisikligi-nedir",
+      "heading": "Kamyonet ve Kamyon Kasa Değişikliği Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bu işlem, kamyonet ya da kamyon üzerindeki mevcut kasaların sökülerek yerine farklı ölçü, yapı veya kullanım amacına daha uygun yeni bir kasa sisteminin takılmasını ifade eder. Açık, kapalı, tenteli, brandalı ya da frigorifik gibi seçenekler, araçların ticari faaliyetlerine göre özelleştirilebilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-gerekir",
+      "heading": "Hangi Durumlarda Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Açık kasadan kapalı kasaya geçiş yapılması",
+            "Standart kasadan özel üretim kasaya geçilmesi",
+            "Tenteli ya da brandalı sisteme dönüştürme ihtiyacı",
+            "Soğutmalı veya frigorifik kasa kurulumu yapılması",
+            "Hasarlı ya da çalışmayan kasaların tamamen değiştirilmesi",
+            "Ticari gereksinimlere uygun yeni taşıma sistemi kurulması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tse-onayli-proje-neden-gerekli",
+      "heading": "TSE Onaylı Proje Neden Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kasa değişikliği, aracın teknik yapısını, ağırlık dengesini, ölçülerini ve taşıma kapasitesini etkileyen kapsamlı bir tadilattır. Bu sebeple yapılan değişikliğin güvenli ve kurallara uygun olduğunu gösteren TSE onaylı araç projesinin hazırlanması zorunludur. Proje kapsamında bağlantı noktaları, ölçüler, ağırlık dengesi ve karayolu uygunluğu teknik olarak incelenir."
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Araç incelenir ve mevcut ölçüleri kayıt altına alınır",
+            "İstenen kasa tipine uygun mühendislik projesi hazırlanır",
+            "Kasa değişimi ve montaj işlemleri uygulanır",
+            "TSE kontrol ve onay süreci tamamlanır",
+            "TÜVTÜRK tadilat muayenesi gerçekleştirilir",
+            "Noter üzerinden ruhsata işletme işlemleri bitirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ölçümleri alınmış araç için hazırlanması gereken proje belgeleri aşağıdaki gibidir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Yapılan tadilata ait işçilik faturası",
+            "Kasa sistemine ilişkin teknik ekipman bilgileri",
+            "Kimlik veya firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kasa-degisikligi-avantajlari",
+      "heading": "Kasa Değişikliğinin Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Ticari ihtiyaçlara uygun taşıma altyapısı kurar",
+            "Yükleme ve boşaltma verimliliğini artırır",
+            "Yük güvenliği ve koruma seviyesini yükseltir",
+            "Farklı yük tiplerine uygun esneklik sunar",
+            "Hasarlı kasaların güvenli şekilde yenilenmesini sağlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme-zorunlu-mu",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Kamyonet ve kamyon kasa değişikliği sonrası araç bilgileri değiştiğinden, tadilatın ruhsata işlenmesi gerekir. Ruhsata işlenmeyen kasa değişiklikleri TÜVTÜRK muayenesinde aksamalara yol açabilir ve trafikte cezai işlemlerle karşılaşılmasına neden olabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

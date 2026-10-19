@@ -1,0 +1,107 @@
+{
+  "slug": "frigorifik-projesi-tse-onayli",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Frigorifik Projesi",
+  "title": "Frigorifik Projesi | TSE Onaylı",
+  "summary": "Soğuk zincir taşımacılığına uygun izolasyonlu ve soğutmalı kamyon ve kamyonet kasaları için TSE onaylı proje, muayene ve ruhsat işlemleri Karakaş Mühendislik'te.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Frigorifik Projesi",
+  "heroLead": "Frigorifik kasa uygulaması, kamyon ve kamyonetlerin soğuk zincir taşımacılığına hazır hale getirilmesi amacıyla izole edilmiş kasa ve soğutma ünitesiyle donatılmasını içeren bir araç tadilatıdır. Karakaş Mühendislik olarak bu dönüşümlerde TSE onaylı proje hazırlığı, teknik uygunluk süreçleri, TÜVTÜRK tadilat muayenesi ve ruhsata işletme konularında profesyonel destek sağlıyoruz.",
+  "sections": [
+    {
+      "id": "frigorifik-kasa-nedir",
+      "heading": "Frigorifik Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "İç yüzeyi özel yalıtım malzemeleriyle kaplanan ve üzerine soğutma cihazı takılan bu kasa tipi, kamyon ve kamyonetlerde termik koruma sağlar. Söz konusu sistem sayesinde gıda, ilaç ve sıcaklığa duyarlı ürünler belirlenen derece aralıklarında güvenle taşınabilir."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Soğutmalı kasa kurulumu, aracın teknik yapısını ve kullanım amacını baştan değiştirdiği için araç tadilatı kapsamında değerlendirilir. Dönüşümün mevzuata uygunluğunu belgeleyen TSE onaylı araç projesinin hazırlanması zorunludur. Onaysız işlemler hem muayene hem de ruhsat aşamasında ciddi sorunlara yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Gıda ürünlerinin taşınması",
+            "İlaç ve tıbbi malzeme lojistiği",
+            "Soğuk zincir gerektiren lojistik faaliyetler",
+            "Standart kasaların soğutmalı kasaya dönüştürülmesi",
+            "Sıcaklık kontrollü ticari taşımacılık ihtiyaçları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Aracın ölçüleri ve teknik bilgileri belirlenir",
+            "Frigorifik kasa projesi hazırlanır",
+            "İzolasyonlu kasa ve soğutma sistemi takılır",
+            "TSE kontrol ve onay süreci sonuçlandırılır",
+            "TÜVTÜRK tadilat muayenesi yapılır",
+            "Noter üzerinden ruhsata işletme işlemleri tamamlanır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Gerçekleştirilen tadilata ait işçilik faturası",
+            "Soğutucu sistem ve ekipman belgeleri",
+            "Kimlik veya firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Soğuk zincir koruma imkanı sağlar",
+            "Ürün güvenliğini üst düzeye taşır",
+            "Ticari taşımacılık standartlarına uymayı kolaylaştırır",
+            "Yasal ve güvenli taşıma ortamı oluşturur",
+            "Bozulabilir ürünlerin kontrollü biçimde taşınmasını sağlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Frigorifik kasa dönüşümü aracın teknik yapısı ve kullanım amacını değiştirdiğinden, tadilatın ruhsata işlenmesi gerekir. Ruhsata yansıtılmayan uygulamalar TÜVTÜRK muayenesinde sorun çıkarabilir ve yasal yaptırımlarla karşılaşılmasına neden olabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

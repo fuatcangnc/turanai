@@ -1,0 +1,111 @@
+{
+  "slug": "brandali-sac-kasa-projesi-tse-onayli",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Brandalı Sac Kasa Projesi",
+  "title": "Brandalı Sac Kasa Projesi | TSE Onaylı",
+  "summary": "Sac kasa üzerine branda sistemi eklenerek hem dayanıklı hem koruyucu hale getirilen kamyon ve kamyonet kasaları için TSE onaylı proje ve ruhsat süreci Karakaş Mühendislik'te.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Brandalı Sac Kasa Projesi",
+  "heroLead": "Brandalı sac kasa dönüşümü, kamyon ve kamyonetlerde sac yapı üzerine branda tertibatı eklenerek aracın hem sağlam hem de dış etkenlere karşı korunaklı hale getirilmesini kapsayan bir araç tadilatıdır. Karakaş Mühendislik olarak bu uygulamalarda TSE onaylı proje hazırlığı, teknik uygunluk kontrolü, TÜVTÜRK tadilat muayenesi ve ruhsata işletme adımlarında uzman destek veriyoruz.",
+  "sections": [
+    {
+      "id": "brandali-sac-kasa-nedir",
+      "heading": "Brandalı Sac Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bu kasa tipinin alt bölümü sağlam sac levhalardan üretilirken, üst kısmı açılıp kapanabilen branda sistemiyle kapatılır. Böylece yükler hem sert bir zemin üzerinde taşınır hem de yağmur, güneş ve benzeri dış etkilerden korunmuş olur. Ticari taşımacılıkta hem güvenli hem de kullanışlı bir tercih sunar."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Branda ve sac entegrasyonu, aracın boyutlarını, ağırlığını ve taşıma özelliklerini farklılaştırdığı için yasal olarak araç tadilatı kabul edilir. Bu değişikliğin teknik açıdan mevzuata uygun olduğunu kanıtlayan TSE onaylı araç projesinin hazırlanması zorunludur. Onaysız uygulamalar TÜVTÜRK kontrolünde sorun yaratabilir ve ruhsat işlemlerini geciktirebilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Açık kasaların brandalı sisteme geçirilmesi",
+            "Dayanıksız kasaların sac yapıyla değiştirilmesi",
+            "Yüklerin hava ve çevre koşullarından korunmak istenmesi",
+            "Ticari taşımada daha güvenli bir altyapı kurulması",
+            "Bozulmuş ya da kullanılamaz durumdaki kasaların yenilenmesi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Araç ölçümleri yapılır ve kasa tipi netleştirilir",
+            "Brandalı sac kasa için mühendislik projesi hazırlanır",
+            "Sac kasa üretimi ile branda sistemi montajı gerçekleştirilir",
+            "TSE inceleme ve onay süreci tamamlanır",
+            "TÜVTÜRK tadilat muayenesinden geçilir",
+            "Noter aracılığıyla ruhsata işletme işlemleri bitirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ölçümleri tamamlanmış araç için hazırlanması gereken proje belgeleri şunlardır:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Yapılan tadilata ait işçilik faturası",
+            "Kasa ve branda sistemine ilişkin ekipman bilgileri",
+            "Kimlik ya da firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yükleri yağmur, güneş ve dış etkenlerden korur",
+            "Sağlam sac zeminle güvenli taşıma ortamı sağlar",
+            "Branda yapısı sayesinde esnek kullanım imkanı sunar",
+            "Ticari işleyişte pratiklik ve verimlilik kazandırır",
+            "Dayanıklı yapısıyla uzun süreli kullanım olanağı verir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme-zorunlu-mu",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Brandalı sac kasa montajı sonrası aracın teknik özellikleri değiştiğinden, söz konusu tadilatın ruhsata işlenmesi gerekir. Ruhsata işlenmeyen değişiklikler TÜVTÜRK muayenesinde ağır kusur olarak değerlendirilebilir ve cezai yaptırımlara sebebiyet verebilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}

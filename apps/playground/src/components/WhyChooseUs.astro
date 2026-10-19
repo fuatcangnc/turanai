@@ -1,0 +1,155 @@
+---
+import SiteImage from './SiteImage.astro'
+
+const featuresLeft = [
+  {
+    title: 'TSE 360 HIZLI DOSYA ONAYI',
+    description: 'TSE dijital başvuru sistemi üzerinden araç proje dosyanız aynı gün incelenir; randevu ve muayene bekleme süresi en aza iner.',
+  },
+  {
+    title: 'AİTM MEVZUATINA %100 UYUM',
+    description: 'Karavan, motor değişimi, çeki demiri ve koltuk tadilatı projeleri güncel Sanayi ve Teknoloji Bakanlığı AİTM yönetmeliğine tam uygun hazırlanır.',
+  },
+]
+
+const featuresRight = [
+  {
+    title: 'MOTOSİKLET ÇANTA TESCİL UZMANLIĞI',
+    description: 'Kurye paket servis kutuları ve bireysel arka çantalar için ceza ve muayene engeli olmadan ruhsata işletme projesi çizilir.',
+  },
+  {
+    title: 'ŞEFFAF MALİYET & DANIŞMANLIK',
+    description: 'Süreç başlamadan önce TSE harçları, muayene ve proje çizim bedelleri net olarak hesaplanır; sürpriz ek masraflarla karşılaşmazsınız.',
+  },
+]
+
+const stats = [
+  {
+    target: 15,
+    suffix: '+',
+    prefix: '',
+    label: 'YILLIK TECRÜBE',
+    description: 'Araç projelendirme ve tip onay alanında yetkili kadro.',
+  },
+  {
+    target: 5000,
+    suffix: '+',
+    prefix: '',
+    label: 'ONAYLI PROJE',
+    description: 'TSE ve noter tescili tamamlanan güvenli araç ve motosikletler.',
+  },
+  {
+    target: 100,
+    suffix: '%',
+    prefix: '',
+    label: 'MEVZUAT UYUMU',
+    description: 'TÜVTÜRK ve TSE standartlarında eksiksiz teknik dosya.',
+  },
+  {
+    target: 27,
+    suffix: '+',
+    prefix: '',
+    label: 'KURYE & FİLO İŞ ORTAĞI',
+    description: 'Kurye firmaları ve araç filolarına kesintisiz teknik destek.',
+  },
+]
+---
+
+<section class="relative bg-white py-20 lg:py-28 overflow-hidden" id="neden-biz">
+  <div class="shell">
+    <!-- Header -->
+    <div class="text-center max-w-4xl mx-auto">
+      <div class="inline-block">
+        <span class="inline-block -skew-x-12 bg-primary px-5 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-white">
+          <span class="inline-block skew-x-12">Neden Bizi Seçmelisiniz?</span>
+        </span>
+      </div>
+      <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-black leading-tight">
+        Araç Projesi ve Motosiklet Çanta Tescilinde Neden Karakaş Mühendislik?
+      </h2>
+      <p class="mt-4 text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto leading-relaxed font-normal">
+        Yetkili makine mühendislerimizle doğru teknik analizden TSE 360 onayına kadar tüm tescil sürecini sıfır hata güvencesiyle yönetiyoruz.
+      </p>
+    </div>
+
+    <!-- Main 3-Column Interactive Layout -->
+    <div class="why-us-grid mt-14 lg:mt-18 grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-4">
+      <!-- Left Features (Slide smoothly from Left) -->
+      <div class="lg:col-span-3 flex flex-col gap-8 order-2 lg:order-1">
+        {featuresLeft.map((feat) => (
+          <div class="why-feat-left relative border-l-4 border-primary pl-5 py-2 group opacity-0 will-change-transform">
+            <h3 class="text-base sm:text-lg font-black uppercase tracking-tight text-black group-hover:text-primary transition-colors">
+              {feat.title}
+            </h3>
+            <p class="mt-2 text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+              {feat.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Center Visual: Enlarged Car Chassis + Spinning Volang Engine Pulley -->
+      <div class="why-car-center lg:col-span-6 flex items-center justify-center order-1 lg:order-2 opacity-0 will-change-transform">
+        <div class="relative w-full max-w-[720px] aspect-[1024/462] flex items-center justify-center">
+          <SiteImage
+            src="/car-banner-1024x462.webp"
+            alt="Karakaş Mühendislik Araç Projelendirme"
+            class="w-full h-full object-contain pointer-events-none select-none drop-shadow-xl"
+            loading="lazy"
+            width="1024"
+            height="462"
+          />
+          <!-- 360 Degree Spinning Volang (Engine Pulley) -->
+          <div class="absolute left-[50%] top-[59.5%] -translate-x-1/2 -translate-y-1/2 w-[5.4%] aspect-square flex items-center justify-center pointer-events-none">
+            <SiteImage
+              src="/volang.webp"
+              alt="Dönen Motor Parçası"
+              class="w-full h-full object-contain animate-spin drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] [animation-duration:3s]"
+              width="45"
+              height="45"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Features (Slide smoothly from Right) -->
+      <div class="lg:col-span-3 flex flex-col gap-8 order-3">
+        {featuresRight.map((feat) => (
+          <div class="why-feat-right relative border-l-4 lg:border-l-0 lg:border-r-4 border-primary pl-5 lg:pl-0 lg:pr-5 py-2 lg:text-right group opacity-0 will-change-transform">
+            <h3 class="text-base sm:text-lg font-black uppercase tracking-tight text-black group-hover:text-primary transition-colors">
+              {feat.title}
+            </h3>
+            <p class="mt-2 text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+              {feat.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bottom Stats Counters with motion.dev CountUp -->
+    <div class="why-us-stats mt-16 lg:mt-24 pt-12 border-t border-neutral-200 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-10">
+      {stats.map((stat) => (
+        <div class="flex flex-col items-center text-center group">
+          <div class="flex items-baseline justify-center text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-black group-hover:text-primary transition-colors">
+            {stat.prefix && <span class="text-primary mr-0.5">{stat.prefix}</span>}
+            <span
+              class="countup-num"
+              data-target={stat.target}
+            >
+              0
+            </span>
+            {stat.suffix && <span class="text-primary ml-0.5">{stat.suffix}</span>}
+          </div>
+          <div class="mt-2 w-8 h-0.5 bg-primary group-hover:w-14 transition-all duration-300"></div>
+          <h4 class="mt-3 text-xs sm:text-sm font-black uppercase tracking-wider text-black">
+            {stat.label}
+          </h4>
+          <p class="mt-1 text-xs text-neutral-600 max-w-[13rem] leading-relaxed">
+            {stat.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

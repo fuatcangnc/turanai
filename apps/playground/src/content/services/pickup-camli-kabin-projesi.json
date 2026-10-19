@@ -1,0 +1,217 @@
+{
+  "title": "Pickup Camlı Kabin Projesi ve TSE Süreci | Karakaş",
+  "shortTitle": "Pickup Camlı Kabin Projesi",
+  "slug": "pickup-camli-kabin-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Pickup camlı kabin projesi için ölçü, bağlantı, cam ve ağırlık kontrollerini; gerekli belgeleri, TSE ve tescil adımlarını inceleyin.",
+  "image": "/hizmetler/pickup-camli-kabin-projesi.webp",
+  "featured": false,
+  "order": 15,
+  "heroEyebrow": "Pickup Camlı Kabin | TSE Onaylı",
+  "heroTitle": "Pickup Camlı Kabin Projesi",
+  "heroDescription": "Kasa ölçülerini, kabin bağlantılarını, camları ve uygulamanın araç ağırlığına etkisini kontrol edelim. Proje ile TSE adımlarını aracınıza göre netleştirelim.",
+  "imageAlt": "Pickup camlı kabin projesi için araç teknik incelemesi",
+  "imageTitle": "Pickup Camlı Kabin Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için pickup camlı kabin projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Pickup kasa kabin projesi",
+  "introTitle": "Camlı kabin montajında hangi ölçüler birlikte kontrol edilir?",
+  "introText": "Kabin yalnız kasanın üzerine oturan bir kapak gibi değerlendirilmez. Kasa ölçüsü, bağlantı noktaları, kabin ağırlığı, cam ve kilit düzeni, dış ölçüler ile arka görüş ve aydınlatma ekipmanlarına etkisi birlikte incelenir.",
+  "technicalChecks": [
+    {
+      "title": "Kasa ve kabin ölçüsü",
+      "description": "Kabinin pickup kasasıyla oturma yüzeyi ve dış ölçü uyumu kontrol edilir."
+    },
+    {
+      "title": "Bağlantı noktaları",
+      "description": "Kabin ile kasa arasındaki sabitleme ve yük aktarımı incelenir."
+    },
+    {
+      "title": "Cam ve kapak düzeni",
+      "description": "Camların, arka kapağın, kilitlerin ve açılır parçaların teknik bilgileri değerlendirilir."
+    },
+    {
+      "title": "Ağırlık ve görünürlük",
+      "description": "Kabin ağırlığı ile lamba, plaka ve arka görüş üzerindeki etkisi kontrol edilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfı, kasa tipi ve teknik bilgileri görmek için."
+    },
+    {
+      "title": "Kabin teknik bilgisi",
+      "description": "Ölçü, malzeme, cam ve bilinen ürün özelliklerini değerlendirmek için."
+    },
+    {
+      "title": "Fatura veya satış belgesi",
+      "description": "Kabin bilgisini araç ve proje dosyasıyla eşleştirmek için."
+    },
+    {
+      "title": "Montaj fotoğrafları",
+      "description": "Bağlantıları, kasa temasını, camları ve kapak düzenini incelemek için."
+    },
+    {
+      "title": "Araç ve kabin ölçüleri",
+      "description": "Dış ölçü, kasa uyumu ve kabinin kapalı konumunu kontrol etmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Pickup kabin yapısı ve montaj düzeni",
+    "title": "Kabin seçimi ile kasa bağlantısı nasıl eşleştirilir?",
+    "leftTitle": "Kabin bileşenleri",
+    "leftItems": [
+      {
+        "title": "Yan ve arka camlar",
+        "description": "Camların ürün bilgisi, sabitlemesi ve görüşe etkisi."
+      },
+      {
+        "title": "Arka kapak ve kilit",
+        "description": "Kapak hareketi ile kilit düzeninin güvenli çalışması."
+      },
+      {
+        "title": "Kabin gövdesi",
+        "description": "Malzeme, taşıyıcı profil ve dış yüzey bütünlüğü."
+      },
+      {
+        "title": "Sızdırmazlık elemanları",
+        "description": "Kasa-kabin birleşimindeki conta ve temas yüzeyleri."
+      }
+    ],
+    "rightTitle": "Araç üzerindeki kontroller",
+    "rightItems": [
+      {
+        "title": "Kasa bağlantısı",
+        "description": "Kelepçe, bağlantı plakası veya kullanılan sabitleme biçimi."
+      },
+      {
+        "title": "Yük ve ağırlık",
+        "description": "Kabin ağırlığının aracın taşıma kapasitesine etkisi."
+      },
+      {
+        "title": "Dış ölçü",
+        "description": "Kabin kapalıyken araç sınırlarına ve yüksekliğe etkisi."
+      },
+      {
+        "title": "Plaka ve lambalar",
+        "description": "Montajın görünürlük ve aydınlatma ekipmanlarını engellememesi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Pickup camlı kabin için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve kabin fotoğraflarını gönderin.",
+    "description": "Kasa ölçüsünü, bağlantıları ve mevcut ürün belgelerini proje hazırlanmadan önce kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve kabin ön kontrolü",
+      "description": "Ruhsat, kasa tipi, kabin ölçüsü ve ürün bilgileri incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Montaj değerlendirmesi",
+      "description": "Bağlantılar, camlar, kapak, ağırlık ve dış ölçü kontrol edilir."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "Kabin ile araç bilgileri ve montaj ayrıntıları projeye işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ve proje dosyası güncel başvuru kapsamına göre incelenir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onaydan sonraki işlemler dosyanın kapsamına göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; pickup modeli, kabin ölçüsü ve malzemesi, ürün belgeleri, montajın mevcut durumu ile teknik dosya kapsamına göre değişir.",
+    "items": [
+      {
+        "title": "Kabin ve montaj",
+        "description": "Ürün ile kasa bağlantısının değerlendirilmesi"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Ölçü, ağırlık ve bağlantı bilgilerinin hazırlanması"
+      },
+      {
+        "title": "Onay adımları",
+        "description": "Güncel başvuru sırasının dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Ölçü uyumsuzluğu",
+      "description": "Kabinin kasa yüzeyi veya araç dış ölçüsüyle uyuşmaması."
+    },
+    {
+      "title": "Gevşek bağlantı",
+      "description": "Kabin sabitlemesinin araç hareketine göre hazırlanmaması."
+    },
+    {
+      "title": "Eksik cam bilgisi",
+      "description": "Kullanılan camların teknik belgesinin dosyada bulunmaması."
+    },
+    {
+      "title": "Ağırlığın atlanması",
+      "description": "Kabin ağırlığının taşıma kapasitesinden düşülmemesi."
+    },
+    {
+      "title": "Görünürlüğün engellenmesi",
+      "description": "Kabin veya kapak düzeninin plaka ve lambaları kapatması."
+    },
+    {
+      "title": "Proje dışı değişiklik",
+      "description": "Kasa, kapak veya taşıyıcıda dosyada gösterilmeyen uygulama bulunması."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Pickup camlı kabin projesi nedir?",
+      "answer": "Pickup kasasına eklenen camlı kabinin ölçülerini, bağlantılarını, malzeme ve ağırlık bilgilerini gösteren teknik proje dosyasıdır."
+    },
+    {
+      "question": "Her pickup araca camlı kabin takılabilir mi?",
+      "answer": "Kasa ölçüsü, bağlantı yüzeyi, taşıma kapasitesi ve seçilen kabinin teknik bilgileri incelenmeden uygunluk kararı verilemez."
+    },
+    {
+      "question": "Camlı kabin araç ağırlığını etkiler mi?",
+      "answer": "Evet. Kabin ağırlığı aracın kullanılabilir taşıma kapasitesini azaltabilir ve yük dağılımını etkileyebilir."
+    },
+    {
+      "question": "Sökülebilir kabin için proje gerekir mi?",
+      "answer": "Bağlantı biçimi tek başına işlem kapsamını belirlemez. Kabinin araç üzerindeki etkisi, kullanım biçimi ve güncel başvuru şartları birlikte değerlendirilir."
+    },
+    {
+      "question": "Montaj yapılmış kabin için sonradan proje hazırlanabilir mi?",
+      "answer": "Mevcut kabin belge, ölçü ve fotoğraflarla ön incelemeye alınabilir. Bağlantı veya görünürlük sorunu varsa başvurudan önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Pickup camlı kabin projesi fiyatı ne kadar?",
+      "answer": "Fiyat araç, kabin tipi, ürün belgeleri, montaj ve proje kapsamına göre değişir. Ruhsat ve fotoğraflar incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Kasa-kabin ön kontrolü",
+      "description": "Araç, kabin ve montaj bilgileri proje öncesinde birlikte incelenir."
+    },
+    {
+      "title": "Ölçü ve bağlantı odaklı dosya",
+      "description": "Dış ölçü, ağırlık ve sabitleme projede bir araya getirilir."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje, TSE ve sonraki adımlar dosyanın kapsamına göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, kabin belgesini ve montaj fotoğraflarını getirin. Kasa ile proje dosyasının kapsamını görüşmede netleştirelim."
+}

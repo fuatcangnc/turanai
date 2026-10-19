@@ -1,0 +1,159 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { siteSettings, phoneHref } from '@/data/site'
+
+const todayDate = '19.08.2026'
+---
+
+<Layout
+  title="Web Sitesi Ziyaretçi Aydınlatma Metni | Karakaş Mühendislik"
+  description="6698 sayılı KVKK kapsamında web sitesi ziyaretçilerimizin kişisel verilerinin işlenmesi, toplanma yöntemleri ve yasal hakları."
+>
+  <main>
+    <InternalHero
+      eyebrow="KVKK ve Yasal Bilgiler"
+      title="Web Sitesi Ziyaretçi Aydınlatma Metni"
+      description="6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca kişisel verilerinizin işlenmesine ilişkin aydınlatma metni."
+      image="/images/project-guidance.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Yasal Uyarı Kutusu -->
+        <div class="mb-10 border-l-4 border-primary bg-neutral-50 p-5 sm:p-6 text-sm leading-relaxed text-neutral-800 shadow-xs">
+          <strong class="font-black text-neutral-950 uppercase tracking-wide">Yasal Uyarı:</strong> Bu metin bilgilendirme amaçlı şablondur; hukuki danışmanlık niteliği taşımaz. Mevzuata tam uyum için bir hukuk danışmanına başvurmanızı öneririz.
+        </div>
+
+        <article class="prose max-w-none text-neutral-800 space-y-10">
+          <div class="border border-neutral-200 bg-neutral-50/50 p-6 sm:p-7 text-sm sm:text-base leading-relaxed text-neutral-700">
+            İşbu Aydınlatma Metni’nde, kişisel verilerinizin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve ilgili mevzuata uygun olarak, veri sorumlusu <strong>Karakaş Mühendislik / Resul Karakaş</strong> nezdinde işlenmesine ilişkin esaslar aşağıda belirtilmiştir.
+          </div>
+
+          <!-- 1. Kişisel Verilerin İşlenme Amacı -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              1. Kişisel Verilerin İşlenme Amacı
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              İnternet sitemizi ziyaret etmeniz dolayısıyla elde edilen kişisel verileriniz aşağıdaki amaçlarla işlenebilecektir:
+            </p>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>İletişim formu veya diğer kanallar üzerinden tarafımıza ulaşmanız halinde taleplerinizin alınması ve cevaplanması</li>
+              <li>Sunulan hizmetlerden ilgili kişilerin faydalandırılması için gerekli çalışmaların yapılması</li>
+              <li>İş süreçlerinin yürütülmesi, bilgi taleplerinin karşılanması ve şikâyetlerin değerlendirilmesi</li>
+              <li>Hizmetlerin geliştirilmesi ve kullanıcı ihtiyaçlarına göre iyileştirilmesi</li>
+              <li>Web sitesi kullanım deneyiminin analiz edilmesi ve iyileştirilmesi</li>
+              <li>Ticari faaliyetlerin yürütülmesi ve iş stratejilerinin planlanması</li>
+              <li>Açık rıza vermeniz halinde tarafınıza bilgilendirme ve tanıtım içeriklerinin gönderilmesi</li>
+              <li>Hukuki, teknik ve ticari güvenliğin sağlanması</li>
+            </ul>
+          </section>
+
+          <!-- 2. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              2. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Kişisel verileriniz, internet sitemizi ziyaret etmeniz sırasında çerezler (cookies), sunucu kayıtları ve iletişim formları aracılığıyla tamamen veya kısmen otomatik yöntemlerle elektronik ortamda toplanmaktadır.
+            </p>
+            <p class="mt-3 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Ayrıca, internet sitesi üzerinde yer alan formların tarafınızca doldurulması suretiyle kişisel verileriniz otomatik olmayan yollarla da elde edilebilmektedir.
+            </p>
+            <div class="mt-5 border-t border-neutral-100 pt-4">
+              <h3 class="text-base font-bold text-neutral-950">Kişisel verileriniz aşağıdaki hukuki sebepler kapsamında işlenmektedir:</h3>
+              <ul class="mt-3 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+                <li><strong class="font-semibold text-neutral-900">KVKK m. 5/2 (a):</strong> Kanunlarda açıkça öngörülmesi</li>
+                <li><strong class="font-semibold text-neutral-900">KVKK m. 5/2 (ç):</strong> Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi</li>
+                <li><strong class="font-semibold text-neutral-900">KVKK m. 5/2 (f):</strong> Meşru menfaatler kapsamında veri işlenmesinin zorunlu olması</li>
+                <li><strong class="font-semibold text-neutral-900">5651 sayılı Kanun</strong> kapsamında trafik bilgilerinin saklanması yükümlülüğü</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 3. Kişisel Verilerin Aktarılması -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              3. Kişisel Verilerin Aktarılması
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Toplanan kişisel verileriniz, işleme amaçları doğrultusunda aşağıdaki taraflara aktarılabilecektir:
+            </p>
+            <ul class="mt-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Hizmet alınan iş ortakları (hosting, yazılım, teknik destek sağlayıcıları)</li>
+              <li>Kanunen yetkili kamu kurum ve kuruluşları</li>
+            </ul>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Bu aktarım işlemleri KVKK’nın 8. ve 9. maddelerine uygun olarak gerçekleştirilmektedir.
+            </p>
+          </section>
+
+          <!-- 4. Veri Sorumlusuna Başvuru Yolları ve Haklarınız -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              4. Veri Sorumlusuna Başvuru Yolları ve Haklarınız
+            </h2>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              KVKK’nın 11. maddesi uyarınca veri sahibi olarak aşağıdaki haklara sahipsiniz:
+            </p>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+              <li>İşlenmişse bilgi talep etme</li>
+              <li>İşlenme amacını öğrenme ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+              <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+              <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+              <li>Silinmesini veya yok edilmesini isteme</li>
+              <li>Bu işlemlerin üçüncü kişilere bildirilmesini isteme</li>
+              <li>Otomatik sistemler ile analiz edilmesi sonucu aleyhe bir sonuca itiraz etme</li>
+              <li>Kanuna aykırı işlenmesi nedeniyle zararın giderilmesini talep etme</li>
+            </ul>
+
+            <div class="mt-6 border-t border-neutral-100 pt-5">
+              <h3 class="text-base font-bold text-neutral-950">Yukarıda belirtilen haklarınıza ilişkin taleplerinizi aşağıdaki yöntemlerle iletebilirsiniz:</h3>
+              <ul class="mt-3 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+                <li><strong class="font-semibold text-neutral-900">E-posta:</strong> <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></li>
+                <li><strong class="font-semibold text-neutral-900">Yazılı olarak:</strong> Merkez Mahallesi İslambey Caddesi No: 12 Altıparmak İş Merkezi Ofis No: 9 Gaziosmanpaşa / İstanbul adresine göndererek</li>
+              </ul>
+            </div>
+
+            <p class="mt-5 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Başvurularınız, talebin niteliğine göre en kısa sürede ve en geç <strong>30 gün</strong> içerisinde ücretsiz olarak sonuçlandırılır. İşlemin ayrıca bir maliyet gerektirmesi halinde ilgili mevzuat kapsamında ücret talep edilebilir.
+            </p>
+            <p class="mt-3 text-sm sm:text-base leading-relaxed text-neutral-700">
+              Başvurunun reddedilmesi, verilen cevabın yetersiz bulunması veya süresinde cevap verilmemesi halinde; cevabın tebliğinden itibaren 30 gün ve her hâlde başvuru tarihinden itibaren 60 gün içinde Kişisel Verileri Koruma Kurulu’na şikâyette bulunabilirsiniz.
+            </p>
+            <p class="mt-4 text-xs sm:text-sm font-semibold text-neutral-600 bg-neutral-50 p-4 border border-neutral-150">
+              Verilerinizin tarafımızca hassasiyetle korunduğunu belirtir, göstermiş olduğunuz güven için teşekkür ederiz.
+            </p>
+          </section>
+
+          <!-- 5. İletişim -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-black text-neutral-950 border-b border-neutral-100 pb-3">
+              5. İletişim
+            </h2>
+            <div class="mt-5 space-y-2.5 text-sm sm:text-base">
+              <p><strong class="font-bold text-neutral-950">Veri Sorumlusu:</strong> Karakaş Mühendislik / Resul Karakaş</p>
+              <p><strong class="font-bold text-neutral-950">Web Sitesi:</strong> <a href="https://karakasmuhendislik.com.tr" target="_blank" class="text-primary font-bold hover:underline">https://karakasmuhendislik.com.tr</a></p>
+              <p><strong class="font-bold text-neutral-950">E-posta:</strong> <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></p>
+              <p><strong class="font-bold text-neutral-950">Telefon:</strong> <a href={phoneHref} class="text-primary font-bold hover:underline">0554 816 63 02</a></p>
+              <p class="leading-relaxed">
+                <strong class="font-bold text-neutral-950">Adres:</strong><br />
+                Merkez Mahallesi İslambey Caddesi No: 12<br />
+                Altıparmak İş Merkezi Ofis No: 9<br />
+                Gaziosmanpaşa / İstanbul
+              </p>
+            </div>
+          </section>
+
+          <!-- Güncelleme -->
+          <section class="border-t border-neutral-200 pt-6 flex items-center justify-between text-xs sm:text-sm text-neutral-500 font-medium">
+            <span>Aydınlatma Metni</span>
+            <span><strong>Son güncelleme:</strong> {todayDate}</span>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

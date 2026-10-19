@@ -1,0 +1,154 @@
+{
+  "slug": "teknik-servis-raporu-test-raporu-hizmetleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Teknik Servis Raporu / Test Raporu Hizmetleri",
+  "title": "Teknik Servis Raporu / Test Raporu Hizmetleri",
+  "summary": "Makineleriniz ve araçlarınız için TSE, CE ve mevzuat uyumunda geçerli teknik servis ile test raporlarını Karakaş Mühendislik güvencesiyle hazırlatın.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Teknik Servis Raporu / Test Raporu Hizmetleri",
+  "heroLead": "İşletmelerin üretim, satış ve muayene süreçlerinde resmi kurumlara sunmak zorunda olduğu teknik servis ve test raporları, ürün uygunluğunun belgelenmesinde kritik rol oynar. Karakaş Mühendislik; makine, ekipman ve araçlara yönelik bu raporların hazırlanması, incelenmesi ve teslim edilmesi aşamalarında uçtan uca profesyonel destek sunar.",
+  "sections": [
+    {
+      "id": "teknik-servis-raporu-nedir",
+      "heading": "Teknik Servis Raporu Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Teknik servis raporu, bir makinenin, ekipmanın ya da aracın belirli bir kontrol veya bakım sonrasındaki teknik durumunu resmi biçimde ortaya koyan belgedir. Rapor; cihazın çalışma şartlarını, tespit edilen arıza veya uygunluk durumunu ve uygulanan işlemleri kayıt altına alır."
+        },
+        {
+          "type": "p",
+          "text": "Karakaş Mühendislik olarak hazırladığımız servis raporları, yalnızca bakım kaydı değil; aynı zamanda mevzuata uyum, garanti ve muayene süreçlerinde ispat aracı olarak kullanılabilen teknik bir dokümandır."
+        }
+      ]
+    },
+    {
+      "id": "test-raporu-kapsami",
+      "heading": "Test Raporu Kapsamı Nelerdir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Makine ve ekipmanların performans ile güvenlik testlerinin sonuçları",
+            "Araçların teknik donanım ve uygunluk muayene verileri",
+            "Elektriksel, mekanik ve çevresel dayanım ölçümleri",
+            "TSE ve CE mevzuatına göre yapılan doğrulama kayıtları",
+            "Numune bazlı laboratuvar veya saha testi bulguları",
+            "Rapor sonucuna bağlı uygunluk ya da uygunsuzluk değerlendirmesi"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Test raporunun kapsamı, ürünün risk sınıfına ve başvuru yapılan kurumun beklentisine göre şekillenir. Bu sebeple rapor içeriği en baştan netleştirilmelidir."
+        }
+      ]
+    },
+    {
+      "id": "kimler-ihtiyac-duyar",
+      "heading": "Hangi Firmalar Bu Raporlara İhtiyaç Duyar?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Sanayi makineleri üreten veya ithal eden imalatçılar",
+            "Araç dönüşüm ve tadilat projesi yürüten atölyeler",
+            "CE ve TSE belgelendirme sürecine giren işletmeler",
+            "Kamu ihale veya denetim şartnamesi olan kurumlar",
+            "Filo ve operasyonel araç yönetimi yapan lojistik firmaları"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Özellikle ihracat odaklı üreticiler için test ve servis raporları, pazar girişinde talep edilen temel teknik kanıtlardan biridir ve sürecin hızlanmasını sağlar."
+        }
+      ]
+    },
+    {
+      "id": "rapor-hazirlama-sureci",
+      "heading": "Karakaş Mühendislik ile Hazırlık Süreci",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Firmanın ürün ve ihtiyaç analizi ilk görüşmede yapılır",
+            "Geçerli standart ve mevzuat kapsamı belirlenir",
+            "Teknik inceleme ve gerekli testler planlanır",
+            "Saha veya laboratuvar verileri uzmanlarca toplanır",
+            "Rapor taslağı hazırlanıp kontrol edilir",
+            "Onaylı rapor müşteriye resmi biçimde teslim edilir"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Sürecin her adımı dokümante edilir; böylece ileride yapılacak denetimlerde raporun geçerliliği ve kaynağı kolayca ispatlanabilir."
+        }
+      ]
+    },
+    {
+      "id": "inceleme-ve-dogrulama",
+      "heading": "İnceleme ve Doğrulama Aşaması",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Hazırlanan raporlar, mühendislik ekibimiz tarafından teknik tutarlılık, standart uyumu ve veri bütünlüğü açısından titizlikle gözden geçirilir. Eksik veya çelişkili veri tespit edildiğinde rapor yeniden düzenlenir."
+        },
+        {
+          "type": "p",
+          "text": "Doğrulama aşaması, raporun resmi mercilerce kabul edilme olasılığını artırır ve firmanın olası itiraz süreçlerinde elini güçlendirir."
+        }
+      ]
+    },
+    {
+      "id": "teslimat-ve-takip",
+      "heading": "Teslimat ve Sonrası Takip",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Onaylanan rapor, dijital ve matbu formatta müşteriye iletilir. İlgili kuruma sunum aşamasında oluşabilecek sorulara karşı mühendislik desteğimiz devam eder."
+        },
+        {
+          "type": "p",
+          "text": "Ayrıca raporun geçerlilik süresi ve yenileme gereksinimleri firmaya bildirilerek, olası mağduriyetlerin önüne geçilmesi sağlanır."
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gereken Hususlar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Raporda kullanılan veriler güncel ve ölçülebilir olmalıdır",
+            "Standart numaraları ve referanslar eksiksiz yazılmalıdır",
+            "Test koşulları rapor içinde açıkça tanımlanmalıdır",
+            "İmza ve onay alanları yetkili kişilerce tamamlanmalıdır",
+            "Rapor, başvurulan kurumun format talebine uygun düzenlenmelidir"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Hatalı veya eksik rapor, belgelendirme sürecini geciktirebileceği gibi idari yaptırımlara da zemin hazırlayabilir. Bu yüzden hazırlık aşaması özenle yürütülmelidir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Teknik servis raporu ile test raporu aynı şey midir?",
+      "a": "Hayır. Servis raporu genellikle bakım ve kontrol kaydını içerirken, test raporu ürünün belirli standartlara göre ölçülmüş performans ve uygunluk sonuçlarını belgeler."
+    },
+    {
+      "q": "Bu raporlar TSE süreçlerinde geçerli midir?",
+      "a": "Evet. Hazırlanan raporlar TSE ve CE mevzuatına uygun biçimde düzenlenerek resmi başvurularda teknik kanıt olarak kullanılabilir."
+    },
+    {
+      "q": "Rapor hazırlığı ne kadar sürer?",
+      "a": "Ürünün karmaşıklığına ve test gereksinimine bağlı olarak birkaç gün ile birkaç hafta arasında değişebilir."
+    },
+    {
+      "q": "Karakaş Mühendislik sadece rapor mu hazırlar?",
+      "a": "Hayır. İnceleme, doğrulama, teslimat ve sonrasındaki kurum süreçlerinde de mühendislik danışmanlığı sunulur."
+    }
+  ]
+}

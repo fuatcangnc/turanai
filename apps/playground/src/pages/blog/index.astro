@@ -1,0 +1,101 @@
+---
+import { ArrowRight, FileText, Phone, ShieldCheck, Tag } from '@lucide/astro'
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/Layout.astro'
+import BlogCard from '@/components/BlogCard.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { phoneHref, siteSettings, whatsappHref } from '@/data/site'
+
+const posts = (await getCollection('posts')).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+
+const popularTopics = [
+  'Karavan Projesi',
+  'Motosiklet Çanta Ruhsata İşletme',
+  'Motor Değişimi',
+  'Çeki Demiri Projesi',
+  'Koltuk Sökümü & İlave',
+  'TSE 360 Dijital Onay',
+  'LPG Söküm Tadilatı',
+  'TÜVTÜRK Muayenesi',
+]
+---
+
+<Layout
+  title="Araç Proje Blogu ve Bilgi Merkezi | Teknik Makaleler"
+  description="Araç tadilatı, TSE uygunluk, ruhsata işletme, motosiklet uygulamaları ve teknik dönüşüm süreçleri için bilgi odaklı, güncel makaleler."
+>
+  <main class="blog-index">
+    <InternalHero
+      eyebrow="Teknik Mühendislik Rehberi"
+      title="Araç Proje Blogu ve Bilgi Merkezi"
+      description="Araç tadilatı, TSE uygunluk, ruhsata işletme, motosiklet uygulamaları ve teknik dönüşüm süreçleri için bilgi odaklı, güncel makaleler."
+      breadcrumbTitle="Blog"
+    />
+
+    <section class="shell" style="padding-top:3.5rem">
+      <!-- Popular Topics Tags -->
+      <div class="mb-10 flex flex-wrap items-center gap-2 border-b border-slate-200 pb-6">
+        <span class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-slate-500 mr-2">
+          <Tag size={14} class="text-primary" /> Popüler Konular:
+        </span>
+        {popularTopics.map((topic) => (
+          <span class="inline-flex items-center bg-slate-100 hover:bg-primary hover:text-white px-3 py-1 text-xs font-bold text-slate-700 transition-colors duration-200 cursor-default">
+            {topic}
+          </span>
+        ))}
+      </div>
+
+      <!-- Informative Intro Box -->
+      <div class="blog-intro__inner border-t-4 border-primary bg-[#f8f9fa] p-8 shadow-xs">
+        <div class="flex items-center gap-2 text-primary text-xs font-black uppercase tracking-wider">
+          <FileText size={16} />
+          <span>Mühendislik Rehberleri & Güncel Makaleler</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black uppercase text-slate-950 tracking-tight">
+          TSE Onaylı Araç Tadilatı ve Ruhsata İşletme Rehberleri
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl">
+          Karakaş Mühendislik uzmanlığıyla hazırlanan teknik makaleler; araç tadilatı, TSE uygunluk, ruhsata işletme, motosiklet taşıma kutusu montajı ve teknik dönüşüm süreçlerinde izlenecek yasal adımları, evrak listelerini ve mühendislik gereksinimlerini detaylandırır.
+        </p>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post, index) => <BlogCard post={post} index={index + 1} />)}
+      </div>
+    </section>
+
+    <!-- Consultation CTA Band -->
+    <section class="dark-band mt-16 bg-[#121820] py-14 text-white">
+      <div class="shell dark-band__grid flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl">
+          <h3 class="eyebrow flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary">
+            <ShieldCheck size={18} /> Teknik Mühendislik Danışmanlığı
+          </h3>
+          <h2 class="mt-3 text-2xl sm:text-3xl font-black uppercase text-white tracking-tight">
+            Aracınız için hangi proje gerektiğini mi merak ediyorsunuz?
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+            Makaleler genel bilgi sağlar. Araç ruhsatınızı ve uygulama detayınızı paylaşarak sizin için doğru proje kapsamını ve TSE onay sürecini yetkili mühendisimizle hemen netleştirebilirsiniz.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+          <a
+            class="button button--primary inline-flex items-center justify-center gap-2 bg-primary px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white hover:bg-white hover:text-slate-950 transition-colors"
+            href={whatsappHref('Merhaba, araç projesi hakkında bilgi ve ön inceleme talep etmek istiyorum.')}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp'tan Danışın <ArrowRight size={16} />
+          </a>
+          <a
+            class="button inline-flex items-center justify-center gap-2 border border-white/20 bg-white/10 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white hover:bg-white hover:text-slate-950 transition-colors"
+            href={phoneHref}
+          >
+            <Phone size={16} /> {siteSettings.phone}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

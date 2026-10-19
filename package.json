@@ -1,0 +1,12 @@
+{
+	"name": "turanai",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Turan — a Frontman-style in-app AI coding agent for EmDash CMS + Astro sites",
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm --filter playground dev",
+		"build": "pnpm --filter playground build",
+		"seed": "pnpm --filter playground exec emdash seed"
+	}
+}

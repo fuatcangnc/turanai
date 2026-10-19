@@ -1,0 +1,221 @@
+{
+  "title": "Sarı Tepe Lambalı Eskort Aracı Projesi | TSE Onaylı | Karakaş",
+  "shortTitle": "Sarı Tepe Lambalı Eskort Aracı Projesi",
+  "slug": "sari-tepe-lambali-eskort-araci-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Sarı tepe lambalı eskort aracı projesi için görev tanımını, amber lamba onayını, montaj ve elektrik kontrollerini; TSE ve tescil adımlarını inceleyin.",
+  "image": "/hizmetler/sari-tepe-lambali-eskort-araci-projesi.webp",
+  "featured": false,
+  "order": 16,
+  "heroEyebrow": "Eskort Aracı | TSE Onaylı",
+  "heroTitle": "Sarı Tepe Lambalı Eskort Aracı Projesi",
+  "heroDescription": "Aracın görev tanımını, amber tepe lambasının teknik belgesini, görünürlüğünü ve elektrik bağlantısını kontrol edelim. Proje ile TSE adımlarını dosyanıza göre netleştirelim.",
+  "imageAlt": "Sarı tepe lambalı eskort aracı için teknik montaj incelemesi",
+  "imageTitle": "Sarı Tepe Lambalı Eskort Aracı Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için sarı tepe lambalı eskort aracı projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Sarı tepe lambalı eskort aracı projesi",
+  "introTitle": "Eskort aracı projesinden önce hangi bilgiler kontrol edilir?",
+  "introText": "Tepe lambasının araca takılmış olması, eskort görevi için tek başına yeterli değildir. Araç sınıfı, öncü veya artçı görev tanımı, ürün etiketi, ışığın görünürlüğü, sabitleme noktası ve elektrik hattı aynı dosyada incelenir. Taşımaya özgü izin şartları varsa bunlar araç projesinden ayrı değerlendirilir.",
+  "technicalChecks": [
+    {
+      "title": "Araç ve görev tanımı",
+      "description": "Aracın sınıfı ile öncü veya artçı uyarı görevinde nasıl kullanılacağı birlikte değerlendirilir."
+    },
+    {
+      "title": "Tepe lambası bilgileri",
+      "description": "Amber renk, ürün etiketi, onay işareti ve teknik belge bilgileri birbiriyle karşılaştırılır."
+    },
+    {
+      "title": "Montaj ve görünürlük",
+      "description": "Lambanın sabitleme noktası, araç dış ölçüsüne etkisi ve gerekli yönlerden görülebilmesi kontrol edilir."
+    },
+    {
+      "title": "Elektrik bağlantısı",
+      "description": "Sigorta, kablo güzergâhı, kumanda ve araç elektrik sistemiyle bağlantı biçimi incelenir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfını, kullanım kaydını ve mevcut teknik bilgileri görmek için."
+    },
+    {
+      "title": "Tepe lambası etiketi",
+      "description": "Ürünün marka, model, renk ve onay işaretini ön incelemede doğrulamak için."
+    },
+    {
+      "title": "Ürün belgesi veya fatura",
+      "description": "Tepe lambasının teknik özelliklerini ve ürün bilgisini dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Montaj fotoğrafları",
+      "description": "Sabitleme noktası, taşıyıcı, kablo güzergâhı ve lambanın araç üzerindeki konumunu görmek için."
+    },
+    {
+      "title": "Görev ve kullanım bilgisi",
+      "description": "Aracın hangi taşıma operasyonunda öncü veya artçı uyarı görevi üstleneceğini değerlendirmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Eskort görevi ve tepe lambası seçimi",
+    "title": "Görev tanımı ile ekipman neden birlikte incelenir?",
+    "leftTitle": "Sarı tepe lambalı aracın görev türleri",
+    "leftItems": [
+      {
+        "title": "Öncü uyarı aracı",
+        "description": "Taşımanın önünde ilerlemesi planlanan araçta görev tanımı ile uyarı donanımı birlikte incelenir."
+      },
+      {
+        "title": "Artçı uyarı aracı",
+        "description": "Taşımanın arkasında görev yapacak araç için donanımın konumu ve görünürlüğü değerlendirilir."
+      },
+      {
+        "title": "Özel yük operasyonu",
+        "description": "Taşımanın boyutları ve operasyon planı ayrıca izin gerektiriyorsa proje dosyasından ayrı ele alınır."
+      },
+      {
+        "title": "Göreve özel ekipman",
+        "description": "Araçta ek uyarı levhası veya donanım varsa bunların yerleşimi de teknik incelemeye alınır."
+      }
+    ],
+    "rightTitle": "Sarı tepe lambası teknik kontrol başlıkları",
+    "rightItems": [
+      {
+        "title": "Amber ışık yapısı",
+        "description": "Ürün rengi ile teknik belge bilgisinin birbiriyle uyumlu olması gerekir."
+      },
+      {
+        "title": "Ürün onay işareti",
+        "description": "Etiket ve belge üzerindeki onay bilgisinin okunaklı olması beklenir."
+      },
+      {
+        "title": "Sağlam sabitleme",
+        "description": "Lamba veya taşıyıcı, araç hareketinde gevşemeyecek biçimde monte edilmelidir."
+      },
+      {
+        "title": "Kontrollü elektrik hattı",
+        "description": "Besleme, sigorta ve kumanda düzeni araç tesisatına zarar vermemelidir."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Eskort aracı belgeleri için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve tepe lambası fotoğraflarını gönderin.",
+    "description": "Ürün etiketini, montajı ve aracın görev tanımını proje hazırlanmadan önce inceleyelim. Eksik belge veya düzeltilmesi gereken montaj varsa başvurudan önce belirleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve görev ön kontrolü",
+      "description": "Ruhsat, kullanım amacı ve eskort görevinin kapsamı birlikte incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Ekipman doğrulaması",
+      "description": "Tepe lambasının etiketi, teknik belgesi, rengi ve onay bilgileri kontrol edilir."
+    },
+    {
+      "number": "03",
+      "title": "Montaj ve proje dosyası",
+      "description": "Sabitleme, görünürlük, elektrik bağlantısı ve görev tanımı teknik dosyaya işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ile proje dosyası, başvuru tarihinde geçerli kontrol kapsamına göre incelenir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onaydan sonraki muayene ve ruhsat adımları, dosyanın kapsamına göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; aracın sınıfı, görev tanımı, tepe lambasının belge durumu, montaj ve elektrik bağlantısı ile dosyanın kapsamına göre değişir. Araç ve ürün bilgileri görülmeden sabit toplam vermek doğru olmaz.",
+    "items": [
+      {
+        "title": "Ön inceleme",
+        "description": "Araç, görev ve ekipman kapsamının belirlenmesi"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Montaj, görünürlük ve elektrik bilgilerinin dosyaya işlenmesi"
+      },
+      {
+        "title": "Onay adımları",
+        "description": "Güncel başvuru sırasının dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Eksik ürün bilgisi",
+      "description": "Tepe lambasının etiketi veya onay işaretinin okunamaması."
+    },
+    {
+      "title": "Yanlış ışık rengi",
+      "description": "Ürün rengi ile proje ve kullanım amacı arasında uyumsuzluk bulunması."
+    },
+    {
+      "title": "Yetersiz görünürlük",
+      "description": "Lambanın taşıyıcı, tavan ekipmanı veya yanlış konum nedeniyle kapanması."
+    },
+    {
+      "title": "Güvensiz sabitleme",
+      "description": "Lamba ya da taşıyıcının araç hareketine uygun biçimde bağlanmaması."
+    },
+    {
+      "title": "Uygunsuz elektrik hattı",
+      "description": "Sigortasız besleme, açık kablo veya araç tesisatına kontrolsüz müdahale."
+    },
+    {
+      "title": "Görev kaydı uyumsuzluğu",
+      "description": "Aracın fiilî kullanımı ile teknik dosyadaki görev tanımının örtüşmemesi."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Sarı tepe lambalı eskort aracı projesi nedir?",
+      "answer": "Uzun, geniş veya özel taşıma operasyonlarında öncü ya da artçı uyarı görevi üstlenecek aracın tepe lambası montajını, elektrik bağlantısını ve kullanım amacını teknik dosyada gösteren proje çalışmasıdır. Kesin kapsam araç ve görev bilgileri incelendikten sonra belirlenir."
+    },
+    {
+      "question": "Her araç sarı tepe lambalı eskort aracı olabilir mi?",
+      "answer": "Hayır. Araç sınıfı, kullanım amacı, üstleneceği görev ve takılacak ekipmanın teknik bilgileri birlikte değerlendirilir. Lambanın araca monte edilebilmesi tek başına uygunluk anlamına gelmez."
+    },
+    {
+      "question": "Sarı tepe lambasında hangi bilgiler kontrol edilir?",
+      "answer": "Amber renk bilgisi, ürün etiketi, onay işareti, teknik belge, montaj konumu ve elektrik bağlantısı kontrol edilir. Etiketteki bilgi ile sunulan belge birbiriyle uyumlu olmalıdır."
+    },
+    {
+      "question": "Mıknatıslı ve sabit tepe lambası aynı şekilde mi değerlendirilir?",
+      "answer": "Montaj biçimi, elektrik bağlantısı ve kullanım amacı ekipmanın nasıl değerlendirileceğini değiştirebilir. Ürün ile araç görülmeden iki uygulama için aynı işlem gerektiği söylenemez."
+    },
+    {
+      "question": "Eskort aracı projesi özel yük taşıma izni yerine geçer mi?",
+      "answer": "Araç tadilat ve uygunluk dosyası ile taşımaya özgü izin veya operasyon şartları ayrı konulardır. Taşımanın boyutu ve güzergâhı ayrıca izin gerektiriyorsa ilgili kurumun güncel şartları da yerine getirilmelidir."
+    },
+    {
+      "question": "Montaj yapıldıktan sonra proje hazırlanabilir mi?",
+      "answer": "Mevcut montaj, ürün belgesi ve fotoğraflarla ön incelemeye alınabilir. Sabitleme, görünürlük veya elektrik bağlantısında uygun olmayan bir nokta varsa TSE başvurusundan önce düzeltilmesi gerekebilir."
+    },
+    {
+      "question": "Sarı tepe lambalı eskort aracı projesi fiyatı ne kadar?",
+      "answer": "Bedel; aracın sınıfı, tepe lambasının belge durumu, montaj biçimi, elektrik bağlantısı ve dosyanın kapsamına göre değişir. Ruhsat, ürün etiketi ve montaj fotoğrafları incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Belge ön kontrolü",
+      "description": "Ruhsat ve tepe lambası bilgileri proje başlamadan önce incelenir."
+    },
+    {
+      "title": "Montajın birlikte değerlendirilmesi",
+      "description": "Sabitleme, görünürlük ve elektrik hattı aynı dosyada ele alınır."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje, TSE ve sonraki adımlar dosyanın kapsamına göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, tepe lambasının teknik belgesini ve montaj fotoğraflarını getirin. Proje dosyasının kapsamını görüşmede netleştirelim."
+}

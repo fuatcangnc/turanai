@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getEmDashEntry } from "emdash";
+
+const slug = Astro.params.slug;
+const { entry: page } = await getEmDashEntry("pages", slug ?? "", { locale: Astro.currentLocale });
+
+if (!page) {
+	return new Response("Not found", { status: 404 });
+}
+const data = page.data as {
+	title?: unknown;
+	body?: unknown;
+	slug?: unknown;
+	id?: unknown;
+	seo?: { ogTitle?: string | null; ogDescription?: string | null; ogImage?: string | null; robots?: string | null };
+};
+const description = String(data.body ?? "").replace(/\s+/g, " ").trim().slice(0, 155);
+---
+
+<Base
+	title={String(data.title ?? "")}
+	description={description}
+	seo={data.seo}
+	kind="content"
+	pageType="page"
+	content={{ collection: "pages", id: String(data.id), slug: (data.slug as string | null | undefined) ?? slug }}
+>
+	<h1>{page.data.title}</h1>
+	<article class="body">{page.data.body}</article>
+</Base>

@@ -1,0 +1,86 @@
+{
+  "slug": "kapasite-raporu-ve-kapasite-ekspertiz-raporu-hizmeti",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Kapasite Raporu ve Kapasite Ekspertiz Raporu Hizmeti",
+  "title": "Kapasite Raporu ve Kapasite Ekspertiz Raporu Hizmeti",
+  "summary": "Karakaş Mühendislik ile işletmenizin üretim ve hizmet kapasitesinin makine parkı, personel ve çalışma alanı verileriyle resmi süreçlere uygun biçimde raporlanması ve ekspertiz edilmesi.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Kapasite Raporu ve Kapasite Ekspertiz Raporu Hizmeti",
+  "heroLead": "Kapasite raporu ve kapasite ekspertiz raporu hizmeti; işletmenin üretim ya da hizmet kapasitesinin makine parkı, personel yapısı, çalışma alanı ve operasyonel yeterlilikleri üzerinden değerlendirilerek resmi süreçlere uygun raporlanmasını kapsar. Karakaş Mühendislik olarak teknik veri hazırlığı, belge düzeni ve başvuru süreci desteği sunuyoruz.",
+  "sections": [
+    {
+      "id": "kapasite-raporu-nedir",
+      "heading": "Kapasite Raporu Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kapasite raporu, işletmenin üretim ya da hizmet verebilme gücünü belirli kriterler doğrultusunda gösteren resmi nitelikli bir değerlendirme dokümanıdır. Çalışan sayısı, makine ve ekipman yeterliliği, üretim alanı ile operasyon kapasitesi gibi unsurlar rapor kapsamında ele alınır."
+        }
+      ]
+    },
+    {
+      "id": "ekspertiz-raporu-neyi-gosterir",
+      "heading": "Ekspertiz Raporu Neyi Gösterir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kapasite ekspertiz raporu, işletmenin mevcut durumunun teknik veriler ve yerinde incelemeyle değerlendirilmesini sağlar. Özellikle ekipman sayısı, üretim akışı, çalışma düzeni ve fiili operasyon kapasitesi bu süreçte detaylı olarak incelenir."
+        }
+      ]
+    },
+    {
+      "id": "kimler-icin-gerekir",
+      "heading": "Kimler İçin Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Üretim faaliyeti yürüten işletmeler",
+            "Belgelendirme sürecine giren firmalar",
+            "İhale ya da teşvik başvurusu yapan kuruluşlar",
+            "Kurumsal kapasitesini resmi olarak belgelemek isteyen işletmeler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hazirlik-sureci",
+      "heading": "Hazırlık Süreci",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Makine, ekipman ve personel verileri titizlikle toplanır",
+            "Üretim ya da hizmet akışı detaylı analiz edilir",
+            "Yerleşim planı ve kapasite hesaplamaları hazırlanır",
+            "Başvuru dosyası ve ekspertiz planlaması oluşturulur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Başvuru Öncesi Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Beyan edilen kapasite ile işletmenin fiili üretim imkanları arasında büyük fark bulunması, eksik makine listeleri ya da güncel olmayan personel verileri raporun güvenilirliğini olumsuz etkileyebilir. Bu nedenle başvuru sürecinde güncel, doğru ve doğrulanabilir verilerin hazırlanması önemlidir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Kapasite raporu ile ekspertiz raporu aynı şey midir?",
+      "a": "Hayır. Kapasite raporu işletmenin kapasitesini resmi olarak gösterirken, ekspertiz raporu mevcut durumun teknik değerlendirmesini içerir."
+    },
+    {
+      "q": "Yerinde inceleme gerekli olabilir mi?",
+      "a": "Evet. İşletmenin üretim alanı, ekipman yapısı ve operasyon düzeninin doğrulanabilmesi için yerinde inceleme gerekebilir."
+    },
+    {
+      "q": "En sık hata nedir?",
+      "a": "Eksik ekipman listesi, güncel olmayan personel bilgileri ve fiili kapasiteyle uyuşmayan beyanlar en sık karşılaşılan sorunlar arasındadır."
+    }
+  ]
+}

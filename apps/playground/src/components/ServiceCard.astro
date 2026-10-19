@@ -1,0 +1,35 @@
+---
+import { ArrowUpRight } from '@lucide/astro'
+import type { Service } from '@/data/site'
+import SiteImage from './SiteImage.astro'
+
+interface Props { service: Service; index?: number }
+const { service, index = service.order } = Astro.props
+
+const aracProjeCategories = ['Araç Projeleri', 'Dönüşüm', 'Söküm', 'Motosiklet', 'Belgelendirme', 'LPG Söküm Sistemi Tadilatı']
+const isAracProje = aracProjeCategories.includes(service.category)
+---
+
+<article class="service-card group flex h-full flex-col border border-black/10 bg-white transition duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_16px_35px_rgba(16,35,50,.1)]" data-reveal>
+  {isAracProje ? (
+    <a class="relative block aspect-[1376/768] overflow-hidden bg-slate-900" href={`/${service.slug}`}>
+      <SiteImage class="size-full object-cover transition duration-500 group-hover:scale-105" src={service.image} alt={service.title} widths={[320, 480, 600]} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px" width="500" height="281" quality={58} loading="lazy" decoding="async" />
+      <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-2.5 py-1 tracking-wider">{String(index).padStart(2, '0')}</span>
+      <span class="absolute right-3 bottom-3 grid size-8 place-items-center bg-black text-white transition duration-200 group-hover:bg-primary"><ArrowUpRight size={16} /></span>
+    </a>
+  ) : (
+    <a class="relative flex aspect-[1376/768] items-center justify-center overflow-hidden bg-white" href={`/${service.slug}`}>
+      <SiteImage class="h-1/2 w-auto max-w-[68%] object-contain" src="/karakasmuhendislik-logo.webp" alt="Karakaş Mühendislik" widths={[240, 360, 480]} sizes="(max-width: 640px) 100vw, 360px" width="360" height="120" quality={80} loading="lazy" decoding="async" />
+      <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-2.5 py-1 tracking-wider">{String(index).padStart(2, '0')}</span>
+      <span class="absolute right-3 bottom-3 grid size-8 place-items-center bg-black text-white transition duration-200 group-hover:bg-primary"><ArrowUpRight size={16} /></span>
+    </a>
+  )}
+  <div class="flex flex-1 flex-col p-5">
+    <h4 class="text-[11px] font-black uppercase tracking-[0.14em] text-primary">{service.category}</h4>
+    <h3 class="mt-2 text-[18px] font-semibold tracking-[-0.035em] text-[#1a1a1a] line-clamp-1"><a href={`/${service.slug}`} class="hover:text-primary transition">{service.shortTitle}</a></h3>
+    <p class="mt-2 text-[13px] leading-relaxed text-black/60 line-clamp-3 min-h-[3.6rem]">{service.summary}</p>
+    <a class="mt-auto pt-4 border-t border-black/5 inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-primary hover:text-black transition" href={`/${service.slug}`}>
+      Leistung ansehen <ArrowUpRight size={14} />
+    </a>
+  </div>
+</article>

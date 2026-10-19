@@ -1,0 +1,222 @@
+{
+  "title": "LPG Sistemi Söküm Tadilatı ve Teknik Kontrol | Karakaş",
+  "shortTitle": "LPG Sistemi Söküm Tadilatı",
+  "slug": "lpg-sistemi-sokum-tadilati",
+  "category": "LPG Söküm Sistemi Tadilatı",
+  "summary": "LPG sistemi söküm tadilatında tank, hat, ECU ve motor ekipmanı kontrollerini; benzin sisteminin geri kazanımını ve proje adımlarını inceleyin.",
+  "image": "/hizmetler/lpg-sistemi-sokum-tadilati.webp",
+  "featured": false,
+  "order": 17,
+  "heroEyebrow": "LPG Sisteminin Teknik Sökümü",
+  "heroTitle": "LPG Sistemi Söküm Tadilatı",
+  "heroDescription": "Tanktan motor bölümü ekipmanlarına kadar LPG sisteminin tüm bileşenlerini kontrol edelim. Eksiksiz sökümü, benzin sisteminin durumunu ve projeye hazırlığı birlikte değerlendirelim.",
+  "imageAlt": "LPG sistemi söküm tadilatı için motor bölümü teknik kontrolü",
+  "imageTitle": "LPG Sistemi Söküm Tadilatı Teknik Kontrolü",
+  "whatsappMessage": "Merhaba, aracımdaki LPG sisteminin söküm tadilatı hakkında bilgi almak istiyorum.",
+  "introEyebrow": "LPG sisteminde eksiksiz söküm",
+  "introTitle": "LPG sistemi araçtan hangi kapsamda kaldırılır?",
+  "introText": "LPG sistemi; tank, dolum hattı, borular, regülatör, enjektörler, elektronik kontrol ünitesi ve bunlara bağlı tesisattan oluşur. Teknik söküm tadilatı bu bileşenleri tek tek kontrol eder, benzin sisteminde kalan bağlantıları güvenli duruma getirir ve aracı proje incelemesine hazırlar.",
+  "relatedLink": {
+    "prefix": "Söküm sonrası resmi proje ve ruhsat adımları için",
+    "label": "LPG söküm projesini inceleyin",
+    "href": "/lpg-sokum-projesi"
+  },
+  "technicalChecks": [
+    {
+      "title": "Tank ve taşıyıcılar",
+      "description": "Tankın, bağlantı kuşaklarının ve taşıyıcı parçaların durumu incelenir."
+    },
+    {
+      "title": "Dolum ağzı ve hatlar",
+      "description": "Dolum bağlantısı, boru ve hortumların araçtan tamamen ayrılması kontrol edilir."
+    },
+    {
+      "title": "Motor bölümü ekipmanları",
+      "description": "Regülatör, enjektör, filtre ve ilgili bağlantılar belirlenir."
+    },
+    {
+      "title": "Elektrik ve benzin sistemi",
+      "description": "LPG ECU’su, kablolar, anahtar ve benzin devresindeki değişiklikler incelenir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Yakıt kaydını ve araç teknik bilgilerini görmek için."
+    },
+    {
+      "title": "LPG montaj belgesi",
+      "description": "Varsa araçtaki sistemin parça ve montaj bilgilerini belirlemek için."
+    },
+    {
+      "title": "Tank etiketi fotoğrafı",
+      "description": "Sökülecek tankı ve mevcut sistem bilgisini kaydetmek için."
+    },
+    {
+      "title": "Motor ve bagaj fotoğrafları",
+      "description": "Sistemin yerleşimini, tankı ve motor bölümü ekipmanlarını incelemek için."
+    },
+    {
+      "title": "Servis belgesi veya faturası",
+      "description": "Söküm tamamlandığında işlemi yapan servis ve kapsamı kaydetmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · LPG ekipmanları ve benzin sisteminin geri kazanımı",
+    "title": "Teknik sökümde hangi parçalar birlikte kontrol edilir?",
+    "leftTitle": "LPG sisteminden kaldırılanlar",
+    "leftItems": [
+      {
+        "title": "Tank ve bağlantılar",
+        "description": "Tank, multivalf çevresi ve taşıyıcı sabitlemeler."
+      },
+      {
+        "title": "Dolum sistemi",
+        "description": "Dolum ağzı, dolum hattı ve ilgili bağlantı elemanları."
+      },
+      {
+        "title": "Yakıt hattı ekipmanları",
+        "description": "Borular, hortumlar, regülatör, filtre ve enjektörler."
+      },
+      {
+        "title": "Elektronik bileşenler",
+        "description": "LPG ECU’su, seçici anahtar, sensör ve sisteme ait kablolar."
+      }
+    ],
+    "rightTitle": "Araçta güvenli duruma getirilenler",
+    "rightItems": [
+      {
+        "title": "Benzin yakıt devresi",
+        "description": "LPG montajı sırasında değiştirilen bağlantıların uygun durumu."
+      },
+      {
+        "title": "Emme sistemi bağlantıları",
+        "description": "LPG ekipmanlarından kalan açıklıkların teknik olarak kapatılması."
+      },
+      {
+        "title": "Elektrik tesisatı",
+        "description": "Sökülen ekipmanlardan kalan kabloların güvenli sonlandırılması."
+      },
+      {
+        "title": "Gövde ve montaj yüzeyleri",
+        "description": "Tank, dolum ağzı ve ekipmanlardan kalan bağlantı noktalarının kontrolü."
+      }
+    ]
+  },
+  "cta": {
+    "label": "LPG sistemi için ücretsiz söküm ön kontrolü",
+    "title": "Motor, tank ve dolum ağzı fotoğraflarını gönderin.",
+    "description": "Araçtaki LPG bileşenlerini ve sökümden sonra projeye kalacak işlemleri servis randevusundan önce belirleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Sistem envanterinin çıkarılması",
+      "description": "Tanktan motor bölümüne kadar araçtaki LPG ekipmanları belirlenir."
+    },
+    {
+      "number": "02",
+      "title": "Yetkili serviste söküm",
+      "description": "LPG ekipmanları, yakıt sistemi güvenliği korunarak araçtan kaldırılır."
+    },
+    {
+      "number": "03",
+      "title": "Söküm sonrası kontrol",
+      "description": "Benzin devresi, elektrik tesisatı ve eski montaj noktaları incelenir."
+    },
+    {
+      "number": "04",
+      "title": "Teknik proje hazırlığı",
+      "description": "Ruhsat, araç bilgileri ve tamamlanan söküm proje dosyasıyla eşleştirilir."
+    },
+    {
+      "number": "05",
+      "title": "Onay ve tescil adımları",
+      "description": "TSE, gerekli muayene ve ruhsat güncellemesi dosyanın kapsamına göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; sistemdeki parça sayısı, tankın ve hatların konumu, tesisatın mevcut durumu, servis işçiliği ve sonrasındaki proje kapsamına göre değişir.",
+    "items": [
+      {
+        "title": "Teknik söküm",
+        "description": "Tank, hat, motor ekipmanı ve elektrik bileşenlerinin işçiliği"
+      },
+      {
+        "title": "Sistem kontrolü",
+        "description": "Benzin devresi ile eski montaj noktalarının incelenmesi"
+      },
+      {
+        "title": "Proje ve tescil",
+        "description": "Söküm sonrası resmi dosya ve kurum işlemleri"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Yetkisiz müdahale",
+      "description": "Basınçlı yakıt sistemi üzerindeki bilinçsiz işlem ciddi güvenlik riski oluşturur."
+    },
+    {
+      "title": "Eksik ekipman sökümü",
+      "description": "Tank kaldırılsa bile hat, ECU veya motor ekipmanı araçta kalabilir."
+    },
+    {
+      "title": "Benzin devresinde hatalı bağlantı",
+      "description": "LPG montajında değiştirilen yakıt hattı uygun biçimde geri alınmayabilir."
+    },
+    {
+      "title": "Açık emme bağlantıları",
+      "description": "Sökülen enjektör veya hortumlardan kalan açıklıklar motor çalışmasını etkileyebilir."
+    },
+    {
+      "title": "Kontrolsüz elektrik tesisatı",
+      "description": "Ek ve kesilmiş kabloların açıkta kalması arızaya yol açabilir."
+    },
+    {
+      "title": "Proje kapsamının atlanması",
+      "description": "Teknik söküm tamamlansa da ruhsattaki yakıt kaydı kendiliğinden değişmez."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "LPG sistemi söküm tadilatı nedir?",
+      "answer": "Araçtaki tank, hatlar, motor bölümü ekipmanları ve elektrikli LPG bileşenlerinin kaldırılıp benzin sisteminin uygun duruma getirilmesidir."
+    },
+    {
+      "question": "LPG sistemi neden yetkili serviste sökülmelidir?",
+      "answer": "LPG basınçlı bir yakıt sistemidir. Tank, hat ve bağlantılara yapılan kontrolsüz müdahale yangın, kaçak ve yaralanma riski doğurabilir."
+    },
+    {
+      "question": "LPG sökümünde hangi parçalar kaldırılır?",
+      "answer": "Araçtaki sisteme göre tank, dolum ağzı, boru ve hortumlar, regülatör, enjektör, ECU, seçici anahtar ve ilgili bağlantılar kontrol edilir."
+    },
+    {
+      "question": "Sistem sökülünce araç hemen benzinli kullanılabilir mi?",
+      "answer": "Benzin yakıt devresi, emme sistemi ve elektrik bağlantıları kontrol edilmeden araç kullanıma hazır kabul edilmemelidir."
+    },
+    {
+      "question": "Teknik söküm ruhsat işlemini de tamamlar mı?",
+      "answer": "Hayır. Sökümden sonra teknik proje, TSE kontrolü, gerekli muayene ve tescil güncellemesi ayrıca tamamlanır."
+    },
+    {
+      "question": "LPG sistemi söküm tadilatı fiyatı ne kadar?",
+      "answer": "Fiyat sistemin yerleşimine, parça sayısına, tesisatın durumuna ve proje kapsamına göre değişir. Araç fotoğrafları incelendikten sonra teklif verilebilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Bileşen bazlı kontrol",
+      "description": "Tank, hatlar, motor ekipmanları ve elektrik sistemi tek listede incelenir."
+    },
+    {
+      "title": "Söküm ile proje ayrımı",
+      "description": "Servis işçiliği ve resmi dosya adımları ziyaretçiye ayrı ayrı açıklanır."
+    },
+    {
+      "title": "Ruhsata kadar planlama",
+      "description": "Teknik sökümden sonraki TSE, muayene ve tescil sırası netleştirilir."
+    }
+  ],
+  "officeText": "Ruhsatı, LPG tankının ve motor bölümünün fotoğraflarını getirin. Sistemdeki bileşenleri ve söküm sonrası proje kapsamını birlikte belirleyelim."
+}

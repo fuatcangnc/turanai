@@ -1,0 +1,25 @@
+---
+/**
+ * bejamas/ui taban ikonu (SemanticIcon).
+ *
+ * Bejamas registry'sindeki bileşenler `../icon/SemanticIcon.astro`'dan bu
+ * bileşeni içe aktarır; registry bu dosyayı ayrı bir öğe olarak yayınlamadığı
+ * için projeye ait (source-owned) sürüm burada tutulur. Adlandırma lucide
+ * kebab-case'dir (`chevron-down`, `chevron-right`, ...) ve astro-icon üzerinden
+ * `lucide:` setine eşlenir; böylece ikonlar erişilebilirlik nitelikleriyle
+ * (aria-hidden/role) birlikte, tema renklerini ve sınıfları koruyarak render
+ * edilir.
+ */
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	/** lucide ikon adı, örn. "chevron-down" */
+	name: string;
+	class?: string;
+	[key: string]: unknown;
+}
+
+const { name, class: className, ...rest } = Astro.props;
+---
+
+<Icon name={`lucide:${name}`} class={className} {...rest} />

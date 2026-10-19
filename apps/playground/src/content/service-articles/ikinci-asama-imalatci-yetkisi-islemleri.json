@@ -1,0 +1,154 @@
+{
+  "slug": "ikinci-asama-imalatci-yetkisi-islemleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "2. Aşama İmalatçı Yetkisi İşlemleri",
+  "title": "2. Aşama İmalatçı Yetkisi İşlemleri",
+  "summary": "Üreticilerin TSE 2. aşama imalatçı yetkisi başvurusunda gereken evrak, değerlendirme ve onay süreçlerini Karakaş Mühendislik ile profesyonelce yönetin.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "2. Aşama İmalatçı Yetkisi İşlemleri",
+  "heroLead": "İmalatçı yetkisi, üreticinin belirli ürün gruplarında TSE mevzuatına göre üretim ve belgelendirme sorumluluğunu üstlendiği resmi bir statüdür. 2. aşama süreci; üretim altyapısının denetimi, teknik dosya kontrolü ve kurum değerlendirmesini kapsar. Karakaş Mühendislik, üretici firmaları bu süreçte başvurudan onaya kadar yönlendirir.",
+  "sections": [
+    {
+      "id": "imalatci-yetkisi-nedir",
+      "heading": "İmalatçı Yetkisi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "İmalatçı yetkisi, bir firmanın ilgili teknik mevzuata uygun şekilde üretim yapmaya ve ürününü belgelendirmeye yetkili olduğunu gösteren resmi statüdür. Bu yetki, firmanın kalite altyapısını ve teknik yeterliliğini ortaya koyar."
+        },
+        {
+          "type": "p",
+          "text": "2. aşama, üreticinin üretim tesisi, teknik dokümantasyonu ve kalite sisteminin TSE tarafından değerlendirildiği daha ileri seviyeli bir yetkilendirme basamağıdır."
+        }
+      ]
+    },
+    {
+      "id": "kimler-basvurabilir",
+      "heading": "Hangi Üreticiler Başvurabilir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "TSE kapsamındaki ürünleri seri üreten imalathaneler",
+            "Makine ve ekipman üretimi yapan fabrikalar",
+            "TSE belgeli ürün pazarlamayı hedefleyen firmalar",
+            "İhracat için resmi yetki belgesi gerektiren üreticiler",
+            "Üretim hatlarını mevzuata uygun hale getiren işletmeler"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Başvuru öncesi firmanın üretim kapasitesi ve teknik altyapısının belirli bir olgunluğa ulaşmış olması beklenir. Eksik altyapı sürecin uzamasına yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "gereken-belgeler",
+      "heading": "Başvuruda Gereken Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Firma ticaret sicil ve imza sirküleri belgeleri",
+            "Üretim tesisine ait teknik dokümantasyon",
+            "Ürünlerin teknik dosyası ve çizimleri",
+            "Kalite yönetim sistemi kayıtları",
+            "Test ve muayene sonuçlarına ait raporlar",
+            "Başvuru formu ve yetkili beyanları"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Belgelerin eksiksiz ve güncel olması, TSE değerlendirmesinin sorunsuz ilerlemesi için belirleyicidir. Karakaş Mühendislik bu evrakların kontrolünü titizlikle yapar."
+        }
+      ]
+    },
+    {
+      "id": "basvuru-adimlari",
+      "heading": "Başvuru ve Değerlendirme Adımları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Firmanın üretim ve teknik yeterliliği ön analizle değerlendirilir",
+            "Gerekli belge ve dokümantasyon eksiksiz hazırlanır",
+            "TSE'ye resmi başvuru dosyası sunulur",
+            "Kurum tarafından tesis denetimi planlanır",
+            "Teknik dosya ve kalite sistemi incelenir",
+            "Değerlendirme sonucunda yetki kararı oluşturulur"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Değerlendirme aşamasında tespit edilen eksiklikler, belirli bir süre içinde giderilmek üzere firmaya bildirilir ve süreç buna göre ilerler."
+        }
+      ]
+    },
+    {
+      "id": "tse-degerlendirmesi",
+      "heading": "TSE Değerlendirme Süreci",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "TSE uzmanları, üretim sahasını, makine parkını ve kalite kontrol prosedürlerini yerinde inceleyerek üreticinin yetkinliğini değerlendirir. Bu aşamada teknik dosyanın üretimle uyumu da gözden geçirilir."
+        },
+        {
+          "type": "p",
+          "text": "Değerlendirme sonucu olumlu ise imalatçı yetkisi onaylanır; aksi halde firma, belirlenen iyileştirmeleri tamamlayıp yeniden değerlendirme talep edebilir."
+        }
+      ]
+    },
+    {
+      "id": "karakas-danismanligi",
+      "heading": "Karakaş Mühendislik Rehberliği",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Süreç boyunca firmanın yanında yer alan ekibimiz; dokümantasyon hazırlığı, denetim öncesi simülasyon ve kurum nezdinde yürütülen yazışmaları yönetir. Böylece üretici mevzuat karmaşasıyla yalnız başına mücadele etmez."
+        },
+        {
+          "type": "p",
+          "text": "Ayrıca yetki alındıktan sonraki periyodik denetim ve yenileme süreçlerinde de süreklilik sağlanmasına destek olunur."
+        }
+      ]
+    },
+    {
+      "id": "yaygin-hatalar",
+      "heading": "Yaygın Yapılan Hatalar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Eksik veya güncel olmayan teknik dosya sunulması",
+            "Kalite kayıtlarının üretimle uyumsuz olması",
+            "Denetim öncesi tesis hazırlığının yetersiz kalması",
+            "Başvuru formunda bilgi tutarsızlıkları bulunması",
+            "Test raporlarının yetkili mercilerce onaylanmamış olması"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu hatalar başvurunun reddine veya uzamasına neden olabilir. Profesyonel danışmanlık, söz konusu riskleri en aza indirir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "2. aşama imalatçı yetkisi 1. aşamadan farkı nedir?",
+      "a": "2. aşama, üretim tesisi ve kalite sisteminin yerinde denetlendiği, daha kapsamlı bir değerlendirme basamağıdır ve üreticiye ileri seviyede yetki sağlar."
+    },
+    {
+      "q": "Başvuru ne kadar sürede sonuçlanır?",
+      "a": "Belge tamamlığı ve TSE denetim takvimine bağlı olarak birkaç haftadan birkaç aya kadar değişebilir."
+    },
+    {
+      "q": "Tesis denetimi zorunlu mudur?",
+      "a": "Evet. 2. aşamada üretim altyapısının kurum uzmanlarınca yerinde incelenmesi temel bir gerekliliktir."
+    },
+    {
+      "q": "Karakaş Mühendislik başvuruyu doğrudan yapar mı?",
+      "a": "Firma adına gerekli hazırlık ve koordinasyonu üstlenir; resmi başvuru yetki verilen firma üzerinden yürütülür."
+    }
+  ]
+}

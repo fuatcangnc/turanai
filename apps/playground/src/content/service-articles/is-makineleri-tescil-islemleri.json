@@ -1,0 +1,92 @@
+{
+  "slug": "is-makineleri-tescil-islemleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "İş Makineleri Tescil İşlemleri",
+  "title": "İş Makineleri Tescil İşlemleri",
+  "summary": "Karakaş Mühendislik ile iş makinelerinizin marka, model, seri numarası ve teknik özelliklerine uygun evrak hazırlığı ve resmi tescil sürecinin profesyonelce yürütülmesi.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "İş Makineleri Tescil İşlemleri",
+  "heroLead": "İş makineleri tescil işlemleri; iş makinesinin resmi kayıt altına alınabilmesi, teknik bilgilerinin doğrulanması ve ilgili kurum süreçlerinin tamamlanabilmesi açısından önem taşır. Karakaş Mühendislik olarak iş makinelerinin marka, model, seri numarası ve teknik özelliklerine uygun şekilde evrak hazırlığı ve tescil süreci desteği sunuyoruz.",
+  "sections": [
+    {
+      "id": "is-makineleri-tescil-islemleri-nedir",
+      "heading": "İş Makineleri Tescil İşlemleri Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "İş makineleri tescil işlemleri, iş makinesinin resmi kayıtlara işlenmesi ve teknik bilgilerinin kayıt altına alınmasını kapsayan süreçtir. Özellikle yeni alınan, ithal edilen ya da ikinci el devri yapılan iş makinelerinde tescil işlemleri önem kazanır."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-gerekir",
+      "heading": "Hangi Durumlarda Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yeni alınan iş makinelerinde",
+            "İthal edilen iş makinelerinde",
+            "İkinci el devir işlemlerinde",
+            "Resmi kurum işlemleri ve belge süreçlerinde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basvuru-sureci",
+      "heading": "Başvuru Süreci Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Makine bilgileri hazırlanır: Marka, model, seri numarası ve teknik veriler belirlenir.",
+            "Evrak kontrolü yapılır: Fatura, teknik belge ve varsa ithalat evrakları incelenir.",
+            "Başvuru dosyası oluşturulur: Resmi işlemler için gerekli belge düzeni hazırlanır.",
+            "Tescil süreci tamamlanır: İlgili kurum işlemleri doğrultusunda kayıt süreci ilerletilir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Satış faturası ya da mülkiyet belgesi",
+            "Marka ve model bilgileri",
+            "Seri numarası bilgileri",
+            "Teknik katalog ya da üretici bilgileri",
+            "Varsa ithalat ve gümrük evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Eksik seri numarası, okunmayan etiket bilgileri ya da teknik verilerdeki uyuşmazlıklar tescil sürecinin uzamasına neden olabilir. Karakaş Mühendislik, süreç öncesinde evrak ve teknik bilgi kontrolü sağlayarak işlemlerin daha düzenli ilerlemesine yardımcı olur."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "İş makinesi tescili neden gereklidir?",
+      "a": "Makinenin resmi kayıtlara alınması ve ilgili kurum işlemlerinin tamamlanabilmesi için gereklidir."
+    },
+    {
+      "q": "İthal iş makinelerinde tescil işlemi yapılır mı?",
+      "a": "Evet. İthal edilen iş makinelerinde teknik evrakların hazırlanması ve kayıt işlemleri önemlidir."
+    },
+    {
+      "q": "Tescil sürecini en çok ne uzatır?",
+      "a": "Eksik evrak, okunmayan seri numarası ve teknik bilgilerdeki uyumsuzluk sürecin uzamasına neden olabilir."
+    }
+  ]
+}

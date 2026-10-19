@@ -1,0 +1,29 @@
+{
+  "title": "Getir Yemek Motosiklet Çanta (Taşıma Kutusu) Ruhsata İşletme Rehberi",
+  "brand": "Getir Yemek",
+  "slug": "getir-yemek-motosiklet-canta-tasima-kutusu-ruhsata-isletme",
+  "deliveryFocus": "yoğun şehir içi yemek teslimatı",
+  "equipment": "paket servis çantası, arka taşıma kutusu ve yemek sepeti",
+  "reviewFocus": "teslimat çantasının ölçüleri, taşıyıcı bağlantıları ve motosiklet üzerindeki konumu",
+  "profileLabel": "Restoran sipariş teslimatları",
+  "profileSummary": "Getir Yemek, restoran siparişlerinin şehir içinde hızlı ulaştırılmasına odaklanan teslimat hizmetidir. Isı korumalı çanta ve arka taşıma kutusu kullanımı, sıcak ürün akışına uygun olsa da ekipmanın motosiklete nasıl bağlandığı teknik değerlendirmede belirleyicidir.",
+  "contextText": "Getir Yemek teslimatlarında kullanılan paket servis çantası ve arka taşıma kutusunun motosikletle uyumu birlikte değerlendirilir.",
+  "faqs": [
+    {
+      "question": "Getir Yemek motosiklet çantayı ruhsata işletmek kaç TL?",
+      "answer": "Getir Yemek için kullanılan ekipmanın ruhsata işletme bedeli; motosiklet modeli, paket servis çantası, arka taşıma kutusu ve yemek sepeti türü, montaj yapısı ve ihtiyaç duyulan teknik işlem kapsamına göre değişir. Net ücret için ruhsat, ekipman bilgisi ve fotoğraflar üzerinden ön değerlendirme yapılır."
+    },
+    {
+      "question": "Getir Yemek motosiklet çantası ruhsata nasıl işletilir?",
+      "answer": "Getir Yemek kuryesinin kullandığı ekipman için önce teslimat çantasının ölçüleri, taşıyıcı bağlantıları ve motosiklet üzerindeki konumu değerlendirilir. Ardından gerekli teknik proje, uygunluk kontrolü, muayene ve tescil adımları aracın durumuna göre planlanır."
+    },
+    {
+      "question": "Getir Yemek kuryelerinde motosiklet yan çanta da değerlendirilir mi?",
+      "answer": "Yan çanta, topcase veya ek taşıma ekipmanının değerlendirilmesi; ürünün niteliği, montaj noktaları ve motosiklet üzerindeki etkisine göre yapılır. Getir Yemek operasyonunda kullanılan tüm ekipmanları birlikte paylaşmanız doğru proje kapsamının belirlenmesini sağlar."
+    },
+    {
+      "question": "Getir Yemek kurye ekipmanını ruhsata işletmek zorunlu mu?",
+      "answer": "Ruhsata işletme ihtiyacı, ekipmanın motosiklete uygulanış biçimi ile teknik ve tescil kapsamına göre belirlenir. Getir Yemek için kullanılan taşıma sisteminin güncel durumunu teknik incelemeyle netleştirmek, işlem öncesinde doğru yolun belirlenmesine yardımcı olur."
+    }
+  ]
+}

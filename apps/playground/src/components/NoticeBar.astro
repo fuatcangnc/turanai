@@ -1,0 +1,35 @@
+---
+interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="notice-bar" role="status">
+	<span class="notice-bar__icon" aria-hidden="true">📣</span>
+	<span class="notice-bar__text">{text}</span>
+</div>
+
+<style>
+	.notice-bar {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.6rem 1rem;
+		border-radius: 0.5rem;
+		background: linear-gradient(90deg, #1e3a8a, #2563eb);
+		color: #fff;
+		font-size: 0.95rem;
+		line-height: 1.4;
+		box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+	}
+
+	.notice-bar__icon {
+		flex: none;
+	}
+
+	.notice-bar__text {
+		flex: 1;
+	}
+</style>

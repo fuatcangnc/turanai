@@ -1,0 +1,310 @@
+---
+import { ArrowRight, CarFront, Check, MessageCircle, ShieldCheck, Wrench } from '@lucide/astro'
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { whatsappHref } from '@/data/site'
+import SiteImage from '@/components/SiteImage.astro'
+
+const carBrands = [
+  {
+    name: 'Volkswagen',
+    logo: '/car/volkswagen.webp',
+    type: 'Ticari & Karavan & Binek',
+    popularModels: ['Crafter', 'Transporter', 'Caddy', 'Passat', 'Golf'],
+    description: 'Crafter ve Transporter motokaravan dönüşümü, Caddy koltuk sökümü ve binek modellerde motor değişimi projeleri.',
+  },
+  {
+    name: 'Ford',
+    logo: '/car/ford.webp',
+    type: 'Ticari & Pickup & Binek',
+    popularModels: ['Transit', 'Tourneo Custom', 'Ranger', 'Courier', 'Focus'],
+    description: 'Transit karavan projesi, Custom koltuk tadilatı, Ranger camlı kabin ve çeki demiri ruhsata işletme.',
+  },
+  {
+    name: 'Fiat',
+    type: 'Panelvan & Ticari & Binek',
+    popularModels: ['Ducato', 'Doblo', 'Fiorino', 'Egea', 'Scudo'],
+    description: 'Ducato M1 sınıfı karavan dönüşümü, Doblo/Fiorino koltuk sökümü ve Egea LPG söküm tadilatı.',
+  },
+  {
+    name: 'Renault',
+    logo: '/car/renault-logo.webp',
+    type: 'Panelvan & Ticari & Binek',
+    popularModels: ['Master', 'Trafic', 'Kangoo', 'Megane', 'Clio'],
+    description: 'Master ve Trafic karavan projeleri, Kangoo koltuk tadilatı ve benzinli modellerde LPG iptali.',
+  },
+  {
+    name: 'Mercedes-Benz',
+    type: 'VIP Minibüs & Panelvan & Binek',
+    popularModels: ['Sprinter', 'Vito', 'V-Class', 'C-Serisi', 'E-Serisi'],
+    description: 'Sprinter karavan ve VIP dizayn, Vito koltuk ilave/söküm ve binek modellerde sandık motor tescili.',
+  },
+  {
+    name: 'Peugeot',
+    logo: '/car/peugeot-logo.webp',
+    type: 'Panelvan & Ticari & SUV',
+    popularModels: ['Boxer', 'Expert', 'Rifter', 'Partner', '3008'],
+    description: 'Boxer karavan projesi, Rifter ve Partner koltuk düzeni tadilatı ile çeki demiri montaj onayı.',
+  },
+  {
+    name: 'Citroën',
+    logo: '/car/citroen-logo.webp',
+    type: 'Panelvan & Ticari & Binek',
+    popularModels: ['Jumper', 'Jumpy', 'Berlingo', 'C-Elysee', 'C4'],
+    description: 'Jumper motokaravan projeleri, Berlingo koltuk tadilatı ve LPG sistemi söküm mühendislik onayı.',
+  },
+  {
+    name: 'Toyota',
+    logo: '/car/toyota-logo.webp',
+    type: 'Pickup & SUV & Hibrit',
+    popularModels: ['Hilux', 'Proace', 'Corolla', 'RAV4', 'Land Cruiser'],
+    description: 'Hilux camlı kabin ve çeki demiri, Proace koltuk/karavan tadilatı ve LPG söküm projeleri.',
+  },
+  {
+    name: 'Dacia',
+    logo: '/car/dacia-logo.webp',
+    type: 'SUV & Ticari & Binek',
+    popularModels: ['Duster', 'Dokker', 'Jogger', 'Sandero'],
+    description: 'Duster çeki demiri montajı, Dokker koltuk sökümü ve fabrika çıkışlı/sonradan takılan LPG iptali.',
+  },
+  {
+    name: 'Opel',
+    logo: '/car/opel.webp',
+    type: 'Ticari & Binek & SUV',
+    popularModels: ['Movano', 'Vivaro', 'Combo', 'Astra', 'Corsa'],
+    description: 'Movano ve Vivaro karavan projeleri, Combo koltuk tescili ve binek modellerde motor değişimi.',
+  },
+  {
+    name: 'Iveco',
+    type: 'Kamyonet & Şasi & Panelvan',
+    popularModels: ['Daily 35S', 'Daily 70C', 'Eurocargo'],
+    description: 'Daily şasi ve panelvan motokaravan projeleri, hidrolik lift ve kasa tadilat mühendislik dosyası.',
+  },
+  {
+    name: 'Isuzu',
+    type: 'Pickup & Kamyon & Kamyonet',
+    popularModels: ['D-Max', 'NPR', 'NQR', 'N-Series'],
+    description: 'D-Max pickup camlı kabin ve çeki demiri, NPR hidrolik ayak ve arka lift montaj projeleri.',
+  },
+  {
+    name: 'Mitsubishi',
+    type: 'Pickup & Ticari Kamyon',
+    popularModels: ['L200', 'Fuso Canter', 'Outlander'],
+    description: 'L200 çeki demiri ve kabin projesi, Fuso Canter kasa değişimi ve hidrolik lift uygunluğu.',
+  },
+  {
+    name: 'Hyundai',
+    type: 'Ticari Panelvan & SUV & Binek',
+    popularModels: ['H350', 'Staria', 'Tucson', 'i20', 'Accent'],
+    description: 'H350 karavan tadilatı, Staria koltuk düzeni ve binek modellerde LPG sökümü ile çeki demiri.',
+  },
+  {
+    name: 'Kia',
+    type: 'Kamyonet & SUV & Binek',
+    popularModels: ['Bongo', 'Sportage', 'Ceed', 'Cerato', 'Stonic'],
+    description: 'Bongo kamyonet kasa tadilatı, Sportage çeki demiri ve benzinli modellerde LPG söküm onayı.',
+  },
+  {
+    name: 'BMW',
+    logo: '/car/bmw.webp',
+    type: 'Premium Binek & SUV',
+    popularModels: ['3 Serisi', '5 Serisi', 'X3', 'X5', '1 Serisi'],
+    description: 'Sandık ve çıkma motor değişimi uygunluk raporu, E belgeli çeki demiri ve LPG sökümü.',
+  },
+  {
+    name: 'Audi',
+    logo: '/car/audi.webp',
+    type: 'Premium Binek & SUV',
+    popularModels: ['A3', 'A4', 'A6', 'Q5', 'Q7'],
+    description: 'Motor değişimi teknik hesap raporu, çeki demiri ruhsata işletme ve engelli aparatı projeleri.',
+  },
+  {
+    name: 'Skoda',
+    logo: '/car/skoda-logo.webp',
+    type: 'SUV & Binek',
+    popularModels: ['Octavia', 'Superb', 'Kodiaq', 'Kamiq', 'Karoq'],
+    description: 'E belgeli çeki demiri montajı, sürücü kursu çift pedal tertibatı ve LPG söküm tescili.',
+  },
+  {
+    name: 'Nissan',
+    type: 'Pickup & SUV',
+    popularModels: ['Navara', 'Qashqai', 'X-Trail', 'Juke'],
+    description: 'Navara camlı kabin ve çeki demiri, Qashqai ve X-Trail çeki demiri ile LPG söküm projeleri.',
+  },
+  {
+    name: 'Volvo',
+    type: 'Premium SUV & Binek',
+    popularModels: ['XC90', 'XC60', 'XC40', 'S90', 'V40'],
+    description: 'XC serisi çeki demiri montaj onayı, motor değişimi ve özel engelli tertibatı projeleri.',
+  },
+  {
+    name: 'Land Rover',
+    type: 'Off-Road & Lüks SUV',
+    popularModels: ['Defender', 'Discovery', 'Range Rover Sport'],
+    description: 'Defender özel dönüşüm projeleri, çeki demiri montaj uygunluğu ve motor tescili.',
+  },
+  {
+    name: 'Togg',
+    type: 'Elektrikli SUV',
+    popularModels: ['T10X V1', 'T10X V2'],
+    description: 'Togg T10X modellerinde E belgeli çeki demiri ve aksesuar montaj uygunluk projeleri.',
+  },
+]
+---
+
+<Layout
+  title="Araba ve Ticari Araç Markaları İçin Araç Projeleri | Karakaş Mühendislik"
+  description="Volkswagen, Ford, Fiat, Renault, Mercedes, Peugeot, Toyota ve tüm araç markaları için TSE onaylı karavan, motor değişimi, çeki demiri ve koltuk projeleri."
+>
+  <main class="bg-[#f8f9fa]">
+    <InternalHero
+      eyebrow="Hizmet Verdiğimiz Markalar"
+      title="Araba ve Ticari Araç Markaları"
+      description="Otomobil, panelvan, minibüs, kamyonet ve SUV araçlar için karavan dönüşümü, motor değişimi, çeki demiri, koltuk ve LPG söküm projeleri."
+      image="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp"
+    />
+
+    <!-- Header info banner -->
+    <section class="border-b border-neutral-200 bg-white py-10">
+      <div class="shell">
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="max-w-3xl">
+            <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-primary">
+              Marka ve Model Kapsamı
+            </h3>
+            <h2 class="mt-2 text-[clamp(1.7rem,3.2vw,2.5rem)] font-black tracking-tight text-neutral-950">
+              Aracınıza Uygun TSE Onaylı Araç Projesi
+            </h2>
+            <p class="mt-2 text-sm text-neutral-600">
+              Tüm binek, hafif ticari, ağır ticari ve pickup araç modellerinde AİTM yönetmeliğine uygun teknik hesap ve proje çizimi yapıyoruz.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="inline-flex items-center gap-1.5 border border-neutral-200 bg-neutral-50 px-3.5 py-2 text-xs font-bold text-neutral-800">
+              <ShieldCheck class="size-4 text-emerald-700" />
+              22+ Önde Gelen Marka
+            </span>
+            <span class="inline-flex items-center gap-1.5 border border-neutral-200 bg-neutral-50 px-3.5 py-2 text-xs font-bold text-neutral-800">
+              <Wrench class="size-4 text-primary" />
+              TSE Yetkili Mühendislik
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Cards Grid -->
+    <section class="py-14 md:py-20">
+      <div class="shell">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            carBrands.map((brand, index) => (
+              <article class="group flex flex-col justify-between border border-neutral-200/90 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-[0_16px_36px_rgba(4,24,39,0.08)]">
+                <div>
+                  <!-- Top Row: Badge, Logo & Type -->
+                  <div class="flex items-center justify-between gap-2 border-b border-neutral-100 pb-3.5">
+                    <span class="grid size-8 place-items-center bg-black text-xs font-black text-white transition-colors group-hover:bg-primary">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-primary">
+                      <CarFront class="size-3.5" />
+                      {brand.type}
+                    </span>
+                  </div>
+
+                  <!-- Brand Name & Logo -->
+                  <div class="mt-4 flex items-center justify-between gap-3">
+                    <h3 class="text-xl font-black tracking-tight text-neutral-950">
+                      {brand.name}
+                    </h3>
+                    {brand.logo && (
+                      <SiteImage
+                        src={brand.logo}
+                        alt={`${brand.name} logosu`}
+                        class="h-6 w-auto max-w-[48px] object-contain opacity-75 grayscale transition-all duration-200 group-hover:opacity-100 group-hover:grayscale-0"
+                        loading="lazy"
+                      />
+                    )}
+                  </div>
+
+                  <!-- Popular Models Pills -->
+                  <div class="mt-3 flex flex-wrap gap-1.5">
+                    {brand.popularModels.map((model) => (
+                      <span class="bg-[#f2f4f7] px-2 py-0.5 text-[11px] font-semibold text-neutral-700 transition-colors group-hover:bg-primary/10 group-hover:text-primary">
+                        {model}
+                      </span>
+                    ))}
+                  </div>
+
+                  <!-- Description -->
+                  <p class="mt-3.5 text-xs leading-relaxed text-neutral-600">
+                    {brand.description}
+                  </p>
+
+                  <!-- Checklist -->
+                  <ul class="mt-4 space-y-1.5 border-t border-neutral-100 pt-3 text-[11px] text-neutral-700">
+                    <li class="flex items-center gap-1.5">
+                      <Check class="size-3.5 text-emerald-700 shrink-0" />
+                      <span>Karavan, Koltuk, Motor & Çeki Demiri Projesi</span>
+                    </li>
+                    <li class="flex items-center gap-1.5">
+                      <Check class="size-3.5 text-emerald-700 shrink-0" />
+                      <span>TSE AKM Kontrolü ve Ruhsat Tescili</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Card Footer Actions -->
+                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between gap-2">
+                  <a
+                    href={whatsappHref(`Merhaba, ${brand.name} marka aracım için araç projesi ve ruhsata işletme teklifi almak istiyorum.`)}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-emerald-700 hover:text-emerald-800 transition-colors"
+                  >
+                    <MessageCircle class="size-3.5" />
+                    Teklif Al
+                  </a>
+
+                  <a
+                    href="/arac-proje-hizmetlerimiz"
+                    class="inline-flex items-center gap-1 text-xs font-bold text-neutral-500 hover:text-primary transition-colors"
+                  >
+                    <span>Hizmetler</span>
+                    <ArrowRight class="size-3.5" />
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="border-t border-neutral-200 bg-white py-14">
+      <div class="shell">
+        <div class="flex flex-col items-center justify-between gap-6 rounded-none border border-neutral-200 bg-[#f8f9fa] p-8 md:flex-row md:p-10">
+          <div class="max-w-2xl">
+            <h4 class="text-xs font-black uppercase tracking-[0.14em] text-primary">Teknik Danışmanlık ve Fiyat</h4>
+            <h3 class="mt-2 text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+              Aracınızın markası veya modeli listede yok mu?
+            </h3>
+            <p class="mt-2 text-sm text-neutral-600">
+              Türkiye'de tescilli tüm yerli ve yabancı marka araçlar için TSE onaylı araç tadilat ve dönüşüm projeleri hazırlıyoruz. Ruhsat görselinizi ileterek projenizi hemen danışabilirsiniz.
+            </p>
+          </div>
+          <a
+            href={whatsappHref('Merhaba, aracım için araç projesi ve ruhsata işletme hakkında danışmak istiyorum.')}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex h-12 shrink-0 items-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white shadow-sm transition-colors"
+          >
+            <MessageCircle class="size-4" />
+            <span>WhatsApp ile Danışın</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

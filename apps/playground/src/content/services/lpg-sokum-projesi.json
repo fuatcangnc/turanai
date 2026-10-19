@@ -1,0 +1,222 @@
+{
+  "title": "LPG Söküm Projesi ve Ruhsattan Kaldırma | Karakaş",
+  "shortTitle": "LPG Söküm Projesi",
+  "slug": "lpg-sokum-projesi",
+  "category": "Söküm",
+  "summary": "LPG söküm projesi için gerekli belgeleri, eksiksiz söküm kontrollerini, TSE, muayene ve ruhsattan kaldırma adımlarını inceleyin.",
+  "image": "/hizmetler/lpg-sokum-projesi.webp",
+  "featured": false,
+  "order": 1,
+  "heroEyebrow": "LPG Sökümü | TSE Onaylı",
+  "heroTitle": "LPG Söküm Projesi ve Ruhsattan Kaldırma",
+  "heroDescription": "LPG donanımının araçtan eksiksiz kaldırıldığını, yakıt bilgisini ve proje evraklarını birlikte kontrol edelim. TSE, muayene ve ruhsat adımlarını dosyanıza göre netleştirelim.",
+  "imageAlt": "LPG söküm projesi için araç yakıt sistemi teknik incelemesi",
+  "imageTitle": "LPG Söküm Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için LPG söküm projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "LPG iptal projesi",
+  "introTitle": "LPG ruhsat kaydı hangi işlemlerden sonra kaldırılır?",
+  "introText": "LPG tankının araçtan alınması tek başına ruhsat kaydını değiştirmez. Sistem yetkili serviste eksiksiz sökülür; aracın mevcut durumu teknik projeye aktarılır. Ardından TSE kontrolü, gerekli muayene ve tescil adımları tamamlanır.",
+  "relatedLink": {
+    "prefix": "Fiziksel sökümün teknik kapsamı için",
+    "label": "LPG sistemi söküm tadilatını inceleyin",
+    "href": "/lpg-sistemi-sokum-tadilati"
+  },
+  "technicalChecks": [
+    {
+      "title": "Ruhsattaki yakıt bilgisi",
+      "description": "Mevcut yakıt kaydı ile araç üzerindeki sistem karşılaştırılır."
+    },
+    {
+      "title": "Sökümün tamamlanma durumu",
+      "description": "Tank, dolum ağzı ve LPG sistemine ait bileşenlerin durumu incelenir."
+    },
+    {
+      "title": "Benzin sisteminin işleyişi",
+      "description": "Araçta kalan yakıt sisteminin güvenli ve çalışır durumda olduğu kontrol edilir."
+    },
+    {
+      "title": "Araç kimliği ve ağırlık bilgisi",
+      "description": "Ruhsat, araç etiketi ve proje verilerinin birbiriyle uyumu denetlenir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Yakıt türü ve araç kimlik bilgilerini kontrol etmek için."
+    },
+    {
+      "title": "Araç ağırlık etiketi",
+      "description": "Projede kullanılacak teknik ağırlık bilgisini doğrulamak için."
+    },
+    {
+      "title": "Söküm belgesi veya faturası",
+      "description": "Varsa işlemi yapan servis ile söküm kapsamını dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Araç fotoğrafları",
+      "description": "Motor bölümü, bagaj, dolum ağzı ve genel durumu önceden incelemek için."
+    },
+    {
+      "title": "Mevcut proje veya montaj belgesi",
+      "description": "Bulunuyorsa LPG sisteminin eski kaydını doğrulamak için."
+    }
+  ],
+  "group": {
+    "label": "03 · LPG söküm kapsamı ve ruhsat kaydı",
+    "title": "Araçtaki söküm ile resmi dosya nasıl eşleştirilir?",
+    "leftTitle": "Araç üzerindeki kontroller",
+    "leftItems": [
+      {
+        "title": "LPG tankı",
+        "description": "Tankın ve bağlantı elemanlarının araçtan kaldırılma durumu."
+      },
+      {
+        "title": "Dolum hattı",
+        "description": "Dolum ağzı ile sisteme ait boru ve hortumların kontrolü."
+      },
+      {
+        "title": "Motor bölümü ekipmanları",
+        "description": "Regülatör, enjektör, ECU ve ilgili elektrik bağlantılarının durumu."
+      },
+      {
+        "title": "Benzinli kullanım",
+        "description": "Aracın sökümden sonra asıl yakıt sistemiyle çalışması."
+      }
+    ],
+    "rightTitle": "Proje ve tescil kontrolleri",
+    "rightItems": [
+      {
+        "title": "Ruhsat kaydı",
+        "description": "Benzin-LPG ibaresinin mevcut tescil bilgileriyle karşılaştırılması."
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Söküm sonrası araç bilgilerinin tadilat dosyasına aktarılması."
+      },
+      {
+        "title": "TSE kontrolü",
+        "description": "Araç ile proje dosyasının güncel başvuru kapsamında incelenmesi."
+      },
+      {
+        "title": "Muayene ve tescil",
+        "description": "Onaylı dosyayla muayene ve ruhsat güncelleme adımlarının tamamlanması."
+      }
+    ]
+  },
+  "cta": {
+    "label": "LPG sökümü için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve söküm fotoğraflarını gönderin.",
+    "description": "Eksik kalan LPG ekipmanını ve proje için gerekli temel belgeleri TSE başvurusundan önce kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "LPG sisteminin sökülmesi",
+      "description": "Sistem, işin teknik ve güvenlik gereklerini bilen yetkili serviste araçtan kaldırılır."
+    },
+    {
+      "number": "02",
+      "title": "Araç ve belge kontrolü",
+      "description": "Ruhsat, ağırlık etiketi, söküm durumu ve fotoğraflar incelenir."
+    },
+    {
+      "number": "03",
+      "title": "LPG söküm projesi",
+      "description": "Aracın söküm sonrası teknik bilgileri proje dosyasına işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ile proje dosyası güncel başvuru kapsamına göre kontrol edilir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve yeni ruhsat",
+      "description": "Gerekli muayene tamamlanır ve yakıt bilgisi tescil kaydında güncellenir."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; aracın türü, sökümün tamamlanma durumu, mevcut belgeler ve proje dosyasının kapsamına göre belirlenir. Kurum ücretleri proje hizmetinden ayrı olabilir.",
+    "items": [
+      {
+        "title": "Servis işçiliği",
+        "description": "LPG ekipmanlarının araçtan teknik olarak sökülmesi"
+      },
+      {
+        "title": "Proje hizmeti",
+        "description": "Araç bilgilerinin ve söküm durumunun dosyalanması"
+      },
+      {
+        "title": "Resmi işlemler",
+        "description": "TSE, muayene ve tescil kapsamındaki güncel ücretler"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Tankın tek başına sökülmesi",
+      "description": "Sistemin diğer bileşenleri araçta kaldığında dosya ile araç uyuşmaz."
+    },
+    {
+      "title": "Dolum ağzının araçta kalması",
+      "description": "Dış görünüm ve tesisat, tamamlanmamış söküm izlenimi verir."
+    },
+    {
+      "title": "Açık elektrik bağlantıları",
+      "description": "Sökülen ECU ve ekipmanlardan kalan bağlantılar teknik risk oluşturur."
+    },
+    {
+      "title": "Ruhsat bilgilerinin güncellenmemesi",
+      "description": "Araçtaki sistem ile tescil kaydı farklı kalır."
+    },
+    {
+      "title": "Eksik ağırlık bilgisi",
+      "description": "Proje verileri aracın etiketiyle doğrulanamadığında ek belge gerekebilir."
+    },
+    {
+      "title": "Proje öncesi kontrolün atlanması",
+      "description": "Eksik söküm, araç kontrolünden önce yeniden işçilik gerektirebilir."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "LPG söküm projesi nedir?",
+      "answer": "Araçtaki LPG sisteminin kaldırıldığını ve aracın yakıt bilgisindeki değişikliği gösteren teknik tadilat dosyasıdır."
+    },
+    {
+      "question": "LPG tankını söktürmek yeterli mi?",
+      "answer": "Hayır. Sisteme ait diğer mekanik ve elektrikli bileşenler de kontrol edilir; proje, onay, muayene ve tescil adımları ayrıca tamamlanır."
+    },
+    {
+      "question": "LPG söküm projesi için hangi belgeler gerekir?",
+      "answer": "Başlangıçta ruhsat ve araç ağırlık etiketi gerekir. Söküm belgesi, eski LPG evrakları ve fotoğraflar dosyanın durumuna göre istenebilir."
+    },
+    {
+      "question": "LPG sökülen araç doğrudan muayeneye girebilir mi?",
+      "answer": "Aracın tescil kaydı ve işlem kapsamı incelenmeden doğrudan muayene sırası varsayılmamalıdır. Proje ve TSE adımları dosyaya göre planlanır."
+    },
+    {
+      "question": "LPG sökümü ruhsata nasıl işlenir?",
+      "answer": "Söküm sonrası teknik proje hazırlanır, araç TSE kontrolüne girer, gerekli muayene tamamlanır ve yakıt kaydı tescilde güncellenir."
+    },
+    {
+      "question": "LPG söküm projesi fiyatı ne kadar?",
+      "answer": "Fiyat aracın durumu, söküm kapsamı ve eksik belgelere göre değişir. Ruhsat ve fotoğraflar incelendikten sonra proje teklifi hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Söküm ön kontrolü",
+      "description": "Araçta kalan ekipmanlar, proje başlamadan önce fotoğraflarla incelenir."
+    },
+    {
+      "title": "Araçla eşleşen dosya",
+      "description": "Ruhsat, ağırlık ve yakıt sistemi bilgileri aynı projede kontrol edilir."
+    },
+    {
+      "title": "Açık işlem sırası",
+      "description": "Proje, TSE, muayene ve tescil adımları dosyaya göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, ağırlık etiketi fotoğrafını ve söküm görsellerini getirin. Eksik ekipman veya belge olup olmadığını birlikte kontrol edelim."
+}

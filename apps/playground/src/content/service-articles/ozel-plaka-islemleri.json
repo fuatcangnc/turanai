@@ -1,0 +1,86 @@
+{
+  "slug": "ozel-plaka-islemleri",
+  "category": "Tescil ve Müşavirlik",
+  "shortTitle": "Özel Plaka İşlemleri",
+  "title": "Özel Plaka İşlemleri",
+  "summary": "Tercih edilen harf ve sayı kombinasyonuna sahip özel plakanın uygunluk, tahsis ve tescil süreçlerinde profesyonel rehberlik sunuyoruz.",
+  "heroEyebrow": "Tescil ve Müşavirlik",
+  "heroTitle": "Özel Plaka İşlemleri",
+  "heroLead": "Araç sahibinin tercih ettiği harf ya da sayı dizilimine sahip plakanın, uygunluk ve tahsis kuralları çerçevesinde resmi kayıtlara işlenmesi özel bir uzmanlık gerektirir. Karakaş Mühendislik olarak başvurudan tescil tamamlanana kadar sürecinizi yönetiyoruz.",
+  "sections": [
+    {
+      "id": "ozel-plaka-nedir",
+      "heading": "Özel Plaka Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Özel plaka, araç sahibinin belirli bir harf veya rakam kombinasyonunu talep etmesiyle devreye giren özel tahsis uygulamasıdır. Talep edilen plakanın uygunluğu, mevcut plaka kayıt yapısı ve tahsis imkanları resmi sistem kayıtları üzerinden değerlendirmeye alınır."
+        }
+      ]
+    },
+    {
+      "id": "nasil-alinir",
+      "heading": "Nasıl Alınır?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "İstenen plaka kombinasyonunun uygun olup olmadığı araştırılır",
+            "Araç ve malik bilgileri eksiksiz olarak hazırlanır",
+            "Tescil işlemleriyle ilişkilendirilerek resmi başvuru yapılır",
+            "Plaka tahsisi gerçekleştikten sonra kayıt süreci kapatılır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tescil-baglantisi",
+      "heading": "Tescil Bağlantısı",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Özel plaka süreci, araç tescil ve ruhsat kayıtlarıyla doğrudan ilişkilidir. Bu nedenle plaka değişikliği ya da yeni tahsis işlemlerinde resmi kayıt akışının kesintisiz ve eksiksiz yürütülmesi gerekir."
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç ruhsatı ve sahibinin kimlik bilgileri",
+            "Başvuruya temel teşkil eden araç bilgileri",
+            "Mevcutsa vekaletname ya da şirket evrakları",
+            "Tescil işlemi için gerekli destekleyici belgeler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Talep edilen plaka kombinasyonunun müsaitliği, bölgesel uygulama farklılıkları ve güncel kayıt durumu sürecin hızını doğrudan etkileyebilir. Başvurudan önce uygunluğun netleştirilmesi ve tescil evraklarının doğru düzenlenmesi zaman kaybını önlemeye yardımcı olur."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Özel plaka herkes için alınabilir mi?",
+      "a": "Uygunluk ve tahsis koşulları sağlandığı sürece bireysel ya da kurumsal araç sahipleri özel plaka başvurusunda bulunabilir."
+    },
+    {
+      "q": "Ruhsat değişikliği gerekir mi?",
+      "a": "Evet, yeni plaka tahsis edildikten sonra ruhsat üzerindeki kayıtların güncellenmesi gerekir."
+    },
+    {
+      "q": "En önemli adım nedir?",
+      "a": "Talep edilen plakanın uygunluk durumunun doğru biçimde araştırılması ve tescil sürecinin eksiksiz yürütülmesi en kritik aşamadır."
+    }
+  ]
+}

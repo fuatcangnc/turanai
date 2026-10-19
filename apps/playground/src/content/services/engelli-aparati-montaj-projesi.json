@@ -1,0 +1,221 @@
+{
+  "title": "Engelli Aparatı Montaj Projesi | TSE Onaylı",
+  "shortTitle": "Engelli Aparatı Montaj Projesi",
+  "slug": "engelli-aparati-montaj-projesi",
+  "category": "Dönüşüm",
+  "summary": "Araca uygun aparatın montajı, proje dosyası ve TSE onay sürecinin mevzuata uygun yürütülmesi.",
+  "image": "/hizmetler/engelli-aparati-montaj-projesi.webp",
+  "featured": false,
+  "order": 2,
+  "heroEyebrow": "Engelli Aparatı | TSE Onaylı",
+  "heroTitle": "Engelli Aparatı Montaj Projesi",
+  "heroDescription": "Uyarlama kodunu, araç kumandalarını, aparatın teknik bilgisini ve montaj bağlantılarını birlikte kontrol edelim. Proje, TSE ve ruhsat adımlarını dosyanıza göre netleştirelim.",
+  "imageAlt": "Engelli aparatı montajı yapılan araç içi uyarlama sistemi",
+  "imageTitle": "Engelli Aparatı Montaj Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için engelli aparatı montaj projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Engelli aparatı montaj ve ruhsata işletme",
+  "introTitle": "Sürücü uyarlaması ile yolcu erişim aparatı aynı işlem midir?",
+  "introText": "Sürücüye yönelik aparat; gaz, fren, direksiyon, debriyaj veya vites kullanımını değiştirir. Yolcu erişim sistemi ise rampa, lift, döner koltuk veya tekerlekli sandalye sabitleme düzenini kapsayabilir. Gerekli belge ve teknik kontroller bu ayrımdan sonra belirlenir.",
+  "technicalChecks": [
+    {
+      "title": "Kullanım amacı ve uyarlama kodu",
+      "description": "Sürücüye yönelik tertibatta sürücü belgesindeki uyarlama kodu ile aparatın işlevi karşılaştırılır."
+    },
+    {
+      "title": "Araç ve aparat uyumu",
+      "description": "Pedal grubu, direksiyon, koltuk alanı ve seçilen aparatın birlikte çalışması incelenir."
+    },
+    {
+      "title": "Montaj bağlantıları",
+      "description": "Aparatın kumandalara, koltuğa veya araç gövdesine bağlandığı noktalar kontrol edilir."
+    },
+    {
+      "title": "Güvenli ve bağımsız kullanım",
+      "description": "Gaz, fren, direksiyon, kemer ve diğer asli kumandaların işlevinin korunup korunmadığı değerlendirilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfını, mevcut kayıtları ve teknik bilgileri görmek için."
+    },
+    {
+      "title": "Sürücü belgesi bilgisi",
+      "description": "Sürücü uyarlaması yapılacaksa ilgili kısıtlama ve uyarlama kodlarını aparatla karşılaştırmak için."
+    },
+    {
+      "title": "İlgili sağlık raporu bilgisi",
+      "description": "Sürücüye yönelik tertibatın raporda belirtilen kullanım ihtiyacıyla uyumunu değerlendirmek için."
+    },
+    {
+      "title": "Aparat teknik belgesi veya faturası",
+      "description": "Ürünün türünü, kaynağını ve bilinen teknik özelliklerini dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Montaj fotoğrafları",
+      "description": "Bağlantı noktalarını, kumanda erişimini ve araç içindeki yerleşimi görmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Sürücü ve yolcu uyarlama türleri",
+    "title": "Uygulama hangi kullanım ihtiyacına göre planlanıyor?",
+    "leftTitle": "Sürücüye yönelik aparatlar",
+    "leftItems": [
+      {
+        "title": "Elden gaz ve fren",
+        "description": "Gaz ile fren kumandasının el hareketiyle yönetildiği mekanik veya uygun sistemler."
+      },
+      {
+        "title": "Sol ayak gaz pedalı",
+        "description": "Gaz kumandasının sürücü belgesindeki uyarlama koduna göre sola alındığı düzen."
+      },
+      {
+        "title": "Direksiyon kontrol aparatı",
+        "description": "Direksiyon kullanımını destekleyen topuz veya ilgili kumanda düzeni."
+      },
+      {
+        "title": "Debriyaj ve vites uyarlaması",
+        "description": "Debriyaj ya da vites kullanımını değiştiren tertibatın araçla uyumu."
+      }
+    ],
+    "rightTitle": "Yolcuya ve erişime yönelik sistemler",
+    "rightItems": [
+      {
+        "title": "Rampa veya araç lifti",
+        "description": "Tekerlekli sandalye ile araca giriş ve çıkış için kullanılan erişim sistemi."
+      },
+      {
+        "title": "Döner veya kayar koltuk",
+        "description": "Oturma ve transfer hareketini kolaylaştıran koltuk tabanı ve ray düzeni."
+      },
+      {
+        "title": "Sandalye sabitleme sistemi",
+        "description": "Tekerlekli sandalye ile kullanıcıyı yolculuk sırasında sabitleyen bağlantılar."
+      },
+      {
+        "title": "Koltuk ve kemer düzeni",
+        "description": "Erişim uygulaması sonrası koltuk, emniyet kemeri ve iç yerleşimin değerlendirilmesi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Engelli aparatı için ücretsiz ön kontrol",
+    "title": "Ruhsatı, uyarlama kodunu ve montaj fotoğraflarını gönderin.",
+    "description": "Aparatın aracın kumandaları ve belgenizle uyumunu TSE başvurusundan önce birlikte değerlendirelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Belge ve ihtiyaç ön kontrolü",
+      "description": "Araç ruhsatı, sürücü uyarlama kodları ve uygulanacak aparatın işlevi birlikte incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Aparat ve araç eşleştirmesi",
+      "description": "Pedal, direksiyon, koltuk, erişim alanı ve montaj noktaları teknik açıdan değerlendirilir."
+    },
+    {
+      "number": "03",
+      "title": "Montaj ve proje dosyası",
+      "description": "Uygulanan tertibat, bağlantılar, kullanım biçimi ve gerekli teknik bilgiler projeye işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ile proje dosyası, başvuru tarihinde geçerli inceleme kapsamına göre TSE kontrolüne sunulur."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onaydan sonra gereken muayene ve ruhsat güncelleme adımları dosyanın kapsamına göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; aparatın türü, sürücü veya yolcu uyarlaması olması, mevcut belgeler ve proje dosyasının kapsamına göre belirlenir. Kurum harçları proje hizmetinden ayrı olabilir.",
+    "items": [
+      {
+        "title": "Aparat ve montaj işçiliği",
+        "description": "Özel tertibatın temini ve araca montajı."
+      },
+      {
+        "title": "Proje hizmeti",
+        "description": "Teknik çizim, hesap ve TSE 360 dosya hazırlığı."
+      },
+      {
+        "title": "Resmi işlemler",
+        "description": "TSE inceleme, TÜVTÜRK muayenesi ve noter tescil harçları."
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Kod ile aparatın uyuşmaması",
+      "description": "Sürücü belgesindeki uyarlama kodunun araçtaki tertibatı karşılamaması."
+    },
+    {
+      "title": "Kumanda hareketinin kısıtlanması",
+      "description": "Aparatın gaz, fren veya direksiyonun tam ve kontrollü çalışmasını engellemesi."
+    },
+    {
+      "title": "Gevşek veya yanlış bağlantı",
+      "description": "Montajın kumanda, koltuk ya da taşıyıcı noktada güvenli sabitlenmemesi."
+    },
+    {
+      "title": "Koltuk ve kemer uyumsuzluğu",
+      "description": "Erişim uygulamasının koltuk veya emniyet kemeri bağlantısını değiştirmesi."
+    },
+    {
+      "title": "Eksik ürün belgesi",
+      "description": "Aparatın teknik bilgisi, faturası veya montaj kaydının dosyayla eşleşmemesi."
+    },
+    {
+      "title": "Proje dışı ek değişiklik",
+      "description": "İncelemeye sunulan araçta dosyada gösterilmeyen başka bir uygulama bulunması."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Engelli aparatı montaj projesi nedir?",
+      "answer": "Sürücüye veya yolcuya yönelik özel tertibatın araçla uyumunu, montaj bağlantılarını ve kullanım biçimini gösteren teknik proje dosyasıdır. Proje kapsamı aparatın türüne, araca ve kullanıcı belgesine göre belirlenir."
+    },
+    {
+      "question": "Sürücü belgesindeki uyarlama kodu neden önemlidir?",
+      "answer": "Sürücüye yönelik tertibatın işlevi, sürücü belgesindeki kısıtlama ve uyarlama koduyla uyumlu olmalıdır. Kod ile araçtaki aparat farklı işlevleri tarif ediyorsa proje ve tescil sürecinde sorun çıkabilir."
+    },
+    {
+      "question": "Her araca engelli aparatı takılabilir mi?",
+      "answer": "Her aparat her araçta aynı şekilde uygulanamaz. Pedal ve direksiyon yapısı, kabin alanı, koltuk bağlantıları, elektrik altyapısı ve kullanıcının belge kapsamı birlikte incelenir."
+    },
+    {
+      "question": "Yolcu erişim aparatı için sürücü belgesi kodu gerekir mi?",
+      "answer": "Rampa, lift veya yolcuya yönelik sabitleme sistemi doğrudan sürüş kumandası değildir. Gerekli belge ve onay kapsamı, aracın sınıfı ile uygulamanın türüne göre ayrıca belirlenir."
+    },
+    {
+      "question": "Mevcut engelli aparatı için sonradan proje hazırlanabilir mi?",
+      "answer": "Mevcut montaj ruhsat, aparat belgesi ve fotoğraflarla ön incelemeye alınabilir. Kod, bağlantı veya kumanda uyumsuzluğu görülürse TSE başvurusundan önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Engelli aparatı projesi ÖTV istisnası sağlar mı?",
+      "answer": "Araç proje ve tescil işlemleri ile vergi istisnası değerlendirmesi aynı işlem değildir. ÖTV şartları kişinin belgesi, araç ve güncel vergi mevzuatına göre ilgili kurum tarafından ayrıca değerlendirilir."
+    },
+    {
+      "question": "Engelli aparatı montaj projesi fiyatı ne kadar?",
+      "answer": "Bedel; aparatın türü, aracın sınıfı, montajın mevcut durumu, ürün belgeleri ve proje kapsamına göre değişir. Ruhsat, uyarlama kodu ve aparat bilgisi incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Uyarlama kodu kontrolü",
+      "description": "Sürücü belgesindeki kodlar ile araçtaki aparatın teknik uyumu önceden incelenir."
+    },
+    {
+      "title": "TSE mevzuatına tam uyum",
+      "description": "AİTM ve güncel TSE inceleme standartlarına uygun onaylı proje dosyası."
+    },
+    {
+      "title": "Uçtan uca süreç yönetimi",
+      "description": "Ön değerlendirmeden TSE kontrolü, muayene ve noter tesciline kadar planlı adımlar."
+    }
+  ],
+  "officeText": "Ruhsatı, sürücü belgesindeki uyarlama kodunu ve aparat fotoğraflarını getirin. Montajın aracınız ve belgenizle uyumunu birlikte inceleyelim."
+}

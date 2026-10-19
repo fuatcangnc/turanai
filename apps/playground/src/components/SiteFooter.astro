@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components'
+import Brand from './Brand.astro'
+import CtaBanner from './CtaBanner.astro'
+import { defaultServices, siteSettings, phoneHref, whatsappHref } from '@/data/site'
+
+const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteSettings.location)}`
+const quickLinks = [
+  ['Home', '/'],
+  ['About us', '/hakkimizda'],
+  ['Our certificates', '/belgelerimiz'],
+  ['Blog / Wissenszentrum', '/blog'],
+  ['Contact und Anfahrt', '/iletisim'],
+]
+const aracProjeCategories = ['Araç Projeleri', 'Dönüşüm', 'Söküm', 'Motosiklet', 'Belgelendirme']
+const aracProjeServices = defaultServices.filter((s) => aracProjeCategories.includes(s.category)).sort((a, b) => a.order - b.order)
+const lpgServices = defaultServices.filter((s) => s.category === 'LPG Söküm Sistemi Tadilatı').sort((a, b) => a.order - b.order)
+---
+
+<!-- CTA Banner -->
+<CtaBanner />
+
+<!-- Footer Main -->
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <section class="footer-brand" aria-labelledby="footer-brand-title">
+      <h2 class="sr-only" id="footer-brand-title">Karakaş Mühendislik</h2>
+      <Brand inverse />
+      <p>Verständliche Ingenieurbegleitung bei technischen Projekten, TSE-Konformität und Eintragung in die vehiclepapiere für vehicleumbauten.</p>
+      <ul class="trust-list" aria-label="Leistungsumfang der Ingenieurdienstleistungen"><li>TSE-Zulassungsverfahren</li><li>Technische Dokumentenprüfung</li><li>Unterstützung bei der Eintragung in die vehiclepapiere</li></ul>
+      <ul class="social-list" aria-label="Social-Media-Konten"><li><a aria-label="Facebook" href={siteSettings.facebook}><Icon name="simple-icons:facebook" size={16} /></a></li><li><a aria-label="Instagram" href={siteSettings.instagram}><Icon name="simple-icons:instagram" size={16} /></a></li><li><a aria-label="YouTube" href={siteSettings.youtube}><Icon name="simple-icons:youtube" size={16} /></a></li></ul>
+    </section>
+    <nav class="footer-column" aria-labelledby="footer-services-title">
+      <h3 id="footer-services-title">Services</h3>
+      <p class="footer-group-title">vehicleprojekt-Services</p>
+      <ul class="numbered-list">
+        {aracProjeServices.map((service) => (
+          <li><a href={`/${service.slug}`}>{service.shortTitle}</a></li>
+        ))}
+      </ul>
+      <p class="footer-group-title">Umbau zum Ausbau der LPG-Anlage</p>
+      <ul class="numbered-list">
+        {lpgServices.map((service) => (
+          <li><a href={`/${service.slug}`}>{service.shortTitle}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <nav class="footer-column" aria-labelledby="footer-corporate-title"><h3 id="footer-corporate-title">Company</h3><ul>{quickLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></nav>
+    <section class="footer-column footer-contact" aria-labelledby="footer-contact-title"><h3 id="footer-contact-title">Contact und Office</h3><address><a href={phoneHref}><Icon name="lucide:phone" size={16} /><span><small>Phone</small>{siteSettings.phone}</span></a><a href={`mailto:${siteSettings.email}`}><Icon name="lucide:mail" size={16} /><span><small>E-mail</small>{siteSettings.email}</span></a><a href={mapHref} target="_blank" rel="noreferrer"><Icon name="lucide:map-pin" size={16} /><span><small>Office</small>{siteSettings.location}</span></a><div><Icon name="lucide:clock-3" size={16} /><span><small>Opening hours</small>{siteSettings.workHours}<small>Sunday: closed</small></span></div></address></section>
+  </div>
+  <div class="shell footer-bottom"><p>© {new Date().getFullYear()} Karakaş Mühendislik. All rights reserved. ✓</p><nav aria-label="Rechtliche Links"><a href="/cerez-politikasi">Cookie-Richtlinie</a><a href="/gizlilik-ve-kvkk-politikasi">Privacy und KVKK</a></nav></div>
+</footer>

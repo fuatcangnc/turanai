@@ -1,0 +1,256 @@
+---
+import { CheckCircle2, ChevronRight, Cpu, FileSearch, ShieldCheck, Wrench, Award, Compass, Eye } from '@lucide/astro'
+import SiteImage from './SiteImage.astro'
+
+const blueprintHeaderLabel = Astro.currentLocale === 'de'
+  ? 'TSE 360 // FAHRZEUGUMBAU & PROJEKTSCHEMA'
+  : 'TSE 360 // ARAÇ TADİLAT & PROJE ŞEMASI'
+
+const steps = [
+  {
+    id: 1,
+    num: '01',
+    title: 'Ön İnceleme & Ruhsat',
+    desc: 'Şase, ruhsat ve araç uygunluk kontrolü',
+    badge: 'Aynı Gün',
+    targetX: '22%',
+    targetY: '48%',
+    cardX: '4%',
+    cardY: '12%',
+    tag: 'Şase & Kimlik'
+  },
+  {
+    id: 2,
+    num: '02',
+    title: 'CAD & 3D Proje Çizimi',
+    desc: 'Mühendislik hesaplama ve çizim dosyası',
+    badge: 'Yetkili Çizim',
+    targetX: '52%',
+    targetY: '32%',
+    cardX: '36%',
+    cardY: '6%',
+    tag: 'AutoCAD / 3D'
+  },
+  {
+    id: 3,
+    num: '03',
+    title: 'TSE 360 Dijital Onay',
+    desc: 'Resmi TSE sistemi üzerinden onaylama',
+    badge: '%100 Uyum',
+    targetX: '68%',
+    targetY: '54%',
+    cardX: '68%',
+    cardY: '12%',
+    tag: 'TSE 360 Portalı'
+  },
+  {
+    id: 4,
+    num: '04',
+    title: 'TÜVTÜRK Muayene',
+    desc: 'Araç muayene ve istasyon kontrolü',
+    badge: 'Garantili',
+    targetX: '20%',
+    targetY: '68%',
+    cardX: '4%',
+    cardY: '74%',
+    tag: 'Muayene Uyumu'
+  },
+  {
+    id: 5,
+    num: '05',
+    title: 'Noter Tescil & Ruhsat',
+    desc: 'Resmi noter tescili ve ruhsata işletme',
+    badge: 'Yasal Tescil',
+    targetX: '90%',
+    targetY: '56%',
+    cardX: '68%',
+    cardY: '74%',
+    tag: 'Noter & Tescil'
+  }
+]
+---
+
+<div class="vehicle-blueprint-hub relative w-full bg-neutral-50/70 border border-neutral-200/90 p-4 sm:p-6 select-none overflow-hidden shadow-sm" data-locale={Astro.currentLocale ?? 'tr'}>
+  <!-- Blueprint Technical Grid -->
+  <div class="absolute inset-0 bg-[radial-gradient(#d4d4d4_1px,transparent_1px)] [background-size:20px_20px] opacity-70 pointer-events-none" aria-hidden="true"></div>
+
+  <!-- Technical Header Bar -->
+  <div class="relative z-10 flex items-center justify-between border-b border-neutral-200/80 pb-3 mb-4 text-xs">
+    <div class="flex items-center gap-2 font-mono font-bold text-neutral-800">
+      <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+      <span class="tracking-wider uppercase">{blueprintHeaderLabel}</span>
+    </div>
+    <div class="flex items-center gap-2 font-mono text-[11px] text-neutral-500">
+      <span class="hidden sm:inline">OTOMATİK AKIŞ:</span>
+      <span class="font-bold text-primary px-2 py-0.5 bg-primary/10 border border-primary/20" id="active-step-counter">01 / 05</span>
+    </div>
+  </div>
+
+  <!-- Main Blueprint Stage with Car Illustration & Hotspots -->
+<div class="relative w-full aspect-[1536/960] max-w-full mx-auto" id="blueprint-stage">
+    <!-- Vehicle Centerpiece Image -->
+    <picture>
+      <source media="(max-width: 640px)" srcset="/karakas-tse-surec-infografik-320.webp" />
+      <SiteImage
+        src="/karakas-tse-surec-infografik-520.webp"
+        srcset="/karakas-tse-surec-infografik-520.webp 600w, /karakas-tse-surec-infografik.webp 720w"
+        sizes="(max-width: 1024px) 50vw, 600px"
+        alt="Araç Proje ve Tadilat Teknik Şeması"
+        class="absolute inset-0 size-full object-contain pointer-events-none drop-shadow-sm opacity-95"
+        width="960"
+        height="600"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+
+    <!-- 5 Interactive Pulsing Radar Beacons on the Car -->
+    {steps.map((item, index) => (
+      <button
+        type="button"
+        class={`blueprint-beacon-btn group absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20 transition-all duration-300 ${
+          index === 0 ? 'active' : ''
+        }`}
+        style={`left: ${item.targetX}; top: ${item.targetY};`}
+        data-step-index={index}
+        aria-label={`${item.num} ${item.title}`}
+      >
+        <!-- Expanding Radar Ping Ring -->
+        <span class="absolute inset-0 rounded-full bg-primary animate-ping opacity-75 group-[.active]:opacity-90 group-[.active]:duration-700"></span>
+        <!-- Solid Central Node -->
+        <span class="relative block size-7 sm:size-8 rounded-full border-2 border-white bg-primary text-white text-[10px] sm:text-xs font-black grid place-items-center shadow-md group-[.active]:scale-125 group-[.active]:ring-4 group-[.active]:ring-primary/30 transition-transform">
+          {item.num}
+        </span>
+      </button>
+    ))}
+  </div>
+
+  <!-- Bottom Interactive Step Navigation Bar -->
+  <div class="relative z-10 mt-4 pt-3 border-t border-neutral-200/80">
+    <div class="grid grid-cols-5 gap-1.5 sm:gap-2">
+      {steps.map((item, index) => (
+        <button
+          type="button"
+          class={`step-tab-btn group p-2 sm:p-2.5 text-left border transition-all duration-300 cursor-pointer ${
+            index === 0
+              ? 'active bg-white border-primary shadow-sm ring-1 ring-primary/20'
+              : 'bg-white/60 border-neutral-200 hover:bg-white hover:border-neutral-300'
+          }`}
+          data-step-index={index}
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] sm:text-xs font-black text-neutral-400 group-[.active]:text-primary transition-colors">
+              {item.num}
+            </span>
+            <span class="hidden md:inline text-[9px] uppercase font-bold text-neutral-400 group-[.active]:text-neutral-900">
+              {item.badge}
+            </span>
+          </div>
+          <p class="mt-0.5 text-[11px] sm:text-xs font-bold text-neutral-800 group-[.active]:text-black truncate">
+            {item.title}
+          </p>
+        </button>
+      ))}
+    </div>
+
+    <!-- Active Step Description Callout -->
+    <div class="mt-3 flex items-center justify-between gap-3 bg-white p-2.5 sm:p-3 border border-neutral-200 text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <CheckCircle2 size={16} class="text-primary shrink-0" />
+        <span class="font-bold text-black shrink-0" id="callout-step-title">{Astro.currentLocale === 'de' ? '01. Vorprüfung:' : '01. Ön İnceleme:'}</span>
+        <span class="text-neutral-600 truncate" id="callout-step-desc">{Astro.currentLocale === 'de' ? 'Zulassung, Fahrgestell und Umbaukonformität des Fahrzeugs werden geprüft.' : 'Ruhsat, şase ve araç tadilat uygunluk kontrolü sağlanır.'}</span>
+      </div>
+      <a href="#proje-talebi" class="text-primary hover:text-black font-black uppercase text-[11px] inline-flex items-center gap-1 shrink-0 transition-colors">
+        <span>Teklif Al</span>
+        <ChevronRight size={13} />
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initBlueprintHub() {
+    const hub = document.querySelector('.vehicle-blueprint-hub');
+    if (!hub) return;
+
+    const isDe = hub.getAttribute('data-locale') === 'de';
+
+    const beacons = hub.querySelectorAll<HTMLElement>('.blueprint-beacon-btn');
+    const tabs = hub.querySelectorAll<HTMLElement>('.step-tab-btn');
+    const counter = hub.querySelector<HTMLElement>('#active-step-counter');
+    const calloutTitle = hub.querySelector<HTMLElement>('#callout-step-title');
+    const calloutDesc = hub.querySelector<HTMLElement>('#callout-step-desc');
+
+    const stepData = isDe
+      ? [
+          { num: '01', title: 'Vorprüfung:', desc: 'Zulassung, Fahrgestell und Umbaukonformität des Fahrzeugs werden geprüft.' },
+          { num: '02', title: 'CAD-Zeichnung:', desc: 'Die technische Berechnungs- und Zeichnungsdatei wird in AutoCAD und 3D erstellt.' },
+          { num: '03', title: 'TSE-Genehmigung:', desc: 'Die Datei wird im digitalen TSE-360-Portal hochgeladen und offiziell genehmigt.' },
+          { num: '04', title: 'TÜVTÜRK-Untersuchung:', desc: 'Die TÜVTÜRK-Umbauprüfung und Kontrollüberweisung wird durchgeführt.' },
+          { num: '05', title: 'Fahrzeugschein-Eintrag:', desc: 'Die neue Fahrzeugart wird notariell zugelassen und im Fahrzeugschein eingetragen.' },
+        ]
+      : [
+          { num: '01', title: 'Ön İnceleme:', desc: 'Ruhsat, şase ve araç tadilat uygunluk kontrolü sağlanır.' },
+          { num: '02', title: 'CAD Çizimi:', desc: 'AutoCAD ve 3D ortamda mühendislik hesaplama dosyası hazırlanır.' },
+          { num: '03', title: 'TSE Onayı:', desc: 'TSE 360 dijital portalına dosya yüklenerek resmi onay alınır.' },
+          { num: '04', title: 'Muayene:', desc: 'TÜVTÜRK tadilat muayenesi ve kontrol yönlendirmesi yapılır.' },
+          { num: '05', title: 'Ruhsat Tescili:', desc: 'Noter üzerinden yeni araç cinsi tescil edilip ruhsata işlenir.' },
+        ];
+
+    let currentIndex = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+    let isPaused = false;
+
+    function activateStep(index: number) {
+      beacons.forEach((b, i) => {
+        if (i === index) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      tabs.forEach((t, i) => {
+        if (i === index) {
+          t.classList.add('active', 'bg-white', 'border-primary', 'shadow-sm', 'ring-1', 'ring-primary/20');
+          t.classList.remove('bg-white/60', 'border-neutral-200');
+        } else {
+          t.classList.remove('active', 'bg-white', 'border-primary', 'shadow-sm', 'ring-1', 'ring-primary/20');
+          t.classList.add('bg-white/60', 'border-neutral-200');
+        }
+      });
+
+      if (counter) counter.textContent = `0${index + 1} / 05`;
+      if (calloutTitle) calloutTitle.textContent = `${stepData[index].num}. ${stepData[index].title}`;
+      if (calloutDesc) calloutDesc.textContent = stepData[index].desc;
+
+      currentIndex = index;
+    }
+
+    function nextStep() {
+      if (isPaused) return;
+      const nextIdx = (currentIndex + 1) % stepData.length;
+      activateStep(nextIdx);
+    }
+
+    timer = setInterval(nextStep, 3000);
+
+    // Attach click listeners to beacons and tabs
+    const allButtons = [...beacons, ...tabs];
+    allButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = Number(btn.getAttribute('data-step-index') || 0);
+        activateStep(idx);
+        if (timer) clearInterval(timer);
+        timer = setInterval(nextStep, 4000);
+      });
+
+      btn.addEventListener('mouseenter', () => { isPaused = true; });
+      btn.addEventListener('mouseleave', () => { isPaused = false; });
+    });
+  }
+
+  initBlueprintHub();
+  document.addEventListener('astro:page-load', initBlueprintHub);
+</script>

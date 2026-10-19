@@ -1,0 +1,221 @@
+{
+  "title": "Hidrolik Ayak Projesi ve TSE Süreci | Karakaş",
+  "shortTitle": "Hidrolik Ayak Projesi",
+  "slug": "hidrolik-ayak-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Hidrolik sabitleme ve destek ayağı projesi için montaj bağlantılarını, kapalı konum ölçülerini, ağırlık hesabını, TSE ve onay adımlarını inceleyin.",
+  "image": "/hizmetler/hidrolik-ayak-projesi.webp",
+  "featured": false,
+  "order": 14,
+  "heroEyebrow": "Hidrolik Ayak | TSE Onaylı",
+  "heroTitle": "Hidrolik Ayak Projesi ve TSE Süreci",
+  "heroDescription": "Ayakların kapalı konumunu, şasi bağlantılarını, hidrolik yerleşimi ve dingil yüküne etkisini kontrol edelim. Proje ile TSE başvuru sırasını aracınıza göre netleştirelim.",
+  "imageAlt": "Hidrolik ayak projesi için araç teknik incelemesi",
+  "imageTitle": "Hidrolik Ayak Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için hidrolik ayak projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Hidrolik sabitleme ayağı projesi",
+  "introTitle": "Hidrolik ayak montajında hangi bilgiler birlikte incelenir?",
+  "introText": "Hidrolik ayak, araç park hâlindeyken gövdeyi veya araç üstü ekipmanı destekleyen bir sistemdir. Projede yalnız ayak kapasitesine bakılmaz. Kapalı konum ölçüsü, montaj plakası, sistem ağırlığı, hortum güzergâhı ve pabuçların zemine nasıl bastığı araç verileriyle birlikte değerlendirilir.",
+  "technicalChecks": [
+    {
+      "title": "Kapalı konum ve dış ölçü",
+      "description": "Ayaklar toplanmış durumdayken aracın genişliğine, yüksekliğine ve yerden açıklığına etkisi ölçülür."
+    },
+    {
+      "title": "Şasi bağlantısı",
+      "description": "Montaj plakası, bağlantı noktaları ve yükün araç yapısına nasıl aktarıldığı incelenir."
+    },
+    {
+      "title": "Sistem ağırlığı ve dingiller",
+      "description": "Ayaklar ile hidrolik grubun toplam ağırlığı, aracın yük dağılımıyla birlikte değerlendirilir."
+    },
+    {
+      "title": "Hidrolik ve hareketli parçalar",
+      "description": "Hortumların, silindirlerin ve pabuçların lastik, egzoz, fren hattı ve yol yüzeyiyle ilişkisi kontrol edilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç sınıfını, ağırlık ve mevcut tescil bilgilerini görmek için."
+    },
+    {
+      "title": "Sistem etiketi veya teknik bilgi",
+      "description": "Ayak kapasitesi, güç ünitesi ve bilinen ürün özelliklerini dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Fatura veya ürün belgesi",
+      "description": "Sistemin kaynağını ve mevcut teknik dokümanlarını ön incelemede değerlendirmek için."
+    },
+    {
+      "title": "Montaj fotoğrafları",
+      "description": "Ayakların kapalı ve açık konumunu, şasi bağlantısını, hortumları ve pabuçları görmek için."
+    },
+    {
+      "title": "Montaj ve dış ölçüler",
+      "description": "Sağ-sol yerleşimi, kapalı konumdaki taşmayı ve yerden açıklığı kontrol etmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Hidrolik ayak düzeni ve kullanım alanı",
+    "title": "Ayak sayısı ve montaj düzeni nasıl belirlenir?",
+    "leftTitle": "Hidrolik ayak sistem düzenleri",
+    "leftItems": [
+      {
+        "title": "İki noktalı destek",
+        "description": "Aracın kullanım amacı ve ağırlık dağılımı uygunsa ön veya arka bölgede iki ayak değerlendirilebilir."
+      },
+      {
+        "title": "Dört noktalı destek",
+        "description": "Çalışma sırasında daha geniş bir destek alanı gereken uygulamalarda dört montaj noktası incelenir."
+      },
+      {
+        "title": "Güç ünitesi yerleşimi",
+        "description": "Pompa, valf ve bağlantılar bakım erişimi ile ısı ve hareketli parçalardan uzaklık bakımından kontrol edilir."
+      },
+      {
+        "title": "Pabuç ve zemin teması",
+        "description": "Pabuç ölçüsü ile ayak geometrisi, sistemin kullanılacağı zemin ve yük aktarımıyla birlikte ele alınır."
+      }
+    ],
+    "rightTitle": "Hidrolik ayak kullanılan araç grupları",
+    "rightItems": [
+      {
+        "title": "Mobil atölye araçları",
+        "description": "Araç içindeki çalışma alanının kullanım sırasında daha kararlı kalması için."
+      },
+      {
+        "title": "Jeneratör ve ekipman araçları",
+        "description": "Çalışan ekipmandan doğan hareketin ve yük aktarımının yönetilmesi için."
+      },
+      {
+        "title": "Karavan ve mobil yaşam araçları",
+        "description": "Park hâlinde gövde hareketini sınırlayan destek düzenini değerlendirmek için."
+      },
+      {
+        "title": "Vinçli ve özel amaçlı araçlar",
+        "description": "Araç üstü ekipman çalışırken gereken destek noktalarını belirlemek için."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Hidrolik ayak belgeleri için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve montaj fotoğraflarını gönderin.",
+    "description": "Kapalı konumu, şasi bağlantısını ve mevcut belgeleri proje hazırlanmadan önce inceleyelim. Düzeltilmesi gereken bir nokta varsa TSE başvurusundan önce belirleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve kullanım amacı",
+      "description": "Ruhsat, araç üstü ekipman ve hidrolik ayağın hangi çalışma için kullanılacağı birlikte incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Montaj ve ölçü kontrolü",
+      "description": "Kapalı konum, bağlantı noktaları, yerden açıklık, hortumlar ve pabuç düzeni kontrol edilir."
+    },
+    {
+      "number": "03",
+      "title": "Hesap ve proje dosyası",
+      "description": "Sistem ağırlığı, dingil etkisi, yerleşim ve montaj ayrıntıları teknik dosyaya işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ve proje dosyası, başvuru tarihinde geçerli kontrol kapsamına göre TSE incelemesine sunulur."
+    },
+    {
+      "number": "05",
+      "title": "Dosyanın tamamlanması",
+      "description": "Onaydan sonraki muayene ve tescil adımları, araç ile proje dosyasının kapsamına göre yürütülür."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; aracın tipi, ayak sayısı, hidrolik grubun teknik bilgileri, mevcut montaj, ölçü ve ağırlık hesabı ile eksik belgelerin kapsamına göre değişir. Araç ve sistem bilgileri incelenmeden sabit toplam vermek doğru olmaz.",
+    "items": [
+      {
+        "title": "Teknik inceleme",
+        "description": "Araç, kullanım amacı ve sistem kapsamının belirlenmesi"
+      },
+      {
+        "title": "Proje dosyası",
+        "description": "Yerleşim, ölçü ve hesapların hazırlanması"
+      },
+      {
+        "title": "Onay adımları",
+        "description": "Güncel başvuru sırasının dosyaya göre planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Yanlış kapalı konum ölçüsü",
+      "description": "Ayak toplanmışken dışa taşma veya yerden açıklığın hatalı ölçülmesi."
+    },
+    {
+      "title": "Uygun olmayan bağlantı",
+      "description": "Montaj plakasının araç yapısına ve yük aktarımına göre hazırlanmaması."
+    },
+    {
+      "title": "Eksik ağırlık hesabı",
+      "description": "Ayaklar, pompa ve diğer parçaların dingil hesabına eklenmemesi."
+    },
+    {
+      "title": "Riskli hortum güzergâhı",
+      "description": "Hortumların egzoza, lastiğe veya hareketli parçalara yakın geçirilmesi."
+    },
+    {
+      "title": "Yetersiz pabuç alanı",
+      "description": "Pabuç ile zemin ilişkisinin kullanım şartlarına göre değerlendirilmemesi."
+    },
+    {
+      "title": "Açık ayakla hareket riski",
+      "description": "Sistem toplanmadan aracın hareket ettirilmesini önleyen kullanım düzeninin düşünülmemesi."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Hidrolik ayak projesi nedir?",
+      "answer": "Araca eklenen hidrolik sabitleme veya destek ayaklarının yerleşimini, kapalı konum ölçülerini, montaj bağlantılarını ve ağırlık etkisini gösteren teknik proje dosyasıdır. Kesin kapsam araç ve sistem bilgileri incelendikten sonra belirlenir."
+    },
+    {
+      "question": "Hidrolik ayak hangi araçlara takılabilir?",
+      "answer": "Panelvan, kamyonet, kamyon, mobil atölye, ekipman taşıyan araç, karavan ve bazı özel amaçlı araçlarda değerlendirilebilir. Uygunluk, araç yapısı ve kullanım amacı birlikte incelenerek belirlenir."
+    },
+    {
+      "question": "İki hidrolik ayak yeterli olur mu?",
+      "answer": "Ayak sayısı yalnız araç boyuna göre seçilmez. Kullanım amacı, ekipmanın konumu, yük dağılımı ve gerekli destek alanı incelenerek iki veya dört noktalı düzen değerlendirilir."
+    },
+    {
+      "question": "Hidrolik ayak aracı tamamen kaldırmak için kullanılabilir mi?",
+      "answer": "Sistemin kullanım amacı ve kapasitesi ürün teknik belgeleriyle birlikte değerlendirilmelidir. Araç tekerleklerini tamamen boşaltacak kullanım, montaj ve araç yapısı üzerinde farklı yükler oluşturabileceği için proje öncesinde ayrıca incelenir."
+    },
+    {
+      "question": "Kapalı konumdaki dışa taşma neden ölçülür?",
+      "answer": "Araç hareket hâlindeyken ayakların toplandığı konum dış ölçüyü ve güvenli açıklıkları etkileyebilir. Bu nedenle açık çalışma konumundan ayrı olarak kapalı konum ölçüsü alınır."
+    },
+    {
+      "question": "Montaj tamamlandıktan sonra proje hazırlanabilir mi?",
+      "answer": "Mevcut montaj proje öncesinde fotoğraf, ölçü ve araç üzerinde incelenebilir. Uygun olmayan bağlantı veya yerleşim görülürse TSE başvurusundan önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Hidrolik ayak projesi fiyatı ne kadar?",
+      "answer": "Bedel; aracın tipi, ayak sayısı, sistemin teknik belgeleri, montajın mevcut durumu, ölçü ve hesap kapsamına göre değişir. Ruhsat ile montaj fotoğrafları incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Montajdan önce kontrol",
+      "description": "Araç ve sistem bilgileri proje başlamadan önce birlikte incelenir."
+    },
+    {
+      "title": "Teknik veriye dayalı dosya",
+      "description": "Ölçü, bağlantı ve ağırlık etkisi araç bilgileriyle ele alınır."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje ve TSE adımları dosyanın kapsamına göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, sistem bilgilerini ve montaj fotoğraflarını getirin. Teknik proje dosyasının kapsamını görüşmede netleştirelim."
+}

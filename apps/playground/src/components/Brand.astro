@@ -1,0 +1,25 @@
+---
+import SiteImage from './SiteImage.astro'
+
+interface Props {
+  inverse?: boolean
+}
+
+const { inverse = false } = Astro.props
+---
+
+<a aria-label="Karakaş Mühendislik Home" class="inline-flex items-center group/brand py-1" href="/">
+  <SiteImage
+    src="/karakasmuhendislik-logo.webp"
+    alt="Karakaş Mühendislik Logo"
+    widths={[140, 180, 240, 290]}
+    sizes="(max-width: 640px) 140px, (max-width: 1024px) 200px, 260px"
+    width={260}
+    height={87}
+    quality={65}
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+    class={`h-8.5 sm:h-11 md:h-14 w-auto max-w-[170px] sm:max-w-[230px] md:max-w-[290px] object-contain transition-all duration-300 ${inverse ? 'brightness-0 invert' : 'group-data-[sticky=true]/header:brightness-0 group-data-[sticky=true]/header:invert'}`}
+  />
+</a>

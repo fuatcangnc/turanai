@@ -1,0 +1,91 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import SiteImage from '@/components/SiteImage.astro'
+
+const documents = [
+  {
+    title: 'ISO 9001 KALİTE YÖNETİM SİSTEMİ',
+    description: 'Hizmet süreçlerimizi sürekli iyileştirerek müşteri memnuniyetini en üst seviyede tutmayı hedefleriz.',
+    image: '/belgeler/iso-9001.webp',
+  },
+  {
+    title: 'ISO 14001 ÇEVRE YÖNETİM SİSTEMİ',
+    description: 'Çevreye duyarlı çalışma prensiplerimizle sürdürülebilirlik ve düşük çevresel etki sağlarız.',
+    image: '/belgeler/iso-14001.webp',
+  },
+  {
+    title: 'ISO 45001 İŞ SAĞLIĞI VE GÜVENLİĞİ YÖNETİM SİSTEMİ',
+    description: 'Çalışanlarımızın güvenliğini ön planda tutan sistematik ve standartlara uygun iş süreçleri uygularız.',
+    image: '/belgeler/iso-45001.webp',
+  },
+  {
+    title: 'TSE AİTM YETKİ BELGESİ',
+    description: 'Araçlarda yapılan tadilatların AİTM yönetmeliğine uygunluğunu belgeleyen ve TSE tarafından araç projesi çizebilmemizi sağlayan AİTM (AİTM, MARTOY, TORTOY ve MOTOY) yetki belgesidir.',
+    image: '/belgeler/tse.webp',
+  },
+  {
+    title: 'İTO KAPASİTE EKSPERTİZ RAPORU',
+    description: 'İstanbul Ticaret Odası (İTO) tarafından verilen ve işletmemizin teknik kapasitesini, üretim gücünü ve hizmet yeterliliğini resmi olarak belgeleyen rapordur.',
+    image: null,
+  },
+]
+---
+
+<Layout
+  title="Belgelerimiz ve Yetki Sertifikalarımız | Karakaş Mühendislik"
+  description="Karakaş Mühendislik ISO 9001, ISO 14001, ISO 45001, TSE AİTM Yetki Belgesi ve İTO Kapasite Raporu bilgileri."
+>
+  <main>
+    <InternalHero
+      eyebrow="Kurumsal Güven"
+      title="Yetki ve Kalite Belgelerimiz"
+      description="Araç projelendirme ve mühendislik hizmetlerimizi uluslararası standartlar ve resmi yetki belgeleriyle yürütüyoruz."
+      image="/images/hero-engineering.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Giriş Açıklaması -->
+        <p class="text-base sm:text-lg leading-relaxed text-neutral-800">
+          <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong> olarak, araç tadilat projeleri ve mühendislik hizmetlerindeki uzmanlığımızı resmi belge ve sertifikalarla destekliyoruz. Kalite standartlarına uygun, güvenilir ve yasal mevzuatlara tam uyumlu hizmet anlayışımız doğrultusunda sahip olduğumuz yetki ve kalite belgeleri aşağıda sunulmaktadır.
+        </p>
+
+        <!-- Belge Kartları Listesi -->
+        <div class="mt-8 sm:mt-10 space-y-5">
+          {documents.map((doc) => (
+            <article class="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-amber-200/80 bg-[#fffdfa] p-6 sm:p-7 shadow-xs border-l-[6px] border-l-amber-500 transition hover:shadow-md hover:border-amber-300">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <h2 class="text-base sm:text-lg font-black tracking-tight text-neutral-950">
+                    {doc.title}
+                  </h2>
+                  <p class="mt-2 text-sm sm:text-base leading-relaxed text-neutral-600">
+                    {doc.description}
+                  </p>
+                </div>
+                {doc.image && (
+                  <div class="shrink-0 self-start sm:self-center">
+                    <SiteImage
+                      src={doc.image}
+                      alt={doc.title}
+                      class="h-12 w-auto max-w-[80px] object-contain opacity-80 transition group-hover:opacity-100"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Kapanış Açıklaması -->
+        <div class="mt-10 sm:mt-12 border-t border-neutral-200 pt-8">
+          <p class="text-sm sm:text-base leading-relaxed text-neutral-700">
+            Bu belgeler, <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong>’in profesyonel hizmet anlayışını, teknik yeterliliğini ve müşteri odaklı çalışma prensibini yansıtmaktadır. Araç proje süreçlerinde güvenilir, sürdürülebilir ve mevzuata uygun çözümler üretmeye kararlılıkla devam ediyoruz.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

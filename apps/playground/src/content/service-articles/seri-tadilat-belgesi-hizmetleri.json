@@ -1,0 +1,91 @@
+{
+  "slug": "seri-tadilat-belgesi-hizmetleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "Seri Tadilat Belgesi Hizmetleri",
+  "title": "Seri Tadilat Belgesi Hizmetleri",
+  "summary": "Karakaş Mühendislik ile aynı tip çok sayıda araçta yapılan dönüşüm ve tadilat işlemlerinin standart, tekrarlanabilir ve mevzuata uygun proje disipliniyle belgelendirilmesi.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "Seri Tadilat Belgesi Hizmetleri",
+  "heroLead": "Seri tadilat belgesi hizmetleri; aynı tip ya da aynı uygulama mantığıyla birden fazla araca uygulanan dönüşüm ve tadilat işlemlerinin standart, tekrarlanabilir ve mevzuata uygun biçimde yürütülmesini sağlayan proje süreçlerini kapsar. Karakaş Mühendislik olarak seri araç dönüşümleri, filo uygulamaları ve standart ekipman montajlarında teknik proje, uygunluk ve belge hazırlık desteği sunuyoruz.",
+  "sections": [
+    {
+      "id": "seri-tadilat-belgesi-nedir",
+      "heading": "Seri Tadilat Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Seri tadilat belgesi, aynı teknik yapıda ve tekrar eden araç dönüşümlerinde standart proje disiplini oluşturulmasını sağlayan önemli bir uygulamadır. Bu sayede her araç için sıfırdan proje hazırlamak yerine, belirli standartlara göre ilerleyen daha düzenli bir teknik süreç kurgulanabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-uygulamalarda-tercih-edilir",
+      "heading": "Hangi Uygulamalarda Tercih Edilir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Filo araçlarına yapılan standart ekipman montajlarında",
+            "Aynı tip araç üzerindeki tekrar eden dönüşümlerde",
+            "Kurumsal seri üretim ya da seri uygulama tadilatlarında",
+            "Standartlaştırılmış araç üstü ekipman uygulamalarında"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-isler",
+      "heading": "Süreç Nasıl İşler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Tadilat kapsamı standart hale getirilir",
+            "Teknik proje ve uygunluk altyapısı hazırlanır",
+            "İlgili değerlendirme ve onay süreçleri yürütülür",
+            "Uygulama yapılan tüm araçlarda aynı standart korunur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-teknik-hazirlik",
+      "heading": "Gerekli Teknik Hazırlık",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Standart montaj ya da dönüşüm tanımının yapılması",
+            "Uygulama çizimleri ve teknik açıklamaların hazırlanması",
+            "Parça ve ekipman uygunluk verilerinin düzenlenmesi",
+            "Araç grubu bazlı teknik sınıflandırmanın oluşturulması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Seri yapı kurulmuş olsa bile her aracın aynı teknik standartlarda uygulanması gerekir. Farklı araç geometrileri, farklı ekipman kullanımı ya da montaj standartlarından sapmalar belge uyumunu olumsuz etkileyebilir. TSE onayı, TÜVTÜRK tadilat muayenesi ve noter ruhsat güncellemesi gereken uygulamalarda dosya kapsamının doğru tanımlanması büyük önem taşır."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Seri tadilat belgesi ne avantaj sağlar?",
+      "a": "Tekrarlayan araç dönüşümlerinde daha standart, düzenli ve yönetilebilir teknik süreç oluşturulmasına yardımcı olur."
+    },
+    {
+      "q": "Her araç için yine de kontrol gerekir mi?",
+      "a": "Evet. Seri yapı bulunsa bile uygulamanın her araçta aynı teknik standartlara uygun şekilde yapılması gerekir."
+    },
+    {
+      "q": "En önemli risk nedir?",
+      "a": "Montaj standardından sapılması, farklı ekipman kullanılması ya da araç yapılarındaki farklılıkların dikkate alınmaması en önemli riskler arasındadır."
+    }
+  ]
+}

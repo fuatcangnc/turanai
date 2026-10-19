@@ -1,0 +1,43 @@
+---
+import { ArrowRight, Search } from '@lucide/astro'
+import Layout from '@/layouts/Layout.astro'
+import { defaultServices } from '@/data/site'
+import { getCollection } from 'astro:content'
+
+const posts = await getCollection('posts')
+const items = [...defaultServices.map((service) => ({ title: service.shortTitle, description: service.category, href: `/${service.slug}` })), ...posts.map((post) => ({ title: post.data.title, description: post.data.category, href: `/${post.id}` }))]
+---
+
+<Layout title="Site içinde ara | Karakaş Mühendislik" description="Karakaş Mühendislik hizmet ve teknik içerik araması.">
+  <!-- Schema.org JSON-LD BreadcrumbList -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://karakasmuhendislik.com.tr"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Site İçi Arama",
+        "item": "https://karakasmuhendislik.com.tr/search"
+      }
+    ]
+  })} />
+  <main class="search-page"><div class="shell"><h2 class="eyebrow"><Search size={15} /> Hızlı arama</h2><h1 class="section-heading">Site içinde arayın.</h1><p class="section-lead">Hizmet, kurye rehberi ve teknik makalelere hızlıca ulaşın.</p><form class="search-box" data-site-search><input name="q" aria-label="Site içinde ara" placeholder="Örn. karavan, LPG, motor değişimi" autocomplete="off" /><button type="submit"><Search size={17} /></button></form><div class="search-results" data-search-results>{items.map((item) => <a href={item.href} data-search-item data-search-text={`${item.title} ${item.description}`}><span><strong>{item.title}</strong><small>{item.description}</small></span><ArrowRight size={17} /></a>)}</div></div></main></Layout>
+
+<script>
+  const form = document.querySelector('[data-site-search]')
+  const input = form?.querySelector('input')
+  const items = [...document.querySelectorAll('[data-search-item]')]
+  const filter = () => {
+    const query = input?.value.trim().toLocaleLowerCase('tr-TR') || ''
+    items.forEach((item) => { item.toggleAttribute('hidden', Boolean(query) && !item.getAttribute('data-search-text')?.toLocaleLowerCase('tr-TR').includes(query)) })
+  }
+  form?.addEventListener('submit', (event) => { event.preventDefault(); filter() })
+  input?.addEventListener('input', filter)
+</script>

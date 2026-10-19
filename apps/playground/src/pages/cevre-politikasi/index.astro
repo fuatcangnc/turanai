@@ -1,0 +1,133 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+
+const todayDate = '19.08.2026'
+
+const policyItems = [
+  {
+    title: 'Yasal Uyum ve Sürekli İyileştirme',
+    items: [
+      'Yürürlükteki tüm çevre mevzuatına ve ilgili yükümlülüklere tam uyum sağlamak',
+      'Çevresel performansı sürekli iyileştirmek için gerekli kaynakları planlamak ve uygulamak',
+    ],
+  },
+  {
+    title: 'Sürdürülebilir Hizmet ve Tüketim',
+    items: [
+      'Sunulan hizmetlerin çevresel etkilerini değerlendirmek ve azaltmak',
+      'Kaynak kullanımını minimize ederek sürdürülebilirlik ilkelerini benimsemek',
+      'Atık oluşumunu azaltmak ve geri dönüşümü teşvik etmek',
+    ],
+  },
+  {
+    title: 'Kaynak Verimliliği',
+    items: [
+      'Doğal kaynakları verimli kullanmak ve israfı önlemek',
+      'Su ve enerji tüketimini azaltmaya yönelik çözümler geliştirmek',
+    ],
+  },
+  {
+    title: 'Çevresel Etkilerin Azaltılması',
+    items: [
+      'Faaliyetlerden kaynaklanan çevresel etkileri en aza indirmek',
+      'Atık, gürültü ve hava kirliliğini önleyici tedbirler almak',
+      'Karbon ayak izini azaltmaya yönelik çalışmalar yapmak',
+    ],
+  },
+  {
+    title: 'İklim Değişikliği ile Mücadele',
+    items: [
+      'Sera gazı emisyonlarını azaltmaya yönelik uygulamalar geliştirmek',
+      'Enerji verimliliği sağlayan teknolojileri tercih etmek',
+      'İklim değişikliğine uyum sağlayacak stratejiler geliştirmek',
+    ],
+  },
+  {
+    title: 'Çevre Bilinci ve Eğitim',
+    items: [
+      'Çalışanların çevre bilincini artırmaya yönelik eğitimler düzenlemek',
+      'Çevresel farkındalığı artırarak tüm paydaşları bilinçlendirmek',
+    ],
+  },
+  {
+    title: 'İş Birliği ve Sorumluluk',
+    items: [
+      'Tedarikçiler, müşteriler ve paydaşlarla çevre konusunda iş birliği yapmak',
+      'Çevre dostu uygulamaları teşvik etmek ve yaygınlaştırmak',
+    ],
+  },
+  {
+    title: 'Şeffaflık ve İzleme',
+    items: [
+      'Çevresel performansı düzenli olarak izlemek ve değerlendirmek',
+      'Gerekli durumlarda iyileştirme faaliyetleri gerçekleştirmek',
+    ],
+  },
+]
+---
+
+<Layout
+  title="Çevre Politikası | Karakaş Mühendislik"
+  description="Karakaş Mühendislik Çevre Politikası, sürdürülebilirlik ilkeleri ve çevresel sorumluluk taahhütlerimiz."
+>
+  <main>
+    <InternalHero
+      eyebrow="Kurumsal İlkeler"
+      title="Çevre Politikası"
+      description="Sürdürülebilir çevre anlayışı, doğal kaynakların korunması ve çevresel etkilerin azaltılmasına yönelik kurumsal taahhüdümüz."
+      image="/images/hero-engineering.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Giriş Kutusu -->
+        <div class="mb-10 border-l-4 border-emerald-600 bg-emerald-50/50 p-6 sm:p-7 text-sm sm:text-base leading-relaxed text-neutral-800 space-y-3">
+          <p>
+            <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong>; sunduğu hizmetlerde sürdürülebilir çevre anlayışı ile hareket etmeyi, çevresel sorumluluklarını yerine getirmeyi, doğal kaynakları korumayı ve gelecek nesillere yaşanabilir bir çevre bırakmayı temel bir görev olarak benimsemektedir.
+          </p>
+          <p class="text-neutral-700">
+            Bu doğrultuda; çevreye duyarlı bir yaklaşım ile faaliyetlerimizi sürdürmeyi, çevresel etkilerimizi azaltmayı ve sürekli iyileştirmeyi taahhüt ederiz.
+          </p>
+        </div>
+
+        <!-- 8 Politika Maddesi -->
+        <article class="space-y-6 text-neutral-800">
+          {policyItems.map((item, index) => (
+            <section class="border border-neutral-200 bg-white p-6 sm:p-7">
+              <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+                <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">
+                  {index + 1}
+                </span>
+                <h2 class="text-base sm:text-lg font-black text-neutral-950">
+                  {item.title}
+                </h2>
+              </div>
+              <ul class="mt-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+                {item.items.map((subItem) => (
+                  <li>{subItem}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
+          <!-- Kapanış Taahhüt Kutusu -->
+          <div class="mt-10 border border-neutral-200 bg-neutral-50 p-6 sm:p-8 space-y-3 text-sm sm:text-base leading-relaxed text-neutral-700">
+            <p>
+              Çevresel sürdürülebilirliği işimizin ayrılmaz bir parçası olarak görmekte; tüm faaliyetlerimizde çevresel etkileri en aza indirmeyi ve sürekli gelişimi sağlamayı taahhüt etmekteyiz.
+            </p>
+            <p>
+              Bu politika, <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong>’in çevreye olan bağlılığının bir göstergesidir ve tüm çalışanlarımız ile iş ortaklarımızın bu doğrultuda hareket etmesi beklenmektedir.
+            </p>
+          </div>
+
+          <!-- Kapanış Bilgi & Tarih -->
+          <div class="border-t border-neutral-200 pt-6 flex items-center justify-between text-xs sm:text-sm text-neutral-500 font-medium">
+            <span>Çevre Politikası</span>
+            <span><strong>Son güncelleme:</strong> {todayDate}</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

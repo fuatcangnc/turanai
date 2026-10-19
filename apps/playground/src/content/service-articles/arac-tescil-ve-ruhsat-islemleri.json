@@ -1,0 +1,91 @@
+{
+  "slug": "arac-tescil-ve-ruhsat-islemleri",
+  "category": "Tescil ve Müşavirlik",
+  "shortTitle": "Araç Tescil ve Ruhsat İşlemleri",
+  "title": "Araç Tescil ve Ruhsat İşlemleri",
+  "summary": "İlk tescil, satış-devir ve tadilat sonrası araç ruhsatı güncelleme işlemlerinde mevzuata uygun kayıt yönetimi sağlıyoruz.",
+  "heroEyebrow": "Tescil ve Müşavirlik",
+  "heroTitle": "Araç Tescil ve Ruhsat İşlemleri",
+  "heroLead": "Aracın malik, teknik tanım ve kullanım durumunun resmi kayıtlara hatasız işlenmesi güvenli bir trafik yaşamının temelidir. Karakaş Mühendislik olarak ilk tescilden devir işlemlerine, tadilat sonrası güncellemeden teknik kayıt takibine kadar profesyonel çözüm sunuyoruz.",
+  "sections": [
+    {
+      "id": "tescil-ve-ruhsat-islemleri-nedir",
+      "heading": "Tescil ve Ruhsat İşlemleri Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Tescil, aracın devletin resmi kayıt sistemine alınmasını ifade ederken; ruhsat işlemleri ise bu kaydın malik ve teknik özellikler doğrultusunda belgelendirilmesini kapsar. Araçta teknik bir değişiklik yapılmışsa ya da mülkiyet el değiştirmişse, kayıtların güncel tutulması yasal bir zorunluluktur."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-gerekir",
+      "heading": "Hangi Durumlarda Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Aracın ilk kez sisteme kaydettirilmesi gereken durumlarda",
+            "Satış ve mülkiyet devri gerçekleştiğinde",
+            "Tadilat ya da teknik bir değişiklik yapıldığında",
+            "Plaka veya malik bilgilerinde güncelleme olduğunda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islem-adimlari",
+      "heading": "İşlem Adımları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Araç ve malik bilgileri eksiksiz olarak derlenir",
+            "Gerekli satış, teknik ya da tespit belgeleri toplanır",
+            "Resmi makamlar önünde tescil başvurusu yapılır",
+            "Ruhsat kaydı güncellenerek doğruluğu teyit edilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç sahibinin kimlik ve ruhsat bilgileri",
+            "Satış sözleşmesi veya devir evrakları",
+            "Mevcutsa muayene, proje ya da teknik onay belgeleri",
+            "Sigorta ve süreci tamamlayan diğer kayıtlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ruhsat üzerinde yazılı teknik bilgiler ile aracın gerçek durumunun örtüşmesi gerekir. Özellikle tadilat, motor değişimi ya da plaka güncellemesi sonrasında kayıtların eksiksiz işlenmesi şarttır. Eksik ya da hatalı kayıt, ileride muayene ve devir süreçlerinde ciddi aksamalara yol açabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Araç tescil ve ruhsat işlemleri neden önemlidir?",
+      "a": "Aracın resmi kayıtlarda doğru ve güncel bilgilerle yer alması; satış, muayene, sigortalama ve teknik işlemler açısından temel bir gerekliliktir."
+    },
+    {
+      "q": "Tadilat sonrası ruhsat güncellemesi gerekir mi?",
+      "a": "Evet, araç üzerinde gerçekleştirilen teknik değişikliklerin ruhsat kayıtlarına usulüne uygun şekilde yansıtılması gerekir."
+    },
+    {
+      "q": "En sık sorun nedir?",
+      "a": "Teknik değişikliklerin ruhsata işlenmemesi ya da belge eksikliği nedeniyle kayıtlar arasında uyuşmazlık yaşanması en karşılaşılan sorunlardandır."
+    }
+  ]
+}

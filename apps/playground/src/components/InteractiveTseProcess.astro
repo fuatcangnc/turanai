@@ -1,0 +1,177 @@
+---
+import { ArrowRight, CheckCircle2, Cpu, FileCheck2, FileSearch, ShieldCheck, Wrench, Award, ChevronRight } from '@lucide/astro'
+
+const steps = [
+  {
+    step: '01',
+    title: 'Ön İnceleme & Ruhsat Analizi',
+    desc: 'Araç ruhsatı, şase numarası ve teknik tadilat uygunluğu taranır.',
+    badge: 'Aynı Gün Ön Kontrol',
+    icon: FileSearch
+  },
+  {
+    step: '02',
+    title: 'CAD & 3D Mühendislik Çizimi',
+    desc: 'AutoCAD ve 3D ortamda mevzuata uygun teknik hesaplama dosyası hazırlanır.',
+    badge: 'Yetkili Mühendis Çizimi',
+    icon: Cpu
+  },
+  {
+    step: '03',
+    title: 'TSE 360 Dijital Dosya Onayı',
+    desc: 'TSE 360 portalına resmi teknik proje dosyası yüklenerek onay alınır.',
+    badge: '%100 Resmi TSE Onayı',
+    icon: ShieldCheck
+  },
+  {
+    step: '04',
+    title: 'TÜVTÜRK Araç Muayenesi',
+    desc: 'Tadilat muayene randevusu ve istasyon kontrol yönlendirmesi sağlanır.',
+    badge: 'Muayene Uygunluk',
+    icon: Wrench
+  },
+  {
+    step: '05',
+    title: 'Noter Tescil & Ruhsat Teslim',
+    desc: 'Yeni araç cinsi resmi noter tesciliyle ruhsata işletilir ve teslim edilir.',
+    badge: 'Yasal Ruhsat Tescili',
+    icon: Award
+  }
+]
+---
+
+<div class="interactive-process-console w-full bg-neutral-950 text-white p-5 sm:p-7 border border-neutral-800 shadow-2xl relative overflow-hidden">
+  <!-- Ambient glow in the corner -->
+  <div class="absolute -right-16 -top-16 size-48 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+  <!-- Console Header -->
+  <div class="flex items-center justify-between border-b border-neutral-800 pb-4 mb-5">
+    <div class="flex items-center gap-2.5">
+      <span class="flex size-2 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full size-2 bg-primary"></span>
+      </span>
+      <span class="text-xs font-black uppercase tracking-[0.14em] text-white">TSE 360 & Tescil Süreç Takibi</span>
+    </div>
+    <div class="flex items-center gap-1 text-[11px] font-mono font-bold text-primary bg-primary/10 px-2.5 py-1 border border-primary/20">
+      <span id="active-step-num">01</span><span>/05 ADIM</span>
+    </div>
+  </div>
+
+  <!-- 5 Interactive Process Cards -->
+  <div class="space-y-2.5 relative" id="process-steps-wrapper">
+    {steps.map((item, index) => {
+      const IconComponent = item.icon
+      return (
+        <div
+          class={`process-step-item group relative p-3.5 sm:p-4 border transition-all duration-300 cursor-pointer ${
+            index === 0
+              ? 'active bg-neutral-900/90 border-primary shadow-[0_0_20px_rgba(221,100,30,0.15)]'
+              : 'bg-neutral-900/30 border-neutral-800/80 hover:bg-neutral-900/60 hover:border-neutral-700'
+          }`}
+          data-step-index={index}
+        >
+          <!-- Active Progress Bar on Card Top -->
+          <div class="step-progress-bar absolute top-0 left-0 h-0.5 bg-primary transition-all duration-300 opacity-0 group-[.active]:opacity-100 group-[.active]:w-full"></div>
+
+          <div class="flex items-start gap-3.5 sm:gap-4">
+            <!-- Step Number Badge -->
+            <div class="step-badge shrink-0 size-9 sm:size-10 grid place-items-center font-black text-xs sm:text-sm transition-all duration-300 bg-neutral-800 text-neutral-300 group-[.active]:bg-primary group-[.active]:text-white group-[.active]:shadow-[0_0_15px_rgba(221,100,30,0.5)]">
+              {item.step}
+            </div>
+
+            <!-- Content Area -->
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="text-xs sm:text-sm font-black uppercase tracking-tight text-white transition-colors group-[.active]:text-primary truncate">
+                  {item.title}
+                </h3>
+                <span class="text-[10px] uppercase font-bold text-neutral-400 group-[.active]:text-primary shrink-0">
+                  {item.badge}
+                </span>
+              </div>
+              <p class="mt-1 text-[11px] sm:text-xs text-neutral-400 font-normal leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        </div>
+      )
+    })}
+  </div>
+
+  <!-- Console Footer Guarantee -->
+  <div class="mt-5 pt-4 border-t border-neutral-800 flex items-center justify-between gap-3 text-[11px] text-neutral-400 font-medium">
+    <div class="flex items-center gap-2">
+      <ShieldCheck size={15} class="text-primary shrink-0" />
+      <span>Mühendislik hesapları ve TSE onayı %100 garantilidir.</span>
+    </div>
+    <a href="#proje-talebi" class="text-primary hover:text-white font-bold inline-flex items-center gap-1 transition-colors shrink-0">
+      <span>Başla</span>
+      <ChevronRight size={13} />
+    </a>
+  </div>
+</div>
+
+<script>
+  function initProcessConsole() {
+    const container = document.querySelector('.interactive-process-console');
+    if (!container) return;
+
+    const items = container.querySelectorAll<HTMLElement>('.process-step-item');
+    const stepNumDisplay = container.querySelector<HTMLElement>('#active-step-num');
+    if (!items.length) return;
+
+    let currentIndex = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+    let isPaused = false;
+
+    function activateStep(index: number) {
+      items.forEach((item, i) => {
+        if (i === index) {
+          item.classList.add('active', 'bg-neutral-900/90', 'border-primary', 'shadow-[0_0_20px_rgba(221,100,30,0.15)]');
+          item.classList.remove('bg-neutral-900/30', 'border-neutral-800/80');
+        } else {
+          item.classList.remove('active', 'bg-neutral-900/90', 'border-primary', 'shadow-[0_0_20px_rgba(221,100,30,0.15)]');
+          item.classList.add('bg-neutral-900/30', 'border-neutral-800/80');
+        }
+      });
+
+      if (stepNumDisplay) {
+        stepNumDisplay.textContent = `0${index + 1}`;
+      }
+      currentIndex = index;
+    }
+
+    function nextStep() {
+      if (isPaused) return;
+      const nextIndex = (currentIndex + 1) % items.length;
+      activateStep(nextIndex);
+    }
+
+    // Auto cycle every 2.8s
+    timer = setInterval(nextStep, 2800);
+
+    // Click to jump to step
+    items.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        activateStep(index);
+        // Reset timer on click
+        if (timer) clearInterval(timer);
+        timer = setInterval(nextStep, 3500);
+      });
+
+      item.addEventListener('mouseenter', () => {
+        isPaused = true;
+      });
+
+      item.addEventListener('mouseleave', () => {
+        isPaused = false;
+      });
+    });
+  }
+
+  // Run on page load and Astro view transitions
+  initProcessConsole();
+  document.addEventListener('astro:page-load', initProcessConsole);
+</script>

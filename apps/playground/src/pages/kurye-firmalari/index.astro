@@ -1,0 +1,384 @@
+---
+import { ArrowRight, BadgeCheck, Bike, Check, FileCheck, ShieldCheck, Wrench, AlertTriangle, Phone } from '@lucide/astro'
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { courierCompanies, phoneHref, whatsappHref } from '@/data/site'
+
+// Import all rich courier JSON data dynamically
+const allCouriers = import.meta.glob('../../content/couriers/*.json', { eager: true }) as Record<string, any>
+
+const couriersList = courierCompanies.map((item) => {
+  const rich = (allCouriers[`../../content/couriers/${item.slug}.json`]?.default || allCouriers[`../../content/couriers/${item.slug}.json`]) || {}
+  return {
+    slug: item.slug,
+    brand: rich.brand || item.name,
+    deliveryFocus: rich.deliveryFocus || 'Hızlı paket servis teslimatı',
+    equipment: rich.equipment || 'Kurye taşıma çantası ve topcase',
+    profileLabel: rich.profileLabel || 'Ticari Kurye',
+    profileSummary: rich.profileSummary || 'Şehir içi hızlı teslimat operasyonlarında kullanılan motosiklet taşıma kutusu ve bağlantı demiri tescili.',
+  }
+})
+
+const siteUrl = 'https://karakasmuhendislik.com.tr'
+const pageUrl = `${siteUrl}/kurye-firmalari`
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}/#webpage`,
+      'url': pageUrl,
+      'name': 'Kurye Firmaları İçin Motosiklet Çanta Ruhsata İşletme | Karakaş Mühendislik',
+      'description': 'Getir, Trendyol Go, Yemeksepeti, Vigo, Paket Taxi ve tüm kurye platformları için TSE onaylı motosiklet çanta ve taşıma kutusu ruhsata işletme rehberleri.',
+      'breadcrumb': {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Ana Sayfa',
+            'item': siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Kurye Firmaları',
+            'item': pageUrl,
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${pageUrl}/#service`,
+      'name': 'Motosiklet Kurye Çantası Ruhsata İşletme Hizmeti',
+      'provider': {
+        '@type': 'LocalBusiness',
+        'name': 'Karakaş Mühendislik',
+        'telephone': '0554 816 63 02',
+        'address': {
+          '@type': 'PostalAddress',
+          'streetAddress': 'Altıparmak İş Merkezi Ofis No: 9',
+          'addressLocality': 'Gaziosmanpaşa',
+          'addressRegion': 'İstanbul',
+          'addressCountry': 'TR',
+        },
+        'url': siteUrl,
+      },
+      'serviceType': 'Motosiklet Çanta ve Taşıma Kutusu Ruhsata İşletme Projesi',
+      'areaServed': 'TR',
+    },
+    {
+      '@type': 'ItemList',
+      'itemListElement': couriersList.map((company, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'name': `${company.brand} Motosiklet Çanta Ruhsata İşletme`,
+        'url': `${siteUrl}/${company.slug}`,
+      })),
+    },
+  ],
+}
+---
+
+<Layout
+  title="Kurye Firmaları İçin Motosiklet Çanta Ruhsata İşletme | Karakaş"
+  description="Getir, Trendyol Go, Yemeksepeti, Vigo, Paket Taxi ve tüm kurye firmaları için TSE onaylı motosiklet çanta ve taşıma kutusu ruhsata işletme rehberleri."
+>
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <main>
+    <InternalHero
+      eyebrow="Kurye Firmaları"
+      title="Kurye Firmaları İçin Çanta Ruhsata İşletme"
+      description="Kullandığınız kurye platformuna ve taşıma kutusu tipine uygun teknik proje, TSE onay ve ruhsata tescil adımlarını inceleyin. Trafik cezası ve araç bağlama riski olmadan güvenle çalışın."
+      image="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp"
+    />
+
+    <!-- Quick Stats Bar in Engineering Style -->
+    <section class="border-b border-neutral-200 bg-[#f8f9fa] py-8">
+      <div class="shell">
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div class="border-l-2 border-primary pl-4">
+            <span class="block text-2xl sm:text-3xl font-black text-neutral-950">27+</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-neutral-500">Kurye Firma Rehberi</span>
+          </div>
+          <div class="border-l-2 border-primary pl-4">
+            <span class="block text-2xl sm:text-3xl font-black text-neutral-950">Aynı Gün</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-neutral-500">TSE 360 Dosya Kaydı</span>
+          </div>
+          <div class="border-l-2 border-primary pl-4">
+            <span class="block text-2xl sm:text-3xl font-black text-primary">%100</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-neutral-500">TÜVTÜRK Uygunluk</span>
+          </div>
+          <div class="border-l-2 border-primary pl-4">
+            <span class="block text-2xl sm:text-3xl font-black text-neutral-950">Sıfır Ceza</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-neutral-500">Yasal Ruhsat Tescili</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courier Grid Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="shell">
+        <div class="flex flex-col justify-between gap-6 border-l-4 border-primary bg-neutral-50 p-6 sm:p-8 md:flex-row md:items-end">
+          <div class="max-w-3xl">
+            <span class="text-xs font-black uppercase tracking-[0.18em] text-primary">Tüm Marka ve Filo Rehberleri</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-neutral-950">
+              Çalıştığınız Kurye Firmasını Seçin
+            </h2>
+            <p class="mt-2 text-sm text-neutral-600 leading-relaxed">
+              Her firmanın kullandığı taşıma çantası ölçüsü, montaj demiri ve bağlantı kuralları farklılık gösterir. Firmanıza özel tescil kılavuzunu seçerek adımları görüntüleyin.
+            </p>
+          </div>
+          <span class="text-xs font-black uppercase tracking-wider text-neutral-500 bg-white border border-neutral-200 px-3 py-1.5 shrink-0">
+            Toplam {couriersList.length} Firma Rehberi
+          </span>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {couriersList.map((company, index) => (
+            <a
+              href={`/${company.slug}`}
+              class="group relative flex flex-col justify-between border border-neutral-200 bg-white p-6 transition-all duration-300 hover:border-emerald-600 hover:shadow-lg hover:-translate-y-0.5"
+            >
+              <!-- Top Accent -->
+              <div class="absolute inset-x-0 top-0 h-1 bg-transparent group-hover:bg-emerald-600 transition-colors"></div>
+
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="grid size-8 place-items-center bg-neutral-950 text-white text-xs font-mono font-bold group-hover:bg-emerald-600 transition-colors">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 border border-emerald-200">
+                    TSE Onaylı
+                  </span>
+                </div>
+
+                <h3 class="mt-5 text-xl font-black uppercase tracking-tight text-neutral-950 group-hover:text-emerald-700 transition-colors">
+                  {company.brand}
+                </h3>
+
+                <p class="mt-2 text-xs font-bold text-neutral-500 uppercase tracking-wider">
+                  {company.deliveryFocus}
+                </p>
+
+                <p class="mt-3 text-xs leading-relaxed text-neutral-600 line-clamp-2">
+                  {company.profileSummary}
+                </p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                <span class="text-[11px] font-bold text-neutral-400">Ruhsat Projesi</span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-neutral-950 group-hover:text-emerald-700 transition-colors">
+                  Yazıya Git <ArrowRight class="size-3.5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive SEO Article (Turkce-Humanizer Standards) -->
+    <article class="border-t border-neutral-200 bg-white py-16 text-neutral-900 md:py-24">
+      <div class="shell max-w-5xl">
+        
+        <!-- Article Header -->
+        <div class="border-b border-neutral-200 pb-10">
+          <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+            Teknik Mevzuat ve Tescil Yazısı
+          </h3>
+          <h2 class="mt-3 text-[clamp(2rem,4vw,3.2rem)] font-black leading-[1.05] tracking-tight text-neutral-950">
+            Kurye Motosikletlerinde Taşıma Kutusu (Çanta) Ruhsata İşletme Rehberi
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-neutral-700 sm:text-lg">
+            Karayolları Trafik Kanunu ve Araçların İmal, Tadil ve Montajı (AİTM) Hakkında Yönetmelik hükümleri uyarınca, ticari amaçla paket servis yapan motosikletlerdeki taşıma kutularının teknik projeyle ruhsata tescil edilmesi zorunludur. Karakaş Mühendislik, tüm kurye markaları ve motosiklet modelleri için aynı gün TSE 360 dosya incelemesiyle tescil sürecini yönetmektedir.
+          </p>
+        </div>
+
+        <!-- 01. Neden Zorunludur? -->
+        <section class="mt-14" aria-labelledby="why-courier-box-mandatory">
+          <h3 id="why-courier-box-mandatory" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Motosiklet Taşıma Kutusunu Ruhsata İşletmek Neden Zorunludur?
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Motosikletin arka kısmına monte edilen kurye çantaları, sepetler ve paket servis kutuları, aracın fabrika çıkış boyutlarını ve ağırlık merkezini değiştiren birer <strong>araç tadilatı</strong> kabul edilir. 2918 sayılı Karayolları Trafik Kanunu'nun 32. maddesi gereğince, yapılan tadilat 30 gün içinde tescil ettirilmelidir.
+          </p>
+
+          <div class="mt-6 border border-neutral-200 bg-neutral-50 p-6 sm:p-7">
+            <h4 class="text-base font-bold text-neutral-950">
+              Ruhsata işletilmemiş taşıma kutusuyla trafiğe çıkmanın sonuçları:
+            </h4>
+            <ul class="mt-4 grid gap-3 text-sm text-neutral-700 sm:grid-cols-2">
+              <li class="flex items-start gap-2.5">
+                <AlertTriangle class="mt-0.5 size-4 shrink-0 text-amber-600" />
+                <span>Trafik denetimlerinde <strong>idari para cezası</strong> kesilir.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <AlertTriangle class="mt-0.5 size-4 shrink-0 text-amber-600" />
+                <span>Motosiklet <strong>otoparka çekilerek trafikten men</strong> edilir.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <AlertTriangle class="mt-0.5 size-4 shrink-0 text-amber-600" />
+                <span>TÜVTÜRK muayenesinde <strong>ağır kusur</strong> sayılarak muayeneden geçemez.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <AlertTriangle class="mt-0.5 size-4 shrink-0 text-amber-600" />
+                <span>Olası kaza durumlarında <strong>kasko ve sigorta tazminatı</strong> riske girer.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 02. TSE 360 Tescil Süreci -->
+        <section class="mt-14" aria-labelledby="courier-tse-steps">
+          <h3 id="courier-tse-steps" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            TSE Onaylı Çanta Ruhsata İşletme Süreci Nasıl İşler?
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Kurye kutusunun ruhsata tescili dört aşamada tamamlanır:
+          </p>
+
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="border border-neutral-200 bg-neutral-50 p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Adım 01</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">Fiziki Ölçü Kontrolü</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                Kutunun arka aydınlatmayı, sinyalleri ve plakayı kapatıp kapatmadığı ile genişlik sınırları incelenir.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-neutral-50 p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Adım 02</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">Mühendislik Çizimi</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                Yetkili makine mühendisi tarafından montaj uygunluk projesi hazırlanır ve TSE 360 sistemine yüklenir.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-neutral-50 p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Adım 03</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">TSE AKM Onayı</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                Araç Kontrol Merkezinde uzman mühendislerce inceleme yapılarak Montaj Uygunluk Raporu onaylanır.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-neutral-50 p-5">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Adım 04</span>
+              <h4 class="mt-2 text-base font-bold text-neutral-950">TÜVTÜRK & Noter</h4>
+              <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+                TÜVTÜRK tespit muayenesi sonrası notere gidilerek ruhsata "Ticari - Taşıma Kutulu" ibaresi işlenir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03. Desteklenen Markalar ve Motosiklet Modelleri -->
+        <section class="mt-14" aria-labelledby="supported-brands-models">
+          <h3 id="supported-brands-models" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Tüm Kurye Markaları ve Motosiklet Modellerine Tam Uyum
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Karakaş Mühendislik; Getir, Trendyol Go, Yemeksepeti, Vigo, Paket Taxi, Migros Hemen, Domino's ve bağımsız çalışan tüm kuryeler için proje çizimi yapmaktadır.
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="border border-neutral-200 p-5">
+              <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-950 flex items-center gap-2">
+                <Bike class="size-4 text-emerald-600" />
+                Popüler Kurye Scooter ve Motosikletleri
+              </h4>
+              <ul class="mt-3 space-y-1.5 text-xs text-neutral-600">
+                <li>• <strong>Honda:</strong> PCX 125, PCX 150, PCX 160, Activa 125, Dio 110, Spacy Alpha</li>
+                <li>• <strong>Yamaha:</strong> NMAX 125, NMAX 155, D'elight 125, XMAX 250</li>
+                <li>• <strong>SYM:</strong> Fiddle II / III / IV, Orbit 125, Jet 14, Symphony</li>
+                <li>• <strong>TVS / Hero:</strong> TVS Jüpiter, TVS Raider, Hero Dash 110 / 125</li>
+                <li>• <strong>Diğer:</strong> RKS, Kuba, Arora, Mondial ve elektrikli teslimat scooterları</li>
+              </ul>
+            </div>
+
+            <div class="border border-neutral-200 p-5">
+              <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-950 flex items-center gap-2">
+                <Wrench class="size-4 text-emerald-600" />
+                Kapsamdaki Ekipman ve Kutu Tipleri
+              </h4>
+              <ul class="mt-3 space-y-1.5 text-xs text-neutral-600">
+                <li>• <strong>Isı Yalıtımlı Termo Kurye Çantaları</strong> (Sıcak yemek teslimatı)</li>
+                <li>• <strong>Fiber ve Plastik Sabit Kargo Kutuları</strong> (Market ve e-ticaret)</li>
+                <li>• <strong>Bireysel Motosiklet Arka Çantaları (Topcase)</strong></li>
+                <li>• <strong>Yan Heybe ve Yan Çanta Taşıma Demirleri</strong></li>
+                <li>• <strong>Özel Ağır Yük Taşıma Platformları ve Şaseler</strong></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04. Gerekli Evraklar -->
+        <section class="mt-14" aria-labelledby="required-documents-courier">
+          <h3 id="required-documents-courier" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Başvuru İçin Gerekli Evraklar ve Şartlar
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            İşlemleri aynı gün başlatabilmek için gerekli temel belgeler:
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-3">
+            <div class="border border-neutral-200 bg-white p-5">
+              <FileCheck class="size-6 text-emerald-600" />
+              <h4 class="mt-3 text-sm font-bold text-neutral-950">Motosiklet Ruhsatı</h4>
+              <p class="mt-1.5 text-xs text-neutral-600 leading-relaxed">
+                Motosikletin güncel tescil belgesi aslı veya noter tasdikli kopyası.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-white p-5">
+              <Wrench class="size-6 text-emerald-600" />
+              <h4 class="mt-3 text-sm font-bold text-neutral-950">Kutu ve Montaj Demiri</h4>
+              <p class="mt-1.5 text-xs text-neutral-600 leading-relaxed">
+                Taşıma kutusu ve bağlantı aparatının motosiklet şasisine sağlam biçimde sabitlenmiş olması.
+              </p>
+            </div>
+            <div class="border border-neutral-200 bg-white p-5">
+              <BadgeCheck class="size-6 text-emerald-600" />
+              <h4 class="mt-3 text-sm font-bold text-neutral-950">Aydınlatma Uygunluğu</h4>
+              <p class="mt-1.5 text-xs text-neutral-600 leading-relaxed">
+                Kutunun arka stop lambasını, sinyalleri ve plaka aydınlatmasını engellememesi gerekir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05. Neden Karakaş Mühendislik? -->
+        <section class="mt-14 border-t border-neutral-200 pt-10" aria-labelledby="why-karakas-courier">
+          <h3 id="why-karakas-courier" class="text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+            Neden Karakaş Mühendislik?
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-neutral-700">
+            Karakaş Mühendislik, İstanbul merkezli yetkili makine mühendisliği kadrosuyla kurye motosikletlerinin çanta ve taşıma kutusu projelerini en kısa sürede çözüme kavuşturur. Tekil kuryeler için aynı gün proje çizimi sağlarken, kurye şirketleri ve filolar için toplu indirim ve anahtar teslim takip desteği sunar.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href={whatsappHref('Merhaba, kurye motosikleti çanta ruhsata işletme projesi hakkında fiyat teklifi ve bilgi almak istiyorum.')}
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex h-12 items-center gap-2.5 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white shadow-sm transition-colors"
+            >
+              <span>WhatsApp İle Bilgi ve Teklif Alın</span>
+              <ArrowRight size={15} />
+            </a>
+            <a
+              href={phoneHref}
+              class="inline-flex h-12 items-center gap-2 border border-neutral-900 bg-white hover:bg-neutral-950 hover:text-white px-6 text-xs font-black uppercase tracking-wider text-neutral-950 transition-colors"
+            >
+              <Phone size={15} />
+              <span>0554 816 63 02</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+</Layout>

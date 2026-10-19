@@ -1,0 +1,123 @@
+{
+  "slug": "ce-belgesi-islemleri",
+  "category": "Firma Belgelendirme Hizmetlerimiz",
+  "shortTitle": "CE Belgesi İşlemleri",
+  "title": "CE Belgesi İşlemleri",
+  "summary": "Karakaş Mühendislik ile ürünlerinizin AB teknik düzenlemelerine uygunluğunu kanıtlayan CE belgesi süreçlerinde teknik dosya, risk analizi ve uygunluk değerlendirmesi desteği alın.",
+  "heroEyebrow": "Firma Belgelendirme Hizmetlerimiz",
+  "heroTitle": "CE Belgesi İşlemleri",
+  "heroLead": "Karakaş Mühendislik bünyesinde yürütülen CE belgesi işlemleri; ürünlerin Avrupa Birliği teknik mevzuatına uygunluğunun değerlendirilmesi, teknik dosyanın oluşturulması ve uygunluk analizlerinin yönetilmesini kapsar. Ürünün risk grubuna ve kullanım alanına bağlı olarak test, belgelendirme ve uygunluk beyanı adımları farklılık gösterebilir.",
+  "sections": [
+    {
+      "id": "ce-belgesi-nedir",
+      "heading": "CE Belgesi Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CE işareti, bir ürünün geçerli AB teknik düzenlemelerinde tanımlanan temel sağlık, güvenlik ve çevre koruma şartlarını karşıladığını gösteren resmi bir uygunluk simgesidir. Ancak bu işaret yalnızca ürünün üzerine basılan bir logodan ibaret değildir; kapsamlı teknik dosya hazırlığı, risk değerlendirmesi, uygunluk analizi ve AB uygunluk beyanının tamamlanmasıyla elde edilir."
+        },
+        {
+          "type": "p",
+          "text": "Karakaş Mühendislik olarak; ürün grubunuza uygun teknik standartların tespiti, dosya altyapısının kurulması ve uygunluk süreçlerinin profesyonel biçimde yönetilmesi için destek sağlıyoruz."
+        }
+      ]
+    },
+    {
+      "id": "hangi-urunlerde-gerekir",
+      "heading": "Hangi Ürünlerde Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Makine ve çeşitli endüstriyel ekipman gruplarında",
+            "Elektrikli ve elektronik cihazlarda",
+            "Basınçlı ekipman ve tesisat sistemlerinde",
+            "Üretim hatlarında kullanılan endüstriyel donanımlarda",
+            "İlgili AB direktifi veya yönetmelik kapsamına giren tüm ürünlerde",
+            "Belirli güvenlik kurallarına tabi teknik ürünlerde"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Her ürün ailesi için geçerli olan standart ve teknik zorunluluklar birbirinden ayrışabilir. Bu sebeple ürünün kullanım amacı, teknik yapısı ve risk sınıfının titizlikle değerlendirilmesi gerekir."
+        }
+      ]
+    },
+    {
+      "id": "teknik-dosya-hazirligi",
+      "heading": "Teknik Dosya Hazırlığı",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Ürünün sınıfının ve kapsamının netleştirilmesi",
+            "Uygulanacak direktif ve standartların belirlenmesi",
+            "Detaylı risk değerlendirmesinin hazırlanması",
+            "Test, tasarım çizimi ve teknik dokümantasyonun oluşturulması",
+            "Etiketleme ve kullanım kılavuzunun düzenlenmesi",
+            "AB uygunluk beyanının resmi biçimde oluşturulması"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Teknik dosya yalnızca resmi başvuru evrakı olmaktan öte; ürünün teknik uygunluğunu ispatlayan en temel altyapıdır. Eksik ya da hatalı hazırlanan dosya, sonraki aşamalarda ciddi aksamalara yol açabilir."
+        }
+      ]
+    },
+    {
+      "id": "uygunluk-degerlendirme-adimlari",
+      "heading": "Uygunluk Değerlendirme Adımları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Ürünün teknik analizi gerçekleştirilir",
+            "İlgili AB direktifleri ve standartları tanımlanır",
+            "Risk değerlendirmesi titizlikle hazırlanır",
+            "Gerekli test ve doğrulama faaliyetleri yürütülür",
+            "Teknik dosya ve uygunluk beyanı oluşturulur",
+            "CE işaretleme süreci sonlandırılır"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bazı ürün gruplarında bağımsız laboratuvar ya da onaylanmış kuruluş müdahalesi de zorunlu olabilir. Bu nedenle uygunluk değerlendirmesi ürün tipine göre değişkenlik arz eder."
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Yanlış standart seçimi ciddi uygunluk sorunlarına yol açabilir",
+            "Eksik risk analizi teknik dosyanın reddedilmesine neden olabilir",
+            "Piyasaya sunulan ürün ile belge kapsamı mutlaka uyumlu olmalıdır",
+            "Ürün varyasyonları teknik dosyada doğru biçimde ele alınmalıdır",
+            "Kullanım kılavuzu ve etiketleme mevzuata uygun hazırlanmalıdır"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "CE işareti taşıyan ürünlerin teknik altyapısı, gerektiğinde denetime sunulabilecek şekilde kurulmalıdır. Bu yüzden süreç yalnızca belge temelli değil, teknik güvenlik odaklı yönetilmelidir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "CE belgesi her ürün için zorunlu mudur?",
+      "a": "Hayır. Yalnızca ilgili AB direktifleri ve regülasyonları kapsamına giren ürünlerde CE işareti bulundurmak zorunludur."
+    },
+    {
+      "q": "CE işareti test olmadan alınabilir mi?",
+      "a": "Ürün grubuna göre değişkenlik gösterir. Kimi ürünlerde teknik değerlendirme yeterli olurken, bazıları için test ve laboratuvar süreçleri zorunlu tutulabilir."
+    },
+    {
+      "q": "En kritik belge hangisidir?",
+      "a": "Teknik dosya ve risk analizi, CE uygunluk sürecinin en kritik dokümantasyon altyapısını oluşturur."
+    }
+  ]
+}

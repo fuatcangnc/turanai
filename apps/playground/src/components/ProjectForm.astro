@@ -1,0 +1,119 @@
+---
+import { ArrowRight, CircleCheck, Lock, Send, ShieldCheck, Zap } from '@lucide/astro'
+import type { Service } from '@/data/site'
+import { siteSettings } from '@/data/site'
+
+interface Props { services: Service[]; title?: string; dark?: boolean; hideHeading?: boolean }
+const { services, title = 'Kostenloses Projektangebot erhalten', hideHeading = false } = Astro.props
+---
+
+<div class="relative w-full border border-neutral-300 bg-white p-6 sm:p-10 shadow-lg text-neutral-950">
+  <!-- Top Accent Bar -->
+  <div class="absolute inset-x-0 top-0 h-1.5 bg-primary"></div>
+
+  <form class="grid w-full gap-5" data-project-form data-whatsapp={siteSettings.whatsapp}>
+    {!hideHeading && (
+      <div class="grid gap-1.5 pb-4 border-b border-neutral-200">
+        <span class="text-[11px] font-black uppercase tracking-[.18em] text-primary">TSE-Antrag & Preisgestaltung</span>
+        <h2 class="text-2xl font-black uppercase tracking-tight text-neutral-950">{title}</h2>
+        <p class="text-xs text-neutral-600 leading-relaxed">Send us the vehicle and conversion details so we can outline the TSE approval steps and engineering costs right away.</p>
+      </div>
+    )}
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      <label class="grid gap-1.5 text-[11px] font-black uppercase tracking-wider text-neutral-800">
+        Vor- und Nachname *
+        <input class="w-full border border-neutral-300 bg-neutral-50/50 px-4 py-3 text-sm font-semibold text-neutral-900 placeholder:text-neutral-400 placeholder:font-normal outline-none transition focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary" required name="fullName" autocomplete="name" placeholder="Ihr Vor- und Nachname" />
+      </label>
+
+      <label class="grid gap-1.5 text-[11px] font-black uppercase tracking-wider text-neutral-800">
+        Telefon *
+        <input class="w-full border border-neutral-300 bg-neutral-50/50 px-4 py-3 text-sm font-semibold text-neutral-900 placeholder:text-neutral-400 placeholder:font-normal outline-none transition focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary" required name="phone" autocomplete="tel" inputmode="tel" placeholder="05XX XXX XX XX" />
+      </label>
+
+      <label class="grid gap-1.5 text-[11px] font-black uppercase tracking-wider text-neutral-800">
+        Your city
+        <input class="w-full border border-neutral-300 bg-neutral-50/50 px-4 py-3 text-sm font-semibold text-neutral-900 placeholder:text-neutral-400 placeholder:font-normal outline-none transition focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary" name="city" placeholder="z. B.: Istanbul, Ankara, Izmir..." />
+      </label>
+
+      <label class="grid gap-1.5 text-[11px] font-black uppercase tracking-wider text-neutral-800">
+        Vehicle type
+        <select class="w-full border border-neutral-300 bg-neutral-50/50 px-4 py-3 text-sm font-semibold text-neutral-900 outline-none transition focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary" name="vehicleType">
+          <option value="Otomobil / Binek">Pkw / Personenkraftwagen</option>
+          <option value="Kurye Motosikleti">Kurier-Motorrad (Lieferdienst)</option>
+          <option value="Bireysel Motosiklet (Topcase)">Privates Motorrad (Topcase)</option>
+          <option value="Panelvan / Minibüs (Karavan)">Van / minibus (camper)</option>
+          <option value="Kamyonet / Pickup">Kleinlastwagen / Pickup</option>
+          <option value="Diğer Ticari Araç">Sonstiges Nutzfahrzeug</option>
+        </select>
+      </label>
+
+      <label class="grid gap-1.5 text-[11px] font-black uppercase tracking-wider text-neutral-800 sm:col-span-2">
+        Service needed
+        <select class="w-full border border-neutral-300 bg-neutral-50/50 px-4 py-3 text-sm font-semibold text-neutral-900 outline-none transition focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary" name="service">
+          <option value="">Please choose a service</option>
+          {services.map((service) => (
+            <option value={service.shortTitle}>{service.shortTitle}</option>
+          ))}
+        </select>
+      </label>
+
+      <label class="grid gap-1.5 text-[11px] font-black uppercase tracking-wider text-neutral-800 sm:col-span-2">
+        Vehicle make/model and project details
+        <textarea class="min-h-24 w-full resize-y border border-neutral-300 bg-neutral-50/50 px-4 py-3 text-sm font-semibold text-neutral-900 placeholder:text-neutral-400 placeholder:font-normal outline-none transition focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary" name="details" rows="3" placeholder="e.g. top-box registration for a 2022 Honda PCX or a Ford Transit camper conversion…"></textarea>
+      </label>
+    </div>
+
+    <label class="flex items-start gap-2.5 text-xs leading-relaxed text-neutral-600 cursor-pointer select-none">
+      <input class="mt-0.5 size-4 rounded-none accent-primary" required type="checkbox" name="consent" />
+      <span>I agree that my details may be used to assess the project and prepare a quote.</span>
+    </label>
+
+    <button class="group inline-flex min-h-13 w-full items-center justify-center gap-3 bg-neutral-950 hover:bg-primary text-white font-black uppercase text-xs sm:text-sm tracking-wider px-8 py-4 transition-all duration-300 shadow-md hover:shadow-primary/30" type="submit">
+      <span>SOFORTIGES ANGEBOT PER WHATSAPP ERHALTEN</span>
+      <ArrowRight class="size-4 group-hover:translate-x-1 transition-transform" />
+    </button>
+
+    <!-- Trust & Speed Badges -->
+    <div class="flex flex-wrap items-center justify-between gap-3 border-t border-neutral-200 pt-4 text-[11px] font-bold text-neutral-500">
+      <span class="inline-flex items-center gap-1.5">
+        <Lock class="size-3.5 text-emerald-600" />
+        Your data is 100% protected
+      </span>
+      <span class="inline-flex items-center gap-1.5 text-primary">
+        <Zap class="size-3.5" />
+        Average response time: 5–10 min.
+      </span>
+    </div>
+
+    <p class="flex items-center gap-2 border border-emerald-300 bg-emerald-50 p-3 text-xs font-bold text-emerald-800" data-form-status hidden>
+      <CircleCheck size={18} class="text-emerald-600 shrink-0" />
+      <span>Your details are ready — opening the WhatsApp quote chat…</span>
+    </p>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll('[data-project-form]').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      const data = new FormData(form as HTMLFormElement)
+      const message = [
+        '📋 *Karakaş Mühendislik - Project request*',
+        '---------------------------------------',
+        `👤 *Ad Soyad:* ${data.get('fullName') || '-'}`,
+        `📞 *Telefon:* ${data.get('phone') || '-'}`,
+        `📍 *Stadt:* ${data.get('city') || '-'}`,
+        `🚗 *Vehicle type:* ${data.get('vehicleType') || '-'}`,
+        `📐 *Requested project:* ${data.get('service') || '-'}`,
+        `📝 *Beschreibung/Detail:* ${data.get('details') || '-'}`,
+        '---------------------------------------',
+        'I would like the TSE approval process and a binding quote.',
+      ].join('\n')
+      const number = form.getAttribute('data-whatsapp')
+      const status = form.querySelector('[data-form-status]')
+      if (status) status.removeAttribute('hidden')
+      window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
+    })
+  })
+</script>

@@ -1,0 +1,217 @@
+{
+  "title": "Hidrolik Kapak Lift Projesi ve TSE Süreci | Karakaş",
+  "shortTitle": "Hidrolik Kapak Lift Projesi",
+  "slug": "hidrolik-kapak-lift-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Hidrolik kapak lift projesi için kapalı konum, etiket bilgisi, montaj kontrolleri, gerekli belgeler, TSE ve ruhsat tescil adımlarını inceleyin.",
+  "image": "/hizmetler/hidrolik-kapak-lift-projesi.webp",
+  "featured": false,
+  "order": 13,
+  "heroEyebrow": "Hidrolik Kapak Lift | TSE Onaylı",
+  "heroTitle": "Hidrolik Kapak Lift Projesi ve TSE Süreci",
+  "heroDescription": "Liftin kapalı konumunu, kapasite etiketini, montaj bağlantılarını ve arka dingil üzerindeki etkisini kontrol edelim. Proje, TSE ve tescil sırasını aracınıza göre netleştirelim.",
+  "imageAlt": "Hidrolik kapak lift projesi için araç teknik incelemesi",
+  "imageTitle": "Hidrolik Kapak Lift Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için hidrolik kapak lift projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Hidrolik kapak lift projesi",
+  "introTitle": "Lift montajından önce hangi teknik bilgiler kontrol edilir?",
+  "introText": "Hidrolik lift yalnızca yükü kaldıran ayrı bir ekipman gibi değerlendirilemez. Cihazın ağırlığı, montaj konumu, kapalı platform ölçüsü ve şase bağlantıları aracın mevcut teknik verileriyle birlikte incelenir. Plaka, lamba, reflektör veya arka koruma düzeni montajdan etkileniyorsa çözüm proje çizilmeden önce belirlenir.",
+  "technicalChecks": [
+    {
+      "title": "Kapalı platform ölçüsü",
+      "description": "Lift kapalıyken aracın arka sınırına ve dış ölçüsüne etkisi kontrol edilir."
+    },
+    {
+      "title": "Cihaz kimliği ve kapasitesi",
+      "description": "Etiketteki marka, model ve kaldırma kapasitesi ile teknik belgeler karşılaştırılır."
+    },
+    {
+      "title": "Ağırlık ve arka dingil",
+      "description": "Lift ağırlığının yük dağılımına ve arka dingil üzerindeki etkisine bakılır."
+    },
+    {
+      "title": "Görünürlük ve arka koruma",
+      "description": "Plaka, lamba, reflektör ve arka koruma düzeninin montajdan etkilenip etkilenmediği incelenir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Araç tipi, azami ağırlık ve mevcut tescil bilgilerini görmek için."
+    },
+    {
+      "title": "Lift etiketi fotoğrafı",
+      "description": "Cihazın marka, model ve kaldırma kapasitesi bilgisini doğrulamak için."
+    },
+    {
+      "title": "Teknik belge veya fatura",
+      "description": "Liftin kaynağını ve bilinen teknik özelliklerini dosyayla eşleştirmek için."
+    },
+    {
+      "title": "Montaj fotoğrafları",
+      "description": "Braketleri, şase bağlantılarını ve platformun kapalı konumunu incelemek için."
+    },
+    {
+      "title": "Araç ve platform ölçüleri",
+      "description": "Arka çıkıntı ile dış ölçü hesabını ön değerlendirmede kontrol etmek için."
+    }
+  ],
+  "group": {
+    "label": "03 · Hidrolik lift için araç ve platform seçimi",
+    "title": "Hangi araçlarda hangi lift düzeni değerlendirilir?",
+    "leftTitle": "Araç ve kasa grupları",
+    "leftItems": [
+      {
+        "title": "Kapalı kasa ve frigo",
+        "description": "Arka kapı açıklığı, kasa profili ve platformun kapalı konumu birlikte değerlendirilir."
+      },
+      {
+        "title": "Perdeli ve açık kasa",
+        "description": "Arka profil, perde rayı, kasa sınırı ve lift bağlantılarının birbiriyle ilişkisi incelenir."
+      },
+      {
+        "title": "Kamyon ve kamyonet",
+        "description": "Lift ağırlığı, taşıma düzeni, arka dingil yükü ve arka koruma sistemi kontrol edilir."
+      },
+      {
+        "title": "Panelvan ve van",
+        "description": "Arka kapı kullanımı, gövde bağlantıları ve araç yapısına uygun lift seçimi ele alınır."
+      }
+    ],
+    "rightTitle": "Hidrolik lift tipleri",
+    "rightItems": [
+      {
+        "title": "Katlanır lift",
+        "description": "Platform kapalıyken kasa arkasında dik konumda durur."
+      },
+      {
+        "title": "Sürgülü lift",
+        "description": "Kullanılmadığında şase altındaki alana doğru toplanır."
+      },
+      {
+        "title": "Tuck-under lift",
+        "description": "Katlanan platform alt bölgede daha küçük bir alana yerleşir."
+      },
+      {
+        "title": "Kolonlu lift",
+        "description": "Platform, aracın arkasındaki iki yan kolon veya ray üzerinde hareket eder."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Hidrolik lift belgeleri için ücretsiz ön kontrol",
+    "title": "Ruhsatı, lift etiketini ve montaj fotoğraflarını gönderin.",
+    "description": "Cihazın araçla teknik uyumunu ve proje öncesinde giderilmesi gereken noktaları dosyayı hazırlamadan önce kontrol edelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Araç ve lift ön kontrolü",
+      "description": "Ruhsat, lift etiketi, kapasite bilgisi, kapalı konum ve montaj fotoğrafları birlikte incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Ölçü ve ağırlık hesabı",
+      "description": "Arka çıkıntı, dış ölçü, lift ağırlığı ve arka dingil üzerindeki etkiler hesaplanır."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "Cihaz ve araç bilgileri, bağlantı noktaları ve gerekli yerleşim ayrıntıları projeye işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ile proje dosyası, güncel başvuru kapsamına göre TSE kontrolüne sunulur."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Onay sonrası gerekli muayene ve ruhsat güncelleme adımları dosyanın kapsamına göre tamamlanır."
+    }
+  ],
+  "cost": {
+    "description": "Toplam bedel; aracın tipi, liftin marka-model ve kapasite bilgisi, montajın mevcut durumu, ölçü ve ağırlık hesabı ile eksik belgelerin kapsamına göre değişir. Araç ve cihaz bilgileri görülmeden sabit toplam vermek doğru olmaz.",
+    "items": [
+      {
+        "title": "Teknik inceleme",
+        "description": "Araç, lift ve montaj kapsamının belirlenmesi"
+      },
+      {
+        "title": "Proje dosyası",
+        "description": "Ölçü, yerleşim ve hesapların hazırlanması"
+      },
+      {
+        "title": "Onay ve tescil",
+        "description": "Güncel başvuru adımlarının planlanması"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Yanlış kapalı konum ölçüsü",
+      "description": "Arka çıkıntı ve dış ölçünün platform kapalıyken alınmaması."
+    },
+    {
+      "title": "Eksik cihaz bilgisi",
+      "description": "Marka, model veya kapasite etiketinin okunamaması."
+    },
+    {
+      "title": "Görünürlüğün engellenmesi",
+      "description": "Platformun plaka, lamba ya da reflektörü kapatması."
+    },
+    {
+      "title": "Ağırlık etkisinin atlanması",
+      "description": "Liftin arka dingil ve yük dağılımına etkisinin hesaba katılmaması."
+    },
+    {
+      "title": "Belirsiz şase bağlantısı",
+      "description": "Braket ve bağlantı plakalarının teknik çizimde açık gösterilmemesi."
+    },
+    {
+      "title": "Arka koruma uyumsuzluğu",
+      "description": "Montajın mevcut arka koruma düzenine etkisinin kontrol edilmemesi."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Hidrolik kapak lift projesi nedir?",
+      "answer": "Araç arkasına eklenen hidrolik yük kaldırma platformunun araçla teknik uyumunu, montajını, ölçülerini ve ağırlık etkisini gösteren proje dosyasıdır. Başvuru kapsamı araç ile cihaz bilgileri incelendikten sonra kesinleşir."
+    },
+    {
+      "question": "Hidrolik kapak hangi araçlara takılır?",
+      "answer": "Kapalı kasa, frigo, perdeli veya açık kasa kamyon ve kamyonetlerde; uygun uygulama varsa panelvan ve van tipi araçlarda değerlendirilebilir. Her lift tipi her araca uygun değildir."
+    },
+    {
+      "question": "Lift kapalıyken plaka veya lambalar kapanırsa ne yapılır?",
+      "answer": "Plaka, lamba ve reflektör görünürlüğü montajla birlikte kontrol edilir. Bir ekipman görünürlüğü engelliyorsa uygun yeni yerleşim proje hazırlanmadan önce belirlenmelidir."
+    },
+    {
+      "question": "Hidrolik lift aracın boyunu değiştirir mi?",
+      "answer": "Platformun kapalı konumu aracın dış ölçüsünü etkileyebilir. Ölçü değerlendirmesinde cihazın çalışma için açık hali değil, kapalı konumu esas alınır."
+    },
+    {
+      "question": "Lift ağırlığı proje hesabını etkiler mi?",
+      "answer": "Evet. Cihaz ağırlığı ile montaj konumu, aracın yük dağılımını ve arka dingil üzerindeki yükü etkileyebilir. Bu nedenle yalnız liftin kilogram bilgisine bakmak yeterli değildir."
+    },
+    {
+      "question": "Hidrolik kapak lift projesi fiyatı ne kadar?",
+      "answer": "Proje bedeli; aracın tipi, liftin teknik bilgileri, mevcut montaj, ölçü ve hesap kapsamı ile eksik belgelere göre değişir. Ruhsat, etiket ve montaj fotoğrafları incelendikten sonra net teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Montajdan önce kontrol",
+      "description": "Araç ve lift bilgileri proje başlamadan önce birlikte incelenir."
+    },
+    {
+      "title": "Hesaba dayalı değerlendirme",
+      "description": "Ölçü, ağırlık ve arka dingil etkisi cihaz bilgileriyle ele alınır."
+    },
+    {
+      "title": "Açık başvuru sırası",
+      "description": "Proje, TSE ve tescil adımları dosyanın kapsamına göre açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı, lift etiketini ve mevcut teknik belgeleri getirin. Montaj ile proje dosyasının kapsamını görüşmede netleştirelim."
+}

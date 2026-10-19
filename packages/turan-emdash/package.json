@@ -1,0 +1,49 @@
+{
+	"name": "turan-emdash",
+	"version": "0.1.0",
+	"description": "Turan — sandbox-compatible AI agent plugin for EmDash (content tools + MCP tools)",
+	"type": "module",
+	"license": "MIT",
+	"main": "dist/index.mjs",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.mts"
+		},
+		"./sandbox": "./dist/plugin.mjs",
+		"./launcher.astro": "./snippets/TuranLauncher.astro"
+	},
+	"files": [
+		"dist",
+		"snippets",
+		"emdash-plugin.jsonc"
+	],
+	"keywords": [
+		"emdash",
+		"cms",
+		"plugin",
+		"ai",
+		"agent",
+		"mcp"
+	],
+	"scripts": {
+		"validate": "emdash-plugin validate",
+		"build": "emdash-plugin build",
+		"dev": "emdash-plugin dev",
+		"typecheck": "tsc --noEmit",
+		"test": "emdash-plugin validate && vitest run"
+	},
+	"peerDependencies": {
+		"emdash": ">=1.3.0"
+	},
+	"dependencies": {
+		"zod": "4.5.4"
+	},
+	"devDependencies": {
+		"@emdash-cms/plugin-cli": "0.13.4",
+		"@emdash-cms/plugin-test": "^0.2.9",
+		"emdash": "^1.3.0",
+		"typescript": "^5.9.0",
+		"vitest": "^4.1.0"
+	}
+}

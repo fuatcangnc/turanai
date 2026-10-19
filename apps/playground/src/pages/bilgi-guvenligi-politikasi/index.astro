@@ -1,0 +1,139 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { siteSettings, phoneHref } from '@/data/site'
+
+const todayDate = '19.08.2026'
+---
+
+<Layout
+  title="Bilgi Güvenliği Politikası | Karakaş Mühendislik"
+  description="Karakaş Mühendislik Bilgi Güvenliği Politikası, TS ISO/IEC 27001 standardı, veri gizliliği ve bilgi varlıklarının korunması taahhütlerimiz."
+>
+  <main>
+    <InternalHero
+      eyebrow="Kurumsal İlkeler"
+      title="Bilgi Güvenliği Politikası"
+      description="Bilgi varlıklarının gizliliği, bütünlüğü, erişilebilirliği ve TS ISO/IEC 27001 standardı doğrultusunda BGYS taahhütlerimiz."
+      image="/images/hero-engineering.webp"
+    />
+
+    <section class="py-14 sm:py-20 bg-white">
+      <div class="shell max-w-4xl mx-auto">
+        <!-- Giriş Kutusu -->
+        <div class="mb-10 border-l-4 border-amber-500 bg-amber-50/50 p-6 sm:p-7 text-sm sm:text-base leading-relaxed text-neutral-800 space-y-3">
+          <p>
+            <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong>; bilgi varlıklarının korunmasını, müşteri ve iş süreçlerine ait verilerin güvenliğini sağlamayı ve bu doğrultuda ulusal ve uluslararası standartlara uygun hareket etmeyi temel ilke olarak benimsemektedir.
+          </p>
+          <p class="text-neutral-700">
+            Bilgi güvenliği kapsamında; gizlilik, bütünlük ve erişilebilirlik prensipleri doğrultusunda tüm süreçler yönetilmekte ve sürekli iyileştirilmektedir.
+          </p>
+        </div>
+
+        <article class="space-y-8 text-neutral-800">
+          <!-- 1. Temel Yaklaşımımız -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">1</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Temel Yaklaşımımız</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Bilgiye erişimde “gerektiği kadar bilme” prensibine uygun yetkilendirme ve erişim kontrolleri uygulamak</li>
+              <li>Gelişen teknolojiye uygun güvenlik önlemleri almak</li>
+              <li>Bilgi güvenliği risklerini belirlemek, analiz etmek ve yönetmek</li>
+              <li>Riskler ile alınacak önlemler arasında dengeli bir yapı kurmak</li>
+            </ul>
+          </section>
+
+          <!-- 2. Bilgi Güvenliği Amaçlarımız -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">2</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Bilgi Güvenliği Amaçlarımız</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Bilişim sistemlerinin güvenli ve standartlara uygun şekilde yönetilmesini sağlamak</li>
+              <li>İşlenen tüm verilerin gizlilik, bütünlük ve erişilebilirliğini en üst seviyede korumak</li>
+              <li>Yasal mevzuata ve ilgili standartlara uyum sağlamak</li>
+              <li>Bilgi güvenliği süreçlerini sürekli iyileştirmek</li>
+              <li>Çalışanların ve paydaşların bilgi güvenliği farkındalığını artırmak</li>
+            </ul>
+          </section>
+
+          <!-- 3. Risk Yönetimi ve Süreklilik -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">3</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Risk Yönetimi ve Süreklilik</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Bilgi güvenliği tehditlerine karşı risk değerlendirmeleri yapmak</li>
+              <li>Kurumsal faaliyetleri etkileyebilecek riskleri minimize etmek</li>
+              <li>Olası kesinti ve felaket durumlarında iş sürekliliğini sağlamak</li>
+              <li>Kritik iş süreçlerinin en az kesinti ile devam etmesini sağlamak</li>
+            </ul>
+          </section>
+
+          <!-- 4. Bilginin Korunması -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">4</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Bilginin Korunması</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>Kurumsal bilgiyi yetkisiz erişimlere karşı korumak</li>
+              <li>Bilgi varlıklarını tehditlere karşı güvence altına almak</li>
+              <li>Bilgi kaybını, veri sızıntısını ve kötüye kullanımı önlemek</li>
+            </ul>
+          </section>
+
+          <!-- 5. Standartlara Uyum ve Taahhüt -->
+          <section class="border border-neutral-200 bg-white p-6 sm:p-8">
+            <div class="flex items-center gap-3 border-b border-neutral-100 pb-3">
+              <span class="grid size-7 place-items-center bg-black text-xs font-black text-white shrink-0">5</span>
+              <h2 class="text-lg sm:text-xl font-black text-neutral-950">Standartlara Uyum ve Taahhüt</h2>
+            </div>
+            <p class="mt-4 text-sm sm:text-base leading-relaxed text-neutral-700">
+              İşletmemiz, bilgi güvenliği yönetim sistemini <strong class="text-neutral-950">TS ISO/IEC 27001</strong> standardına uygun olarak yürütmeyi ve geliştirmeyi hedeflemektedir.
+            </p>
+            <ul class="mt-4 space-y-2.5 list-disc pl-5 text-sm sm:text-base text-neutral-700">
+              <li>İlgili yasal düzenlemelere ve sözleşmelere tam uyum sağlanır</li>
+              <li>Bilgi Güvenliği Yönetim Sistemi (BGYS) sürekli gözden geçirilir ve iyileştirilir</li>
+              <li>Tüm çalışanlar bu politika doğrultusunda hareket etmekle yükümlüdür</li>
+            </ul>
+          </section>
+
+          <!-- 6. İletişim Bilgileri -->
+          <section class="border border-neutral-200 bg-neutral-50/70 p-6 sm:p-8">
+            <h2 class="text-lg sm:text-xl font-black text-neutral-950 border-b border-neutral-200/80 pb-3">
+              6. İletişim Bilgileri
+            </h2>
+            <div class="mt-5 space-y-2.5 text-sm sm:text-base">
+              <p><strong class="font-bold text-neutral-950">Firma / Ünvan:</strong> Karakaş Mühendislik / Resul Karakaş</p>
+              <p><strong class="font-bold text-neutral-950">Web Sitesi:</strong> <a href="https://karakasmuhendislik.com.tr" target="_blank" class="text-primary font-bold hover:underline">https://karakasmuhendislik.com.tr</a></p>
+              <p><strong class="font-bold text-neutral-950">E-posta:</strong> <a href={`mailto:${siteSettings.email}`} class="text-primary font-bold hover:underline">{siteSettings.email}</a></p>
+              <p><strong class="font-bold text-neutral-950">Telefon:</strong> <a href={phoneHref} class="text-primary font-bold hover:underline">0554 816 63 02</a></p>
+              <p class="leading-relaxed">
+                <strong class="font-bold text-neutral-950">Adres:</strong><br />
+                Merkez Mahallesi İslambey Caddesi No: 12<br />
+                Altıparmak İş Merkezi Ofis No: 9<br />
+                Gaziosmanpaşa / İstanbul
+              </p>
+            </div>
+          </section>
+
+          <!-- Kapanış Taahhüt Paragrafı -->
+          <div class="border border-neutral-200 bg-white p-6 text-sm sm:text-base leading-relaxed text-neutral-700">
+            Bu politika, <strong class="font-bold text-neutral-950">Karakaş Mühendislik</strong> yönetimi tarafından onaylanmış olup bilgi güvenliğinin sağlanması ve sürdürülebilirliğinin teminat altına alınması amacıyla yürürlüğe alınmıştır.
+          </div>
+
+          <!-- Kapanış Bilgi & Tarih -->
+          <div class="border-t border-neutral-200 pt-6 flex items-center justify-between text-xs sm:text-sm text-neutral-500 font-medium">
+            <span>Bilgi Güvenliği Politikası</span>
+            <span><strong>Son güncelleme:</strong> {todayDate}</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

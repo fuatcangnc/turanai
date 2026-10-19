@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  src: string
+  alt?: string | null
+  sizes?: string
+  widths?: number[]
+  quality?: number | 'low' | 'mid' | 'high' | 'max'
+  format?: 'webp' | 'avif' | 'png' | 'jpg'
+  width?: number | string
+  height?: number | string
+  class?: string
+  loading?: 'lazy' | 'eager'
+  decoding?: 'async' | 'sync' | 'auto'
+  fetchpriority?: 'high' | 'low' | 'auto'
+  [key: string]: unknown
+}
+
+const {
+  src,
+  alt = '',
+  sizes,
+  widths,
+  quality = 58,
+  format = 'webp',
+  width,
+  height,
+  ...attrs
+} = Astro.props as Props
+
+const assets = import.meta.glob<{ default: ImageMetadata }>('/src/assets/site-images/**/*.{webp,png,jpg,jpeg,svg}', {
+  eager: true,
+})
+
+const isSvg = typeof src === 'string' && src.endsWith('.svg')
+const assetEntry = isSvg ? undefined : assets[`/src/assets/site-images${src}`]
+const localAsset = assetEntry?.default
+
+const numericWidth = width ? Number(width) : undefined
+const numericHeight = height ? Number(height) : undefined
+---
+
+{isSvg ? (
+  <img
+    src={src}
+    alt={alt ?? ''}
+    width={numericWidth}
+    height={numericHeight}
+    {...attrs}
+  />
+) : localAsset ? (
+  <Image
+    src={localAsset}
+    alt={alt ?? ''}
+    widths={widths}
+    sizes={sizes}
+    quality={quality}
+    format={format}
+    width={numericWidth}
+    height={numericHeight}
+    {...attrs}
+  />
+) : (
+  <img
+    src={src}
+    alt={alt ?? ''}
+    sizes={sizes}
+    width={numericWidth}
+    height={numericHeight}
+    {...attrs}
+  />
+)}

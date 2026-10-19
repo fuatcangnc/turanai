@@ -1,0 +1,61 @@
+---
+import { Clock3, MapPin, Phone } from '@lucide/astro'
+import { getEntry } from 'astro:content'
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import ProjectForm from '@/components/ProjectForm.astro'
+import { defaultServices, phoneHref, siteSettings, whatsappHref } from '@/data/site'
+
+const cmsPage = await getEntry('pages', 'iletisim')
+const pageContent = cmsPage?.data
+const mapHref = 'https://maps.google.com/maps?q=Kara%C5%9F%20Ara%C3%A7%20Proje'
+---
+
+<Layout title={`${pageContent?.title ?? 'İletişim'} | Karakaş Mühendislik`} description={pageContent?.description ?? 'Karakaş Mühendislik araç proje, TSE onay ve ruhsata işletme iletişim bilgileri.'}>
+  <main>
+    <InternalHero eyebrow={pageContent?.eyebrow ?? 'İletişim ve teklif'} title={pageContent?.title ?? 'Projenizi birlikte netleştirelim.'} description={pageContent?.description ?? 'Araç bilgilerinizi ve yapmak istediğiniz değişikliği paylaşın. Size uygun proje kapsamını ve sonraki adımları kısa sürede anlatalım.'} image="/images/project-guidance.webp" />
+    <section class="bg-white py-10 md:py-14" id="form">
+      <div class="shell max-w-6xl">
+        <div class="grid gap-7 lg:grid-cols-[1fr_22rem] lg:items-start">
+          <div class="border border-slate-200 bg-[#f7f7f7] p-5 md:p-7" data-reveal>
+            <div class="mb-6">
+              <h3 class="text-xs font-black uppercase tracking-[.16em] text-primary">[ İletişim ]</h3>
+              <h2 class="mt-4 text-3xl font-black uppercase leading-none tracking-[-.055em] text-slate-950 md:text-5xl">Bize mesaj gönderin.</h2>
+              <p class="mt-4 max-w-2xl text-sm leading-6 text-black/60">Araç proje ve TSE süreçleriyle ilgili sorularınızı uzman ekibimize iletin.</p>
+            </div>
+            <ProjectForm services={defaultServices} hideHeading />
+          </div>
+          <aside class="lg:sticky lg:top-28 flex flex-col gap-6 border border-neutral-700/60 bg-gradient-to-b from-[#2a2d32] via-[#1e2024] to-[#121315] p-6 text-white md:p-7 shadow-2xl" data-reveal>
+            <div class="flex flex-col items-start gap-1">
+              <span class="grid size-12 -skew-x-12 place-items-center bg-primary text-white shadow-sm mb-2"><MapPin class="skew-x-12" size={21} /></span>
+              <small class="text-xs font-medium uppercase tracking-wider text-neutral-300">Ofis adresimiz</small>
+              <a class="text-base font-bold italic transition hover:text-primary" href={mapHref} target="_blank" rel="noreferrer">{siteSettings.location}</a>
+            </div>
+            <div class="flex flex-col items-start gap-1 border-t border-neutral-700/50 pt-5">
+              <span class="grid size-12 -skew-x-12 place-items-center bg-primary text-white shadow-sm mb-2"><Phone class="skew-x-12" size={21} /></span>
+              <small class="text-xs font-medium uppercase tracking-wider text-neutral-300">Telefon ve e-posta desteği</small>
+              <a class="text-base font-bold italic transition hover:text-primary" href={phoneHref}>{siteSettings.phone}</a>
+              <a class="text-sm font-medium text-neutral-300 transition hover:text-primary" href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
+            </div>
+            <div class="flex flex-col items-start gap-1 border-t border-neutral-700/50 pt-5">
+              <span class="grid size-12 -skew-x-12 place-items-center bg-primary text-white shadow-sm mb-2"><Clock3 class="skew-x-12" size={21} /></span>
+              <small class="text-xs font-medium uppercase tracking-wider text-neutral-300">Çalışma saatleri</small>
+              <strong class="text-base font-bold italic text-white">{siteSettings.workHours}</strong>
+              <span class="text-sm text-neutral-300 italic">Pazar: Kapalı</span>
+            </div>
+            <div class="border-t border-neutral-700/50 pt-5">
+              <a class="group inline-flex w-full items-center justify-center gap-2.5 bg-white px-5 py-3.5 text-center text-sm font-black uppercase tracking-wide !text-[#0f172a] shadow-md transition-all duration-200 hover:bg-[#f1f5f9] hover:shadow-xl hover:scale-[1.01] active:scale-95" href={whatsappHref('Merhaba, araç projesi hakkında bilgi almak istiyorum.')} target="_blank" rel="noreferrer">
+                <svg class="size-5 shrink-0 transition-transform duration-200 group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><title>WhatsApp</title><path fill="#b3b3b3" d="m143.8 431.2l7.7 4.5c32.2 19.1 69.2 29.2 106.8 29.2h.1c115.7 0 209.8-94.1 209.9-209.8c0-56.1-21.8-108.8-61.4-148.4c-39.3-39.5-92.7-61.7-148.4-61.5c-115.8 0-209.9 94.1-210 209.8c-.1 39.5 11.1 78.2 32.1 111.7l5 7.9L64.4 452zM3.7 512l35.8-130.8C17.5 342.9 5.8 299.5 5.9 255C5.9 115.8 119.2 2.6 258.4 2.6c67.5 0 130.9 26.3 178.6 74s73.9 111.1 73.9 178.6c-.1 139.2-113.3 252.4-252.5 252.4h-.1c-42.3 0-83.8-10.6-120.7-30.7z"/><path fill="#fff" d="M1.1 509.4L37 378.6C14.8 340.2 3.2 296.7 3.3 252.4C3.3 113.2 116.6 0 255.8 0c67.5 0 130.9 26.3 178.6 74s73.9 111.1 73.9 178.6C508.2 391.8 394.9 505 255.8 505h-.1c-42.3 0-83.8-10.6-120.7-30.7z"/><linearGradient id="SVGshpjYc9B" x1="254.658" x2="256.786" y1="345.363" y2="704.074" gradientTransform="translate(0 -277.552)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#57d163"/><stop offset="1" stop-color="#23b33a"/></linearGradient><path fill="url(#SVGshpjYc9B)" d="M255.8 42.6c-115.8 0-209.9 94.1-210 209.8c0 39.5 11.2 78.2 32.2 111.7l5 7.9l-21.2 77.4l79.4-20.8l7.7 4.5c32.2 19.1 69.2 29.2 106.8 29.2h.1c115.7 0 209.8-94.1 209.9-209.8c.2-55.7-21.9-109.1-61.4-148.4c-39.3-39.4-92.8-61.6-148.5-61.5"/><path fill="#fff" fill-rule="evenodd" d="M192.7 146.9c-4.7-10.5-9.7-10.7-14.2-10.9l-12.1-.1c-4.2 0-11 1.6-16.8 7.9s-22.1 21.6-22.1 52.6s22.6 61 25.8 65.2s43.6 69.9 107.8 95.2c53.3 21 64.1 16.8 75.7 15.8c11.6-1.1 37.3-15.3 42.6-30s5.3-27.4 3.7-30s-5.8-4.2-12.1-7.4s-37.3-18.4-43.1-20.5s-10-3.2-14.2 3.2c-4.2 6.3-16.3 20.5-20 24.7s-7.4 4.7-13.7 1.6c-6.3-3.2-26.6-9.8-50.7-31.3c-18.8-16.7-31.4-37.4-35.1-43.7s-.4-9.7 2.8-12.9c2.8-2.8 6.3-7.4 9.5-11.1s4.2-6.3 6.3-10.5s1.1-7.9-.5-11.1c-1.8-3-14-34.2-19.6-46.7"/></svg>
+                <span class="!text-[#0f172a] group-hover:!text-primary font-black transition-colors duration-200">WhatsApp ile Danışın</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+        <div class="mt-8 h-64 overflow-hidden border border-slate-200 md:h-80" data-reveal>
+          <iframe class="size-full border-0" loading="lazy" src="https://maps.google.com/maps?q=Kara%C5%9F%20Ara%C3%A7%20Proje&t=m&z=14&output=embed&iwloc=near" title="Karaş Araç Proje" aria-label="Karaş Araç Proje"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+

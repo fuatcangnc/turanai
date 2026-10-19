@@ -1,0 +1,276 @@
+---
+import { ArrowRight, Bike, Check, MessageCircle, ShieldCheck, Wrench } from '@lucide/astro'
+import Layout from '@/layouts/Layout.astro'
+import InternalHero from '@/components/InternalHero.astro'
+import { whatsappHref } from '@/data/site'
+
+const motorcycleBrands = [
+  {
+    name: 'Honda',
+    type: 'Scooter & Touring',
+    popularModels: ['PCX 125', 'Forza 250', 'Dio', 'Activa', 'NC750X'],
+    description: 'PCX, Forza, Dio ve Activa kurye çantası ile touring modellerinde çanta ve şase tadilat projesi.',
+  },
+  {
+    name: 'Yamaha',
+    type: 'Maxi Scooter & Sport',
+    popularModels: ['NMAX 125/155', 'XMAX 250', 'Tracer 7/9', 'MT-07'],
+    description: 'NMAX, XMAX paket servis kutusu ve Tracer serisi yan/arka çanta tescil projeleri.',
+  },
+  {
+    name: 'BMW Motorrad',
+    type: 'Adventure & Maxi Scooter',
+    popularModels: ['R 1250 GS', 'F 850 GS', 'C 400 GT', 'R 1300 GS'],
+    description: 'GS serisi üçlü alüminyum çanta seti ve C 400 serisi arka taşıma kutusu ruhsat kaydı.',
+  },
+  {
+    name: 'Vespa',
+    type: 'İtalyan Klasik Scooter',
+    popularModels: ['Primavera 150', 'GTS 300', 'Sprint 125'],
+    description: 'Özgün arka çanta ve demir montajlarında TSE standartlarına uygun mühendislik projesi.',
+  },
+  {
+    name: 'Piaggio',
+    type: 'Şehir & Teslimat Scooter',
+    popularModels: ['Medley 150', 'Beverly 400', 'Liberty 125'],
+    description: 'Medley ve Liberty kurye taşıma kutusu ile şase tadilatı tescil işlemleri.',
+  },
+  {
+    name: 'Kymco',
+    type: 'Scooter & Maxi Scooter',
+    popularModels: ['Agility Carry', 'DTX 360', 'Xciting 400', 'People S'],
+    description: 'Agility Carry teslimat kasası ve DTX serisi arka çanta projelendirmesi.',
+  },
+  {
+    name: 'Sym',
+    type: 'Ticari & Şehir Scooter',
+    popularModels: ['Jet 14', 'Fiddle', 'Symphony', 'ADX 125', 'Joymax'],
+    description: 'Jet 14 ve Symphony kurye çantası ruhsata işletme ve teknik onay süreci.',
+  },
+  {
+    name: 'CFMoto',
+    type: 'Touring & Adventure',
+    popularModels: ['250 SR', '450 SR', '700 CL-X', '800 MT'],
+    description: '800 MT touring çanta setleri ve 250/450 serisi şase değişim projeleri.',
+  },
+  {
+    name: 'Bajaj',
+    type: 'Commuter & Naked',
+    popularModels: ['Pulsar NS200', 'Dominar 400', 'Pulsar RS200'],
+    description: 'Pulsar ve Dominar modellerinde paket servis kutusu ve arka çanta işletme.',
+  },
+  {
+    name: 'RKS',
+    type: 'Şehir & Teslimat Scooter',
+    popularModels: ['Bitter 125', 'Wildcat', 'Freccia 150', 'Spontini'],
+    description: 'RKS teslimat modellerinde hazır çanta demiri ve kutu tescil projesi.',
+  },
+  {
+    name: 'Mondial',
+    type: 'Scooter & Touring',
+    popularModels: ['Drift L', 'Turismo', 'Revival', 'Wing 50'],
+    description: 'Drift L ve Turismo motosikletlerinde kurye çantası ve şase değişim dosyası.',
+  },
+  {
+    name: 'Arora',
+    type: 'Scooter & Elektrikli',
+    popularModels: ['Cappucino 125', 'Safari', 'Beat 125', 'Mojito'],
+    description: 'Cappucino ve Safari kurye kutusu montajında TSE onaylı proje çözümleri.',
+  },
+  {
+    name: 'KTM',
+    type: 'Enduro & Adventure',
+    popularModels: ['390 Adventure', 'Duke 250/390', '890 Adventure'],
+    description: 'Adventure serisi yan çanta demirleri ve Duke şase tadilatı tescili.',
+  },
+  {
+    name: 'Kawasaki',
+    type: 'Sport & Touring',
+    popularModels: ['Versys 650/1000', 'Ninja 400/650', 'Z900'],
+    description: 'Versys arka/yan çanta donanımları ve motor şase değişim uygunluk projesi.',
+  },
+  {
+    name: 'Suzuki',
+    type: 'Maxi Scooter & Touring',
+    popularModels: ['Burgman 400', 'V-Strom 650/1050', 'Address 125'],
+    description: 'Burgman ve V-Strom seyahat ve kurye çantaları için ruhsat tescili.',
+  },
+  {
+    name: 'Ducati',
+    type: 'Sport & Adventure',
+    popularModels: ['Multistrada V4', 'Monster', 'Scrambler', 'DesertX'],
+    description: 'Multistrada ve DesertX alüminyum çanta montaj uygunluk projeleri.',
+  },
+  {
+    name: 'Triumph',
+    type: 'Adventure & Classic',
+    popularModels: ['Tiger 900/1200', 'Bonneville', 'Trident 660'],
+    description: 'Tiger serisi arka ve yan çanta sistemleri için teknik proje ve TSE onayı.',
+  },
+  {
+    name: 'Harley-Davidson',
+    type: 'Cruiser & Touring',
+    popularModels: ['Pan America 1250', 'Sportster S', 'Street Glide'],
+    description: 'Pan America çanta setleri ve özel tadilatlar için mühendislik onayı.',
+  },
+  {
+    name: 'Benelli',
+    type: 'Touring & Naked',
+    popularModels: ['TRK 502 / 502X', 'Leoncino 500', 'TNT 125'],
+    description: 'TRK 502 3 lü çanta seti ve kurye çantası ruhsata işletme projeleri.',
+  },
+  {
+    name: 'Aprilia',
+    type: 'Scooter & Sport',
+    popularModels: ['SR GT 200', 'Tuareg 660', 'RS 660'],
+    description: 'SR GT şehir içi taşıma çantası ve Tuareg seyahat çantaları projesi.',
+  },
+]
+---
+
+<Layout
+  title="Motosiklet Markaları İçin Çanta ve Şase Projesi | Karakaş Mühendislik"
+  description="Honda, Yamaha, BMW, Vespa, Piaggio, Sym, CFMoto ve tüm motosiklet markaları için TSE onaylı çanta ruhsata işletme ve şase değişim projeleri."
+>
+  <main class="bg-[#f8f9fa]">
+    <InternalHero
+      eyebrow="Hizmet Verdiğimiz Markalar"
+      title="Motosiklet Markaları ve Proje Çözümleri"
+      description="Tüm marka ve modeller için çanta ruhsata işletme, taşıma kutusu montaj uygunluğu ve şase değişim projelerinde yetkili mühendislik desteği."
+      image="/karakas-muhendislik-arac-proje-hizmetleri-bg.webp"
+    />
+
+    <!-- Header info banner -->
+    <section class="border-b border-neutral-200 bg-white py-10">
+      <div class="shell">
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="max-w-3xl">
+            <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-primary">
+              Marka ve Model Kapsamı
+            </h3>
+            <h2 class="mt-2 text-[clamp(1.7rem,3.2vw,2.5rem)] font-black tracking-tight text-neutral-950">
+              Motosikletinize Özel TSE Onaylı Proje Hizmeti
+            </h2>
+            <p class="mt-2 text-sm text-neutral-600">
+              Listedeki tüm markalar ve diğer motosiklet modelleri için Karayolları ve AİTM mevzuatına uygun teknik proje çizimi yapıyoruz.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="inline-flex items-center gap-1.5 border border-neutral-200 bg-neutral-50 px-3.5 py-2 text-xs font-bold text-neutral-800">
+              <ShieldCheck class="size-4 text-emerald-700" />
+              20+ Popüler Marka
+            </span>
+            <span class="inline-flex items-center gap-1.5 border border-neutral-200 bg-neutral-50 px-3.5 py-2 text-xs font-bold text-neutral-800">
+              <Wrench class="size-4 text-primary" />
+              TSE Yetkili Mühendislik
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Cards Grid -->
+    <section class="py-14 md:py-20">
+      <div class="shell">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            motorcycleBrands.map((brand, index) => (
+              <article class="group flex flex-col justify-between border border-neutral-200/90 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-[0_16px_36px_rgba(4,24,39,0.08)]">
+                <div>
+                  <!-- Top Row: Badge & Type -->
+                  <div class="flex items-center justify-between gap-2 border-b border-neutral-100 pb-3.5">
+                    <span class="grid size-8 place-items-center bg-black text-xs font-black text-white transition-colors group-hover:bg-primary">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-primary">
+                      <Bike class="size-3.5" />
+                      {brand.type}
+                    </span>
+                  </div>
+
+                  <!-- Brand Name -->
+                  <h3 class="mt-4 text-xl font-black tracking-tight text-neutral-950">
+                    {brand.name}
+                  </h3>
+
+                  <!-- Popular Models Pills -->
+                  <div class="mt-3 flex flex-wrap gap-1.5">
+                    {brand.popularModels.map((model) => (
+                      <span class="bg-[#f2f4f7] px-2 py-0.5 text-[11px] font-semibold text-neutral-700 transition-colors group-hover:bg-primary/10 group-hover:text-primary">
+                        {model}
+                      </span>
+                    ))}
+                  </div>
+
+                  <!-- Description -->
+                  <p class="mt-3.5 text-xs leading-relaxed text-neutral-600">
+                    {brand.description}
+                  </p>
+
+                  <!-- Checklist -->
+                  <ul class="mt-4 space-y-1.5 border-t border-neutral-100 pt-3 text-[11px] text-neutral-700">
+                    <li class="flex items-center gap-1.5">
+                      <Check class="size-3.5 text-emerald-700 shrink-0" />
+                      <span>Çanta / Taşıma Kutusu Ruhsata İşletme</span>
+                    </li>
+                    <li class="flex items-center gap-1.5">
+                      <Check class="size-3.5 text-emerald-700 shrink-0" />
+                      <span>Şase Değişim Projesi ve TSE Tescili</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Card Footer Actions -->
+                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between gap-2">
+                  <a
+                    href={whatsappHref(`Merhaba, ${brand.name} marka motosikletim için proje ve ruhsata işletme teklifi almak istiyorum.`)}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-emerald-700 hover:text-emerald-800 transition-colors"
+                  >
+                    <MessageCircle class="size-3.5" />
+                    Teklif Al
+                  </a>
+
+                  <a
+                    href="/motosiklet-canta-ruhsata-isletme"
+                    class="inline-flex items-center gap-1 text-xs font-bold text-neutral-500 hover:text-primary transition-colors"
+                  >
+                    <span>Hizmet Detayı</span>
+                    <ArrowRight class="size-3.5" />
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="border-t border-neutral-200 bg-white py-14">
+      <div class="shell">
+        <div class="flex flex-col items-center justify-between gap-6 rounded-none border border-neutral-200 bg-[#f8f9fa] p-8 md:flex-row md:p-10">
+          <div class="max-w-2xl">
+            <h4 class="text-xs font-black uppercase tracking-[0.14em] text-primary">Teknik Destek ve Fiyat</h4>
+            <h3 class="mt-2 text-2xl font-black tracking-tight text-neutral-950 sm:text-3xl">
+              Motosikletinizin markası listede yok mu?
+            </h3>
+            <p class="mt-2 text-sm text-neutral-600">
+              Türkiye'de tescilli tüm marka ve modeller için TSE onaylı çanta ve tadilat projesi hazırlıyoruz. Ruhsat bilgilerinizi ileterek anında bilgi alabilirsiniz.
+            </p>
+          </div>
+          <a
+            href={whatsappHref('Merhaba, motosikletim için proje ve ruhsata işletme hakkında bilgi almak istiyorum.')}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex h-12 shrink-0 items-center gap-2 bg-[#25D366] hover:bg-[#1fb65a] px-6 text-xs font-black uppercase tracking-wider text-white shadow-sm transition-colors"
+          >
+            <MessageCircle class="size-4" />
+            <span>WhatsApp ile Danışın</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

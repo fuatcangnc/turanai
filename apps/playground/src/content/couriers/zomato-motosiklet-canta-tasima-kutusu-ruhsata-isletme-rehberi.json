@@ -1,0 +1,29 @@
+{
+  "title": "Zomato Motosiklet Çanta (Taşıma Kutusu) Ruhsata İşletme Rehberi",
+  "brand": "Zomato",
+  "slug": "zomato-motosiklet-canta-tasima-kutusu-ruhsata-isletme-rehberi",
+  "deliveryFocus": "restoran siparişi ve paket teslimatı",
+  "equipment": "teslimat çantası, arka taşıma kasası ve topcase",
+  "reviewFocus": "ekipmanın araç üzerinde oluşturduğu ölçüsel ve bağlantısal değişiklikler",
+  "profileLabel": "Restoran keşfi ve yemek siparişi",
+  "profileSummary": "Zomato, restoran keşfi ve yemek siparişi alanında bilinen dijital platformlardan biridir. Teslimatta kullanılan arka taşıma kasası veya yemek çantası için teknik yaklaşım; platform isminden bağımsız olarak ekipmanın ölçüsü, montajı ve motosiklet uyumuna dayanır.",
+  "contextText": "Zomato sipariş akışında kullanılan yemek teslimat ekipmanının türü ve motosikletle bağlantısı birlikte incelenir.",
+  "faqs": [
+    {
+      "question": "Zomato motosiklet çantayı ruhsata işletmek kaç TL?",
+      "answer": "Zomato için kullanılan ekipmanın ruhsata işletme bedeli; motosiklet modeli, teslimat çantası, arka taşıma kasası ve topcase türü, montaj yapısı ve ihtiyaç duyulan teknik işlem kapsamına göre değişir. Net ücret için ruhsat, ekipman bilgisi ve fotoğraflar üzerinden ön değerlendirme yapılır."
+    },
+    {
+      "question": "Zomato motosiklet çantası ruhsata nasıl işletilir?",
+      "answer": "Zomato kuryesinin kullandığı ekipman için önce ekipmanın araç üzerinde oluşturduğu ölçüsel ve bağlantısal değişiklikler değerlendirilir. Ardından gerekli teknik proje, uygunluk kontrolü, muayene ve tescil adımları aracın durumuna göre planlanır."
+    },
+    {
+      "question": "Zomato kuryelerinde motosiklet yan çanta da değerlendirilir mi?",
+      "answer": "Yan çanta, topcase veya ek taşıma ekipmanının değerlendirilmesi; ürünün niteliği, montaj noktaları ve motosiklet üzerindeki etkisine göre yapılır. Zomato operasyonunda kullanılan tüm ekipmanları birlikte paylaşmanız doğru proje kapsamının belirlenmesini sağlar."
+    },
+    {
+      "question": "Zomato kurye ekipmanını ruhsata işletmek zorunlu mu?",
+      "answer": "Ruhsata işletme ihtiyacı, ekipmanın motosiklete uygulanış biçimi ile teknik ve tescil kapsamına göre belirlenir. Zomato için kullanılan taşıma sisteminin güncel durumunu teknik incelemeyle netleştirmek, işlem öncesinde doğru yolun belirlenmesine yardımcı olur."
+    }
+  ]
+}

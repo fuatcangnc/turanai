@@ -1,0 +1,36 @@
+---
+export const prerender = true;
+import { getCollection, type CollectionEntry } from 'astro:content'
+import Layout from '@/layouts/Layout.astro'
+import CourierDetail from '@/components/CourierDetail.astro'
+import PostDetail from '@/components/PostDetail.astro'
+import ServiceDetail from '@/components/ServiceDetail.astro'
+import ServiceArticleDetail from '@/components/ServiceArticleDetail.astro'
+import { courierCompanies, defaultServices } from '@/data/site'
+
+export async function getStaticPaths() {
+  const articleModules = import.meta.glob('../content/service-articles/*.json', { eager: true })
+  const posts = await getCollection('posts')
+  return [
+    ...defaultServices.map((service) => ({ params: { slug: service.slug }, props: { kind: 'service' as const, service, hasArticle: Boolean(articleModules[`../content/service-articles/${service.slug}.json`]) } })),
+    ...courierCompanies.map((courier) => ({ params: { slug: courier.slug }, props: { kind: 'courier' as const, courier } })),
+    ...posts.map((post) => ({ params: { slug: post.id }, props: { kind: 'post' as const, post } })),
+  ]
+}
+
+type Props =
+  | { kind: 'service'; service: (typeof defaultServices)[number]; hasArticle: boolean }
+  | { kind: 'courier'; courier: (typeof courierCompanies)[number] }
+  | { kind: 'post'; post: CollectionEntry<'posts'> }
+
+const props = Astro.props as Props
+const courierJson = props.kind === 'courier' ? (import.meta.glob('../content/couriers/*.json', { eager: true })[`../content/couriers/${props.courier.slug}.json`] as any)?.default || (import.meta.glob('../content/couriers/*.json', { eager: true })[`../content/couriers/${props.courier.slug}.json`] as any) : null
+const title = props.kind === 'service' ? props.service.title : props.kind === 'courier' ? (courierJson?.title || `${props.courier.name} Motosiklet Çanta (Taşıma Kutusu) Ruhsata İşletme Rehberi`) : props.post.data.title
+const description = props.kind === 'service' ? props.service.summary : props.kind === 'courier' ? (courierJson ? `${courierJson.brand} kuryelerinde kullanılan ${courierJson.equipment} için motosiklet çanta ruhsata işletme sürecini, teknik değerlendirme adımlarını ve sık sorulan soruları inceleyin.` : `${props.courier.name} motosiklet çanta ve taşıma kutusu ruhsata işletme süreci.`) : props.post.data.description
+---
+
+<Layout title={`${title} | Karakaş Mühendislik`} description={description}>
+  {props.kind === 'service' && (props.hasArticle ? <ServiceArticleDetail service={props.service} /> : <ServiceDetail service={props.service} />)}
+  {props.kind === 'courier' && <CourierDetail courier={props.courier} />}
+  {props.kind === 'post' && <PostDetail post={props.post} />}
+</Layout>

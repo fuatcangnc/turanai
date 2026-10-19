@@ -1,0 +1,347 @@
+{
+  "title": "Motor Değişim Projesi ve Ruhsata İşletme | Karakaş",
+  "shortTitle": "Motor Değişim Projesi",
+  "slug": "arac-motor-degisim-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Motor değişim projesi, montaj uygunluk ve ruhsata işletme sürecini öğrenin. Gerekli evrakları, 2026 ücretlerini ve TSE-TÜVTÜRK adımlarını inceleyin.",
+  "image": "/hizmetler/arac-motor-degisimi-projesi-tse-onayli-karakas-muhendislik.webp",
+  "featured": true,
+  "order": 3,
+  "heroEyebrow": "Araç Motor Değişimi | TSE Onaylı",
+  "heroTitle": "Motor Değişim Projesi ve Ruhsata İşletme Süreci",
+  "heroDescription": "Motor değiştiyse ilk iş, montaj uygunluk raporu mu yoksa motor tadilat projesi mi gerektiğini belirlemektir. Ruhsatı ve yeni motorun bilgilerini gönderin; TSE kontrolü, muayene ve tescil sırasını aracınıza göre çıkaralım.",
+  "articleEyebrow": "Motor Değişim Projesi",
+  "articleTitle": "Motor değişimi projesi ve ruhsata işletme süreci",
+  "articleLead1": "Araca başka bir motor takıldığında yalnızca motorun sıfır veya çıkma olmasına bakılmaz. Motor numarası, sahiplik belgesi, güç, silindir hacmi, yakıt türü, model yılı ve emisyon bilgisi eski motorun verileriyle karşılaştırılır. Bu inceleme, işlemin montaj uygunluk mu yoksa daha kapsamlı bir motor tadilat projesi mi gerektirdiğini gösterir.",
+  "articleLead2": "Ustanın “motor araca olur” demesi mekanik montajı anlatır; proje uygunluğunu tek başına göstermez. Sandık motor, çıkma motor, farklı güçte motor ve “motor swap” uygulamalarında istenen belgeler değişebilir. Bu yüzden motoru satın almadan önce ruhsat ile motor bilgilerini kontrol ettirmek gerekir.",
+  "articleAuthor": "Karakaş Mühendislik",
+  "articleUpdated": "10 Ağustos 2026",
+  "articleImage": "/hizmetler/arac-motor-degisimi-projesi-tse-onayli-karakas-muhendislik.webp",
+  "summaryCards": [
+    {
+      "value": "2 dosya yolu",
+      "label": "Montaj uygunluk veya motor tadilat",
+      "className": "bg-neutral-950 text-white",
+      "labelClassName": "text-white/65"
+    },
+    {
+      "value": "6 ana adım",
+      "label": "Ön kontrolden tescile kadar",
+      "className": "bg-[#fff4e8] text-[#1a1a1a]",
+      "labelClassName": "text-black/60"
+    },
+    {
+      "value": "1 araca özel sonuç",
+      "label": "Genel bilgi değil teknik mukayese",
+      "className": "bg-[#edf7f1] text-[#1a1a1a]",
+      "labelClassName": "text-black/60"
+    }
+  ],
+  "decisionTree": {
+    "startQuestion": "Eski ve yeni motorun teknik verilerini karşılaştırın",
+    "optionA": {
+      "label": "Veriler eşleşiyorsa",
+      "title": "Montaj uygunluk yolu",
+      "description": "Yeni motorun orijinal tipe yakınlığı, kimliği ve belgeleri incelenir. Dosyanın kapsamı araç kontrolünden sonra kesinleşir.",
+      "items": [
+        "Motor kimliği doğrulanır",
+        "Teknik özellikler mukayese edilir",
+        "Montaj ve belge bütünlüğü kontrol edilir"
+      ]
+    },
+    "optionB": {
+      "label": "Veriler farklıysa",
+      "title": "Motor tadilat projesi yolu",
+      "description": "Güç, hacim veya diğer teknik veriler farklıysa bu değişikliğin emisyon, gürültü ve araç güvenliğine etkisi projede incelenir.",
+      "items": [
+        "Motor mukayese verileri hazırlanır",
+        "Ek teknik belge ihtiyacı araştırılır",
+        "Muayene ve tescil yolu ayrıca planlanır"
+      ]
+    }
+  },
+  "processSteps": [
+    {
+      "number": "01",
+      "title": "Motorun teknik uygunluğu",
+      "description": "Takılacak motorun araçla teknik uyumu kontrol edilir ve değişim mevzuata uygun biçimde tamamlanır."
+    },
+    {
+      "number": "02",
+      "title": "Evrakların hazırlanması",
+      "description": "Ruhsat, motor faturası veya satış belgesi, motor numarası ve montaj evrakı bir araya getirilir."
+    },
+    {
+      "number": "03",
+      "title": "Proje dosyasının hazırlanması",
+      "description": "Teknik karşılaştırma sonucuna göre montaj uygunluk raporu veya motor tadilat projesi hazırlanır."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç ve dosya kontrolü",
+      "description": "Araç ve proje dosyası, belirlenen başvuru kapsamında TSE kontrolüne girer."
+    },
+    {
+      "number": "05",
+      "title": "TÜVTÜRK tadilat muayenesi",
+      "description": "TSE onayından sonra araç, tadilat kapsamında TÜVTÜRK muayenesine götürülür."
+    },
+    {
+      "number": "06",
+      "title": "Noter tescili ve yeni ruhsat",
+      "description": "Onaylı proje ve muayene belgeleriyle notere başvurulur; yeni motor bilgisi ruhsata işlenir."
+    }
+  ],
+  "technicalChecks": [
+    {
+      "label": "Kimlik ve kaynak",
+      "description": "Motor numarası, sahiplik belgesi ve motorun kimden alındığı kontrol edilir.",
+      "value": "NUMARA + BELGE"
+    },
+    {
+      "label": "Teknik mukayese",
+      "description": "Eski motor ile yeni motorun gücü, silindir hacmi ve yakıt sistemi karşılaştırılır.",
+      "value": "kW, HP ve cc"
+    },
+    {
+      "label": "Model ve emisyon",
+      "description": "Aracın ve motorun model yılı, motor ailesi ve emisyon seviyesi birlikte incelenir.",
+      "value": "YIL + SEVİYE"
+    },
+    {
+      "label": "Araçla bütünleşme",
+      "description": "Motor bağlantıları ile soğutma, elektrik ve yakıt sistemlerinin montajı kontrol edilir.",
+      "value": "MONTAJ"
+    }
+  ],
+  "technicalDecisionRows": [
+    {
+      "criterion": "Hazırlanan belge",
+      "montage": "Montaj uygunluk raporu",
+      "modification": "AİTM tadilat projesi ve motor mukayese raporu"
+    },
+    {
+      "criterion": "Teknik karşılaştırma",
+      "montage": "Motor kimliği ile mevcut ve yeni motorun teknik verileri karşılaştırılır.",
+      "modification": "Güç, hacim, yakıt, model yılı veya emisyon farkı ayrıntılı incelenir."
+    },
+    {
+      "criterion": "TSE aşaması",
+      "montage": "Dosya ve araç, güncel TSE uygulamasına göre kontrol edilir.",
+      "modification": "Tadilat dosyası ve motor mukayese raporu TSE incelemesine sunulur."
+    },
+    {
+      "criterion": "TÜVTÜRK aşaması",
+      "montage": "Muayene gerekliliği araç ve dosya kapsamına göre doğrulanır.",
+      "modification": "Gerekli tadilat muayenesi ve ilgili kontroller ayrıca planlanır."
+    },
+    {
+      "criterion": "Son işlem",
+      "montage": "Onaylı belgelerle yeni motor bilgisi noterde ruhsata işlenir.",
+      "modification": "Proje ve muayene belgeleriyle yeni motor bilgisi noterde tescil edilir."
+    }
+  ],
+  "documentGroups": [
+    {
+      "title": "Ortak başvuru belgeleri",
+      "items": [
+        "Motor değişimi yapılan aracın ruhsatı",
+        "Motor numarasının okunaklı fotoğrafı",
+        "Motor gücü (kW veya HP) ve silindir hacmi (cc)",
+        "Motor montajı veya işçilik faturası"
+      ]
+    },
+    {
+      "title": "Sıfır veya sandık motor",
+      "items": [
+        "Üreticiden araç sahibine kadar fatura zinciri",
+        "İthal motor için gümrük beyannamesi ve vergi alındısı",
+        "Yerli üretim motor için imalat beyanı",
+        "Garanti değişimiyse bayi veya firma yazısı"
+      ]
+    },
+    {
+      "title": "İkinci el veya çıkma motor",
+      "items": [
+        "Motor satış faturası veya noter satış sözleşmesi",
+        "Motorun çıktığı araca ait ruhsat fotokopisi",
+        "Varsa hurda tescil belgesi veya bertaraf formu",
+        "Motorun araç sahibine kadar gelen fatura zinciri"
+      ]
+    }
+  ],
+  "costRows": [
+    {
+      "item": "Mühendislik",
+      "scope": "Ön inceleme, teknik karşılaştırma ve proje dosyası",
+      "value": "Araç ve proje kapsamına göre teklif"
+    },
+    {
+      "item": "TSE",
+      "scope": "Araç kontrolü ve dosya incelemesi",
+      "value": "Başvuru günündeki TSE tarifesi"
+    },
+    {
+      "item": "TÜVTÜRK",
+      "scope": "Yalnız tadilat muayenesi gerekiyorsa",
+      "value": "Güncel resmî muayene tarifesi"
+    },
+    {
+      "item": "Noter",
+      "scope": "Yeni motor bilgisinin ruhsata işlenmesi",
+      "value": "1.968 TL (1 Ocak 2026)"
+    },
+    {
+      "item": "Egzoz",
+      "scope": "Yalnız dosya kapsamında gerekiyorsa",
+      "value": "Güncel resmî tarife"
+    }
+  ],
+  "noterPrice2026": "1.968 TL",
+  "prePurchaseChecklist": [
+    "Motor numarası okunuyor mu?",
+    "Fatura veya sahiplik zinciri mevcut mu?",
+    "Güç, hacim ve yakıt verileri biliniyor mu?",
+    "Kaynak araç ve model yılı doğrulanabiliyor mu?",
+    "Montaj sonrası ek sistem uyumu kontrol edildi mi?"
+  ],
+  "penaltyInfo": {
+    "days": "30 gün",
+    "daysLabel": "Tadilatı belgelere işletmek için başvuru süresi",
+    "fee": "1.246,11 TL",
+    "feeLabel": "2026 yılı için belirtilen idari para cezası",
+    "points": "10 puan",
+    "pointsLabel": "Sürücü belgesine işlenen ceza puanı"
+  },
+  "sources": [
+    {
+      "label": "TSE AİTM münferit araç uygunluk belgesi",
+      "url": "https://www.tse.org.tr/aitm-munferit-arac-uygunluk-belgesi-tadilat/"
+    },
+    {
+      "label": "TSE hizmet standartları ve gerekli belgeler",
+      "url": "https://www.tse.org.tr/hizmet-standartlari-tablosu/"
+    },
+    {
+      "label": "TSE GSR II mevzuat geçiş tarihleri",
+      "url": "https://www.tse.org.tr/duyuru/gsr-ii-mevzuat-gecis-tarihleri-hakkinda/"
+    },
+    {
+      "label": "EGM trafik tescil bilgileri",
+      "url": "https://www.egm.gov.tr/trafik-tescil-hakkinda"
+    }
+  ],
+  "trustReasons": [
+    {
+      "title": "Dosya açılmadan önce teknik kontrol",
+      "description": "Ruhsat, motor numarası ve teknik veriler proje başlamadan önce birlikte incelenir."
+    },
+    {
+      "title": "Araca göre belirlenen proje yolu",
+      "description": "Montaj uygunluk raporu ile motor tadilat projesi arasındaki fark, araca özel verilerle belirlenir."
+    },
+    {
+      "title": "Başvurudan tescile açık işlem sırası",
+      "description": "Proje, TSE kontrolü, gerekiyorsa TÜVTÜRK muayenesi ve noter tescili tek akışta planlanır."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Araç motor değişikliği proje fiyatı ne kadar?",
+      "answer": "Tek bir proje fiyatı yok. Aracın marka ve modeli, takılan motorun özellikleri, belgelerin durumu ve montajın kapsamı fiyatı değiştirir. Ruhsat ile motor bilgilerini inceledikten sonra hangi dosyanın hazırlanacağını ve proje bedelini söyleyebiliriz."
+    },
+    {
+      "question": "Motor değişirse ruhsata işletilir mi?",
+      "answer": "Evet. Tescile konu bir motor değişikliği yapıldıysa yeni motor bilgisinin ruhsata işlenmesi gerekir. Bunun için izlenecek yol, eski ve yeni motorun teknik bilgileri karşılaştırıldıktan sonra belirlenir."
+    },
+    {
+      "question": "Araç motor tadilat projesi nereden alınır?",
+      "answer": "Motor tadilat projesini bu alanda yetkili mühendisler ve firmalar hazırlar. İlk kontrol için araç ruhsatı, motor bilgileri ve varsa montaj belgeleri gerekir."
+    },
+    {
+      "question": "Motor değişimi ruhsata işletme ücreti ne kadar?",
+      "answer": "Toplam maliyette mühendislik projesi, TSE kontrolü, gerekiyorsa TÜVTÜRK tadilat muayenesi ve noter tescili bulunur. 1 Ocak 2026 itibarıyla noter ruhsat değişim bedeli 1.968 TL’dir. Resmî tarifeler değişebildiği için işlem günündeki tutarı ayrıca kontrol etmek gerekir."
+    },
+    {
+      "question": "2. el (numarasız) motora proje yapılabilir mi?",
+      "answer": "Motor numarası bulunmayan veya okunmayan ikinci el motor için proje hazırlanamayabilir. Motoru satın almadan önce numarayı ve sahiplik belgelerini kontrol ettirin."
+    },
+    {
+      "question": "Motor değişimi projelerinde faturada bulunması gereken bilgiler nelerdir?",
+      "answer": "Faturada motorun kimliği, bilinen teknik bilgileri, montaj işçiliği ve araç sahibine ilişkin bilgiler açıkça yazılmalıdır. Eksik bir bilgi varsa ek belge veya imzalı açıklama istenebilir."
+    },
+    {
+      "question": "Sandık motor ile çıkma motor arasındaki fark nedir?",
+      "answer": "Sandık motor, araçtan ayrı parça olarak satılan yeni motordur. Çıkma motor ise başka bir araçtan sökülmüş ikinci el motordur. Her ikisinde de motor numarası ve teknik bilgiler kontrol edilir. Sandık motorda fatura zinciri; çıkma motorda ise sahiplik ve kaynak araç belgeleri öne çıkar."
+    },
+    {
+      "question": "Aynı motor takılırsa yine proje gerekir mi?",
+      "answer": "Evet, gerekebilir. Yeni motor eski motorla aynı özellikte olsa bile motor numarası ve sahiplik bilgileri değişir. Teknik karşılaştırma sonunda montaj uygunluk raporunun yeterli olup olmadığı belirlenir."
+    },
+    {
+      "question": "Farklı motor takılırsa ne olur?",
+      "answer": "Motorun gücü, silindir hacmi veya diğer teknik özellikleri farklıysa işlem motor tadilat projesi kapsamına girebilir. Karar verilirken emisyon seviyesi, araç modeli ve yakıt sistemi de incelenir."
+    },
+    {
+      "question": "Araç motor değişimi ruhsata işletilmezse ne olur?",
+      "answer": "Motor değişikliği 30 gün içinde ruhsata işletilmezse 2918 sayılı Karayolları Trafik Kanunu’nun 32/1 maddesi uyarınca idari işlem uygulanır. 2026 için belirtilen yaptırım 1.246,11 TL ve 10 ceza puanıdır. Ceza tutarı değişebileceği için işlem günündeki tarife esas alınır."
+    },
+    {
+      "question": "Araç motor değiştirme prosedürü nedir?",
+      "answer": "Önce araç ile motor bilgileri karşılaştırılır. Ardından gerekli proje hazırlanır, TSE kontrolü yapılır, gerekiyorsa araç TÜVTÜRK tadilat muayenesine girer ve son olarak yeni motor noterde ruhsata işlenir."
+    },
+    {
+      "question": "Motor değişiminde muayene gerekir mi?",
+      "answer": "Her motor değişiminde aynı muayene yolu izlenmez. Montaj uygunluk raporu ile motor tadilat projesinin şartları farklıdır. Aracın TÜVTÜRK tadilat muayenesine girip girmeyeceği teknik incelemede belirlenir."
+    },
+    {
+      "question": "Egzoz muayenesi her zaman yapılır mı?",
+      "answer": "Hayır. Egzoz kontrolü veya belgesi her dosyada istenmez. Gereklilik, motor değişikliğinin teknik kapsamına göre belirlenir."
+    },
+    {
+      "question": "Benzinli araca dizel motor takılabilir mi?",
+      "answer": "Benzin ve dizel arasında yakıt türü değişikliği kapsamlı teknik şartlara bağlıdır. Araç, motor ve gerekli belgeler incelenmeden bu değişikliğin uygun olduğu söylenemez."
+    },
+    {
+      "question": "Güç artışı yüksekse, daha eski model motor takılırsa veya yakıt sistemi değişirse ne olur?",
+      "answer": "Bu üç durumda ek teknik belge veya teknik servis raporu istenebilir. Hangi belgenin gerektiği, aracın eski motoruyla takılan motor karşılaştırıldıktan sonra belli olur."
+    },
+    {
+      "question": "Motor değişimi kaç gün sürer?",
+      "answer": "Süre, belgelerin eksiksiz olmasına, dosyanın kapsamına ve kurum randevularına bağlıdır. Araç ile motor bilgileri görülmeden kesin gün vermek doğru olmaz."
+    },
+    {
+      "question": "Araca daha eski model bir motor takılabilir mi?",
+      "answer": "Motorun model yılı, motor ailesi, teknik özellikleri ve emisyon bilgisi araçla birlikte değerlendirilir. Araçtan daha eski bir motor kullanıldığında ek belge veya teknik inceleme gerekebilir. Yalnızca model yılına bakarak uygunluk kararı verilmez."
+    },
+    {
+      "question": "Tip onay belgesi veya teknik servis raporu ne zaman gerekir?",
+      "answer": "Motor ailesi, güç, model yılı, emisyon, yakıt sistemi ve araç bilgileri birlikte incelenir. Teknik farklar veya belirsizlikler ek onay belgesi ya da teknik servis raporu gerektirebilir. Hangi belgenin isteneceği, somut araç ve motor mukayesesinden sonra belirlenir."
+    },
+    {
+      "question": "Motor numarası okunmuyorsa ne olur?",
+      "answer": "Motor numarası, motorun kimliğini doğrulamak için gerekir. Numara okunmuyorsa proje işlemine başlamadan önce bu durumun çözülmesi gerekir."
+    },
+    {
+      "question": "Motor değişiminde güç artışı sınırı var mı?",
+      "answer": "Güç farkı önemli bir ölçüttür, ancak tek ölçüt değildir. Yakıt türü, motor ailesi, model yılı ve diğer teknik veriler de sonucu etkilediği için yalnızca yüzdeye bakılarak karar verilmez."
+    },
+    {
+      "question": "Şasi numarası veya motor numarası usulsüz biçimde değiştirilmiş araçlara proje yapılır mı?",
+      "answer": "Şasi veya motor kimliğinde usulsüz değişiklik şüphesi varsa proje işlemi yürütülemeyebilir. Böyle bir durumda yetkili kurumların kararı ile aracın hukuki ve teknik durumu esas alınır."
+    },
+    {
+      "question": "Proje olmadan motor değişimi yapılır mı?",
+      "answer": "Motor fiziksel olarak takılabilir, ancak teknik onay ve tescil tamamlanmadan işlem resmî olarak bitmez. Motoru taktırmadan önce hangi projenin gerektiğini öğrenmek sonradan çıkabilecek belge ve işçilik sorunlarını azaltır."
+    },
+    {
+      "question": "İkinci el (çıkma) motor için motor değişimi projesinde hangi evraklar gerekir?",
+      "answer": "Araç ruhsatı, motor satış faturası veya noter satış sözleşmesi, motorun çıktığı aracın ruhsat fotokopisi ve varsa hurda tescil belgesi ya da bertaraf formu istenebilir. Kesin liste, motorun kaynağına göre değişir."
+    },
+    {
+      "question": "Sıfır motor için motor değişimi projesinde hangi evraklar gerekir?",
+      "answer": "Araç ruhsatı ve motor faturası temel belgelerdir. İthal motor için gümrük beyannamesi ve vergi alındısı, yerli üretim motor için imalat beyanı, garanti değişiminde ise bayi veya firma yazısı istenebilir."
+    }
+  ],
+  "whatsappMessage": "Merhaba, motor değişim projesi ve ruhsata işletme süreci hakkında bilgi almak istiyorum."
+}

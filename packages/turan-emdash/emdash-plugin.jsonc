@@ -1,0 +1,63 @@
+{
+	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
+
+	"slug": "turan",
+	"publisher": "did:plc:turan000000000000000000",
+	"license": "MIT",
+	"author": { "name": "TuranAI" },
+	"security": { "url": "https://github.com/turanai/turan-emdash/security/advisories/new" },
+	"description": "In-app AI agent for EmDash: chats over the site's content through EmDash's own content APIs and exposes the agent as MCP tools.",
+
+	// Trust contract. `schema:read` + `content:read` let the agent inspect the
+	// site; `content:write` lets it save entries as drafts. `network:request`
+	// with the hosts below is only for the model providers.
+	"capabilities": ["schema:read", "content:read", "content:write", "content:publish", "network:request"],
+	"allowedHosts": ["api.anthropic.com", "api.openai.com", "evren-llmapi.ssyz.org.tr"],
+
+	// Chat transcripts live in a declared collection so the API stays portable
+	// across the Node and Cloudflare sandbox runners.
+	"storage": {
+		"sessions": { "indexes": ["updatedAt"] }
+	},
+
+	"admin": {
+		"pages": [{ "path": "/chat", "label": "Turan AI", "icon": "chat" }],
+		"settingsSchema": {
+			"anthropicApiKey": {
+				"type": "secret",
+				"label": "Anthropic API key",
+				"description": "Used for claude-* models. Stored encrypted."
+			},
+			"openaiApiKey": {
+				"type": "secret",
+				"label": "OpenAI API key",
+				"description": "Used for gpt-* models. Stored encrypted."
+			},
+			"evrenApiKey": {
+				"type": "secret",
+				"label": "Evren API key",
+				"description": "OpenAI-compatible Evren gateway (test). Stored encrypted."
+			},
+			"evrenBaseUrl": {
+				"type": "string",
+				"label": "Evren base URL",
+				"description": "Blank = https://evren-llmapi.ssyz.org.tr/v1"
+			},
+			"provider": {
+				"type": "select",
+				"label": "Provider",
+				"options": [
+					{ "value": "", "label": "Auto (prefer Anthropic)" },
+					{ "value": "anthropic", "label": "Anthropic" },
+					{ "value": "openai", "label": "OpenAI" },
+					{ "value": "evren", "label": "Evren" }
+				]
+			},
+			"model": {
+				"type": "string",
+				"label": "Model override",
+				"description": "e.g. claude-sonnet-4-5, gpt-4.1-mini or deepseek-v4.1-flash. Blank = provider default."
+			}
+		}
+	}
+}

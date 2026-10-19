@@ -1,0 +1,91 @@
+{
+  "slug": "motor-numarasi-caktirma-islemleri",
+  "category": "Tescil ve Müşavirlik",
+  "shortTitle": "Motor Numarası Çaktırma İşlemleri",
+  "title": "Motor Numarası Çaktırma İşlemleri",
+  "summary": "Okunamaz hale gelen veya motor değişimi sonrası motor numarasının resmi prosedürlere uygun şekilde yeniden işaretlenmesi için destek sağlıyoruz.",
+  "heroEyebrow": "Tescil ve Müşavirlik",
+  "heroTitle": "Motor Numarası Çaktırma İşlemleri",
+  "heroLead": "Motor numarası, her motorun resmi kimliğini oluşturan kritik bir veridir ve ruhsat ile teknik kayıtların eşleşmesinde belirleyici rol oynar. Karakaş Mühendislik olarak tespit, belge hazırlığı ve resmi işaretleme süreçlerinde uçtan uca uzmanlık sunuyoruz.",
+  "sections": [
+    {
+      "id": "motor-numarasi-caktirma-nedir",
+      "heading": "Motor Numarası Çaktırma Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Motor numarası, motor bloğunun resmi kimlik kodudur ve ruhsat ile teknik tescil kayıtlarında doğrudan referans alınır. Aşınma, darbe, paslanma ya da motor değişimi sonucunda bu numaranın okunamaz hale gelmesi durumunda, yeniden işaretleme ve kayıt doğrulama ihtiyacı ortaya çıkar."
+        }
+      ]
+    },
+    {
+      "id": "ne-zaman-gerekir",
+      "heading": "Ne Zaman Gerekir?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Motor numarasının silinmiş ya da okunamaz durumda olması halinde",
+            "Motor değişimi yapıldıktan sonra kayıtların tamamlanması gerektiğinde",
+            "Teknik inceleme ve resmi tespit raporları bunu zorunlu kıldığında",
+            "Ruhsat kayıtları ile motor bilgileri birbiriyle uyuşmadığında"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resmi-islem-asamalari",
+      "heading": "Resmi İşlem Aşamaları",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Motorun kimlik durumu teknik uzmanlıkla değerlendirilir",
+            "Ruhsat ve resmi tespit belgeleri eksiksiz hazırlanır",
+            "Yetkili kurumun yönlendirmesiyle işaretleme süreci başlatılır",
+            "Gerek görülürse tescil ve muayene kayıtları güncellenir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-belgeler",
+      "heading": "Gerekli Belgeler",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç ruhsatı ve sahibinin kimlik bilgileri",
+            "Motor değişimi yapıldıysa buna ait resmi belgeler",
+            "Tespit ya da ekspertiz raporları",
+            "İlgili kurum yazıları veya resmi yönlendirmeler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dikkat-edilmesi-gerekenler",
+      "heading": "Dikkat Edilmesi Gerekenler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Motor numarası üzerinden yürütülen işlemler, şase numarası kadar hassas ve denetime tabi süreçlerdir. Kayıt dışı müdahale, eksik belge sunumu ya da teknik uyumsuzluk; ruhsat, muayene ve tescil aşamalarında ciddi engeller doğurabilir. Bu sebeple tüm adımların resmi prosedürlere birebir uygun ilerlemesi elzemdir."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Motor numarası neden yeniden işaretlenir?",
+      "a": "Numaranın silinmesi, okunamaz hale gelmesi ya da motor değişimi sonrası kayıtların doğrulanması gerektiğinde yeniden işaretleme yoluna gidilebilir."
+    },
+    {
+      "q": "Motor değişiminde bu işlem gerekebilir mi?",
+      "a": "Evet, motor değişimi sonrasında ruhsat ve teknik kayıtların doğru biçimde güncellenebilmesi için bu süreç zorunlu hale gelebilir."
+    },
+    {
+      "q": "En kritik nokta nedir?",
+      "a": "Motor kimlik bilgisinin resmi kayıtlarla birebir uyumlu olması ve tüm sürecin yetkili kurum prosedürlerine göre yürütülmesi en hayati noktadır."
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "title": "Mobil Hizmet ve Yol Yardım Aracı Projesi | TSE Onaylı | Karakaş",
+  "shortTitle": "Mobil Hizmet ve Yol Yardım Aracı Projesi",
+  "slug": "mobil-hizmet-ve-yol-yardim-araci-projesi",
+  "category": "Araç Projeleri",
+  "summary": "Kaza, arıza veya acil durumlarda araçlara yerinde müdahale eden, bakım-onarım ve çekici desteği sunan mobil hizmet ve yol yardım araçları için TSE onaylı teknik proje ve ruhsatlandırma desteği.",
+  "image": "/hizmetler/mobil-hizmet-ve-yol-yardim-araci-projesi.webp",
+  "featured": true,
+  "order": 18,
+  "heroEyebrow": "Yol Yardım & Mobil Servis | TSE Onaylı",
+  "heroTitle": "Mobil Hizmet ve Yol Yardım Aracı Projesi",
+  "heroDescription": "Kaza, arıza veya güvenli olmayan yol koşullarında araçlara yerinde müdahale eden ya da en yakın servis noktasına güvenle taşıyan mobil hizmet ve yol yardım araçları için TSE ve AİTM mevzuatına uygun teknik proje hazırlıyoruz.",
+  "imageAlt": "Mobil hizmet ve yol yardım aracı teknik donanım ve proje incelemesi",
+  "imageTitle": "Mobil Hizmet ve Yol Yardım Aracı Projesi",
+  "whatsappMessage": "Merhaba, mobil hizmet ve yol yardım aracı projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Mobil Hizmet ve Yol Yardım Aracı Projesi",
+  "introTitle": "Yol yardım ve mobil servis araçlarında teknik proje süreci nasıl yürütülür?",
+  "introText": "Mobil servis ve yol yardım araçları; araca entegre edilen kompresör, jeneratör, takım tezgâhı, akü takviye sistemleri, vinç veya sarı tepe lambası gibi özel donanımlar barındırır. Bu donanımların araç ağırlık merkezine, dingil yüklerine, yangın güvenliğine ve elektrik altyapısına etkisi hesaplanarak AİTM yönetmeliğine uygun teknik proje çizilir ve ruhsata işletilir.",
+  "technicalChecks": [
+    {
+      "title": "Donanım Yerleşimi ve Sabitleme",
+      "description": "Takım dolapları, tezgâh, kompresör, jeneratör ve kurtarma aparatlarının şasi ve gövdeye mukavemetli montajı incelenir."
+    },
+    {
+      "title": "Ağırlık ve Dingil Kapasitesi",
+      "description": "Eklenen cihazların toplam ağırlığı, araç istiap haddi ve ön/arka dingil taşıma kapasitesi sınırları hesaplanır."
+    },
+    {
+      "title": "Elektrik ve Güvenlik Altyapısı",
+      "description": "Ek akü, inverter, sigorta paneli, kablo kesitleri, aydınlatma ve sarı tepe lambasının bağlantı standartları kontrol edilir."
+    },
+    {
+      "title": "Havalandırma ve Yangın Güvenliği",
+      "description": "Kapalı kasa içindeki yakıtlı veya basınçlı cihazlar için uygun havalandırma menfezleri ve yangın tüpü konumu doğrulanır."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç Ruhsatı (Tescil Belgesi)",
+      "description": "Mevcut araç cinsi, net ağırlık, azami yüklü ağırlık ve şasi numarası kontrolü için."
+    },
+    {
+      "title": "Tadilat ve Montaj Faturası",
+      "description": "Araç üzerine uygulanan raf, tezgâh veya vinç/kurtarma ekipmanlarının yasal faturaları."
+    },
+    {
+      "title": "Ekipman Teknik Belgeleri",
+      "description": "Varsa vinç, kompresör, inverter ve sarı tepe lambasına ait CE veya tip onay belgeleri."
+    },
+    {
+      "title": "Araç Donanım Fotoğrafları",
+      "description": "Aracın dış görünümü, iç yerleşimi, ekipman montaj noktaları ve etiketlerin detaylı fotoğrafları."
+    }
+  ],
+  "group": {
+    "label": "03 · Yol yardım ve mobil hizmet donanım türleri",
+    "title": "Hizmet kapsamına göre araç türleri ve teknik inceleme",
+    "leftTitle": "Mobil Servis ve Yol Yardım Uygulama Türleri",
+    "leftItems": [
+      {
+        "title": "Mobil Mekanik & Bakım Aracı",
+        "description": "Takım dolapları, yağ dolum aparatları, hava kompresörü ve test cihazları barındıran yerinde onarım araçları."
+      },
+      {
+        "title": "Mobil Lastik Yol Yardım Aracı",
+        "description": "Lastik sökme-takma makinesi, balans ünitesi ve yüksek kapasiteli kompresör içeren mobil lastik servisleri."
+      },
+      {
+        "title": "Akü ve Hızlı Yol Yardım Aracı",
+        "description": "Hızlı müdahale, akü takviye, yakıt ikmali ve acil yol emniyet ekipmanları ile donatılmış hafif ticari araçlar."
+      },
+      {
+        "title": "Çekici ve Araç Kurtarma Aracı",
+        "description": "Kayar kasa, sabit kasa veya gözlü kurtarıcı mekanizmasına sahip arıza/kaza çekici araçları."
+      }
+    ],
+    "rightTitle": "TSE ve Ruhsat Tescil Standartları",
+    "rightItems": [
+      {
+        "title": "Sarı Tepe Lambası Onayı",
+        "description": "Yol yardım ve kurtarma araçlarında trafiği uyarıcı sarı tepe lambası projeye dahil edilerek tescil edilir."
+      },
+      {
+        "title": "Kabin İçi Sabitleme",
+        "description": "Sürüş esnasında avadanlıkların ve ağır makinelerin savrulmasını engelleyen emniyetli montaj."
+      },
+      {
+        "title": "Yasal Sınıf Değişimi",
+        "description": "Aracın kullanım amacına uygun olarak ruhsattaki kullanım tarzının 'Özel Amaçlı / Yol Yardım' olarak güncellenmesi."
+      },
+      {
+        "title": "TÜVTÜRK Uygunluğu",
+        "description": "TSE AKM onayı sonrasında periyodik veya tadilat muayenesinden sorunsuz geçiş güvencesi."
+      }
+    ]
+  },
+  "process": {
+    "label": "04 · Adım adım proje süreci",
+    "title": "Mobil hizmet aracınızın projeden ruhsata uzanan tescil adımları",
+    "description": "Donanım montajından noter tesciline kadar tüm mühendislik ve onay adımlarını sizin için koordine ediyoruz.",
+    "steps": [
+      {
+        "title": "1. Ön İnceleme ve Donanım Tespiti",
+        "description": "Araç ruhsatı, monte edilen ekipman listesi ve fotoğraflar mühendislerimizce incelenerek proje planı çıkarılır."
+      },
+      {
+        "title": "2. Mühendislik Hesabı ve Proje Çizimi",
+        "description": "AİTM mevzuatına göre ağırlık dağılımı, elektrik güzergâhı ve teknik çizimler hazırlanıp TSE sistemine yüklenir."
+      },
+      {
+        "title": "3. TSE Araç Kontrol Merkezi (AKM) Onayı",
+        "description": "Araç, TSE kontrol merkezinde fiziki kontrolden geçer ve mühendis onaylı Araç Uygunluk Belgesi üretilir."
+      },
+      {
+        "title": "4. TÜVTÜRK Muayenesi ve Noter Tescili",
+        "description": "Onaylanan proje ile araç muayenesi tamamlanır ve noterden yeni ruhsata 'Yol Yardım / Mobil Servis' olarak tescil edilir."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Mobil hizmet ve yol yardım aracı projesi neden zorunludur?",
+      "answer": "Araca eklenen sabit cihazlar (jeneratör, kompresör, tezgâh, vinç, tepe lambası) araç ağırlığını ve kullanım amacını değiştirir. Bu donanımların ruhsata işlenmemesi durumunda araç muayeneden geçemez ve trafik denetimlerinde cezai işlem uygulanır."
+    },
+    {
+      "question": "Sarı tepe lambasını yol yardım aracıma işletebilir miyim?",
+      "answer": "Evet. Yol yardım ve arıza kurtarma hizmeti veren araçlarda sarı tepe lambası, teknik tadilat projesine dahil edilerek yasal olarak ruhsata işletilebilir."
+    },
+    {
+      "question": "Projelendirme ve onay süreci ne kadar sürer?",
+      "answer": "Evraklar ve montaj fotoğrafları eksiksiz iletildiğinde teknik projeniz aynı gün hazırlanır. TSE AKM randevu durumuna göre tüm süreç ortalama 1-2 iş günü içerisinde tamamlanır."
+    }
+  ]
+}

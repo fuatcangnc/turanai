@@ -1,0 +1,27 @@
+---
+/**
+ * One-line mount for the FULL in-page widget.
+ *
+ * The widget UI (launcher, drawer, canvas, element picker) is trusted UI, so a
+ * registry/sandbox install cannot inject it. When a site already depends on the
+ * trusted package, this component can mount the same bundle explicitly — useful
+ * for layouts where `page:fragments` is disabled or must be avoided.
+ *
+ * Requires:
+ *   npm i turan-widget
+ *   astro.config.mjs → import turanWidget from "turan-widget";
+ *                      plugins: [turan, turanWidget()]
+ *
+ * Renders nothing when the package is absent (sandbox-only installs), so it is
+ * safe to keep in a shared layout.
+ */
+let bundle: string | null = null;
+try {
+	const mod = (await import("turan-widget/bundle")) as { TURAN_WIDGET_BUNDLE?: string };
+	bundle = mod.TURAN_WIDGET_BUNDLE ?? null;
+} catch {
+	bundle = null;
+}
+---
+
+{bundle ? <script is:inline set:html={bundle} /> : null}

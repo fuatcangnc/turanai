@@ -1,0 +1,11 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+
+# pnpm 12 requires an explicit decision for packages with build scripts.
+onlyBuiltDependencies:
+  - esbuild
+  - workerd
+  - sharp
+  - "@tailwindcss/oxide"
+strictDepBuilds: false

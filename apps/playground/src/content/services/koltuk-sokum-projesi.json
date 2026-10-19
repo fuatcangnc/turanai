@@ -1,0 +1,217 @@
+{
+  "title": "Koltuk Söküm Projesi ve Ruhsata İşletme | Karakaş",
+  "shortTitle": "Koltuk Söküm Projesi",
+  "slug": "koltuk-sokum-projesi",
+  "category": "Söküm",
+  "summary": "Koltuk söküm projesi için yeni oturma kapasitesini, bağlantı ve kemer kontrollerini, gerekli belgeleri, TSE ve tescil adımlarını inceleyin.",
+  "image": "/hizmetler/koltuk-sokum-projesi.webp",
+  "featured": false,
+  "order": 7,
+  "heroEyebrow": "Koltuk Kapasitesi Değişikliği | TSE Onaylı",
+  "heroTitle": "Koltuk Söküm Projesi ve Ruhsata İşletme",
+  "heroDescription": "Sökülecek koltukları, bağlantı noktalarını, emniyet kemerlerini ve yeni oturma kapasitesini birlikte kontrol edelim. Proje ile tescil adımlarını aracınıza göre planlayalım.",
+  "imageAlt": "Koltuk söküm projesi için araç içi teknik incelemesi",
+  "imageTitle": "Koltuk Söküm Projesi Teknik İncelemesi",
+  "whatsappMessage": "Merhaba, aracım için koltuk söküm projesi hakkında bilgi almak istiyorum.",
+  "introEyebrow": "Araç koltuk kapasitesi değişikliği",
+  "introTitle": "Koltuk sayısı azaltıldığında projede ne değişir?",
+  "introText": "Koltuk sökümü, yalnız koltuğu tabandan ayırma işlemi değildir. Araçta kalacak koltuklar, emniyet kemerleri, bağlantı noktaları, iç geçiş alanı ve yeni oturma kapasitesi birlikte değerlendirilir. Fiili koltuk sayısı ile ruhsat kaydı proje sonrasında eşleştirilir.",
+  "technicalChecks": [
+    {
+      "title": "Mevcut ruhsat kapasitesi",
+      "description": "Ruhsattaki koltuk sayısı ile araçtaki fiili düzen karşılaştırılır."
+    },
+    {
+      "title": "Sökülecek koltuklar",
+      "description": "Konum, koltuk türü ve bağlantı biçimi belirlenir."
+    },
+    {
+      "title": "Kalan koltuk ve kemerler",
+      "description": "Seyirde kullanılacak koltuklar ile emniyet kemeri düzeni incelenir."
+    },
+    {
+      "title": "Taban ve geçiş alanı",
+      "description": "Söküm sonrası açık bağlantılar ve iç yerleşim kontrol edilir."
+    }
+  ],
+  "documents": [
+    {
+      "title": "Araç ruhsatı",
+      "description": "Mevcut koltuk sayısını ve araç sınıfını görmek için."
+    },
+    {
+      "title": "Araç içi genel fotoğraflar",
+      "description": "Koltuk sıralarını ve geçiş düzenini incelemek için."
+    },
+    {
+      "title": "Koltuk bağlantı fotoğrafları",
+      "description": "Taban, ayak, ray ve bilinen sabitleme biçimini kontrol etmek için."
+    },
+    {
+      "title": "Emniyet kemeri bilgileri",
+      "description": "Kalan ve sökülecek koltukların kemer düzenini projeyle eşleştirmek için."
+    },
+    {
+      "title": "Varsa eski tadilat projesi",
+      "description": "Mevcut koltuk düzeninin daha önceki kaydını doğrulamak için."
+    }
+  ],
+  "group": {
+    "label": "03 · Koltuk düzeni ve yeni oturma kapasitesi",
+    "title": "Söküm kararı araç içinde hangi noktaları etkiler?",
+    "leftTitle": "Sökülecek koltuklarda kontrol",
+    "leftItems": [
+      {
+        "title": "Koltuk konumu",
+        "description": "Hangi sıra ve koltukların araçtan kaldırılacağı."
+      },
+      {
+        "title": "Bağlantı sistemi",
+        "description": "Koltuk ayağı, ray ve taban bağlantılarının mevcut durumu."
+      },
+      {
+        "title": "Emniyet kemeri",
+        "description": "Koltuğa veya araç gövdesine bağlı kemer bileşenleri."
+      },
+      {
+        "title": "Elektrikli donanım",
+        "description": "Varsa koltuk sensörü, ısıtma veya diğer elektrik bağlantıları."
+      }
+    ],
+    "rightTitle": "Söküm sonrasında kontrol",
+    "rightItems": [
+      {
+        "title": "Yeni koltuk sayısı",
+        "description": "Sürücü dâhil ruhsata işlenecek toplam oturma kapasitesi."
+      },
+      {
+        "title": "Taban yüzeyi",
+        "description": "Kullanılmayan bağlantı delikleri ve açık parçaların güvenli durumu."
+      },
+      {
+        "title": "Geçiş ve erişim",
+        "description": "Kalan koltukların kapı ve koridor kullanımına etkisi."
+      },
+      {
+        "title": "Araç sınıfı",
+        "description": "Kapasite değişikliğinin araç cinsi ve kullanımıyla birlikte değerlendirilmesi."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Koltuk sökümü için ücretsiz ön kontrol",
+    "title": "Ruhsatı ve koltuk düzeninin fotoğraflarını gönderin.",
+    "description": "Sökülecek koltukları, yeni kapasiteyi ve proje öncesinde düzeltilmesi gereken bağlantıları birlikte belirleyelim."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Mevcut düzenin sayımı",
+      "description": "Ruhsat bilgisi, koltuk sıraları, kemerler ve bağlantı noktaları incelenir."
+    },
+    {
+      "number": "02",
+      "title": "Koltukların sökülmesi",
+      "description": "Projede kaldırılacak koltuk ve bağlı donanımlar araçtan uygun biçimde sökülür."
+    },
+    {
+      "number": "03",
+      "title": "Teknik proje dosyası",
+      "description": "Yeni koltuk sayısı ve araç içi düzen teknik dosyaya işlenir."
+    },
+    {
+      "number": "04",
+      "title": "TSE araç kontrolü",
+      "description": "Araç ile proje dosyası güncel başvuru kapsamında kontrol edilir."
+    },
+    {
+      "number": "05",
+      "title": "Muayene ve tescil",
+      "description": "Gerekli muayene tamamlanır ve yeni oturma kapasitesi ruhsata işlenir."
+    }
+  ],
+  "cost": {
+    "description": "Bedel; araç sınıfı, sökülecek koltuk sayısı, bağlantı düzeni, mevcut belgeler ve projenin aracın cinsine etkisine göre belirlenir.",
+    "items": [
+      {
+        "title": "Söküm kapsamı",
+        "description": "Koltuk, kemer ve bağlı donanımların mevcut durumu"
+      },
+      {
+        "title": "Teknik proje",
+        "description": "Yeni oturma kapasitesi ve yerleşim bilgilerinin dosyalanması"
+      },
+      {
+        "title": "Resmi işlemler",
+        "description": "TSE, muayene ve tescil kapsamındaki güncel ücretler"
+      }
+    ]
+  },
+  "risks": [
+    {
+      "title": "Ruhsatla farklı koltuk sayısı",
+      "description": "Araçtaki fiili kapasite ile tescil kaydının uyuşmaması."
+    },
+    {
+      "title": "Açık taban bağlantıları",
+      "description": "Söküm sonrasında delik veya bağlantı parçalarının güvensiz kalması."
+    },
+    {
+      "title": "Kemerin yanlış sökülmesi",
+      "description": "Koltuk ile kemer bağlantısının birlikte değerlendirilmemesi."
+    },
+    {
+      "title": "Kalan koltukların etkilenmesi",
+      "description": "Sökümün komşu koltuk bağlantılarına veya geçişe zarar vermesi."
+    },
+    {
+      "title": "Elektrik bağlantısının açıkta kalması",
+      "description": "Sensör veya donanım kablolarının güvenli biçimde sonlandırılmaması."
+    },
+    {
+      "title": "Araç sınıfının atlanması",
+      "description": "Kapasite değişikliğinin ruhsattaki araç cinsine etkisinin incelenmemesi."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Koltuk söküm projesi nedir?",
+      "answer": "Araçtaki koltuk sayısı azaltıldığında yeni oturma kapasitesini ve iç yerleşimi gösteren teknik tadilat dosyasıdır."
+    },
+    {
+      "question": "Bir koltuk sökülünce proje gerekir mi?",
+      "answer": "Gereklilik yalnız sayıya bakılarak belirlenmez. Ruhsattaki kapasite, koltuğun kullanımı ve sökümün araç üzerindeki etkisi birlikte incelenir."
+    },
+    {
+      "question": "Koltuk sökümü araç sınıfını değiştirir mi?",
+      "answer": "Bazı kapasite değişiklikleri araç cinsi veya kullanım kaydını etkileyebilir. Kesin kapsam, ruhsat ve yeni koltuk düzeni incelenerek belirlenir."
+    },
+    {
+      "question": "Koltukları söktürdükten sonra proje yapılabilir mi?",
+      "answer": "Mevcut araç ön incelemeye alınabilir. Taban, kemer veya elektrik bağlantılarında sorun varsa TSE kontrolünden önce düzeltme gerekebilir."
+    },
+    {
+      "question": "Yeni koltuk sayısı ruhsata nasıl işlenir?",
+      "answer": "Teknik proje ve TSE kontrolünün ardından gerekli muayene tamamlanır; yeni oturma kapasitesi tescil kaydında güncellenir."
+    },
+    {
+      "question": "Koltuk söküm projesi fiyatı ne kadar?",
+      "answer": "Fiyat araç sınıfı, sökülecek koltuklar, bağlantılar ve proje kapsamına göre değişir. Ruhsat ve fotoğraflar incelendikten sonra teklif hazırlanabilir."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Koltuk düzeni ön kontrolü",
+      "description": "Ruhsat kapasitesi, sökülecek koltuklar ve kalan düzen birlikte incelenir."
+    },
+    {
+      "title": "Bağlantı odaklı proje",
+      "description": "Koltuk, kemer ve taban bilgileri teknik dosyada eşleştirilir."
+    },
+    {
+      "title": "Açık tescil planı",
+      "description": "Yeni koltuk sayısının ruhsata işlenmesi için gereken sıra açıklanır."
+    }
+  ],
+  "officeText": "Ruhsatı ve araç içinin fotoğraflarını getirin. Sökülecek koltukları, yeni kapasiteyi ve proje kapsamını birlikte belirleyelim."
+}

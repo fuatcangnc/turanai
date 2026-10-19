@@ -1,0 +1,107 @@
+{
+  "slug": "kayar-perde-brandali-sac-kasa-projesi",
+  "category": "Kamyon & Kamyonet Kasa Projeleri",
+  "shortTitle": "Kayar Perde Brandalı Sac Kasa Projesi",
+  "title": "Kayar Perde Brandalı Sac Kasa Projesi",
+  "summary": "Sac kasa üzerine raylı kayar perde sistemi eklenerek hızlı yükleme imkanı sunan kamyon ve kamyonet kasaları için TSE onaylı proje ve ruhsat süreci Karakaş Mühendislik'te.",
+  "heroEyebrow": "Kamyon & Kamyonet Kasa Projeleri",
+  "heroTitle": "Kayar Perde Brandalı Sac Kasa Projesi",
+  "heroLead": "Kayar perde brandalı sac kasa dönüşümü, kamyon ve kamyonetlerde sac yapı üzerine raylı kayar perde tertibatı eklenerek hızlı yükleme ve boşaltma yapılabilen bir kasa düzenine geçilmesini içeren araç tadilatıdır. Karakaş Mühendislik olarak bu uygulamalarda TSE onaylı proje hazırlığı, teknik uygunluk süreçleri, TÜVTÜRK tadilat muayenesi ve ruhsata işletme konularında uzman destek sunuyoruz.",
+  "sections": [
+    {
+      "id": "kayar-perde-brandali-sac-kasa-nedir",
+      "heading": "Kayar Perde Brandalı Sac Kasa Nedir?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bu kasa modelinde yan yüzeyler ray sistemi üzerinde kayan branda panellerinden oluşur ve böylece yükleme ile boşaltma işlemi çok daha hızlı gerçekleşir. Sac kasaların sağlamlığı ile kayar perde sisteminin pratikliği tek bir çözümde birleşmiş olur."
+        }
+      ]
+    },
+    {
+      "id": "neden-proje-gerekli",
+      "heading": "Neden Proje Gerekli?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kayar perde ve sac entegrasyonu aracın ölçülerini, kullanım düzenini ve teknik özelliklerini değiştirdiği için resmi olarak araç tadilatı sayılır. Bu değişikliğin mevzuata uygunluğunu belgeleyen TSE onaylı araç projesinin hazırlanması zorunludur. Onaysız uygulamalar TÜVTÜRK muayenesinde sorun yaratabilir ve ruhsat sürecini sekteye uğratabilir."
+        }
+      ]
+    },
+    {
+      "id": "hangi-durumlarda-yapilir",
+      "heading": "Hangi Durumlarda Yapılır?",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Standart kasaların kayar perde sistemine dönüştürülmesi",
+            "Sıfırdan kayar perde kasa montajı yapılması",
+            "Lojistik faaliyetlerde hızlı yükleme ihtiyacı doğması",
+            "Hasarlı ya da kullanılamaz kasaların yenilenmesi",
+            "Ticari taşımada operasyonel verimlilik sağlanması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surec-nasil-ilerler",
+      "heading": "Süreç Nasıl İlerler?",
+      "blocks": [
+        {
+          "type": "ol",
+          "items": [
+            "Aracın ölçüleri ve teknik bilgileri alınır",
+            "Kayar perde brandalı kasa projesi hazırlanır",
+            "Sac kasa, ray sistemi ve perde montajı yapılır",
+            "TSE kontrol ve onay süreci tamamlanır",
+            "TÜVTÜRK tadilat muayenesi gerçekleştirilir",
+            "Noter aracılığıyla ruhsata işletme işlemleri bitirilir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gerekli-evraklar",
+      "heading": "Gerekli Evraklar",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Araç tescil belgesi (ruhsat) aslı",
+            "Yapılan tadilata ait işçilik faturası",
+            "Kasa ve ray sistemi ekipman bilgileri",
+            "Kimlik veya firma evrakları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avantajlari",
+      "heading": "Avantajları",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Hızlı yükleme ve boşaltma imkanı sağlar",
+            "Zaman tasarrufu oluşturur",
+            "Yüklerin dış etkenlerden korunmasına yardımcı olur",
+            "Dayanıklı ve uzun ömürlü bir yapı sunar",
+            "Lojistik operasyonlarda verimlilik sağlar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruhsata-isletme",
+      "heading": "Ruhsata İşletme Zorunlu mu?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evet, zorunludur. Kayar perde brandalı kasa dönüşümü sonrası aracın teknik yapısı değiştiğinden, tadilatın ruhsata işlenmesi gerekir. Ruhsata yansıtılmayan uygulamalar TÜVTÜRK muayenesinde ağır kusur olarak değerlendirilebilir ve cezai yaptırımlara yol açabilir."
+        }
+      ]
+    }
+  ],
+  "faqs": []
+}
